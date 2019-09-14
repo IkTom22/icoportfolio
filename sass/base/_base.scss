@@ -1,0 +1,28 @@
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%; // 10/16=0.625
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 1.7rem;
+    font-weight: 300;
+    background-color: $base-black;
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color:black;
+    display: grid;
+    grid-template-columns: minmax(2rem, 5rem) 2rem repeat(12, minmax(6.25rem, 1fr )) 2rem minmax(2rem, 5rem);
+    grid-template-rows: minmax(2rem, 5rem) 2rem repeat(10, minmax(4rem, 1fr )) 2rem minmax(2rem, 5rem);
+}

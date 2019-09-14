@@ -1,0 +1,4 @@
+@mixin base-template {
+    grid-template-columns: minmax(2rem, 5rem) 2rem repeat(12, minmax(6.25rem, 1fr )) 2rem minmax(2rem, 5rem);
+    grid-template-rows: minmax(2rem, 5rem) 2rem repeat(10, minmax(4rem, 1fr )) 2rem minmax(2rem, 5rem);
+}

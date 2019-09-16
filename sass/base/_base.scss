@@ -19,10 +19,14 @@ body{
     background-color: $base-black;
 }
 .container {
+    position: relative;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
     background-color:black;
     display: grid;
+    justify-items: center;
+    align-items: center;
     grid-template-columns: minmax(2rem, 5rem) 2rem repeat(12, minmax(6.25rem, 1fr )) 2rem minmax(2rem, 5rem);
     grid-template-rows: minmax(2rem, 5rem) 2rem repeat(10, minmax(4rem, 1fr )) 2rem minmax(2rem, 5rem);
 }

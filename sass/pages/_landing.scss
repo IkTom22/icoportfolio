@@ -3,36 +3,42 @@
     @include base-template;
     width: 100%;
     height: 100%;
-    grid-row: 2 / 14;
-    grid-column:  4 /14;
+    grid-row: 1 / -1;
+    grid-column:  3/-1;
     background-color: $base-white;
     //border-radius: 68% 32% 42% 58% / 51% 51% 49% 49%;
-    border-radius: 61% 39% 67% 33% / 49% 54% 46% 51% ;
+    //border-radius: 61% 39% 67% 33% / 49% 54% 46% 51% ;
+    border-radius:100% 0% 81% 19% / 61% 100% 0% 39% ;
+    position: relative;
+    transform: scaleY(1.5) scaleX(1);
+    transform-style: preserve-3d;
     transition: all linear;
-    animation: wobbling 20s linear infinite;
-
+    //animation: wobbling 35s linear infinite;
 }
+.logo {
+    width: 15rem;
+    height: 15rem;
+    background-color: $base-white;
+    position: absolute;
+    grid-column: 2/5;
+    grid-row: 1/4;
+    justify-self: start;
+    transform: translateY(4rem);
+    border: 1px solid $base-white;
+    border-radius: 50%;
+    color: $base-black;
+    display: grid;
+    grid-template-columns: repeat(3, 5rem);
+    grid-template-rows: repeat(3, 5rem);
+    @include centering;
+    &__letter {
+      font-family: $font-display;
+      font-weight: 700;
+      font-size: 6rem;
+      grid-column: 2/3;
 
-@keyframes wobbling {
-    0%{
-        border-radius: 61% 39% 67% 33% / 49% 54% 46% 51% ; 
-    }
-
-    30%{
-        border-radius: 50% 50% 60% 40% / 49% 54% 46% 51% ;
-    }
-
-    50%{
-        border-radius: 40% 60% 49% 51% / 58% 39% 61% 42%  ;
-    }
-    60%{
-        border-radius: 54% 46% 58% 42% / 53% 39% 61% 47% ; 
-    }
-    80%{
-        border-radius: 59% 41% 68% 32% / 46% 44% 56% 54% ;
-    }
-
-    100%{
-        border-radius: 61% 39% 67% 33% / 49% 54% 46% 51% ;
+      &--i{
+        
+      }
     }
 }

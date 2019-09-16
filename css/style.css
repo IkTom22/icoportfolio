@@ -18,12 +18,33 @@ body {
   background-color: black; }
 
 .container {
+  position: relative;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
   background-color: black;
   display: grid;
+  justify-items: center;
+  align-items: center;
   grid-template-columns: minmax(2rem, 5rem) 2rem repeat(12, minmax(6.25rem, 1fr)) 2rem minmax(2rem, 5rem);
   grid-template-rows: minmax(2rem, 5rem) 2rem repeat(10, minmax(4rem, 1fr)) 2rem minmax(2rem, 5rem); }
+
+@keyframes wobbling {
+  0% {
+    transform: scaleY(1);
+    border-radius: 100% 0% 81% 19% / 61% 100% 0% 39%; }
+  30% {
+    border-radius: 50% 50% 60% 40% / 49% 54% 46% 51%; }
+  50% {
+    transform: scaleY(1.2);
+    border-radius: 40% 60% 49% 51% / 58% 39% 61% 42%; }
+  60% {
+    border-radius: 54% 46% 58% 42% / 53% 39% 61% 47%; }
+  80% {
+    border-radius: 59% 41% 68% 32% / 46% 44% 56% 54%; }
+  100% {
+    transform: scaleY(1);
+    border-radius: 100% 0% 81% 19% / 61% 100% 0% 39%; } }
 
 .wrapper {
   display: grid;
@@ -31,23 +52,73 @@ body {
   grid-template-rows: minmax(2rem, 5rem) 2rem repeat(10, minmax(4rem, 1fr)) 2rem minmax(2rem, 5rem);
   width: 100%;
   height: 100%;
-  grid-row: 2 / 14;
-  grid-column: 4 /14;
+  grid-row: 1 / -1;
+  grid-column: 3/-1;
   background-color: #fffef8;
-  border-radius: 61% 39% 67% 33% / 49% 54% 46% 51%;
-  transition: all linear;
-  animation: wobbling 20s linear infinite; }
+  border-radius: 100% 0% 81% 19% / 61% 100% 0% 39%;
+  position: relative;
+  transform: scaleY(1.5) scaleX(1);
+  transform-style: preserve-3d;
+  transition: all linear; }
 
-@keyframes wobbling {
+.logo {
+  width: 15rem;
+  height: 15rem;
+  background-color: #fffef8;
+  position: absolute;
+  grid-column: 2/5;
+  grid-row: 1/4;
+  justify-self: start;
+  transform: translateY(4rem);
+  border: 1px solid #fffef8;
+  border-radius: 50%;
+  color: black;
+  display: grid;
+  grid-template-columns: repeat(3, 5rem);
+  grid-template-rows: repeat(3, 5rem);
+  justify-items: center;
+  align-items: center; }
+  .logo__letter {
+    font-family: "Manjari", sans-serif;
+    font-weight: 700;
+    font-size: 6rem;
+    grid-column: 2/3; }
+
+.about__goo {
+  position: absolute;
+  border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+  animation: morph 3s linear infinite;
+  transform-style: preserve-3d;
+  outline: 1px solid transparent;
+  will-change: border-radius; }
+  .about__goo--1 {
+    width: 55rem;
+    height: 40rem;
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    background-image: linear-gradient(#00F260, #0575e6);
+    position: absolute;
+    top: 25%;
+    right: 10%;
+    animation: morph 50s linear infinite; }
+
+@keyframes morph {
   0% {
-    border-radius: 61% 39% 67% 33% / 49% 54% 46% 51%; }
-  30% {
-    border-radius: 50% 50% 60% 40% / 49% 54% 46% 51%; }
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    transform: translate3d(0, 0, 0) rotateZ(0.01deg); }
+  34% {
+    border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+    transform: translate3d(0, 5px, 0) rotateZ(0.01deg); }
   50% {
-    border-radius: 40% 60% 49% 51% / 58% 39% 61% 42%; }
-  60% {
-    border-radius: 54% 46% 58% 42% / 53% 39% 61% 47%; }
-  80% {
-    border-radius: 59% 41% 68% 32% / 46% 44% 56% 54%; }
+    opacity: .89;
+    transform: translate3d(0, 0, 0) rotateZ(0.01deg); }
+  67% {
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+    transform: translate3d(0, -3px, 0) rotateZ(0.01deg); }
   100% {
-    border-radius: 61% 39% 67% 33% / 49% 54% 46% 51%; } }
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    transform: translate3d(0, 0, 0) rotateZ(0.01deg); } }
+
+@keyframes fadeIn {
+  100% {
+    transform: scale(1.03);
+    opacity: 0; } }

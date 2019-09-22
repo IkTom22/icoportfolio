@@ -9,175 +9,138 @@
     display: grid;
     @include base-template;
     @include   centering;
-    
+
+    &__menu{
+      grid-column: 1 / 3;
+      grid-row: 8 / 10;
+      color: $base-black;
+      height: 8rem;
+      width: 8rem;
+      z-index: 2100;
+      text-align: center;
+      transform: translateX(-4rem);
+      font-size: 2rem;
+      font-weight: 400;
+      display: grid;
+      @include centering;
+      &--left{
+        &::after{
+          content: "";
+          display: block;
+          height: .5rem;
+          width:6rem;
+          background-color: $base-black;
+          border-radius: 1rem;
+          text-align: center;
+
+        }
+      }
+      &--right{
+
+      }
+    }
     
     &__greet {
         grid-column: 3 / 8;
         grid-row: 4 / 9;
         z-index: 2100;
-
-      & h1 {
         
-        font-size: 10rem;
-        font-weight: 900;
-        font-family: $font-display;
-        letter-spacing: .5rem;
-      }
-
     }
 
     &__bubble{
       position: absolute;
-      grid-column: 4/8;
-      grid-row: 9/ 12;
+      grid-column: 4/9;
+      grid-row: 9/ 13;
       z-index: 2100;
-      //transform: translateX(5rem);
-      h2 {
-       color: white; 
-      font-size: 5rem;
-      font-weight: 300;
-      font-family: $font-body;
-      // text-transform: capitalize;
-      animation: morph 20s linear infinite;
       
+      h2 {
+       color: $base-white; 
+       animation: morph 20s linear infinite;
+      
+       }
     }
-  }
     &__goo {
         z-index: 1800;
-        position: absolute;
+        position: relative;
         grid-column: 1/ -1;
         grid-row: 1/ -1;
-        //transform: translateX(-5rem);
         height: 100%;
         width: 100%;
-        //border-radius: 65% 35% 54% 46% / 54% 56% 44% 46% ;
-        //animation: morph 3s linear infinite; 
-        //transform-style: preserve-3d;
-        //outline: 1px solid transparent;
-        //will-change: border-radius;
         background-color: $base-white;
-        filter: blur(20px) contrast(30);
+        filter: blur(20px) contrast(70);
         display: grid;
         @include base-template;
+        &--1,
+        &--2,
+        &--3,
+        &--4,
+        &--5,
+        &--6{
+          background-color: $red-light;       
+            position: absolute;
+            border-radius: 62% 38% 65% 35% / 50% 49% 51% 50% ;
+            transition: all linear;
+        }
         &--1 {
           grid-column: 3/9;
           grid-row: 7/14;
-            width: 50rem;
-            height: 38rem;
+            width: 60rem;
+            height: 50rem;
             border-radius: 62% 38% 65% 35% / 50% 49% 51% 50% ;
-            background-color: $red-light;
-            //background-image: linear-gradient($blue, $lime-green);
-            position: absolute;
-            //top: 120%;
-            
-            animation:  blobbing 5s linear infinite;
+            //background-color: $red-light;       
+            //position: absolute;
+            transform: translateX(0) translateY(0) rotate(0) scale(.1);
+            transition: all linear;
+            animation: 2s blowing .5s ease-in-out forwards, 5s blobbing 1s linear infinite;
         }
         &--2{
-          position: absolute;
-          grid-column: 9/ 15;
-          grid-row: 2 / 7;
-          background-color: $red-light;
-          width: 55rem;
-          height: 55rem;
+          //position: absolute;
+          grid-column: 10/ 14;
+          grid-row: 2/ 6;
+          //background-color: $red-light;
+          width: 40rem;
+          height: 40rem;
           border-radius: 62% 38% 65% 35% / 50% 49% 51% 50% ;
-          transform: translateX(0) translateY(0) scale(1);
+          transform: translateX(0) translateY(0) scale(1) rotate(0);
           opacity: 0;
-          //animation: 10s morph .5s linear infinite;
-          animation: blobbing 5s linear infinite, birth 2s ease-in-out forwards;
+          //transition: all linear;
+          animation: 4s blobbing 1.6s linear infinite, 3s birth 2s ease-in-out forwards;
               
+        }
+        &--3 {
+          grid-column: 12/ 15;
+          grid-row: 10 / 13;
+          transform: translateX(-250%) translateY(60%) scale(.3) rotate(0);
+          opacity: 0;
+          width: 25rem;
+          height: 25rem;
+          animation: 6s blobbing 1.6s linear infinite, 3s birth2 6s ease-in-out forwards;
+        }
+        &--4{
+          width: 15rem;
+          height: 15rem;
+          top: 100%;
+          right: 10%;
+          transform: scale(1);
+          animation: 25s floating 10s linear infinite;
+        }
+        &--5{
+          width: 22rem;
+          height: 22rem;
+          transform: scale(1);
+          top: 100%;
+          left: 20%;
+          animation: 21s floating2 14s linear infinite;
+        }
+
+        &--6{
+          width: 10rem;
+          height: 10rem;
+          top: 100%;
+          left: 10%;
+          animation: 23s floating3 18s linear infinite;
         }
     }
     
 }
 
-
-
-
-@keyframes blobbing{
-0%{
- 
-  border-radius: 62% 38% 65% 35% / 50% 49% 51% 50% ;
-  transform: translate3d(0,0,0) rotateZ(0.01deg) ;
-}
-
-// 10%{
-  
-//   border-radius: 62% 38% 65% 35% / 50% 49% 51% 50% ;
-//   transform: translate3d(0,0,0) rotateZ(0.01deg) ;
-// }
-30%{
-  //top: 36%;
-    border-radius: 46% 54% 46% 54% / 56% 49% 51% 44% ;
-  transform:  translate3d(0,5px,0) rotateZ(0.01deg);
-}
-40%{
-  //top: 36%;
-  opacity: .89;
-  border-radius: 37% 63% 30% 70% / 58% 36% 64% 42% ;
-  transform: translate3d(0,0,0) rotateZ(0.01deg);
-}
-60%{
-  //top: 36%;
-  border-radius: 59% 41% 62% 38% / 49% 39% 61% 51% ;
-  transform: translate3d(0,-3px,0) rotateZ(0.01deg);
-}
-// 80%{
-//   //top: -100%;
-//     border-radius: 62% 38% 65% 35% / 50% 49% 51% 50% ;
-//     transform: translate3d(0,0,0) rotateZ(0.01deg);
-//   }
-100%{
-
-    border-radius: 62% 38% 65% 35% / 50% 49% 51% 50% ;
-      transform: translate3d(0,0,0) rotateZ(0.01deg) ;
-    }  
-}
-
-  
-
-@keyframes fadeIn{
-100%{
-  transform: scale(1.03);
-  opacity: 0;
-}
-}
-@keyframes birth {
-  0%{
-  
-    transform: scale(0.3) translateX(-200%) translateY(60%);
-    opacity: 0;
-    
-  }
-  2% {
-    opacity: 1;
-  }
-  10%{
-    transform: scale(0.3) translateX(-180%) translateY(50%);
-  }
-  15%{
-    transform: scale(0.4) translateX(-170%) translateY(40%);
-  }
-  30%{
-    transform: scale(0.5) translateX(-180%) translateY(50%);
-  }
-  40%{
-    transform: scale(0.5) translateX(-100%) translateY(50%);
-  }
-  
-  100% {
-    transform:scale(1) translateX(0) translateY(0);
-    opacity: 1;
-  }
-      
-}
-// @keyframes left-goo{
-//   0%{
-//     transform: translateX(0);
-//   }
-//   50%{
-//     transform: translateX(50%);
-//   }
-//   0%{
-//     transform: translateX(0);
-//   }
-// }

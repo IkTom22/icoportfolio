@@ -30,7 +30,7 @@
       &--top{
         grid-column: 1/2;
         grid-row: 1/2;
-
+        
         &::after{
           content: "";
           display: block;
@@ -51,7 +51,9 @@
         grid-row: 1/2;
         height: 4rem;
         width: 4rem;
-        transform: translate(-40%, -15%) rotate(75deg);
+        transition: all linear;
+        transform: translate(-40%, -15%) rotate(75deg) scaleY(.9);
+        animation: speaker 2s ease-in .5s 1 forwards;
       }
       &--lines {
         position: absolute;
@@ -61,9 +63,11 @@
         background-color: $base-black;
         top: 10%;
         right: -30%;
-        transform: rotate(-20deg);
+        transform: rotate(-18deg) translateX(-100%);
         border-radius: 5rem;
-
+        transition: all linear;
+        opacity: 0;
+        animation: shouting .5s ease-in .5s 2 forwards;
         &::before,
         &::after {
           content: "";
@@ -74,8 +78,14 @@
           border-radius: inherit;
         }
         &::before {
-          top: 5%;
-          transform: rotate(-50deg);
+          
+          transform: translateY(-350%) rotate(-28deg);
+        }
+
+        &::after {
+          
+          transform: translateY(300%) rotate(28deg);
+          
         }
       }
     }
@@ -184,3 +194,30 @@
     
 }
 
+@keyframes speaker {
+  0%{
+    transform: translate(-40%, -15%) rotate(75deg) scaleY(.9);
+  }
+  10%{
+    transform: translate(-40%, -15%) rotate(75deg) scaleY(.9);
+  }
+  20%{
+    transform: translate(-40%, -15%) rotate(75deg) scaleY(1.1);
+  }
+  70%{
+    transform: translate(-40%, -15%) rotate(75deg) scaleY(1.1);
+  }
+  90%{
+    transform: translate(-40%, -15%) rotate(75deg) scaleY(.9);
+  }
+  100%{
+    transform: translate(-40%, -15%) rotate(75deg) scaleY(1);
+  }
+}
+@keyframes shouting {
+
+  100%{
+    opacity: 1;
+    transform: rotate(-18deg) translateX(20%);
+  }
+}

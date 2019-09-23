@@ -239,16 +239,50 @@ p {
     font-size: 2rem;
     font-weight: 400;
     display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
     justify-items: center;
-    align-items: center; }
-    .about__menu--left::after {
-      content: "";
-      display: block;
-      height: .5rem;
-      width: 6rem;
+    align-items: center;
+    position: relative; }
+    .about__menu--top {
+      grid-column: 1/2;
+      grid-row: 1/2; }
+      .about__menu--top::after {
+        content: "";
+        display: block;
+        height: .5rem;
+        width: 6rem;
+        background-color: black;
+        border-radius: 1rem;
+        text-align: center; }
+    .about__menu--bottom {
+      grid-column: 1/2;
+      grid-row: 2/3; }
+    .about__menu--icon {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      height: 4rem;
+      width: 4rem;
+      transform: translate(-40%, -15%) rotate(75deg); }
+    .about__menu--lines {
+      position: absolute;
+      height: 3px;
+      width: 2rem;
       background-color: black;
-      border-radius: 1rem;
-      text-align: center; }
+      top: 10%;
+      right: -30%;
+      transform: rotate(-20deg);
+      border-radius: 5rem; }
+      .about__menu--lines::before, .about__menu--lines::after {
+        content: "";
+        display: block;
+        background-color: inherit;
+        width: inherit;
+        height: inherit;
+        border-radius: inherit; }
+      .about__menu--lines::before {
+        top: 5%;
+        transform: rotate(-50deg); }
   .about__greet {
     grid-column: 3 / 8;
     grid-row: 4 / 9;

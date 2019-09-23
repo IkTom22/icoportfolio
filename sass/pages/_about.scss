@@ -22,8 +22,15 @@
       font-size: 2rem;
       font-weight: 400;
       display: grid;
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: repeat(2, auto);
       @include centering;
-      &--left{
+        position: relative;
+
+      &--top{
+        grid-column: 1/2;
+        grid-row: 1/2;
+
         &::after{
           content: "";
           display: block;
@@ -35,8 +42,41 @@
 
         }
       }
-      &--right{
+      &--bottom{
+        grid-column: 1/2;
+        grid-row: 2/3;
+      }
+      &--icon {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        height: 4rem;
+        width: 4rem;
+        transform: translate(-40%, -15%) rotate(75deg);
+      }
+      &--lines {
+        position: absolute;
+        
+        height: 3px;
+        width: 2rem;
+        background-color: $base-black;
+        top: 10%;
+        right: -30%;
+        transform: rotate(-20deg);
+        border-radius: 5rem;
 
+        &::before,
+        &::after {
+          content: "";
+          display: block;
+          background-color: inherit;
+          width: inherit;
+          height: inherit;
+          border-radius: inherit;
+        }
+        &::before {
+          top: 5%;
+          transform: rotate(-50deg);
+        }
       }
     }
     

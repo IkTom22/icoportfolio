@@ -97,7 +97,7 @@
         
     }
 
-    &__bubble{
+    &__sub{
       position: absolute;
       grid-column: 4/9;
       grid-row: 9/ 13;
@@ -105,10 +105,51 @@
       
       h2 {
        color: $base-white; 
-       animation: morph 20s linear infinite;
-      
+       //animation: blobbing 15s linear infinite;
        }
     }
+
+    &__me{
+      align-content: center;
+      transform-style: preserve-3d;
+      perspective: 50rem;
+      z-index: 2100;
+      width: 40rem;
+      grid-column: 11/ 14;
+      grid-row: 3/ 10;
+      position: relative; 
+
+      height: 100%;   
+      & h2{
+        font-size: 8rem;
+        margin: 1rem;
+      }
+
+      & > *{
+        transition: all 0.2s ease;
+        color: $base-white;
+
+        transform: translateX(5%);
+
+        
+      }
+      &--1{
+
+        padding: 4rem 2rem 0 0;
+
+        ul {
+          list-style: none;
+          display: grid;
+          padding-left: 0;
+          height: 25rem;
+
+          li {
+              font-size: 3rem;
+          }
+        }
+      }
+    }
+
     &__goo {
         z-index: 1800;
         position: relative;
@@ -132,7 +173,8 @@
             transition: all linear;
         }
         &--1 {
-          grid-column: 3/9;
+          //grid-column: 3/9;
+          grid-column: 2/8;
           grid-row: 7/14;
             width: 60rem;
             height: 50rem;
@@ -145,11 +187,11 @@
         }
         &--2{
           //position: absolute;
-          grid-column: 10/ 14;
-          grid-row: 2/ 6;
+          grid-column: 9/ 15;
+          grid-row: 2/ 10;
           //background-color: $red-light;
-          width: 40rem;
-          height: 40rem;
+          width: 55rem;
+          height: 45rem;
           border-radius: 62% 38% 65% 35% / 50% 49% 51% 50% ;
           transform: translateX(0) translateY(0) scale(1) rotate(0);
           opacity: 0;
@@ -162,30 +204,30 @@
           grid-row: 10 / 13;
           transform: translateX(-250%) translateY(60%) scale(.3) rotate(0);
           opacity: 0;
-          width: 25rem;
-          height: 25rem;
+          width: 30rem;
+          height: 30rem;
           animation: 6s blobbing 1.6s linear infinite, 3s birth2 6s ease-in-out forwards;
         }
         &--4{
-          width: 15rem;
-          height: 15rem;
+          width: 20rem;
+          height: 20rem;
           top: 100%;
           right: 10%;
           transform: scale(1);
           animation: 25s floating 10s linear infinite;
         }
         &--5{
-          width: 22rem;
-          height: 22rem;
+          width: 18rem;
+          height: 18rem;
           transform: scale(1);
           top: 100%;
           left: 20%;
-          animation: 21s floating2 14s linear infinite;
+          animation: 20s floating2 14s linear infinite;
         }
 
         &--6{
-          width: 10rem;
-          height: 10rem;
+          width: 20rem;
+          height: 20rem;
           top: 100%;
           left: 10%;
           animation: 23s floating3 18s linear infinite;
@@ -194,30 +236,17 @@
     
 }
 
-@keyframes speaker {
-  0%{
-    transform: translate(-40%, -15%) rotate(75deg) scaleY(.9);
-  }
-  10%{
-    transform: translate(-40%, -15%) rotate(75deg) scaleY(.9);
-  }
-  20%{
-    transform: translate(-40%, -15%) rotate(75deg) scaleY(1.1);
-  }
-  70%{
-    transform: translate(-40%, -15%) rotate(75deg) scaleY(1.1);
-  }
-  90%{
-    transform: translate(-40%, -15%) rotate(75deg) scaleY(.9);
-  }
-  100%{
-    transform: translate(-40%, -15%) rotate(75deg) scaleY(1);
-  }
-}
-@keyframes shouting {
+@keyframes folding {
 
   100%{
-    opacity: 1;
-    transform: rotate(-18deg) translateX(20%);
+    transform: rotateX(-90deg);
+    
+  }
+}
+@keyframes folding2 {
+
+  100%{
+    transform: rotateX(180deg);
+    
   }
 }

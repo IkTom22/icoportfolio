@@ -84,11 +84,6 @@ p {
     border-radius: 62% 38% 65% 35% / 50% 49% 51% 50%;
     transform: translateY(0) translateX(0); } }
 
-@keyframes fadeIn {
-  100% {
-    transform: scale(1.03);
-    opacity: 0; } }
-
 @keyframes birth {
   0% {
     transform: scale(0.3) translateX(-200%) translateY(60%);
@@ -196,6 +191,24 @@ p {
   100% {
     opacity: 1;
     transform: rotate(-18deg) translateX(20%); } }
+
+@keyframes typing {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
+
+@keyframes blinking {
+  50% {
+    border-color: transparent; } }
+
+@keyframes blinking-end {
+  100% {
+    border-color: transparent; } }
+
+@keyframes blinking-below {
+  50% {
+    border-color: black; } }
 
 .wrapper {
   display: grid;
@@ -312,9 +325,24 @@ p {
       .about__menu--lines::after {
         transform: translateY(300%) rotate(28deg); }
   .about__greet {
-    grid-column: 3 / 8;
+    grid-column: 3 / 9;
     grid-row: 4 / 9;
-    z-index: 2100; }
+    z-index: 2100;
+    width: 38rem; }
+    .about__greet h1 {
+      width: 0;
+      overflow: hidden;
+      margin: 1rem auto;
+      width: 0;
+      height: 8rem;
+      white-space: nowrap;
+      letter-spacing: 1rem; }
+    .about__greet :nth-child(1) {
+      border-right: 5px black solid;
+      animation: 0.8s typing steps(10, start) 1s forwards, 0.5s blinking step-end alternate infinite, 0.2s blinking-end 3.2s linear forwards; }
+    .about__greet :nth-child(2) {
+      border-right: 5px transparent solid;
+      animation: 1.5s typing 3.5s steps(20, start) forwards, 0.5s blinking-below 3.2s step-end alternate infinite, 0.2s blinking-end 7s linear forwards; }
   .about__sub {
     position: absolute;
     grid-column: 4/9;
@@ -361,7 +389,7 @@ p {
     grid-template-columns: minmax(2rem, 5rem) 2rem repeat(12, minmax(6.25rem, 1fr)) 2rem minmax(2rem, 5rem);
     grid-template-rows: minmax(2rem, 5rem) 2rem repeat(10, minmax(4rem, 1fr)) 2rem minmax(2rem, 5rem);
     gap: 1.5rem; }
-    .about__goo--1, .about__goo--2, .about__goo--3, .about__goo--4, .about__goo--5, .about__goo--6 {
+    .about__goo > * {
       background-color: #f00000;
       position: absolute;
       border-radius: 62% 38% 65% 35% / 50% 49% 51% 50%;
@@ -413,10 +441,20 @@ p {
       left: 10%;
       animation: 23s floating3 18s linear infinite; }
 
-@keyframes folding {
-  100% {
-    transform: rotateX(-90deg); } }
+@keyframes typing {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
 
-@keyframes folding2 {
+@keyframes blinking {
+  50% {
+    border-color: transparent; } }
+
+@keyframes blinking-end {
   100% {
-    transform: rotateX(180deg); } }
+    border-color: transparent; } }
+
+@keyframes blinking-below {
+  50% {
+    border-color: black; } }

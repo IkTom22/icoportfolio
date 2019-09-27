@@ -65,15 +65,7 @@
         transform: translateY(0) translateX(0);
       }  
   }
-  
-    
-  
-  @keyframes fadeIn{
-  100%{
-    transform: scale(1.03);
-    opacity: 0;
-  }
-  }
+
   @keyframes birth {
     0%{
     
@@ -235,5 +227,27 @@
     100%{
       opacity: 1;
       transform: rotate(-18deg) translateX(20%);
+    }
+  }
+//Typing animation
+  @keyframes typing {
+    from {width: 0}
+    to {width: 100%}
+  }
+  
+  @keyframes blinking {
+    50% {
+      border-color: transparent;
+    }
+  }
+  @keyframes blinking-end {
+    100% {
+      border-color: transparent;
+    }
+    
+  }
+  @keyframes blinking-below {
+    50% {
+      border-color: $base-black;
     }
   }

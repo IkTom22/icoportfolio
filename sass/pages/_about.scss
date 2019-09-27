@@ -91,10 +91,34 @@
     }
     
     &__greet {
-        grid-column: 3 / 8;
+        grid-column: 3 / 9;
         grid-row: 4 / 9;
         z-index: 2100;
+        width: 38rem;
         
+        
+        h1{
+          width: 0;
+          overflow: hidden;
+          margin: 1rem auto;
+          width:0;
+          height:8rem;
+          white-space: nowrap;
+          letter-spacing: 1rem;
+          
+        
+        }
+        & :nth-child(1){
+          border-right: 5px $base-black solid;
+          animation: .8s typing steps(10, start) 1s forwards, .5s blinking  step-end alternate infinite, .2s blinking-end 3.2s linear forwards;
+          
+           
+
+        }
+        & :nth-child(2){
+          border-right: 5px transparent solid;
+          animation: 1.5s typing 3.5s steps(20, start) forwards, .5s blinking-below 3.2s step-end alternate infinite, .2s blinking-end 7s linear forwards;
+        }
     }
 
     &__sub{
@@ -161,12 +185,8 @@
         filter: blur(20px) contrast(70);
         display: grid;
         @include base-template;
-        &--1,
-        &--2,
-        &--3,
-        &--4,
-        &--5,
-        &--6{
+
+        & > * {
           background-color: $red-light;       
             position: absolute;
             border-radius: 62% 38% 65% 35% / 50% 49% 51% 50% ;
@@ -236,17 +256,24 @@
     
 }
 
-@keyframes folding {
+@keyframes typing {
+  from {width: 0}
+  to {width: 100%}
+}
 
-  100%{
-    transform: rotateX(-90deg);
-    
+@keyframes blinking {
+  50% {
+    border-color: transparent;
   }
 }
-@keyframes folding2 {
-
-  100%{
-    transform: rotateX(180deg);
-    
+@keyframes blinking-end {
+  100% {
+    border-color: transparent;
+  }
+  
+}
+@keyframes blinking-below {
+  50% {
+    border-color: $base-black;
   }
 }

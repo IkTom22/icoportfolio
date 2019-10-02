@@ -280,6 +280,8 @@
           }
         }
         &--3{
+          opacity:0;
+          animation:.2s appear 17.5s linear forwards;
           h1 {
             color: $base-black;
             opacity:0;
@@ -308,24 +310,28 @@
            
           }
           & :nth-child(3){
+            opacity:0;
             grid-column: 3 /4;
             grid-row: 4/5;
             font-size: 7rem;
             animation: .05s appear 18.05s linear forwards;
           }
           & :nth-child(4){
+            opacity:0;
             grid-column: 4 /5;
             grid-row: 4/5;
             font-size: 9rem;
             animation: .05s appear 18.1s linear forwards;
           }
           & :nth-child(5){
+            opacity:0;
             grid-column: 5 /6;
             grid-row: 4/5;
             font-size: 11rem;
             animation: .05s appear 18.15s linear forwards;
           }
           & :nth-child(6){
+            opacity:0;
             grid-column: 6 /8;
             grid-row: 4/5;
             font-size: 19rem;

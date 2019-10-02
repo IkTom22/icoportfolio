@@ -588,49 +588,56 @@ p {
         grid-column: 4/ 7;
         grid-row: 5/ 6;
         opacity: 0; }
-    .about__me--3 h1 {
-      color: black;
+    .about__me--3 {
       opacity: 0;
-      width: 100%;
-      transform-origin: 50% 50%;
-      text-align: left;
-      transform: translateX(-5rem) rotate(0);
-      animation: .5s turningIn 17.5s ease-out forwards; }
-    .about__me--3 h2 {
-      opacity: 0;
-      justify-self: center;
-      text-align: center;
-      transform: rotate(20deg);
-      z-index: 2700;
-      text-transform: uppercase; }
-    .about__me--3 :nth-child(2) {
-      opacity: 0;
-      grid-row: 4/5;
-      grid-column: 2/3;
-      justify-self: end;
-      transform: translateY(17%) rotate(20deg);
-      animation: .05s appear 18s linear forwards; }
-    .about__me--3 :nth-child(3) {
-      grid-column: 3 /4;
-      grid-row: 4/5;
-      font-size: 7rem;
-      animation: .05s appear 18.05s linear forwards; }
-    .about__me--3 :nth-child(4) {
-      grid-column: 4 /5;
-      grid-row: 4/5;
-      font-size: 9rem;
-      animation: .05s appear 18.1s linear forwards; }
-    .about__me--3 :nth-child(5) {
-      grid-column: 5 /6;
-      grid-row: 4/5;
-      font-size: 11rem;
-      animation: .05s appear 18.15s linear forwards; }
-    .about__me--3 :nth-child(6) {
-      grid-column: 6 /8;
-      grid-row: 4/5;
-      font-size: 19rem;
-      transform: translateX(-10%) rotate(20deg);
-      animation: .05s appear 18.2s linear forwards; }
+      animation: .2s appear 17.5s linear forwards; }
+      .about__me--3 h1 {
+        color: black;
+        opacity: 0;
+        width: 100%;
+        transform-origin: 50% 50%;
+        text-align: left;
+        transform: translateX(-5rem) rotate(0);
+        animation: .5s turningIn 17.5s ease-out forwards; }
+      .about__me--3 h2 {
+        opacity: 0;
+        justify-self: center;
+        text-align: center;
+        transform: rotate(20deg);
+        z-index: 2700;
+        text-transform: uppercase; }
+      .about__me--3 :nth-child(2) {
+        opacity: 0;
+        grid-row: 4/5;
+        grid-column: 2/3;
+        justify-self: end;
+        transform: translateY(17%) rotate(20deg);
+        animation: .05s appear 18s linear forwards; }
+      .about__me--3 :nth-child(3) {
+        opacity: 0;
+        grid-column: 3 /4;
+        grid-row: 4/5;
+        font-size: 7rem;
+        animation: .05s appear 18.05s linear forwards; }
+      .about__me--3 :nth-child(4) {
+        opacity: 0;
+        grid-column: 4 /5;
+        grid-row: 4/5;
+        font-size: 9rem;
+        animation: .05s appear 18.1s linear forwards; }
+      .about__me--3 :nth-child(5) {
+        opacity: 0;
+        grid-column: 5 /6;
+        grid-row: 4/5;
+        font-size: 11rem;
+        animation: .05s appear 18.15s linear forwards; }
+      .about__me--3 :nth-child(6) {
+        opacity: 0;
+        grid-column: 6 /8;
+        grid-row: 4/5;
+        font-size: 19rem;
+        transform: translateX(-10%) rotate(20deg);
+        animation: .05s appear 18.2s linear forwards; }
   .about__goo {
     z-index: 1800;
     position: relative;

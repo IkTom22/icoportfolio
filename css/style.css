@@ -338,6 +338,15 @@ p {
     opacity: 1;
     transform: translateX(-5rem) rotate(360deg); } }
 
+@keyframes zoomOut {
+  0% {
+    opacity: 1; }
+  96% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    transform: translateX(1100%) translateY(-15%) rotate(20deg) scale(1.5); } }
+
 .wrapper {
   display: grid;
   grid-template-columns: minmax(2rem, 5rem) 2rem repeat(12, minmax(6.25rem, 1fr)) 2rem minmax(2rem, 5rem);
@@ -470,10 +479,10 @@ p {
       color: black; }
     .about__greet :nth-child(1) {
       border-right: 5px black solid;
-      animation: 0.8s typing steps(10, start) 1s forwards, 0.5s blinking step-end alternate infinite, 0.2s blinking-end 3.2s linear forwards; }
+      animation: 0.8s typing steps(10, start) 2s forwards, 0.5s blinking step-end alternate infinite, 0.2s blinking-end 4.2s linear forwards; }
     .about__greet :nth-child(2) {
       border-right: 5px transparent solid;
-      animation: 1.5s typing 3.5s steps(20, start) forwards, 0.5s blinking-below 3.2s step-end alternate infinite, 0.2s blinking-end 7s linear forwards; }
+      animation: 1.5s typing 4.5s steps(20, start) forwards, 0.5s blinking-below 4.2s step-end alternate infinite, 0.2s blinking-end 8s linear forwards; }
   .about__sub {
     position: absolute;
     grid-column: 4/9;
@@ -545,9 +554,9 @@ p {
       align-self: end;
       transform: translateX(-2rem) rotate3d(0, 0, 0, 0);
       opacity: 0;
-      animation: 2s fade-in linear forwards, .2s coloring 8.5s ease-in forwards, 2.5s totheRight 9.5s ease-in forwards; }
+      animation: 2s fade-in 1s linear forwards, .2s coloring 9.5s ease-in forwards, 2.5s totheRight 10.5s ease-in forwards; }
     .about__me--1 h2 {
-      animation: 2s fade-in linear forwards, .1s fade-out 11.6s linear forwards; }
+      animation: 2s fade-in 1s linear forwards, .1s fade-out 12.6s linear forwards; }
     .about__me--1 :nth-child(2) {
       grid-column: 3/ 8;
       grid-row: 3/ 4; }
@@ -559,7 +568,7 @@ p {
       grid-row: 5/ 6; }
     .about__me--2 {
       opacity: 0;
-      animation: .2s appear 11.87s linear forwards; }
+      animation: .2s appear 12.87s linear forwards; }
       .about__me--2 h1 {
         grid-column: 4/6;
         justify-self: end;
@@ -567,7 +576,7 @@ p {
         width: 100%;
         transform-origin: 0% 0%;
         transform: translateX(5rem) translateY(0) rotateY(85deg) scale(1);
-        animation: 1.5s totheLeft 11.87s ease-in-out forwards, 2s turning 16s ease-in forwards; }
+        animation: 1.5s totheLeft 12.87s ease-in-out forwards, 2s turning 17s ease-in forwards; }
       .about__me--2 h2 {
         width: 30rem;
         margin-left: 200%;
@@ -575,7 +584,7 @@ p {
         height: 5rem;
         overflow: hidden;
         transition: all linear .2s;
-        animation: 1.5s slidingRight 12s ease-in-out forwards, .5s slideDown 17.5s ease-in forwards; }
+        animation: 1.5s slidingRight 13s ease-in-out forwards, .5s slideDown 18.5s ease-in forwards; }
       .about__me--2 :nth-child(2) {
         grid-column: 4/ 7;
         grid-row: 3/ 4;
@@ -590,15 +599,15 @@ p {
         opacity: 0; }
     .about__me--3 {
       opacity: 0;
-      animation: .2s appear 17.5s linear forwards; }
+      animation: .2s appear 18.5s linear forwards; }
       .about__me--3 h1 {
         color: black;
         opacity: 0;
         width: 100%;
         transform-origin: 50% 50%;
         text-align: left;
-        transform: translateX(-5rem) rotate(0);
-        animation: .5s turningIn 17.5s ease-out forwards; }
+        transform: translateX(-5rem) translateY(0) rotate(0);
+        animation: 0.5s turningIn 18.5s ease-out forwards, 1s zoomOut 21s cubic-bezier(0.86, -0.57, 0.45, 0.77) forwards; }
       .about__me--3 h2 {
         opacity: 0;
         justify-self: center;
@@ -612,32 +621,32 @@ p {
         grid-column: 2/3;
         justify-self: end;
         transform: translateY(17%) rotate(20deg);
-        animation: .05s appear 18s linear forwards; }
+        animation: 0.05s appear 19.5s linear forwards, 1s zoomOut 22s cubic-bezier(0.86, -0.57, 0.45, 0.77) forwards; }
       .about__me--3 :nth-child(3) {
         opacity: 0;
         grid-column: 3 /4;
         grid-row: 4/5;
         font-size: 7rem;
-        animation: .05s appear 18.05s linear forwards; }
+        animation: 0.05s appear 19.55s linear forwards, 1s zoomOut 22s cubic-bezier(0.86, -0.57, 0.45, 0.77) forwards; }
       .about__me--3 :nth-child(4) {
         opacity: 0;
         grid-column: 4 /5;
         grid-row: 4/5;
         font-size: 9rem;
-        animation: .05s appear 18.1s linear forwards; }
+        animation: 0.05s appear 19.6s linear forwards, 1s zoomOut 22s cubic-bezier(0.86, -0.57, 0.45, 0.77) forwards; }
       .about__me--3 :nth-child(5) {
         opacity: 0;
         grid-column: 5 /6;
         grid-row: 4/5;
         font-size: 11rem;
-        animation: .05s appear 18.15s linear forwards; }
+        animation: 0.05s appear 19.65s linear forwards, 1s zoomOut 22s cubic-bezier(0.86, -0.57, 0.45, 0.77) forwards; }
       .about__me--3 :nth-child(6) {
         opacity: 0;
         grid-column: 6 /8;
         grid-row: 4/5;
         font-size: 19rem;
         transform: translateX(-10%) rotate(20deg);
-        animation: .05s appear 18.2s linear forwards; }
+        animation: 0.05s appear 19.7s linear forwards, 1s zoomOut 22s cubic-bezier(0.86, -0.57, 0.45, 0.77) forwards; }
   .about__goo {
     z-index: 1800;
     position: relative;
@@ -662,9 +671,9 @@ p {
       width: 60rem;
       height: 50rem;
       border-radius: 62% 38% 65% 35% / 50% 49% 51% 50%;
-      transform: translateX(0) translateY(0) rotate(0) scale(0.1);
+      transform: translateX(0) translateY(0) rotate(0) scale(0.05);
       transition: all linear;
-      animation: 2s blowing .5s ease-in-out forwards, 5s blobbing 1s linear infinite; }
+      animation: 2s blowing 1.5s ease-in-out forwards, 5s blobbing 2s linear infinite; }
     .about__goo--2 {
       grid-column: 9/ -1;
       grid-row: 2/ 10;
@@ -673,7 +682,7 @@ p {
       border-radius: 62% 38% 65% 35% / 50% 49% 51% 50%;
       transform: translateX(0) translateY(0) scale(1) rotate(0);
       opacity: 0;
-      animation: 4s blobbing 1.6s linear infinite, 3s birth 2s ease-in-out forwards; }
+      animation: 4s blobbing 2.6s linear infinite, 3s birth 3s ease-in-out forwards; }
     .about__goo--3 {
       grid-column: 12/ 15;
       grid-row: 10 / 13;
@@ -681,65 +690,28 @@ p {
       opacity: 0;
       width: 30rem;
       height: 30rem;
-      animation: 6s blobbing 1.6s linear infinite, 3s birth2 6s ease-in-out forwards; }
+      animation: 6s blobbing 2.6s linear infinite, 3s birth2 7s ease-in-out forwards; }
     .about__goo--4 {
       width: 20rem;
       height: 20rem;
       top: 100%;
       right: 10%;
       transform: scale(1);
-      animation: 25s floating 10s linear infinite; }
+      animation: 25s floating 11s linear infinite; }
     .about__goo--5 {
       width: 18rem;
       height: 18rem;
       transform: scale(1);
       top: 100%;
       left: 20%;
-      animation: 20s floating2 14s linear infinite; }
+      animation: 20s floating2 15s linear infinite; }
     .about__goo--6 {
       width: 20rem;
       height: 20rem;
       top: 100%;
       left: 10%;
-      animation: 23s floating3 18s linear infinite; }
+      animation: 23s floating3 19s linear infinite; }
 
-@keyframes appear3D {
-  0% {
-    transform: rotate3d(0, 1, 0, 90deg); }
-  15% {
-    transform: rotate3d(0, 0, 0, 0); }
-  75% {
-    transform: rotate3d(0, 0, 0, 0); }
-  100% {
-    transform: rotate3d(0, 1, 0, 90deg); } }
-
-@keyframes opening {
-  0% {
-    transform: scaleX(0); }
-  5% {
-    transform: scaleX(0.05); }
-  7% {
-    transform: scaleX(1); }
-  90% {
-    transform: scaleX(1); }
-  93% {
-    transform: scaleX(0); }
-  100% {
-    transform: scaleX(0); } }
-
-@keyframes opening2 {
-  0% {
-    transform: scaleX(0);
-    opacity: 0; }
-  5% {
-    transform: scaleX(0.05);
-    opacity: 0; }
-  10% {
-    transform: scaleX(1);
-    opacity: 1; }
-  80% {
-    transform: scaleX(1);
-    opacity: 1; }
-  100% {
-    transform: scaleX(0.05);
-    opacity: 1; } }
+.contact {
+  grid-row: 10/12;
+  grid-column: 13/15; }

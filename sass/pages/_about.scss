@@ -115,11 +115,17 @@
         }
         & :nth-child(1){
           border-right: 5px $base-black solid;
-          animation: .8s typing steps(10, start) 1s forwards, .5s blinking  step-end alternate infinite, .2s blinking-end 3.2s linear forwards;
+          animation: .8s typing steps(10, start) 2s forwards, 
+                      .5s blinking  step-end alternate infinite, 
+                      .2s blinking-end 4.2s linear forwards;
+          // animation: .8s typing steps(10, start) 1s forwards, 
+          // .5s blinking  step-end alternate infinite, 
+          // .2s blinking-end 3.2s linear forwards;            
         }
         & :nth-child(2){
           border-right: 5px transparent solid;
-          animation: 1.5s typing 3.5s steps(20, start) forwards, .5s blinking-below 3.2s step-end alternate infinite, .2s blinking-end 7s linear forwards;
+          //animation: 1.5s typing 3.5s steps(20, start) forwards, .5s blinking-below 3.2s step-end alternate infinite, .2s blinking-end 7s linear forwards;
+          animation: 1.5s typing 4.5s steps(20, start) forwards, .5s blinking-below 4.2s step-end alternate infinite, .2s blinking-end 8s linear forwards;  
         }
     }
 
@@ -206,21 +212,19 @@
             z-index: 2300;
             
           }
-
-
         }
         &--1{
          h1 {
-            
             justify-self: end;
             align-self: end;
             transform: translateX(-2rem) rotate3d(0, 0, 0, 0);
             opacity:0;
-            animation: 2s fade-in linear forwards, .2s coloring 8.5s ease-in forwards, 2.5s totheRight 9.5s ease-in forwards;
+            //animation: 2s fade-in linear forwards, .2s coloring 8.5s ease-in forwards, 2.5s totheRight 9.5s ease-in forwards;
+            animation: 2s fade-in 1s linear forwards, .2s coloring 9.5s ease-in forwards, 2.5s totheRight 10.5s ease-in forwards;
           }
           h2 {  
-            animation: 2s fade-in linear forwards, .1s fade-out 11.6s linear forwards;
-            
+            //animation: 2s fade-in linear forwards, .1s fade-out 11.6s linear forwards;
+            animation: 2s fade-in 1s linear forwards, .1s fade-out 12.6s linear forwards;
           }
           & :nth-child(2){
             grid-column: 3/ 8;
@@ -239,7 +243,8 @@
         }   
         &--2{
           opacity: 0;
-          animation:.2s appear 11.87s linear forwards;
+          //animation:.2s appear 11.87s linear forwards;
+          animation:.2s appear 12.87s linear forwards;
       
           h1 {
             grid-column: 4/6;
@@ -249,8 +254,8 @@
             transform-origin: 0% 0%;
             //transform: translateX(0) rotate3d(0, -1, 0, -92deg) scale(1);
             transform: translateX(5rem) translateY(0) rotateY(85deg) scale(1);
-            animation: 1.5s totheLeft 11.87s ease-in-out forwards, 2s turning 16s ease-in forwards;
-            
+            //animation: 1.5s totheLeft 11.87s ease-in-out forwards, 2s turning 16s ease-in forwards;
+            animation: 1.5s totheLeft 12.87s ease-in-out forwards, 2s turning 17s ease-in forwards;
           }
           h2{
             width:30rem;
@@ -260,7 +265,8 @@
             height: 5rem;
             overflow: hidden;
             transition: all linear .2s;
-            animation: 1.5s slidingRight 12s ease-in-out forwards, .5s slideDown 17.5s ease-in forwards;
+            //animation: 1.5s slidingRight 12s ease-in-out forwards, .5s slideDown 17.5s ease-in forwards;
+            animation: 1.5s slidingRight 13s ease-in-out forwards, .5s slideDown 18.5s ease-in forwards;
             // animation: 10s slidingLeft 13s ease-in-out forwards;    
           }
           & :nth-child(2){
@@ -281,16 +287,22 @@
         }
         &--3{
           opacity:0;
-          animation:.2s appear 17.5s linear forwards;
+          //animation:.2s appear 17.5s linear forwards;
+          animation:.2s appear 18.5s linear forwards;
           h1 {
             color: $base-black;
             opacity:0;
             width: 100%;
             transform-origin: 50% 50%;
             text-align: left;
-            transform: translateX(-5rem) rotate(0);
-            animation: .5s turningIn 17.5s ease-out forwards;
-          }
+            transform: translateX(-5rem) translateY(0) rotate(0);
+            animation:.5s turningIn 18.5s ease-out forwards, 
+                      1s zoomOut 21s cubic-bezier(.86, -0.57, .45, .77)  forwards;
+         
+            // animation:.5s turningIn 17.5s ease-out forwards, 
+            //           1s zoomOut 20s cubic-bezier(.86, -0.57, .45, .77)  forwards;
+         
+            }
           h2{
             opacity:0;
             justify-self: center;
@@ -306,29 +318,40 @@
             grid-column: 2/3;
             justify-self: end;
             transform: translateY(17%) rotate(20deg);
-            animation: .05s appear 18s linear forwards;
-           
+            animation: .05s appear 19.5s linear forwards,
+                        1s zoomOut 22s cubic-bezier(.86, -0.57, .45, .77)  forwards;
+                        // animation: .05s appear 18.5s linear forwards,
+                        // 1s zoomOut 21s cubic-bezier(.86, -0.57, .45, .77)  forwards;
           }
           & :nth-child(3){
             opacity:0;
             grid-column: 3 /4;
             grid-row: 4/5;
             font-size: 7rem;
-            animation: .05s appear 18.05s linear forwards;
-          }
+            animation: .05s appear 19.55s linear forwards, 
+                        1s zoomOut 22s cubic-bezier(.86, -0.57, .45, .77)  forwards;
+                        // animation: .05s appear 18.55s linear forwards, 
+                        // 1s zoomOut 21s cubic-bezier(.86, -0.57, .45, .77)  forwards;
+            }
           & :nth-child(4){
             opacity:0;
             grid-column: 4 /5;
             grid-row: 4/5;
             font-size: 9rem;
-            animation: .05s appear 18.1s linear forwards;
+            animation: .05s appear 19.6s linear forwards,
+                        1s zoomOut 22s cubic-bezier(.86, -0.57, .45, .77)  forwards;
+                        // animation: .05s appear 18.6s linear forwards,
+                        // 1s zoomOut 21s cubic-bezier(.86, -0.57, .45, .77)  forwards;
           }
           & :nth-child(5){
             opacity:0;
             grid-column: 5 /6;
             grid-row: 4/5;
             font-size: 11rem;
-            animation: .05s appear 18.15s linear forwards;
+            animation: .05s appear 19.65s linear forwards,
+                        1s zoomOut 22s cubic-bezier(.86, -0.57, .45, .77)  forwards;
+                        // animation: .05s appear 18.65s linear forwards,
+                        // 1s zoomOut 21s cubic-bezier(.86, -0.57, .45, .77)  forwards;
           }
           & :nth-child(6){
             opacity:0;
@@ -336,7 +359,10 @@
             grid-row: 4/5;
             font-size: 19rem;
             transform: translateX(-10%) rotate(20deg);
-            animation: .05s appear 18.2s linear forwards;
+            animation: .05s appear 19.7s linear forwards,
+                        1s zoomOut 22s cubic-bezier(.86, -0.57, .45, .77)  forwards;
+                        // animation: .05s appear 18.7s linear forwards,
+                        // 1s zoomOut 21s cubic-bezier(.86, -0.57, .45, .77)  forwards;
           }
         }
       }
@@ -369,9 +395,10 @@
             border-radius: 62% 38% 65% 35% / 50% 49% 51% 50% ;
             //background-color: $red-light;       
             //position: absolute;
-            transform: translateX(0) translateY(0) rotate(0) scale(.1);
+            transform: translateX(0) translateY(0) rotate(0) scale(.05);
             transition: all linear;
-            animation: 2s blowing .5s ease-in-out forwards, 5s blobbing 1s linear infinite;
+            //animation: 2s blowing .5s ease-in-out forwards, 5s blobbing 1s linear infinite;
+            animation: 2s blowing 1.5s ease-in-out forwards, 5s blobbing 2s linear infinite;
         }
         &--2{
           //position: absolute;
@@ -384,7 +411,8 @@
           transform: translateX(0) translateY(0) scale(1) rotate(0);
           opacity: 0;
           //transition: all linear;
-          animation: 4s blobbing 1.6s linear infinite, 3s birth 2s ease-in-out forwards;
+          //animation: 4s blobbing 1.6s linear infinite, 3s birth 2s ease-in-out forwards;
+          animation: 4s blobbing 2.6s linear infinite, 3s birth 3s ease-in-out forwards;
               
         }
         &--3 {
@@ -394,7 +422,8 @@
           opacity: 0;
           width: 30rem;
           height: 30rem;
-          animation: 6s blobbing 1.6s linear infinite, 3s birth2 6s ease-in-out forwards;
+          //@at-rootanimation: 6s blobbing 1.6s linear infinite, 3s birth2 6s ease-in-out forwards;
+          animation: 6s blobbing 2.6s linear infinite, 3s birth2 7s ease-in-out forwards;
         }
         &--4{
           width: 20rem;
@@ -402,7 +431,8 @@
           top: 100%;
           right: 10%;
           transform: scale(1);
-          animation: 25s floating 10s linear infinite;
+          //animation: 25s floating 10s linear infinite;
+          animation: 25s floating 11s linear infinite;
         }
         &--5{
           width: 18rem;
@@ -410,7 +440,8 @@
           transform: scale(1);
           top: 100%;
           left: 20%;
-          animation: 20s floating2 14s linear infinite;
+          //animation: 20s floating2 14s linear infinite;
+          animation: 20s floating2 15s linear infinite;
         }
 
         &--6{
@@ -418,73 +449,10 @@
           height: 20rem;
           top: 100%;
           left: 10%;
-          animation: 23s floating3 18s linear infinite;
+          //animation: 23s floating3 18s linear infinite;
+          animation: 23s floating3 19s linear infinite;
         }
     }
     
 }
 
-@keyframes appear3D {
-  0%{
-    transform: rotate3d(0, 1, 0, 90deg);
-  }
-  15%{
-    transform: rotate3d(0,0,0,0);
-  }
-  75%{
-    transform: rotate3d(0,0,0,0);
-  }
-  100%{
-    transform: rotate3d(0,1,0, 90deg);
-  }
-}
-
-
-
-@keyframes opening {
-  0%{
-    transform: scaleX(0);
-    
-  }
-  5%{
-    transform: scaleX(.05);
-    
-  }
-  7%{
-    transform: scaleX(1);
-   
-  }
-  90% {
-    transform: scaleX(1);
-    
-  }
-  93% {
-    transform: scaleX(0);
-  }  
-  100% {
-    transform: scaleX(0);
-    
-  }
-}
-@keyframes opening2 {
-  0%{
-    transform: scaleX(0);
-    opacity:0;
-  }
-  5%{
-    transform: scaleX(.05);
-    opacity:0;
-  }
-  10%{
-    transform: scaleX(1);
-    opacity:1;
-  }
-  80% {
-    transform: scaleX(1);
-    opacity:1;
-  }
-  100% {
-    transform: scaleX(.05);
-    opacity:1;
-  }
-}

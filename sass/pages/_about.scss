@@ -2,7 +2,7 @@
     position: relative;
     z-index: 2000;
     
-    grid-row: 4/ 12;
+    grid-row: 3/ 14;
     grid-column: 2/-1;
     width: 100%;
     height: 100%;
@@ -377,6 +377,7 @@
         filter: blur(20px) contrast(70);
         display: grid;
         @include base-template;
+        
 
         & > * {
           background-color: $red-light;
@@ -403,7 +404,7 @@
         &--2{
           //position: absolute;
           grid-column: 9/ -1;
-          grid-row: 2/ 10;
+          grid-row: 3/ 10;
           //background-color: $red-light;
           width: 55rem;
           height: 45rem;
@@ -417,7 +418,7 @@
         }
         &--3 {
           grid-column: 12/ 15;
-          grid-row: 10 / 13;
+          grid-row: 9 / 13;
           transform: translateX(-250%) translateY(60%) scale(.3) rotate(0);
           opacity: 0;
           width: 30rem;
@@ -426,8 +427,8 @@
           animation: 6s blobbing 2.6s linear infinite, 3s birth2 7s ease-in-out forwards;
         }
         &--4{
-          width: 20rem;
-          height: 20rem;
+          width: 21rem;
+          height: 21rem;
           top: 100%;
           right: 10%;
           transform: scale(1);

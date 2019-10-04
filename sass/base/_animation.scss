@@ -5,7 +5,7 @@
    
       border-radius: 62% 38% 65% 35% / 50% 49% 51% 50% ;
       //transform: translate3d(0,0,0) translateX(0) rotateZ(0.01deg) ;
-      transform: translateY(0) translateX(0) scale(.1);
+      transform: translateY(0) translateX(-2rem) scale(.1);
     }
     
   20%{
@@ -167,9 +167,9 @@
     }
     
     100% {
-      transform: scale(.8);
+      transform: scale(1);
       top: 110%;
-      right: 10%;
+      right: 7%;
     }
   }
   @keyframes floating2{
@@ -383,7 +383,17 @@
     margin-top: 100%;
  }
  }
+ @keyframes slideUp {
+  0%{
+    opacity: 1;
+    margin-top: 150%;
+  }
 
+  100%{
+    opacity: 1;
+    margin-top: 0;
+}
+}
  @keyframes turning{
    0%{
      color: $base-black;

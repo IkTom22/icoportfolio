@@ -14,9 +14,7 @@
     &__menu{
       grid-column: 1 / 3;
       grid-row: 8 / 10;
-      // grid-column: 10 / 13;
-      // grid-row: 8 / 10;
-      //color: $base-black;
+
       color: $base-white;
       height: 8rem;
       width: 8rem;
@@ -42,7 +40,7 @@
           height: .5rem;
           width:6rem;
           //@at-rootbackground-color: $base-black;
-          background-color: $base-white;
+          // background-color: $base-white;
           border-radius: 1rem;
           text-align: center;
         }
@@ -118,9 +116,7 @@
           animation: .8s typing steps(10, start) 2s forwards, 
                       .5s blinking  step-end alternate infinite, 
                       .2s blinking-end 4.2s linear forwards;
-          // animation: .8s typing steps(10, start) 1s forwards, 
-          // .5s blinking  step-end alternate infinite, 
-          // .2s blinking-end 3.2s linear forwards;            
+        
         }
         & :nth-child(2){
           border-right: 5px transparent solid;
@@ -391,7 +387,7 @@
           //grid-column: 3/9;
           grid-column: 2/8;
           grid-row: 7/14;
-            width: 60rem;
+            width: 58rem;
             height: 50rem;
             border-radius: 62% 38% 65% 35% / 50% 49% 51% 50% ;
             //background-color: $red-light;       

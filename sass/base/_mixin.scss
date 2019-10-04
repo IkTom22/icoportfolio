@@ -9,38 +9,73 @@
 }
 
 @mixin menubox {
-      color: $base-white;
-      height: 8rem;
-      width: 8rem;
+      // color: $base-white;
+      // height: 8rem;
+      // width: 8rem;
       text-align: center;
     //   transform: translateX(-4rem);
       font-size: 2rem;
       font-weight: 400;
       display: grid;
-      grid-template-columns: repeat(2, auto);
+      // grid-template-columns: repeat(2, auto);
       grid-template-rows: repeat(2, auto);
       @include centering;
       position: relative;
       z-index: 2800;
 
       &--top{
-        grid-column: 1/2;
+        // grid-column: 1/2;
         grid-row: 1/2;
         
         &::after{
           content: "";
           display: block;
-          height: .5rem;
-          width:6rem;
+          height: .3rem;
+          width: 6rem;
           //@at-rootbackground-color: $base-black;
-          background-color: $base-white;
+          // background-color: $base-white;
           border-radius: 1rem;
           text-align: center;
+          margin: 0 auto;
         }
       }
 
       &--bottom{
-        grid-column: 1/2;
+        // grid-column: 1/2;
         grid-row: 2/3;
       }
+
+      // &--lines {
+      //   position: absolute;
+        
+      //   height: 3px;
+      //   width: 2rem;
+      //   // background-color: $base-black;
+      //   top: 10%;
+      //   right: -30%;
+      //   transform: rotate(-18deg) translateX(-100%);
+      //   border-radius: 5rem;
+      //   transition: all linear;
+      //   opacity: 0;
+      //   animation: shouting .5s ease-in .5s 2 forwards;
+      //   &::before,
+      //   &::after {
+      //     content: "";
+      //     display: block;
+      //     background-color: inherit;
+      //     width: inherit;
+      //     height: inherit;
+      //     border-radius: inherit;
+      //   }
+      //   &::before {
+          
+      //     transform: translateY(-350%) rotate(-28deg);
+      //   }
+
+      //   &::after {
+          
+      //     transform: translateY(300%) rotate(28deg);
+          
+      //   }
+      // }
 }

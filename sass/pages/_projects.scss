@@ -16,10 +16,17 @@
         grid-column: 1 /-1;
         grid-row: 1/-1;
         
-       width: 8rem;
+       width: 10rem;
        height: 8rem;
+
         @include menubox;
+        
         font-size: 2.5rem;
+
+        &:hover {
+            transition: all .2s linear;
+            transform: scaleY(1.1);
+        }
         &--top,
         &--bottom {
             position: absolute;
@@ -42,20 +49,29 @@
 
     }
     &__icon {
+
         position: absolute;
+        grid-row: 1/-1;
+        grid-column: 1/-1;
         z-index: 2500;
         fill: $base-black;
-        width: 30rem;
-        height: 30rem;
-        transform-origin: center;
-        transform: scale(2) rotate3d(1, 0, 0, 90deg);
-        animation: .3s openingEye 23.5s ease-in forwards;
+        transition: all .2s linear;
         
-        &:hover {
-            cursor: pointer;
-            transform: scale(2) rotate3d(1, 0, 0, 45deg);
+
+        &--eye{
+            width: 15rem;
+            height: 15rem;
+            transform-origin: center;
+            transform: scale(2.5) rotate3d(1, 0, 0, 90deg);
+            animation: .3s openingEye 23.5s ease-in forwards;
+            // &:hover {
+            //     transition: all .2s linear;
+            //     transform: scaleY(1.1);
+            // }
         }
-    
+        
+ 
     }
+
 
 }

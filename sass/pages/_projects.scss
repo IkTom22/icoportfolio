@@ -1,0 +1,61 @@
+.projects{
+    grid-row: 6/9;
+    grid-column: 9/16;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(7, minmax(8.22rem, auto));
+    grid-template-rows: repeat(3, minmax(7.46rem, auto));
+    @include centering;
+    align-content: center;
+    justify-content: center;
+    
+    
+    &__menu{
+        grid-column: 1 /-1;
+        grid-row: 1/-1;
+        
+       width: 8rem;
+       height: 8rem;
+        @include menubox;
+        font-size: 2.5rem;
+        &--top,
+        &--bottom {
+            position: absolute;
+            z-index: 2600;
+            color: $base-white;
+            transform: rotate3d(1, 0, 0, 90deg);
+            animation: .3s insideEye 23.5s ease-in forwards;
+            
+        }
+        &--top{
+            align-self: end;
+            &::after{
+                background-color: $red-cube;
+            }
+        }
+        &--bottom{
+            align-self: start;
+        }
+        
+
+    }
+    &__icon {
+        position: absolute;
+        z-index: 2500;
+        fill: $base-black;
+        width: 30rem;
+        height: 30rem;
+        transform-origin: center;
+        transform: scale(2) rotate3d(1, 0, 0, 90deg);
+        animation: .3s openingEye 23.5s ease-in forwards;
+        
+        &:hover {
+            cursor: pointer;
+            transform: scale(2) rotate3d(1, 0, 0, 45deg);
+        }
+    
+    }
+
+}

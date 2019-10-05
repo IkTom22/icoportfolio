@@ -445,3 +445,14 @@
      transform: translateX(1100%) translateY(-15%) rotate(20deg) scale(1.5);
    }
  }
+ // eye animaton
+ @keyframes openingEye {
+   0%{ transform: scale(2) rotate3d(1, 0, 0, 90deg);}
+   100%{ transform: scale(2) rotate3d(0, 0, 0, 0);}
+ }
+
+ @keyframes insideEye {
+  0%{ transform: rotate3d(1, 0, 0, 90deg);}
+  100%{ transform: rotate3d(0, 0, 0, 0);}
+}
+

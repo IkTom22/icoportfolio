@@ -10,28 +10,42 @@
     @include centering;
     align-content: center;
     justify-content: center;
-    
-    
+    // @include hoverEffect2;
+    &:hover{
+        cursor: pointer;
+      }
+      &:hover &__menu{
+        animation: .2s spinning .2s ease-in forwards;
+        // &--top, 
+        // &--bottom{
+        //   color: $red-cube;
+        // }
+      }
+      &:hover &__icon {
+        transition: 0.2s all ease-in;
+        //fill: $base-white;
+        fill: $bage-yellow;
+        
+      }
     &__menu{
         grid-column: 1 /-1;
         grid-row: 1/-1;
         
        width: 10rem;
-       height: 8rem;
+       height: 10rem;
 
         @include menubox;
         
         font-size: 2.5rem;
-
-        &:hover {
-            transition: all .2s linear;
-            transform: scaleY(1.1);
-        }
+        transition: .2s all .2s linear;
+        
+        color: $base-white;
         &--top,
         &--bottom {
             position: absolute;
             z-index: 2600;
-            color: $base-white;
+            color: inherit;
+            transition: .2s all  linear backwards;
             transform: rotate3d(1, 0, 0, 90deg);
             animation: .3s insideEye 23.5s ease-in forwards;
             
@@ -64,10 +78,7 @@
             transform-origin: center;
             transform: scale(2.5) rotate3d(1, 0, 0, 90deg);
             animation: .3s openingEye 23.5s ease-in forwards;
-            // &:hover {
-            //     transition: all .2s linear;
-            //     transform: scaleY(1.1);
-            // }
+
         }
         
  

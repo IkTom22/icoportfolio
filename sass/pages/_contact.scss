@@ -15,6 +15,8 @@
         z-index: 2500;
         display: grid;
         margin-top: 150%;
+        // transform-style: preserve-3d;
+        // perspective: 60rem;
         grid-template-columns: repeat(4, minmax(4.25rem, auto));
         grid-template-rows: repeat(4, minmax(3.6rem,auto));
         animation: .3s slideUp 10s ease-in forwards;
@@ -24,49 +26,122 @@
     
     
     &__menu {
-        position: absolute;
+        position: relative;
        
         @include menubox;
-        height: 100%;
-        width: 100%;
+        height: 8.5rem;
+        width: 8.5rem;
+        
         color: $base-white;
         grid-row: 1/3;
-        grid-column: 3/5;
+        grid-column: 2/5;
+        transform-style: preserve-3d;
+        perspective: 10rem;
         // opacity: 0;
+        //@include hoverEffect;
+        transform: rotateX(-1rem);
+        transition: .5s all ease;
+        &--card{
+            position: absolute;
+            z-index: 2700;
+            height: 8.5rem;
+            width:  8.5rem;
+            backface-visibility: hidden;
+            overflow: hidden; 
+            transition: .5s all ease;
+            top:0;
+            left:0;
+            border-radius: 50%;
+
+            &-front{
+                @include menubox;
+                opacity: 1;
+               // z-index: 2600;
+                // height: 8.5rem;
+                // width:8.5rem;
+                
+                grid-column: 1/-1;
+                grid-row: 1/-1;
+                // z-index: 2900;
+                background-color: $base-black;
+                // transform: rotate(0 scale(1));
+
+               
+            }
+
+            &-back{
+                // position: absolute;
+                // height: 8.5rem;
+                // width:  8.5rem;
+                border-radius: 50%;
+                // grid-column: 1/-1;
+                // grid-row: 1/-1;
+                // z-index: 2800;
+                background-color: $base-white;
+                transform: rotateY(-180deg);
+                &--icon{
+                    fill: $red-cube;
+                    height: 8.5rem;
+    width: 8.5rem;
+
+
+                }
+           }            
+
+        }
+       &:hover &--card-back{
+           transform: rotateY(360deg);
+        //    z-index:2900;
+       } 
+       &:hover &--card-front{
+        //    background-color: $base-white;
+        //    color:$base-black;
+            transform: rotateY(540deg);
+            //z-index:2800;
+       }
+       
+        
         &--top,
         &--bottom{
             z-index: 2600;
         }
         &--top{
+            padding-top: 1rem;
             &::after{
                 background-color: $red-cube;
             }
         }
-        &:hover{
-            cursor: pointer;
-
-        }
         
+        // &--icon{
+        //     position: absolute;
+        //     z-index: 2500;
+        //     grid-row: 1/-1;
+        //     grid-column: 1/-1;
+        //     width: 14rem;
+        //     height: 14rem;
+        //     transform: translateY(10%) rotate(15deg);
+        //     fill: $base-black;
+        // }
     }
     &__icon {
         fill: $base-black;
         
-        &--1{
-            position: absolute;
-            z-index: 2500;
-            grid-row: 1/-1;
-            grid-column: 1/-1;
-            width: 12rem;
-            height: 12rem;
-            //transform: rotate(10deg);
+        // &--1{
+        //     position: absolute;
+        //     z-index: 2500;
+        //     grid-row: 1/-1;
+        //     grid-column: 1/-1;
+        //     width: 13rem;
+        //     height: 13rem;
+        //     transform: rotate(15deg);
             
-        }
+        // }
         &--2{
             grid-row: 3/5;
             grid-column: 1/2;
             width: 10rem;
             height: 10rem;
-            transform: translateY(4rem) scale(2);
+            transform: scale(.5) translateX(-1.5rem);
         }
         
     }

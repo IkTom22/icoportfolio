@@ -21,7 +21,6 @@
       z-index: 2800;
 
       &--top{
-        // grid-column: 1/2;
         grid-row: 1/2;
         
         &::after{
@@ -37,7 +36,6 @@
       }
 
       &--bottom{
-        // grid-column: 1/2;
         grid-row: 2/3;
       }
 
@@ -74,4 +72,47 @@
           
       //   }
       // }
+}
+
+@mixin hoverEffect{
+  &:hover{
+    cursor: pointer;
+  }
+  &:hover &--content{
+    animation: .2s spinning .2s ease-in forwards;
+  }
+  &:hover &--icon {
+    transition: 0.2s all ease-in;
+    //fill: $base-white;
+    fill: $bage-yellow;
+  }
+}
+@mixin hoverEffect2{
+  &:hover{
+    cursor: pointer;
+  }
+  &:hover &__menu{
+    animation: .2s spinning .2s ease-in forwards;
+    &--top, 
+    &--bottom{
+      transition: .2s all .2s linear;
+      color: $red-cube;
+    }
+  }
+  &:hover &__icon {
+    transition: 0.2s all ease-in;
+    //fill: $base-white;
+    //fill: $bage-yellow;
+    fill: $light-blue;
+  }
+
+ 
+}
+
+@mixin hoverEffectIcon{
+
+    transition: 0.2s all ease-in;
+    //fill: $base-white;
+    fill: $bage-yellow;
+ 
 }

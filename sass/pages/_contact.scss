@@ -56,42 +56,28 @@
             &-front{
                 @include menubox;
                 opacity: 1;
-               // z-index: 2600;
-                // height: 8.5rem;
-                // width:8.5rem;
-                
                 grid-column: 1/-1;
                 grid-row: 1/-1;
-                // z-index: 2900;
-                background-color: $base-black;
-                // transform: rotate(0 scale(1));
 
-               
+                background-color: $base-black;
             }
 
             &-back{
-                // position: absolute;
-                // height: 8.5rem;
-                // width:  8.5rem;
                 border-radius: 50%;
-                // grid-column: 1/-1;
-                // grid-row: 1/-1;
-                // z-index: 2800;
-                background-color: $base-white;
+                background-color: $base-black;
+                border: 2px $base-white solid;
                 transform: rotateY(-180deg);
                 &--icon{
                     fill: $red-cube;
-                    height: 8.5rem;
-    width: 8.5rem;
-
-
+                    height: 5rem;
+                    width: 5rem;
                 }
            }            
 
         }
        &:hover &--card-back{
-           transform: rotateY(360deg);
-        //    z-index:2900;
+            transform: rotateY(360deg);
+
        } 
        &:hover &--card-front{
         //    background-color: $base-white;

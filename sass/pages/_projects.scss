@@ -11,59 +11,50 @@
     align-content: center;
     justify-content: center;
     // @include hoverEffect2;
-    &:hover{
-        cursor: pointer;
-      }
-      &:hover &__menu{
-        animation: .2s spinning .2s ease-in forwards;
-        // &--top, 
-        // &--bottom{
-        //   color: $red-cube;
-        // }
-      }
-      &:hover &__icon {
-        transition: 0.2s all ease-in;
-        //fill: $base-white;
-        fill: $bage-yellow;
-        
-      }
+    &__checkbox{
+        display: none;
+    }
+       
     &__menu{
-        grid-column: 1 /-1;
-        grid-row: 1/-1;
         
-       width: 10rem;
-       height: 10rem;
-
+        grid-column: 4 / 5;
+        grid-row: 2/3;
+        cursor: pointer;
+        opacity:0;
         @include menubox;
-        
+        height: 10rem;
+        width: 10rem;
         font-size: 2.5rem;
-        transition: .2s all .2s linear;
-        
+        background-color: $base-black;
+        border-radius: 50%;
         color: $base-white;
+        transition: all .2s ease;
+        animation: .3s appear 23.5s ease-in forwards;
+        z-index: 3000;
+
         &--top,
         &--bottom {
-            position: absolute;
-            z-index: 2600;
-            color: inherit;
-            transition: .2s all  linear backwards;
-            transform: rotate3d(1, 0, 0, 90deg);
-            animation: .3s insideEye 23.5s ease-in forwards;
-            
+                position: absolute;
+                z-index: 2600;
+                color: inherit;
+                transition: .2s all  linear backwards;
+                transform: rotate3d(1, 0, 0, 90deg);
+                color: $base-white;
+                animation: .3s insideEye 23.5s ease-in forwards;
+                
         }
         &--top{
-            align-self: end;
-            &::after{
-                background-color: $red-cube;
+                align-self: end;
+                &::after{
+                    background-color: $red-cube;
             }
         }
         &--bottom{
-            align-self: start;
+                align-self: start;
         }
-        
-
+            
     }
-    &__icon {
-
+    &__icon{
         position: absolute;
         grid-row: 1/-1;
         grid-column: 1/-1;
@@ -79,10 +70,130 @@
             transform: scale(2.5) rotate3d(1, 0, 0, 90deg);
             animation: .3s openingEye 23.5s ease-in forwards;
 
+        }       
+    }
+
+    &__background {
+        position: absolute;
+        z-index:2900;
+        opacity: 0;
+        height: 6.5rem;
+        width: 6.5rem;
+        border-radius: 50%;
+        background-color: orange;
+        background-image: radial-gradient($orange-light, orange, $orange-red);
+        
+        transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+        animation: .3s appear 24s ease-in forwards;
+    }
+
+    &__nav{
+        height: 100vh;
+        
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 2800;
+        opacity: 0;
+        width: 0;
+        transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    &__list {
+        &__list {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+            list-style: none;
+            text-transform: uppercase;
+            text-align: center;
+            width: 100%;
+    
         }
+    }
+
+    &:hover{
+        cursor: pointer;
+      }
+      &:hover &__menu{
+          border: 5px  $base-white solid ;
+          transform: scale(1.1);
+        //animation: .2s spinning .2s ease-in forwards;
+        // &--top, 
+        // &--bottom{
+        //   color: $red-cube;
+        // }
+      }
+      
+      //FUNCTIONARITY 
+      &__checkbox:checked ~ &__background {
+        transform: scale(80);
+        
+      }
+      &__checkbox:checked ~ &__nav {
+        opacity: 1;
+        width: 100%;
+    }
+   
+
+
+    // &__menu{
+    //     grid-column: 1 /-1;
+    //     grid-row: 1/-1;
+        
+    //    width: 10rem;
+    //    height: 10rem;
+
+    //     @include menubox;
+        
+    //     font-size: 2.5rem;
+    //     transition: .2s all .2s linear;
+        
+    //     color: $base-white;
+    //     &--top,
+    //     &--bottom {
+    //         position: absolute;
+    //         z-index: 2600;
+    //         color: inherit;
+    //         transition: .2s all  linear backwards;
+    //         transform: rotate3d(1, 0, 0, 90deg);
+    //         animation: .3s insideEye 23.5s ease-in forwards;
+            
+    //     }
+    //     &--top{
+    //         align-self: end;
+    //         &::after{
+    //             background-color: $red-cube;
+    //         }
+    //     }
+    //     &--bottom{
+    //         align-self: start;
+    //     }
+        
+
+    // }
+    // &__icon {
+
+    //     position: absolute;
+    //     grid-row: 1/-1;
+    //     grid-column: 1/-1;
+    //     z-index: 2500;
+    //     fill: $base-black;
+    //     transition: all .2s linear;
+        
+
+    //     &--eye{
+    //         width: 15rem;
+    //         height: 15rem;
+    //         transform-origin: center;
+    //         transform: scale(2.5) rotate3d(1, 0, 0, 90deg);
+    //         animation: .3s openingEye 23.5s ease-in forwards;
+
+    //     }
         
  
-    }
+    // }
 
 
 }

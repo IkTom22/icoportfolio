@@ -5,6 +5,9 @@
     @include base-template;
     // width: 100%;
     // height: 150%;
+    &__checkbox{
+        display: none;
+    }
     
     &__small{
         grid-row: 10/12;
@@ -27,20 +30,19 @@
     
     &__menu {
         position: relative;
-       
+        cursor: pointer;
         @include menubox;
         height: 8.5rem;
         width: 8.5rem;
-        
+        background-color: $base-black;
         color: $base-white;
         grid-row: 1/3;
-        grid-column: 2/5;
-        transform-style: preserve-3d;
-        perspective: 10rem;
-        // opacity: 0;
-        //@include hoverEffect;
-        transform: rotateX(-1rem);
-        transition: .5s all ease;
+        grid-column: 1/3;
+        border-radius: 50%;
+        z-index: 2800;
+        transform-origin: center;
+        transition: .2s all ease;
+
         &--card{
             position: absolute;
             z-index: 2700;
@@ -52,39 +54,53 @@
             top:0;
             left:0;
             border-radius: 50%;
-
-            &-front{
-                @include menubox;
-                opacity: 1;
-                grid-column: 1/-1;
+            @include menubox;
+            grid-column: 1/-1;
                 grid-row: 1/-1;
-
-                background-color: $base-black;
+                 background-color: $base-black;
+        }
+            &--front{
+               // @include menubox;
+                opacity: 1;
+                
+                
+                opacity: 1;
+                transform: scale(1) rotate(0);
+                //background-color: $base-black;
             }
 
-            &-back{
-                border-radius: 50%;
-                background-color: $base-black;
-                border: 2px $base-white solid;
-                transform: rotateY(-180deg);
-                &--icon{
-                    fill: $red-cube;
-                    height: 5rem;
-                    width: 5rem;
-                }
+            &--back{
+                opacity:0;
+                transform: scale(0) rotate(-720deg);
+               // @include menubox;
+                // background-color: $base-black;
+                // border: 2px $base-white solid;
+                // transform: rotateY(-180deg);
+                // &--icon{
+                //     fill: $red-cube;
+                //     height: 5rem;
+                //     width: 5rem;
+                // }
            }            
 
-        }
-       &:hover &--card-back{
-            transform: rotateY(360deg);
+        
+        
+        &:hover {
+            border: 5px  $base-white solid;
+            transform-origin: center;
+            transform: scale(1.05) translate(-3px, -9px);
 
-       } 
-       &:hover &--card-front{
-        //    background-color: $base-white;
-        //    color:$base-black;
-            transform: rotateY(540deg);
-            //z-index:2800;
-       }
+        }
+    //    &:hover &--card-back{
+    //         transform: rotateY(360deg);
+
+    //    } 
+    //    &:hover &--card-front{
+    //     //    background-color: $base-white;
+    //     //    color:$base-black;
+    //         transform: rotateY(540deg);
+    //         //z-index:2800;
+    //    }
        
         
         &--top,
@@ -92,12 +108,28 @@
             z-index: 2600;
         }
         &--top{
-            padding-top: 1rem;
+            padding-top: 2rem;
             &::after{
                 background-color: $red-cube;
             }
         }
-        
+        &--bottom{
+            padding-bottom: 1rem;
+        }
+        &--back {
+            z-index: 2700;
+            opacity:0;
+            position: absolute;
+            grid-row: 1/2;
+            color: $base-white;
+            
+        }
+        // &--arrow {
+        //     z-index: 2700;
+        //     position: absolute;
+        //     opacity:0;
+        //     grid-row: 2/3;
+        // }
         // &--icon{
         //     position: absolute;
         //     z-index: 2500;
@@ -109,6 +141,49 @@
         //     fill: $base-black;
         // }
     }
+    &__background {
+        @include background-bubble;
+        z-index: 2780;
+        background-color: $blue-light;
+        transform: translate(10px, 10px);
+        background-image: radial-gradient(rgba($blue-light, .9), rgba($blue-mid, .9), rgba($blue, .9));
+        transition: all .3s ease-in .5s;
+        animation: .3s appear 10.5s ease-in forwards;
+    }
+
+@include checked;
+
+// &__checkbox:checked + &__menu &__menu--bottom{
+        
+//     opacity:0; 
+// }  
+// &__checkbox:checked + &__menu &__menu--back{
+        
+//     opacity:1;
+
+// }  
+// &__checkbox:checked + &__menu &__menu--arrow{
+    
+// opacity:1; 
+// }
+//     &__checkbox:checked + &__menu &__menu--top{
+            
+//             opacity:0;  
+//     }  
+
+//     &__checkbox:checked + &__menu &__menu--bottom{
+            
+//         opacity:0; 
+//     }  
+//     &__checkbox:checked + &__menu &__menu--back{
+            
+//         opacity:1;
+    
+// }  
+// &__checkbox:checked + &__menu &__menu--arrow{
+        
+//     opacity:1; 
+// } 
     &__icon {
         fill: $base-black;
         

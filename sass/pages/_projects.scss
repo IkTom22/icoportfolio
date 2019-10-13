@@ -74,16 +74,11 @@
     }
 
     &__background {
-        position: absolute;
+        @include background-bubble;
         z-index:2900;
-        opacity: 0;
-        height: 6.5rem;
-        width: 6.5rem;
-        border-radius: 50%;
-        background-color: orange;
-        background-image: radial-gradient($orange-light, orange, $orange-red);
-        
-        transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+        background-color: $orange;
+        background-image: radial-gradient($orange-light, $orange, $orange-red);
+
         animation: .3s appear 24s ease-in forwards;
     }
 
@@ -118,7 +113,9 @@
       }
       &:hover &__menu{
           border: 5px  $base-white solid ;
-          transform: scale(1.1);
+          height: 10.5rem;
+        width: 10.5rem;
+        font-size: 2.6rem;
         //animation: .2s spinning .2s ease-in forwards;
         // &--top, 
         // &--bottom{

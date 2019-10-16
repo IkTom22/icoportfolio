@@ -46,6 +46,11 @@ h3 {
   font-weight: 400;
   font-family: "Josefin Sans", sans-serif; }
 
+h4 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  font-family: "Josefin Sans", sans-serif; }
+
 p {
   font-size: 2rem;
   font-family: "Josefin Sans", sans-serif; }
@@ -289,6 +294,12 @@ p {
   100% {
     opacity: 1; } }
 
+@keyframes blackBackground {
+  0% {
+    background-color: transparent; }
+  100% {
+    background-color: black; } }
+
 @keyframes slidingRight {
   0% {
     margin-left: 200%;
@@ -367,21 +378,33 @@ p {
   100% {
     transform: rotate3d(0, 0, 0, 0); } }
 
-@keyframes spinningOut {
+@keyframes shikaku {
   0% {
-    opacity: 1;
-    transform: scale(1) rotate(0); }
+    border-radius: 50%; }
   100% {
-    opacity: 0;
-    transform: scale(0) rotate(720deg); } }
+    border-radius: 2.8rem; } }
 
-@keyframes spinningIn {
+@keyframes maru {
+  0% {
+    border-radius: 2.8rem; }
+  100% {
+    border-radius: 50%; } }
+
+@keyframes zoomingIn {
   0% {
     opacity: 0;
-    transform: scale(0) rotate(-720deg); }
+    transform: scale(0); }
   100% {
     opacity: 1;
-    transform: scale(1) rotate(0); } }
+    transform: scale(1); } }
+
+@keyframes zoomingOut {
+  0% {
+    opacity: 1;
+    transform: scale(1); }
+  100% {
+    opacity: 0;
+    transform: scale(0); } }
 
 .wrapper {
   display: grid;
@@ -781,11 +804,11 @@ p {
     height: 10rem;
     width: 10rem;
     font-size: 2.5rem;
-    background-color: black;
+    background-color: transparent;
     border-radius: 50%;
     color: #fffef8;
     transition: all .2s ease;
-    animation: .3s appear 23.5s ease-in forwards;
+    animation: .3s appear 23.5s ease-in forwards, .3s blackBackground 23.5s ease-in forwards;
     z-index: 3000; }
     .projects__menu--top {
       grid-row: 1/2; }
@@ -832,7 +855,7 @@ p {
     height: 6.5rem;
     width: 6.5rem;
     border-radius: 50%;
-    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1);
     z-index: 2900;
     background-color: #ffa500;
     background-image: radial-gradient(#f5af19, #ffa500, #ff3c00);
@@ -875,7 +898,8 @@ p {
   display: grid;
   grid-template-columns: minmax(2rem, 5rem) 2rem repeat(12, minmax(6.25rem, 1fr)) 2rem minmax(2rem, 5rem);
   grid-template-rows: minmax(2rem, 5rem) 2rem repeat(10, minmax(4rem, 1fr)) 2rem minmax(2rem, 5rem);
-  gap: 1.5rem; }
+  gap: 1.5rem;
+  position: relative; }
   .contact__checkbox {
     display: none; }
   .contact__small {
@@ -891,7 +915,7 @@ p {
     grid-template-rows: repeat(4, minmax(3.6rem, auto));
     animation: .3s slideUp 10s ease-in forwards; }
   .contact__menu {
-    position: relative;
+    position: absolute;
     cursor: pointer;
     text-align: center;
     font-size: 2rem;
@@ -910,6 +934,8 @@ p {
     grid-column: 1/3;
     border-radius: 50%;
     z-index: 2800;
+    transform-style: preserve-3d;
+    perspective: 60rem;
     transform-origin: center;
     transition: .2s all ease; }
     .contact__menu--top {
@@ -959,23 +985,22 @@ p {
           margin: 0 auto; }
       .contact__menu--card--bottom {
         grid-row: 2/3; }
-    .contact__menu--front {
-      opacity: 1;
-      opacity: 1;
-      transform: scale(1) rotate(0); }
-    .contact__menu--back {
-      opacity: 0;
-      transform: scale(0) rotate(-720deg); }
     .contact__menu:hover {
       border: 5px #fffef8 solid;
       transform-origin: center;
-      transform: scale(1.05) translate(-3px, -9px); }
+      transform: scale(1) translate(-2px, -7px); }
+    .contact__menu:hover .contact__menu--bottom-icon {
+      fill: #ff0000; }
     .contact__menu--top, .contact__menu--bottom {
       z-index: 2600; }
     .contact__menu--top {
       padding-top: 2rem; }
       .contact__menu--top::after {
         background-color: #ff0000; }
+    .contact__menu--front {
+      opacity: 1;
+      border-radius: 50%;
+      transform: scale(1); }
     .contact__menu--bottom {
       padding-bottom: 1rem; }
     .contact__menu--back {
@@ -983,39 +1008,113 @@ p {
       opacity: 0;
       position: absolute;
       grid-row: 1/2;
-      color: #fffef8; }
+      color: #fffef8;
+      border-radius: 50%;
+      opacity: 0;
+      transform: scale(0); }
+    .contact__menu--bottom-icon {
+      height: 3rem;
+      width: 4rem;
+      fill: white; }
   .contact__background {
     position: absolute;
     opacity: 0;
     height: 6.5rem;
     width: 6.5rem;
     border-radius: 50%;
-    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1);
     z-index: 2780;
     background-color: #48cafd;
     transform: translate(10px, 10px);
     background-image: radial-gradient(rgba(72, 202, 253, 0.9), rgba(6, 182, 251, 0.9), rgba(0, 3, 214, 0.9));
     transition: all .3s ease-in .5s;
     animation: .3s appear 10.5s ease-in forwards; }
+  .contact__content {
+    grid-column: 1 /13;
+    grid-row: 1/-1;
+    position: fixed;
+    display: grid;
+    grid-template-columns: minmax(2rem, 5rem) 2rem repeat(12, minmax(6.25rem, 1fr)) 2rem minmax(2rem, 5rem);
+    grid-template-rows: minmax(2rem, 5rem) 2rem repeat(10, minmax(4rem, 1fr)) 2rem minmax(2rem, 5rem);
+    gap: 1.5rem;
+    justify-items: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 3500;
+    width: 100%;
+    height: 100%;
+    transition: all .3s ease-in .7s;
+    opacity: 0; }
+    .contact__content--details {
+      grid-column: 4/10;
+      grid-row: 5/10;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
+      grid-template-rows: repeat(auto-fill, minmax(5rem, 1fr));
+      justify-items: center;
+      align-items: center;
+      align-content: center;
+      border-radius: 62% 38% 65% 35% / 50% 49% 51% 50%;
+      background-color: #faeeb8; }
+    .contact__content--details > * {
+      position: absolute;
+      color: #fffef8; }
+    .contact__content--message {
+      grid-column: 10/16;
+      grid-row: 8/12;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      border-radius: 62% 38% 65% 35% / 50% 49% 51% 50%;
+      background-color: black; }
+    .contact__content--speech {
+      grid-column: 2 /9;
+      grid-row: 1/-1;
+      width: 100%;
+      height: 100%;
+      fill: black; }
+    .contact__content--title {
+      grid-column: 2/9;
+      grid-row: 3/4; }
+    .contact__content--name, .contact__content--email {
+      display: grid;
+      grid-template-columns: min-content 1fr;
+      gap: 1rem;
+      height: 100%; }
+    .contact__content--name {
+      grid-row: 4/5;
+      grid-column: 2 /9; }
+    .contact__content--email {
+      grid-row: 5/6;
+      grid-column: 2 /9; }
+    .contact__content--icon {
+      grid-column: 1/2;
+      fill: lightseagreen;
+      width: 3rem;
+      height: 3rem; }
+    .contact__content h4 {
+      grid-column: 2/3; }
+  .contact__checkbox:checked ~ .contact__content {
+    opacity: 1; }
   .contact__checkbox:checked ~ .contact__background {
     transform: scale(80); }
+  .contact__checkbox:checked + .contact__menu {
+    animation: .2s shikaku .2s ease-in forwards; }
   .contact__checkbox:checked + .contact__menu .contact__menu--front {
-    animation: .2s spinningOut .2s ease-in forwards; }
-  .contact__checkbox:not(:checked) + .contact__menu .contact__menu--front {
-    opacity: 0;
-    animation: .2s spinningIn .2s ease-in forwards; }
+    animation: .2s zoomingOut .2s ease-in forwards; }
   .contact__checkbox:checked + .contact__menu .contact__menu--back {
-    animation: .2s  spinningIn .4s ease-in forwards; }
-  .contact__checkbox:not(:checked) + .contact__menu .contact__menu--back {
-    animation: .2s spinningOut .2s ease-in forwards; }
-  .contact__icon {
-    fill: black; }
-    .contact__icon--2 {
-      grid-row: 3/5;
-      grid-column: 1/2;
-      width: 10rem;
-      height: 10rem;
-      transform: scale(0.5) translateX(-1.5rem); }
+    animation: .2s zoomingIn .3s ease-in forwards; }
+  .contact__icon--2 {
+    grid-row: 3/5;
+    grid-column: 1/2;
+    width: 10rem;
+    height: 10rem;
+    transform: scale(0.5) translateX(-1.5rem); }
 
 @keyframes bloating {
   0% {

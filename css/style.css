@@ -89,6 +89,18 @@ p {
     border-radius: 62% 38% 65% 35% / 50% 49% 51% 50%;
     transform: translateY(0) translateX(0); } }
 
+@keyframes blobbing2 {
+  0% {
+    border-radius: 62% 38% 65% 35% / 50% 49% 51% 50%; }
+  20% {
+    border-radius: 57% 43% 48% 52% / 50% 47% 53% 50%; }
+  50% {
+    border-radius: 57% 43% 56% 44% / 41% 51% 49% 59%; }
+  80% {
+    border-radius: 57% 43% 48% 52% / 50% 47% 53% 50%; }
+  100% {
+    border-radius: 62% 38% 65% 35% / 50% 49% 51% 50%; } }
+
 @keyframes birth {
   0% {
     transform: scale(0.3) translateX(-200%) translateY(60%);
@@ -894,7 +906,7 @@ p {
 
 .contact {
   grid-row: 1 / -1;
-  grid-column: 3/-1;
+  grid-column: 1/-1;
   display: grid;
   grid-template-columns: minmax(2rem, 5rem) 2rem repeat(12, minmax(6.25rem, 1fr)) 2rem minmax(2rem, 5rem);
   grid-template-rows: minmax(2rem, 5rem) 2rem repeat(10, minmax(4rem, 1fr)) 2rem minmax(2rem, 5rem);
@@ -907,7 +919,9 @@ p {
     grid-column: 13/15;
     width: 100%;
     height: 100%;
-    position: relative;
+    position: absolute;
+    top: 0;
+    right: 0;
     z-index: 2500;
     display: grid;
     margin-top: 150%;
@@ -1030,9 +1044,9 @@ p {
     transition: all .3s ease-in .5s;
     animation: .3s appear 10.5s ease-in forwards; }
   .contact__content {
+    position: absolute;
     grid-column: 1 /13;
     grid-row: 1/-1;
-    position: fixed;
     display: grid;
     grid-template-columns: minmax(2rem, 5rem) 2rem repeat(12, minmax(6.25rem, 1fr)) 2rem minmax(2rem, 5rem);
     grid-template-rows: minmax(2rem, 5rem) 2rem repeat(10, minmax(4rem, 1fr)) 2rem minmax(2rem, 5rem);
@@ -1045,13 +1059,15 @@ p {
     width: 100%;
     height: 100%;
     transition: all .3s ease-in .7s;
-    opacity: 0; }
+    opacity: 1;
+    transform-style: preserve-3d; }
     .contact__content--details {
-      grid-column: 4/10;
-      grid-row: 5/10;
+      grid-column: 4/11;
+      grid-row: 5/11;
       width: 100%;
       height: 100%;
-      position: relative;
+      position: absolute;
+      z-index: 2800;
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
       grid-template-rows: repeat(auto-fill, minmax(5rem, 1fr));
@@ -1059,7 +1075,8 @@ p {
       align-items: center;
       align-content: center;
       border-radius: 62% 38% 65% 35% / 50% 49% 51% 50%;
-      background-color: #faeeb8; }
+      background-color: #faeeb8;
+      animation: 10s blobbing2 .5s linear infinite; }
     .contact__content--details > * {
       position: absolute;
       color: #fffef8; }
@@ -1068,37 +1085,53 @@ p {
       grid-row: 8/12;
       width: 100%;
       height: 100%;
+      color: black;
       top: 0;
       left: 0;
       border-radius: 62% 38% 65% 35% / 50% 49% 51% 50%;
-      background-color: black; }
+      background-color: #faeeb8; }
     .contact__content--speech {
-      grid-column: 2 /9;
+      grid-column: 1 /-1;
       grid-row: 1/-1;
       width: 100%;
       height: 100%;
-      fill: black; }
+      z-index: 2820;
+      fill: black;
+      transform: rotateY(180deg); }
     .contact__content--title {
-      grid-column: 2/9;
-      grid-row: 3/4; }
-    .contact__content--name, .contact__content--email {
+      grid-column: 2/10;
+      grid-row: 3/4;
+      z-index: 2850;
+      color: #faeeb8; }
+    .contact__content--list {
+      grid-column: 2 /10;
       display: grid;
+      justify-items: center;
+      align-items: center;
+      color: #faeeb8;
       grid-template-columns: min-content 1fr;
       gap: 1rem;
-      height: 100%; }
+      height: 100%;
+      max-width: 70%;
+      z-index: 2850; }
     .contact__content--name {
-      grid-row: 4/5;
-      grid-column: 2 /9; }
+      grid-row: 4/5; }
     .contact__content--email {
       grid-row: 5/6;
-      grid-column: 2 /9; }
+      width: 70%; }
+    .contact__content--language {
+      grid-row: 6/7;
+      width: 70%; }
+    .contact__content--map {
+      grid-row: 7/8; }
     .contact__content--icon {
       grid-column: 1/2;
       fill: lightseagreen;
-      width: 3rem;
-      height: 3rem; }
+      width: 2.5rem;
+      height: 2.5rem; }
     .contact__content h4 {
-      grid-column: 2/3; }
+      grid-column: 2/3;
+      margin: 0; }
   .contact__checkbox:checked ~ .contact__content {
     opacity: 1; }
   .contact__checkbox:checked ~ .contact__background {

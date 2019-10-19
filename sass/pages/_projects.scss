@@ -30,8 +30,8 @@
         color: $base-white;
         transition: all .2s ease;
         animation: .3s appear 23.5s ease-in forwards, .3s blackBackground 23.5s ease-in forwards;
-        z-index: 3000;
-
+        //z-index: 3000;
+        z-index: 250;
         &--top,
         &--bottom {
                 position: absolute;
@@ -75,7 +75,8 @@
 
     &__background {
         @include background-bubble;
-        z-index:2900;
+        //z-index:2900;
+        z-index:250;
         background-color: $orange;
         background-image: radial-gradient($orange-light, $orange, $orange-red);
 

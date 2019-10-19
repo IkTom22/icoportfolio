@@ -821,7 +821,7 @@ p {
     color: #fffef8;
     transition: all .2s ease;
     animation: .3s appear 23.5s ease-in forwards, .3s blackBackground 23.5s ease-in forwards;
-    z-index: 3000; }
+    z-index: 250; }
     .projects__menu--top {
       grid-row: 1/2; }
       .projects__menu--top::after {
@@ -868,7 +868,7 @@ p {
     width: 6.5rem;
     border-radius: 50%;
     transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1);
-    z-index: 2900;
+    z-index: 250;
     background-color: #ffa500;
     background-image: radial-gradient(#f5af19, #ffa500, #ff3c00);
     animation: .3s appear 24s ease-in forwards; }
@@ -922,14 +922,14 @@ p {
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 2500;
+    z-index: 2700;
     display: grid;
     margin-top: 150%;
     grid-template-columns: repeat(4, minmax(4.25rem, auto));
     grid-template-rows: repeat(4, minmax(3.6rem, auto));
     animation: .3s slideUp 10s ease-in forwards; }
   .contact__menu {
-    position: absolute;
+    position: fixed;
     cursor: pointer;
     text-align: center;
     font-size: 2rem;
@@ -947,7 +947,7 @@ p {
     grid-row: 1/3;
     grid-column: 1/3;
     border-radius: 50%;
-    z-index: 2800;
+    z-index: 2900;
     transform-style: preserve-3d;
     perspective: 60rem;
     transform-origin: center;
@@ -966,7 +966,7 @@ p {
       grid-row: 2/3; }
     .contact__menu--card {
       position: absolute;
-      z-index: 2700;
+      z-index: 2900;
       height: 8.5rem;
       width: 8.5rem;
       backface-visibility: hidden;
@@ -1018,7 +1018,7 @@ p {
     .contact__menu--bottom {
       padding-bottom: 1rem; }
     .contact__menu--back {
-      z-index: 2700;
+      z-index: 2850;
       opacity: 0;
       position: absolute;
       grid-row: 1/2;
@@ -1038,14 +1038,14 @@ p {
     border-radius: 50%;
     transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1);
     z-index: 2780;
-    background-color: #48cafd;
+    background-color: #a5ffef;
     transform: translate(10px, 10px);
-    background-image: radial-gradient(rgba(72, 202, 253, 0.9), rgba(6, 182, 251, 0.9), rgba(0, 3, 214, 0.9));
+    background-image: radial-gradient(#00ffd0, #06b6fb, #0980af, #0047d6);
     transition: all .3s ease-in .5s;
     animation: .3s appear 10.5s ease-in forwards; }
   .contact__content {
     position: absolute;
-    grid-column: 1 /13;
+    grid-column: 1 /12;
     grid-row: 1/-1;
     display: grid;
     grid-template-columns: minmax(2rem, 5rem) 2rem repeat(12, minmax(6.25rem, 1fr)) 2rem minmax(2rem, 5rem);
@@ -1055,7 +1055,7 @@ p {
     align-items: center;
     top: 0;
     left: 0;
-    z-index: 3500;
+    z-index: 2800;
     width: 100%;
     height: 100%;
     transition: all .3s ease-in .7s;
@@ -1086,10 +1086,38 @@ p {
       width: 100%;
       height: 100%;
       color: black;
-      top: 0;
-      left: 0;
+      position: absolute;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
+      z-index: 2800;
+      grid-template-rows: repeat(auto-fill, minmax(5rem, 1fr));
+      justify-items: center;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
       border-radius: 62% 38% 65% 35% / 50% 49% 51% 50%;
-      background-color: #faeeb8; }
+      background-color: black;
+      animation: 17s blobbing2 .7s linear infinite; }
+      .contact__content--message h2 {
+        color: black;
+        position: absolute;
+        grid-column: 2/8;
+        grid-row: 2/5;
+        text-align: center;
+        z-index: 2850;
+        color: black;
+        font-size: 3.7rem; }
+    .contact__content--message-back {
+      display: absolute;
+      width: 20rem;
+      height: 20rem;
+      background-color: #00ffd0;
+      grid-column: 2/8;
+      grid-row: 2/5;
+      border-radius: 62% 38% 65% 35%/50% 49% 51% 50%;
+      background-image: radial-gradient(#00ffd0, #06b6fb, #0980af, #0047d6);
+      z-index: 2820;
+      animation: 10s blobbing2 .7s linear infinite; }
     .contact__content--speech {
       grid-column: 1 /-1;
       grid-row: 1/-1;
@@ -1098,6 +1126,11 @@ p {
       z-index: 2820;
       fill: black;
       transform: rotateY(180deg); }
+    .contact__content--speech-2 {
+      fill: #faeeb8;
+      width: 115%;
+      height: 115%;
+      transform: rotateY(0); }
     .contact__content--title {
       grid-column: 2/10;
       grid-row: 3/4;
@@ -1128,10 +1161,36 @@ p {
       grid-column: 1/2;
       fill: lightseagreen;
       width: 2.5rem;
-      height: 2.5rem; }
+      height: 2.5rem;
+      cursor: auto; }
     .contact__content h4 {
       grid-column: 2/3;
       margin: 0; }
+    .contact__content--job {
+      position: absolute;
+      grid-column: 12/16;
+      grid-row: 2/9;
+      width: 100%;
+      height: 100%;
+      display: grid;
+      z-index: 2780; }
+      .contact__content--job > * {
+        position: absolute; }
+      .contact__content--job h3 {
+        z-index: 700;
+        grid-row: 2/3;
+        grid-column: 2/3; }
+    .contact__content--positions {
+      z-index: 700;
+      grid-row: 3/7;
+      grid-column: 1/-1; }
+    .contact__content--clip {
+      grid-row: 1/-1;
+      grid-column: 1/-1;
+      height: 40rem;
+      width: 40rem;
+      z-index: 500;
+      fill: rgba(165, 255, 239, 0.6); }
   .contact__checkbox:checked ~ .contact__content {
     opacity: 1; }
   .contact__checkbox:checked ~ .contact__background {
@@ -1147,10 +1206,4 @@ p {
     grid-column: 1/2;
     width: 10rem;
     height: 10rem;
-    transform: scale(0.5) translateX(-1.5rem); }
-
-@keyframes bloating {
-  0% {
-    transform: scale(1); }
-  100% {
-    transform: scale(1.2); } }
+    transform: scale(0.5) translateX(-20%); }

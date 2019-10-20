@@ -155,7 +155,11 @@
         opacity:1 ;
         transform-style: preserve-3d;
         // contact details 
-        &--details {
+        &--details > * {
+            position: absolute; 
+            color: $base-white;
+        }
+    &--details {
             grid-column: 4/11;
             grid-row: 5/11;
             width: 100%;
@@ -172,60 +176,11 @@
             border-radius: 62% 38% 65% 35% / 50% 49% 51% 50% ;
             background-color: $baige-yellow;
             animation: 10s blobbing2 .5s linear infinite;
-         
-        }
-        &--details > * {
-            position: absolute; 
-            color: $base-white;
-        }
-      // message
-      &--message {
-        grid-column: 10/16;
-        grid-row: 8/12;
-        width: 100%;
-        height: 100%;
-        color: $base-black;
-        position: absolute;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
-        z-index:2800;
-        grid-template-rows: repeat(auto-fill, minmax(5rem, 1fr));
-        @include centering;
-        align-content: center;
-        justify-content: center;
-        // top: 0;
-        // left:0;
-        border-radius: 62% 38% 65% 35% / 50% 49% 51% 50%;
-        background-color:$base-black;
-        animation: 14s blobbing2 .7s linear infinite;
-        
-        h2 {
-            color: $base-black;
-            position: absolute;
-            grid-column: 2/8;
-            grid-row: 2/5;
-            text-align: center;
-            z-index: 2850;
-            color: $base-black;
-            font-size:3.7rem;
+
+
         }
 
-    }
-    &--message-back {
-        display: absolute;
-        width: 22rem;
-        height: 22rem;
-        //background-color: lightskyblue;
-        background-color:$blue-lime;
-        grid-column: 2/8;
-            grid-row: 2/5;
-        border-radius: $base-radious;
-        background-image: radial-gradient($blue-lime,  $blue-mid-light,  $blue-mid,  $blue);
-        z-index: 2820;
-        animation: 9s blobbing2 .7s linear infinite;
-       
-
-    }
+ 
     //speech bubble
     &--speech {
         
@@ -235,10 +190,7 @@
         height: 100%;
         z-index: 2850;
         fill: $base-black;
-        transform: translateY(5%) rotateY(180deg);
-        
-        //fill: $red-cube;      
-        
+       // transform: translateY(5%) rotateY(180deg);  
     }
     &--speech-2{
         fill: $baige-yellow;
@@ -251,7 +203,8 @@
     &--title {
         grid-column: 2/10;
         grid-row: 3/4;
-        z-index: 2850;
+        //z-index: 2850;
+        z-index:2900;  
         color: $baige-yellow;
     }
     &--list {
@@ -264,7 +217,9 @@
         gap: 1rem;
         height: 100%;
         max-width: 70%;
-        z-index: 2850;
+        //z-index: 2850;
+
+        z-index:2900;   
         
     }
     &--name {
@@ -303,6 +258,57 @@
         grid-column: 2/3;
         margin:0;
     }
+
+
+         // message
+         &--message {
+            grid-column: 10/16;
+            grid-row: 8/12;
+            width: 100%;
+            height: 100%;
+            color: $base-black;
+            position: absolute;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
+            z-index:2800;
+            grid-template-rows: repeat(auto-fill, minmax(5rem, 1fr));
+            @include centering;
+            align-content: center;
+            justify-content: center;
+            // top: 0;
+            // left:0;
+            z-index: 2800;
+            border-radius: 62% 38% 65% 35% / 50% 49% 51% 50%;
+            background-color:$base-black;
+            animation: 14s blobbing2 .7s linear infinite;
+            
+            h2 {
+                color: $base-black;
+                position: absolute;
+                grid-column: 2/8;
+                grid-row: 2/5;
+                text-align: center;
+                z-index: 2900;
+                color: $base-black;
+                font-size:3.7rem;
+            }
+    
+        }
+        &--message-back {
+            display: absolute;
+            width: 23rem;
+            height: 23rem;
+            background-color: lightskyblue;
+            background-color:$blue-lime;
+            grid-column: 2/8;
+            grid-row: 2/5;
+            border-radius: $base-radious;
+            background-image: radial-gradient($blue-lime,  $blue-mid-light,  $blue-mid,  $blue);
+            z-index: 2850;
+            animation: 9s blobbing2 .7s linear infinite;
+           
+    
+        }
     &--job {
         position: absolute;
         grid-column: 12/16;
@@ -379,7 +385,9 @@
             z-index: 500;
             // transform: translateX(-2%);
             fill: rgba( $blue-light, .7);
+           
             align-self: end;
+            //background-image: radial-gradient($blue-lime,  $blue-mid-light,  $blue-mid,  $blue);
             transform: rotateY(180deg) translateY(5%) translateX(-20%);
         }
   

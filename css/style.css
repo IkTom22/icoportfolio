@@ -335,10 +335,10 @@ p {
 @keyframes slideUp {
   0% {
     opacity: 1;
-    margin-top: 150%; }
+    top: 150%; }
   100% {
     opacity: 1;
-    margin-top: 0; } }
+    top: 0; } }
 
 @keyframes turning {
   0% {
@@ -796,7 +796,8 @@ p {
   justify-items: center;
   align-items: center;
   align-content: center;
-  justify-content: center; }
+  justify-content: center;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
   .projects__checkbox {
     display: none; }
   .projects__menu {
@@ -821,7 +822,7 @@ p {
     color: #fffef8;
     transition: all .2s ease;
     animation: .3s appear 23.5s ease-in forwards, .3s blackBackground 23.5s ease-in forwards;
-    z-index: 250; }
+    z-index: 3000; }
     .projects__menu--top {
       grid-row: 1/2; }
       .projects__menu--top::after {
@@ -868,29 +869,33 @@ p {
     width: 6.5rem;
     border-radius: 50%;
     transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1);
-    z-index: 250;
+    z-index: 2900;
+    opacity: 0;
     background-color: #ffa500;
-    background-image: radial-gradient(#f5af19, #ffa500, #ff3c00);
-    animation: .3s appear 24s ease-in forwards; }
+    background-image: radial-gradient(#f5af19, #ffa500, #ff3c00, #ff0000); }
   .projects__nav {
-    height: 100vh;
+    height: 135vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 5rem);
+    grid-template-rows: repeat(auto-fill, 5rem);
     position: fixed;
+    gap: 2rem;
     top: 0;
     right: 0;
     z-index: 2800;
     opacity: 0;
     width: 0;
     transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
-  .projects__list__list {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    list-style: none;
-    text-transform: uppercase;
-    text-align: center;
-    width: 100%; }
+    .projects__nav > * {
+      position: absolute;
+      z-index: 2900; }
+    .projects__nav--2019 {
+      grid-column: 3/9;
+      grid-row: 5/9;
+      width: 100%;
+      height: 100%;
+      color: black; }
   .projects:hover {
     cursor: pointer; }
   .projects:hover .projects__menu {
@@ -899,10 +904,16 @@ p {
     width: 10.5rem;
     font-size: 2.6rem; }
   .projects__checkbox:checked ~ .projects__background {
+    opacity: 1;
     transform: scale(80); }
+  .projects__checkbox:checked + .projects__menu {
+    border-radius: 2.5rem; }
   .projects__checkbox:checked ~ .projects__nav {
     opacity: 1;
     width: 100%; }
+
+.disappear {
+  z-index: 50; }
 
 .contact {
   grid-row: 1 / -1;
@@ -919,8 +930,9 @@ p {
     grid-column: 13/15;
     width: 100%;
     height: 100%;
+    opacity: 0;
     position: absolute;
-    top: 0;
+    top: 150%;
     left: 0;
     justify-items: center;
     align-items: center;
@@ -929,7 +941,8 @@ p {
     display: grid;
     grid-template-columns: repeat(4, 4.25rem);
     grid-template-rows: repeat(6, 4rem);
-    animation: .3s slideUp 10s ease-in forwards; }
+    transition: all .2s linear;
+    animation: .2s appear 8s linear forwards, .3s slideUp 10s ease-in forwards; }
   .contact__menu {
     position: fixed;
     cursor: pointer;
@@ -971,7 +984,7 @@ p {
       width: 8.5rem;
       backface-visibility: hidden;
       overflow: hidden;
-      transition: .5s all ease;
+      transition: .2s all ease;
       top: 0;
       left: 0;
       border-radius: 50%;
@@ -986,7 +999,9 @@ p {
       z-index: 2800;
       grid-column: 1/-1;
       grid-row: 1/-1;
-      background-color: black; }
+      background-color: black;
+      opacity: 0;
+      animation: .3s appear 8s linear forwards; }
       .contact__menu--card--top {
         grid-row: 1/2; }
         .contact__menu--card--top::after {
@@ -1001,8 +1016,7 @@ p {
         grid-row: 2/3; }
     .contact__menu:hover {
       border: 5px #fffef8 solid;
-      transform-origin: center;
-      transform: scale(1) translate(-2px, -2px); }
+      transform-origin: 50% 50%; }
     .contact__menu:hover .contact__menu--bottom-icon {
       fill: #ff0000; }
     .contact__menu--top, .contact__menu--bottom {
@@ -1039,9 +1053,8 @@ p {
     transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1);
     z-index: 2780;
     background-color: #a5ffef;
-    transform: translate(10px, 10px);
+    grid-row: 1/4;
     background-image: radial-gradient(#00ffd0, #06b6fb, #0980af, #0047d6);
-    transition: all .3s ease-in .5s;
     animation: .3s appear 10.5s ease-in forwards; }
   .contact__content {
     position: absolute;
@@ -1054,12 +1067,12 @@ p {
     justify-items: center;
     align-items: center;
     top: 0;
-    left: 0;
+    left: -150%;
     z-index: 2800;
     width: 100%;
     height: 100%;
-    transition: all .3s ease-in .7s;
-    opacity: 1;
+    transition: all .3s ease-in .2s;
+    opacity: 0;
     transform-style: preserve-3d; }
     .contact__content--details > * {
       position: absolute;
@@ -1085,13 +1098,15 @@ p {
       grid-row: 1/-1;
       width: 100%;
       height: 100%;
+      transform-origin: center;
+      transform: rotate(300deg) translateY(5%) translateX(5%);
       z-index: 2850;
       fill: black; }
     .contact__content--speech-2 {
       fill: #faeeb8;
       width: 115%;
       height: 115%;
-      transform: rotateY(0); }
+      transform: rotate(0) translateY(0) translateX(0); }
     .contact__content--title {
       grid-column: 2/10;
       grid-row: 3/4;
@@ -1107,7 +1122,12 @@ p {
       gap: 1rem;
       height: 100%;
       max-width: 70%;
+      transition: all .2s linear;
       z-index: 2900; }
+      .contact__content--list:hover svg {
+        cursor: auto;
+        transform-origin: 50% 50%;
+        animation: .2s jump .2s linear alternate 4; }
     .contact__content--name {
       grid-row: 4/5; }
     .contact__content--email {
@@ -1205,10 +1225,14 @@ p {
       gap: 1.5rem;
       align-items: center;
       justify-items: start; }
+      .contact__content--position:hover svg {
+        cursor: auto;
+        animation: .5s shake .2s ease-in forwards; }
       .contact__content--position svg {
         grid-column: 2/3;
         width: 2rem;
         height: 2rem;
+        transition: all .2s linear;
         fill: black; }
       .contact__content--position p {
         font-size: 2.5rem;
@@ -1225,19 +1249,47 @@ p {
       fill: rgba(165, 255, 239, 0.7);
       align-self: end;
       transform: rotateY(180deg) translateY(5%) translateX(-20%); }
-  .contact__checkbox:checked ~ .contact__content {
-    opacity: 1; }
   .contact__checkbox:checked ~ .contact__background {
+    opacity: 1;
     transform: scale(80); }
   .contact__checkbox:checked + .contact__menu {
-    animation: .2s shikaku .2s ease-in forwards; }
+    animation: .2s shikaku .2s linear forwards; }
   .contact__checkbox:checked + .contact__menu .contact__menu--front {
-    animation: .2s zoomingOut .2s ease-in forwards; }
+    animation: .2s zoomingOut .2s linear forwards; }
   .contact__checkbox:checked + .contact__menu .contact__menu--back {
-    animation: .2s zoomingIn .3s ease-in forwards; }
+    animation: .1s zoomingIn .2s linear forwards; }
   .contact__icon--2 {
-    grid-row: 3/4;
-    grid-column: 1/5;
+    grid-row: 3/6;
+    grid-column: 2/4;
     width: 10rem;
     height: 10rem;
-    transform: scale(0.5) translateX(-20%); }
+    transform: scale(0.5); }
+
+@keyframes shake {
+  0% {
+    transform: rotate(0); }
+  20% {
+    transform: rotate(-15deg); }
+  40% {
+    transform: rotate(15deg); }
+  60% {
+    transform: rotate(-15deg); }
+  80% {
+    transform: rotate(15deg); }
+  100% {
+    transform: rotate(0); } }
+
+@keyframes jump {
+  0% {
+    transform: translate3d(0, 0, 0) scale3d(1, 1, 1); }
+  40% {
+    transform: translate3d(0, 10%, 0) scale3d(0.9, 1.2, 1); }
+  100% {
+    transform: translate3d(0, 20%, 0) scale3d(1.2, 0.7, 1); } }
+
+.appear {
+  opacity: 1;
+  left: 0; }
+
+.scaleBig {
+  transform: scale(80); }

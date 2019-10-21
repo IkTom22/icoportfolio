@@ -114,20 +114,20 @@
 
 @mixin checked {
   &__checkbox:checked ~ &__background {
-    
+    opacity: 1;
     transform: scale(80); 
   }
   &__checkbox:checked + &__menu{
-    animation: .2s shikaku .2s ease-in forwards;
+    animation: .2s shikaku .2s linear forwards;
   }
   &__checkbox:checked + &__menu &__menu--front{
     
-    animation: .2s zoomingOut .2s ease-in forwards;
+    animation: .2s zoomingOut .2s linear forwards;
   }  
 
   &__checkbox:checked + &__menu &__menu--back{
           
-    animation: .2s zoomingIn .3s ease-in forwards;
+    animation: .1s zoomingIn .2s linear forwards;
   } 
 
   // &__checkbox:not(:checked) + &__menu{

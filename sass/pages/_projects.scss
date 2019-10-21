@@ -10,6 +10,7 @@
     @include centering;
     align-content: center;
     justify-content: center;
+    transition: all .2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     // @include hoverEffect2;
     &__checkbox{
         display: none;
@@ -30,8 +31,8 @@
         color: $base-white;
         transition: all .2s ease;
         animation: .3s appear 23.5s ease-in forwards, .3s blackBackground 23.5s ease-in forwards;
-        //z-index: 3000;
-        z-index: 250;
+        z-index: 3000;
+        //z-index: 250;
         &--top,
         &--bottom {
                 position: absolute;
@@ -75,39 +76,56 @@
 
     &__background {
         @include background-bubble;
-        //z-index:2900;
-        z-index:250;
+        z-index:2900;
+        //z-index:250;
+        opacity:0;
         background-color: $orange;
-        background-image: radial-gradient($orange-light, $orange, $orange-red);
+        background-image: radial-gradient($orange-light, $orange, $orange-red, $red-cube);
 
-        animation: .3s appear 24s ease-in forwards;
+        //animation: .3s appear 24s ease-in forwards;
     }
 
     &__nav{
-        height: 100vh;
-        
+        height: 135vh;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 5rem);
+        grid-template-rows: repeat(auto-fill, 5rem);
         position: fixed;
+        gap: 2rem;
         top: 0;
         right: 0;
         z-index: 2800;
         opacity: 0;
         width: 0;
         transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    }
-    &__list {
-        &__list {
+
+        & > * {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-                    transform: translate(-50%, -50%);
-            list-style: none;
-            text-transform: uppercase;
-            text-align: center;
+            z-index: 2900
+        }
+        &--2019{
+            grid-column: 3/9;
+            grid-row: 5/9;
             width: 100%;
-    
+            height:100%;
+            color: $base-black;
         }
     }
+    // &__lists {
+    //     // &__list {
+    //     //     position: absolute;
+    //     //     top: 50%;
+    //     //     left: 50%;
+    //     //     -webkit-transform: translate(-50%, -50%);
+    //     //             transform: translate(-50%, -50%);
+    //     //     list-style: none;
+    //     //     text-transform: uppercase;
+    //     //     text-align: center;
+    //     //     width: 100%;
+    
+    //     // }
+    // }
 
     &:hover{
         cursor: pointer;
@@ -117,17 +135,17 @@
           height: 10.5rem;
         width: 10.5rem;
         font-size: 2.6rem;
-        //animation: .2s spinning .2s ease-in forwards;
-        // &--top, 
-        // &--bottom{
-        //   color: $red-cube;
-        // }
+
       }
       
       //FUNCTIONARITY 
       &__checkbox:checked ~ &__background {
+        opacity:1;  
         transform: scale(80);
         
+      }
+      &__checkbox:checked + &__menu{
+        border-radius: 2.5rem;
       }
       &__checkbox:checked ~ &__nav {
         opacity: 1;
@@ -194,4 +212,7 @@
     // }
 
 
+}
+.disappear {
+    z-index: 50;
 }

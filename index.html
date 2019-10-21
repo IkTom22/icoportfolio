@@ -107,17 +107,24 @@
                     </label>
                     <div class="projects__background">&nbsp;</div>
                     <div class="projects__nav">
-                        <ul class="projects__list">
-                            <li class="projects__item"><a href="#" class="navigation__link"><span>01</span>Lawyer</a>
+                        <div class="projects__nav--2019">2019</div>
+                        <div class="projects__nav--2018">2019</div>
+                        <ul class="projects__nav--lists">
+                            <li class="projects__iists--list">
+                                <a href="#" target="_blank" class="navigation__link"><span>01</span>Lawyer</a>
                             </li>
-                            <li class="projects__item"><a href="#" class="navigation__link"><span>02</span>Tango</a>
+                            <li class="projects__iists--list">
+                                <a href="#" target="_blank" class="navigation__link"><span>02</span>Tango</a>
                             </li>
-                            <li class="projects__item"><a href="#" class="navigation__link"><span>03</span>---</a>
+                            <li class="projects__iists--list">
+                                <a href="#" target="_blank" class="navigation__link"><span>03</span>---</a>
                             </li>
-                            <li class="projects__item"><a href="#" class="navigation__link"><span>04</span>Portfolio
-                                    2019</a></li>
-                            <li class="projects__item"><a href="#" class="navigation__link"><span>05</span>Portfolio
-                                    2018</a></li>
+                            <li class="projects__iists--list">
+                                <a href="#" target="_blank" class="navigation__link"><span>04</span>Portfolio 2019</a>
+                            </li>
+                            <li class="projects__iists--list">
+                                <a href="#" target="_blank" class="navigation__link"><span>05</span>Portfol 2018</a>
+                            </li>
                         </ul>
                     </div>
                     <!-- <div class="projects__menu" id="myProjects">
@@ -134,7 +141,8 @@
                 <section class="contact">
 
                     <div class="contact__small">
-                        <input type="checkbox" class="contact__checkbox" id="contact-toggle">
+                        <input type="checkbox" class="contact__checkbox" id="contact-toggle"
+                            onclick="setTimeout(show, 100); setTimeout(disappear, 250)">
                         <label class="contact__menu" for="contact-toggle">
                             <!-- button -->
                             <div class="contact__menu--card contact__menu--front">
@@ -151,7 +159,7 @@
                         <svg class="contact__icon contact__icon--2">
                             <use xlink:href="imgs/sprite.svg#icon-child"></use>
                         </svg>
-                        <div class="contact__background">&nbsp;</div>
+                        <div class="contact__background" id="contactBubble">&nbsp;</div>
                     </div>
 
 
@@ -197,7 +205,7 @@
                             <h2>Looking forward <br>to hearing <br>from you</h2>
                         </div>
                         <!-- Job -->
-                        <div class="contact__content--job">
+                        <div class="contact__content--job" id="jobList">
                             <h3>Remote or onsite</h3>
                             <ul class="contact__content--positions">
 
@@ -238,7 +246,7 @@
             </div>
 
         </div>
-
+        <script type="text/javascript" src="index.js"></script>
     </body>
 
 

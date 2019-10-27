@@ -1,13 +1,16 @@
 .wrapper {
     display: grid;
     @include base-template;
+    // @include centering;
     width: 100%;
+    //@at-rootheight: 150%;
     height: 150%;
     grid-row: 1 / -1;
     grid-column:  3/-1;
     background-color: $base-white;
 
     border-radius:100% 0% 81% 19% / 61% 100% 0% 39% ;
+    //border-radius: 35% 10% 89% 5% / 61% 0% 0% 39%  ;
     position: relative;
     //transform: scaleY(1.5) scaleX(1);
     transform-style: preserve-3d;

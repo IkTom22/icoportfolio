@@ -130,16 +130,5 @@
     animation: .1s zoomingIn .2s linear forwards;
   } 
 
-  // &__checkbox:not(:checked) + &__menu{
-  //   animation: .2s maru .2s ease-in forwards;
-  // }
-  // &__checkbox:not(:checked) + &__menu &__menu--back{
-  //   opacity: 1;    
-  //   animation: .2s zoomingOut .2s ease-in forwards;
-  // } 
-  // &__checkbox:not(:checked) + &__menu &__menu--front{
-      
-  //   animation: .2s szoomingIn .3s ease-in forwards;
-  // } 
-  
+
 }

@@ -7,7 +7,10 @@
     justify-items: center;
     align-items: center;
 }
-
+@mixin centerContent {
+  justify-content: center;
+  align-content: center;
+}
 @mixin menubox {
 
       text-align: center;
@@ -78,10 +81,12 @@
         position: absolute;
         
         opacity: 0;
-        height: 6.5rem;
-        width: 6.5rem;
+        height: 300rem;
+        width: 300rem;
         border-radius: 50%;
+
         transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1);
+        transform: scale(0);
 }
 
 //--bBUTTON CHECKED MIXIN
@@ -115,10 +120,12 @@
 @mixin checked {
   &__checkbox:checked ~ &__background {
     opacity: 1;
-    transform: scale(80); 
+    transform: scale(1); 
+
   }
   &__checkbox:checked + &__menu{
     animation: .2s shikaku .2s linear forwards;
+    
   }
   &__checkbox:checked + &__menu &__menu--front{
     

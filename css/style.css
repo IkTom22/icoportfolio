@@ -418,6 +418,13 @@ p {
     opacity: 0;
     transform: scale(0); } }
 
+@keyframes arrow-top {
+  100% {
+    color: transparent;
+    border-bottom: 0.3rem solid #fffef8;
+    width: 1rem;
+    transform: rotate(45deg); } }
+
 .wrapper {
   display: grid;
   grid-template-columns: minmax(2rem, 5rem) 2rem repeat(12, minmax(6.25rem, 1fr)) 2rem minmax(2rem, 5rem);
@@ -874,20 +881,22 @@ p {
   .projects__background {
     position: absolute;
     opacity: 0;
-    height: 6.5rem;
-    width: 6.5rem;
+    height: 300rem;
+    width: 300rem;
     border-radius: 50%;
     transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1);
+    transform: scale(0);
     z-index: 3000;
     opacity: 0;
     background-color: #ffa500;
-    background-image: radial-gradient(#f5af19, #ff3c00, #ff0000); }
+    background-image: radial-gradient(black, black); }
   .projects__card {
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
     background-color: black;
+    opacity: 0;
     position: relative;
     transform-style: preserve-3d;
     z-index: 3500; }
@@ -896,8 +905,9 @@ p {
   .projects__card-1 {
     grid-row: 7/10;
     grid-column: 4/7; }
-  .projects:hover {
-    cursor: pointer; }
+    .projects__card-1 svg {
+      fill: #fffef8;
+      opacity: 0; }
   .projects:hover .projects__menu {
     border: 5px #fffef8 solid;
     height: 10.5rem;
@@ -905,9 +915,13 @@ p {
     font-size: 2.6rem; }
   .projects__checkbox:checked ~ .projects__background {
     opacity: 1;
-    transform: scale(80); }
+    transform: scale(1); }
   .projects__checkbox:checked + .projects__menu {
-    border-radius: 2.5rem; }
+    border-radius: 2.5rem;
+    grid-column: 7 / 8;
+    grid-row: 3/4;
+    height: 6rem;
+    width: 6rem; }
   .projects__checkbox:checked ~ .projects__nav {
     opacity: 1;
     width: 100%; }
@@ -1017,8 +1031,8 @@ p {
     .contact__menu:hover {
       border: 5px #fffef8 solid;
       transform-origin: 50% 50%; }
-    .contact__menu:hover .contact__menu--bottom-icon {
-      fill: #ff0000; }
+    .contact__menu:hover .contact__menu--icon {
+      fill: #fffef8; }
     .contact__menu--top, .contact__menu--bottom {
       z-index: 2600; }
     .contact__menu--top {
@@ -1035,26 +1049,28 @@ p {
       z-index: 2850;
       opacity: 0;
       position: absolute;
+      justify-content: center;
+      align-content: center;
       grid-row: 1/2;
       color: #fffef8;
       border-radius: 50%;
       opacity: 0;
       transform: scale(0); }
-    .contact__menu--bottom-icon {
-      height: 3rem;
-      width: 4rem;
-      fill: white; }
+    .contact__menu--icon {
+      height: 100%;
+      width: 100%;
+      fill: #f5af19; }
   .contact__background {
     position: absolute;
     opacity: 0;
-    height: 6.5rem;
-    width: 6.5rem;
+    height: 300rem;
+    width: 300rem;
     border-radius: 50%;
     transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1);
+    transform: scale(0);
     z-index: 2780;
-    background-color: #a5ffef;
     grid-row: 1/4;
-    background-image: radial-gradient(#06b6fb, #0980af, #1c0575);
+    background-image: radial-gradient(#ffa500 0%, #ff9900 5%, #ff5e00 50%, #ff0000 100%);
     animation: .3s appear 10.5s ease-in forwards; }
   .contact__content {
     position: absolute;
@@ -1091,6 +1107,7 @@ p {
       justify-items: center;
       align-items: center;
       align-content: center;
+      transform-style: preserve-3d;
       border-radius: 62% 38% 65% 35% / 50% 49% 51% 50%;
       background-color: #faeeb8;
       animation: 10s blobbing2 .5s linear infinite; }
@@ -1111,6 +1128,7 @@ p {
     .contact__content--title {
       grid-column: 2/10;
       grid-row: 3/4;
+      z-index: 2850;
       z-index: 2900;
       color: #faeeb8; }
     .contact__content--list {
@@ -1126,7 +1144,6 @@ p {
       transition: all .2s linear;
       z-index: 2900; }
       .contact__content--list:hover svg {
-        cursor: auto;
         transform-origin: 50% 50%;
         animation: .2s jump .2s linear alternate 4; }
     .contact__content--name {
@@ -1141,10 +1158,13 @@ p {
       grid-row: 7/8; }
     .contact__content--icon {
       grid-column: 1/2;
-      fill: lightseagreen;
+      fill: #ff3c00;
       width: 2.5rem;
       height: 2.5rem;
-      cursor: auto; }
+      z-index: 2900; }
+    .contact__content--icon:hover {
+      transform-origin: 50% 50%;
+      animation: .2s jump .2s linear alternate 4; }
     .contact__content h4 {
       grid-column: 2/3;
       margin: 0; }
@@ -1247,18 +1267,24 @@ p {
       height: 45rem;
       width: 45rem;
       z-index: 500;
-      fill: rgba(0, 0, 0, 0.9);
+      fill: none;
       align-self: end;
       transform: rotateY(180deg) translateY(5%) translateX(-20%); }
   .contact__checkbox:checked ~ .contact__background {
     opacity: 1;
-    transform: scale(80); }
+    transform: scale(1); }
   .contact__checkbox:checked + .contact__menu {
     animation: .2s shikaku .2s linear forwards; }
   .contact__checkbox:checked + .contact__menu .contact__menu--front {
     animation: .2s zoomingOut .2s linear forwards; }
   .contact__checkbox:checked + .contact__menu .contact__menu--back {
     animation: .1s zoomingIn .2s linear forwards; }
+  .contact__checkbox:checked + .contact__menu {
+    height: 5rem;
+    width: 5rem; }
+  .contact__checkbox:checked + .contact__menu > .contact__menu--icon {
+    height: 5rem;
+    width: 5rem; }
   .contact__icon--2 {
     grid-row: 3/6;
     grid-column: 2/4;
@@ -1280,15 +1306,7 @@ p {
   100% {
     transform: rotate(0); } }
 
-@keyframes jump {
-  0% {
-    transform: translate3d(0, 0, 0) scale3d(1, 1, 1); }
-  40% {
-    transform: translate3d(0, 10%, 0) scale3d(0.9, 1.2, 1); }
-  100% {
-    transform: translate3d(0, 20%, 0) scale3d(1.2, 0.7, 1); } }
-
-.appear {
+@keyframes jump {}.appear {
   opacity: 1;
   transform: scale(1); }
 

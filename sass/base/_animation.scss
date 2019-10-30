@@ -545,9 +545,11 @@
 @keyframes shikaku{
   0% {
     border-radius: 50%;
+    
   }
   100%{
     border-radius: 2.8rem;
+
   }
 }
 @keyframes maru{
@@ -579,4 +581,12 @@
     opacity: 0;
     transform: scale(0);
   }
+}
+@keyframes arrow-top {
+    100% {
+      color: transparent;
+      border-bottom: .3rem solid $base-white;
+      width: 1rem;
+      transform: rotate(45deg);
+    }
 }

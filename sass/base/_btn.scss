@@ -16,6 +16,33 @@
         opacity:0;
         background-color: $base-black;
         border-radius: 50%;
+
+        &--front{
+            opacity: 1;
+            border-radius: 50%;
+            transform: scale(1);
+        }
+        &--back{
+            position: absolute;
+            z-index: 2850;
+            @include centerContent;
+            grid-row: 1/2;
+            padding: 0;
+            color: $base-white;  
+            border-radius: 50%;
+            opacity:0;
+            transform-origin: center;
+            transform: scale(0);
+            transition: .2 all linear;
+        }
     }
+    &__icon {
+        position: absolute;
+        background-color: transparent;
+         height: 100%;
+         width: 100%;
+         transform: translateX(-50%);
+    }
+
 }
 

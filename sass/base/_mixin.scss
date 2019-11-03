@@ -131,12 +131,6 @@
     animation: .2s zoomingOut .2s linear forwards;
   }  
 
-  // &__checkbox:checked + &__menu &__menu--back{
-          
-    
-  // } 
-
-
 &__checkbox:checked + &__menu > &__menu--back {
   animation: .1s zoomingIn .2s linear forwards;
     transform: scale(.6);

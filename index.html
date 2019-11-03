@@ -101,14 +101,15 @@
 
                 <section class="projects">
                     <div class="projects__sml">
-                        <input type="checkbox" class="projects__checkbox" id="projects-toggle">
-                        <label for="projects-toggle" class="projects__menu">
-                            <div class="project__menu--card  btn ">
-                                <div class="projects__menu--top">See</div>
-                                <div class="projects__menu--bottom">Projects</div>
+                        <input type="checkbox" class="projects__checkbox" id="projects-toggle"
+                            onclick="setTimeout(show, 250); setTimeout(disappear, 250)">
+                        <label for="projects-toggle" class="projects__menu btn">
+                            <div class="projects__menu--card  btn__card btn__card--front projects__menu--front">
+                                <div class="projects__menu--top btn__card--top">See</div>
+                                <div class="projects__menu--bottom btn__card--bottom">Projects</div>
                             </div>
-                            <div class="project__menu--card btn ">
-                                <svg class="contact__menu--icon">
+                            <div class="projects__menu--card btn__card btn__card--back projects__menu--back">
+                                <svg class="projects__menu--icon btn__icon">
                                     <use xlink:href="imgs/sprite.svg#icon-long-arrow-right"></use>
                                 </svg>
                             </div>
@@ -120,29 +121,6 @@
                         </div>
                         <div class="projects__background">&nbsp;</div>
                     </div>
-
-                    <!-- <div class="projects__nav">
-                        <div class="projects__nav--2019">2019</div>
-                        <div class="projects__nav--2018">2019</div>
-                        <ul class="projects__nav--lists">
-                            <li class="projects__iists--list">
-                                <a href="#" target="_blank" class="navigation__link"><span>01</span>Lawyer</a>
-                            </li>
-                            <li class="projects__iists--list">
-                                <a href="#" target="_blank" class="navigation__link"><span>02</span>Tango</a>
-                            </li>
-                            <li class="projects__iists--list">
-                                <a href="#" target="_blank" class="navigation__link"><span>03</span>---</a>
-                            </li>
-                            <li class="projects__iists--list">
-                                <a href="#" target="_blank" class="navigation__link"><span>04</span>Portfolio 2019</a>
-                            </li>
-                            <li class="projects__iists--list">
-                                <a href="#" target="_blank" class="navigation__link"><span>05</span>Portfol 2018</a>
-                            </li>
-                        </ul>
-                    </div> -->
-
 
                     <div class="projects__card projects__card-3d projects__card-1">
                         <div class="projects__card--front ">
@@ -170,9 +148,6 @@
                     </div>
 
 
-
-
-
                 </section>
 
                 <section class="contact">
@@ -182,13 +157,15 @@
                             onclick="setTimeout(show, 250); setTimeout(disappear, 250)">
                         <label class="contact__menu btn" for="contact-toggle">
                             <!-- button -->
-                            <div class="contact__menu--card btn__card contact__menu--front">
+                            <!-- <div class="contact__menu--card btn__card contact__menu--front"> -->
+                            <div class="contact__menu--card btn__card btn__card--front contact__menu--front">
                                 <div class="contact__menu--top btn__card--top">Contact</div>
                                 <div class="contact__menu--bottom btn__card--bottom">Me</div>
                             </div>
 
-                            <div class="contact__menu--card btn__card contact__menu--back">
-                                <svg class="contact__menu--icon">
+                            <!-- <div class="contact__menu--card btn__card contact__menu--back"> -->
+                            <div class="contact__menu--card btn__card btn__card--back contact__menu--back">
+                                <svg class="contact__menu--icon btn__icon">
                                     <use xlink:href="imgs/sprite.svg#icon-long-arrow-right"></use>
                                 </svg>
                             </div>

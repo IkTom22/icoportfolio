@@ -87,8 +87,8 @@
 
     &__background {
         @include background-bubble;
-        z-index:3000;
-        //z-index:250;
+        //z-index:3000;
+        z-index:250;
         opacity:0;
         background-color: $orange;
         //background-image: radial-gradient($orange-light, $orange-red, $red-cube);
@@ -97,32 +97,32 @@
         //background-color: $base-black;
         //animation: .3s appear 24s ease-in forwards;
     }
-    &__card {
-        margin: 0;
-        padding:0;
-        height: 100%;
-        width: 100%;
-        background-color: black;
-        opacity:0;
+    // &__card {
+    //     margin: 0;
+    //     padding:0;
+    //     height: 100%;
+    //     width: 100%;
+    //     background-color: black;
+    //     opacity:0;
 
-        position: relative;
-        transform-style: preserve-3d;
-        z-index:3500;
+    //     position: relative;
+    //     transform-style: preserve-3d;
+    //     z-index:3500;
 
-    }
-    &__card-3d {
-        perspective: 500rem;
+    // }
+    // &__card-3d {
+    //     perspective: 500rem;
     
-    }
-    &__card-1 {
-        grid-row: 7/10;
-        grid-column: 4/7;
-        svg {
-            fill: $base-white;
-            opacity:0;
+    // }
+    // &__card-1 {
+    //     grid-row: 7/10;
+    //     grid-column: 4/7;
+    //     svg {
+    //         fill: $base-white;
+    //         opacity:0;
 
-        }
-    }
+    //     }
+    // }
 
     // &__nav{
     //     // height: 135vh;

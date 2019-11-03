@@ -103,9 +103,15 @@
                     <div class="projects__sml">
                         <input type="checkbox" class="projects__checkbox" id="projects-toggle">
                         <label for="projects-toggle" class="projects__menu">
-                            <div class="projects__menu--top">See</div>
-                            <div class="projects__menu--bottom">Projects</div>
-
+                            <div class="project__menu--card  btn ">
+                                <div class="projects__menu--top">See</div>
+                                <div class="projects__menu--bottom">Projects</div>
+                            </div>
+                            <div class="project__menu--card btn ">
+                                <svg class="contact__menu--icon">
+                                    <use xlink:href="imgs/sprite.svg#icon-long-arrow-right"></use>
+                                </svg>
+                            </div>
                         </label>
                         <div class="projects__icon">
                             <svg class="projects__icon--eye">
@@ -174,19 +180,14 @@
                     <div class="contact__small">
                         <input type="checkbox" class="contact__checkbox" id="contact-toggle"
                             onclick="setTimeout(show, 250); setTimeout(disappear, 250)">
-                        <label class="contact__menu" for="contact-toggle">
+                        <label class="contact__menu btn" for="contact-toggle">
                             <!-- button -->
-                            <div class="contact__menu--card contact__menu--front">
-                                <div class="contact__menu--top">Contact</div>
-                                <div class="contact__menu--bottom">Me</div>
+                            <div class="contact__menu--card btn__card contact__menu--front">
+                                <div class="contact__menu--top btn__card--top">Contact</div>
+                                <div class="contact__menu--bottom btn__card--bottom">Me</div>
                             </div>
-                            <!-- <div class="contact__menu--card contact__menu--back">
-                                <div class="contact__menu--top">Back</div>
-                                <svg class="contact__menu--bottom contact__menu--bottom-icon">
-                                    <use xlink:href="imgs/sprite.svg#icon-arrow-back"></use>
-                                </svg>
-                            </div> -->
-                            <div class="contact__menu--card contact__menu--back">
+
+                            <div class="contact__menu--card btn__card contact__menu--back">
                                 <svg class="contact__menu--icon">
                                     <use xlink:href="imgs/sprite.svg#icon-long-arrow-right"></use>
                                 </svg>

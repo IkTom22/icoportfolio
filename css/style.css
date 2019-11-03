@@ -55,6 +55,43 @@ p {
   font-size: 2rem;
   font-family: "Josefin Sans", sans-serif; }
 
+.btn {
+  position: fixed;
+  cursor: pointer;
+  color: #fffef8;
+  border-radius: 50%; }
+  .btn__card {
+    position: absolute;
+    backface-visibility: hidden;
+    transition: .3s all linear;
+    top: 0;
+    left: 0;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 400;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    justify-items: center;
+    align-items: center;
+    position: relative;
+    z-index: 2800;
+    opacity: 0;
+    background-color: black;
+    border-radius: 50%; }
+    .btn__card--top {
+      grid-row: 1/2; }
+      .btn__card--top::after {
+        content: "";
+        display: block;
+        height: .3rem;
+        width: 6rem;
+        background-color: #ff0000;
+        border-radius: 1rem;
+        text-align: center;
+        margin: 0 auto; }
+    .btn__card--bottom {
+      grid-row: 2/3; }
+
 @keyframes blowing {
   0% {
     border-radius: 62% 38% 65% 35% / 50% 49% 51% 50%;
@@ -412,11 +449,9 @@ p {
 
 @keyframes zoomingOut {
   0% {
-    opacity: 1;
-    transform: scale(1); }
+    opacity: 1; }
   100% {
-    opacity: 0;
-    transform: scale(0); } }
+    opacity: 0; } }
 
 @keyframes arrow-top {
   100% {
@@ -846,6 +881,7 @@ p {
         display: block;
         height: .3rem;
         width: 6rem;
+        background-color: #ff0000;
         border-radius: 1rem;
         text-align: center;
         margin: 0 auto; }
@@ -886,28 +922,10 @@ p {
     border-radius: 50%;
     transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1);
     transform: scale(0);
-    z-index: 3000;
+    z-index: 250;
     opacity: 0;
     background-color: #ffa500;
     background-image: radial-gradient(black, black); }
-  .projects__card {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    opacity: 0;
-    position: relative;
-    transform-style: preserve-3d;
-    z-index: 3500; }
-  .projects__card-3d {
-    perspective: 500rem; }
-  .projects__card-1 {
-    grid-row: 7/10;
-    grid-column: 4/7; }
-    .projects__card-1 svg {
-      fill: #fffef8;
-      opacity: 0; }
   .projects:hover .projects__menu {
     border: 5px #fffef8 solid;
     height: 10.5rem;
@@ -953,86 +971,34 @@ p {
     transform: translateY(-5rem);
     z-index: 2700;
     display: grid;
+    transform-origin: 50% 50%;
     grid-template-columns: repeat(4, 4.25rem);
     grid-template-rows: repeat(6, 4rem);
     transition: all .2s linear;
     animation: .2s appear 8s linear forwards, .3s slideUp 10s ease-in forwards; }
   .contact__menu {
-    position: fixed;
-    cursor: pointer;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 400;
-    display: grid;
-    grid-template-rows: repeat(2, auto);
-    justify-items: center;
-    align-items: center;
-    position: relative;
-    z-index: 2800;
     height: 8.5rem;
     width: 8.5rem;
     background-color: black;
-    color: #fffef8;
     grid-row: 1/4;
     grid-column: 1/5;
-    border-radius: 50%;
     z-index: 2900;
-    transform-origin: center;
+    transform-origin: 50% 50%;
     transition: .2s all linear; }
-    .contact__menu--top {
-      grid-row: 1/2; }
-      .contact__menu--top::after {
-        content: "";
-        display: block;
-        height: .3rem;
-        width: 6rem;
-        border-radius: 1rem;
-        text-align: center;
-        margin: 0 auto; }
-    .contact__menu--bottom {
-      grid-row: 2/3; }
     .contact__menu--card {
-      position: absolute;
       z-index: 2900;
       height: 8.5rem;
       width: 8.5rem;
-      backface-visibility: hidden;
-      overflow: hidden;
-      transition: .2s all ease;
-      top: 0;
-      left: 0;
-      border-radius: 50%;
-      text-align: center;
-      font-size: 2rem;
-      font-weight: 400;
-      display: grid;
-      grid-template-rows: repeat(2, auto);
-      justify-items: center;
-      align-items: center;
-      position: relative;
-      z-index: 2800;
+      transition: .3s all linear;
       grid-column: 1/-1;
       grid-row: 1/-1;
-      background-color: black;
-      opacity: 0;
       animation: .3s appear 8s linear forwards; }
-      .contact__menu--card--top {
-        grid-row: 1/2; }
-        .contact__menu--card--top::after {
-          content: "";
-          display: block;
-          height: .3rem;
-          width: 6rem;
-          border-radius: 1rem;
-          text-align: center;
-          margin: 0 auto; }
-      .contact__menu--card--bottom {
-        grid-row: 2/3; }
     .contact__menu:hover {
       border: 5px #fffef8 solid;
-      transform-origin: 50% 50%; }
+      transform-origin: center; }
     .contact__menu:hover .contact__menu--icon {
-      fill: #fffef8; }
+      fill: #fffef8;
+      transform: translateX(0); }
     .contact__menu--top, .contact__menu--bottom {
       z-index: 2600; }
     .contact__menu--top {
@@ -1052,14 +1018,20 @@ p {
       justify-content: center;
       align-content: center;
       grid-row: 1/2;
+      padding: 0;
       color: #fffef8;
       border-radius: 50%;
       opacity: 0;
-      transform: scale(0); }
+      transform-origin: center;
+      transform: scale(0);
+      transition: .2 all linear; }
     .contact__menu--icon {
+      position: absolute;
+      background-color: transparent;
       height: 100%;
       width: 100%;
-      fill: #f5af19; }
+      transform: translateX(-50%);
+      fill: #ff9c00; }
   .contact__background {
     position: absolute;
     opacity: 0;
@@ -1142,10 +1114,12 @@ p {
       height: 100%;
       max-width: 70%;
       transition: all .2s linear;
-      z-index: 2900; }
-      .contact__content--list:hover svg {
+      z-index: 3000; }
+      .contact__content--list:hover > svg {
         transform-origin: 50% 50%;
         animation: .2s jump .2s linear alternate 4; }
+      .contact__content--list:hover > h4 {
+        color: #ff3c00; }
     .contact__content--name {
       grid-row: 4/5; }
     .contact__content--email {
@@ -1162,9 +1136,6 @@ p {
       width: 2.5rem;
       height: 2.5rem;
       z-index: 2900; }
-    .contact__content--icon:hover {
-      transform-origin: 50% 50%;
-      animation: .2s jump .2s linear alternate 4; }
     .contact__content h4 {
       grid-column: 2/3;
       margin: 0; }
@@ -1246,7 +1217,7 @@ p {
       gap: 1.5rem;
       align-items: center;
       justify-items: start; }
-      .contact__content--position:hover svg {
+      .contact__content--position:hover > svg {
         cursor: auto;
         animation: .5s shake .2s ease-in forwards; }
       .contact__content--position svg {
@@ -1261,6 +1232,8 @@ p {
         grid-column: 3/-1;
         color: #fffef8;
         font-weight: 400; }
+      .contact__content--position:hover > p {
+        color: black; }
     .contact__content--clip {
       grid-row: 1/-1;
       grid-column: 1/-1;
@@ -1274,17 +1247,13 @@ p {
     opacity: 1;
     transform: scale(1); }
   .contact__checkbox:checked + .contact__menu {
-    animation: .2s shikaku .2s linear forwards; }
+    animation: .2s shikaku .2s linear forwards;
+    transform: scale(0.6); }
   .contact__checkbox:checked + .contact__menu .contact__menu--front {
     animation: .2s zoomingOut .2s linear forwards; }
-  .contact__checkbox:checked + .contact__menu .contact__menu--back {
-    animation: .1s zoomingIn .2s linear forwards; }
-  .contact__checkbox:checked + .contact__menu {
-    height: 5rem;
-    width: 5rem; }
-  .contact__checkbox:checked + .contact__menu > .contact__menu--icon {
-    height: 5rem;
-    width: 5rem; }
+  .contact__checkbox:checked + .contact__menu > .contact__menu--back {
+    animation: .1s zoomingIn .2s linear forwards;
+    transform: scale(0.6); }
   .contact__icon--2 {
     grid-row: 3/6;
     grid-column: 2/4;
@@ -1306,7 +1275,15 @@ p {
   100% {
     transform: rotate(0); } }
 
-@keyframes jump {}.appear {
+@keyframes jump {
+  0% {
+    transform: translate3d(0, 0, 0) scale3d(1, 1, 1); }
+  40% {
+    transform: translate3d(0, 10%, 0) scale3d(0.9, 1.2, 1); }
+  100% {
+    transform: translate3d(0, 20%, 0) scale3d(1.2, 0.7, 1); } }
+
+.appear {
   opacity: 1;
   transform: scale(1); }
 

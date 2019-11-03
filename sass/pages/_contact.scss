@@ -27,6 +27,7 @@
         //margin-top: 150%;
         // transform-style: preserve-3d;
         // perspective: 60rem;
+        transform-origin: 50% 50%;
         grid-template-columns: repeat(4, 4.25rem);
         grid-template-rows: repeat(6, 4rem);
         transition: all .2s linear;
@@ -34,49 +35,47 @@
     }
     
     &__menu {
-        //position: absolute;
-        position: fixed;
-        cursor: pointer;
-        @include menubox;
+        
+        // position: fixed;
+        // cursor: pointer;
+        // @include menubox;
         height: 8.5rem;
         width: 8.5rem;
         background-color: $base-black;
-        color: $base-white;
+        //color: $base-white;
        
         grid-row: 1/4;
         grid-column: 1/5;
-        border-radius: 50%;
+        //border-radius: 50%;
         z-index: 2900;
-        // transform-style: preserve-3d;
-        // perspective: 60rem;
-        transform-origin: center;
+
+        transform-origin: 50% 50%;
         transition: .2s all linear;
-        // opacity:0;
-        // animation: .2s appear 8s linear forwards;
+
 
         &--card{
-            position: absolute;
+            // position: absolute;
             z-index: 2900;
             height: 8.5rem;
             width:  8.5rem;
-            backface-visibility: hidden;
-            overflow: hidden; 
-            transition: .2s all ease;
-            top:0;
-            left:0;
-            border-radius: 50%;
-            @include menubox;
+            // backface-visibility: hidden;
+            //overflow: hidden; 
+            transition: .3s all linear;
+            // top:0;
+            // left:0;
+            // border-radius: 50%;
+            // @include menubox;
             grid-column: 1/-1;
             grid-row: 1/-1;
-            background-color: $base-black;
-            opacity:0;
+            // background-color: $base-black;
+            // opacity:0;
             animation: .3s appear 8s linear forwards;
         }
 
      
         &:hover {
             border: 5px  $base-white solid;
-            transform-origin: 50% 50%;
+            transform-origin: center;
            
             //transform: scale(1);
 
@@ -84,6 +83,8 @@
 
         &:hover &--icon {
             fill: $base-white;
+            transform: translateX(0);
+            
         }
         &--top,
         &--bottom{
@@ -109,20 +110,27 @@
         &--back {
             z-index: 2850;
             opacity:0;
+
             position: absolute;
             @include centerContent;
             grid-row: 1/2;
+            padding: 0;
             color: $base-white;  
             border-radius: 50%;
             opacity:0;
-                //transform: scale(0) rotate(-360deg);
+            transform-origin: center;
             transform: scale(0);
+            transition: .2 all linear;
             
         }
         &--icon {
+           position: absolute;
+           background-color: transparent;
             height: 100%;
             width: 100%;
-            fill:$orange-light;
+            transform: translateX(-50%);
+            fill:#ff9c00;
+
         }
 
     }
@@ -243,13 +251,17 @@
         max-width: 70%;
        
         transition: all .2s linear;
-        z-index:2900;   
-        &:hover svg{
-            transform-origin: 50% 50%;
-            animation: .2s jump .2s linear alternate 4;
+        z-index:3000;   
+        &:hover > svg{
+        transform-origin: 50% 50%;
+        animation: .2s jump .2s linear alternate 4;
         }
+        &:hover > h4 {
+            color: $orange-red;
+        }
+        
     }
-    
+
     &--name {
      grid-row: 4/5;
     
@@ -280,10 +292,10 @@
         z-index: 2900;
         
     }
-    &--icon:hover {
-        transform-origin: 50% 50%;
-        animation: .2s jump .2s linear alternate 4;
-    }
+    // &--icon:hover {
+    //     transform-origin: 50% 50%;
+    //     animation: .2s jump .2s linear alternate 4;
+    // }
     
     & h4 {
         grid-column: 2/3;
@@ -393,10 +405,12 @@
         gap: 1.5rem;
         align-items: center;
         justify-items: start;
-        &:hover svg{
+        &:hover > svg{
             cursor: auto;
             animation: .5s shake .2s ease-in forwards;
         }
+
+        
         svg {
             grid-column: 2/3;
             width: 2rem;
@@ -413,6 +427,9 @@
             //color: rgba($blue-mid, .8);
             color: $base-white;
             font-weight:400;
+        }
+        &:hover > p{
+            color: $base-black;
         }
             
     }  
@@ -441,15 +458,14 @@
 //     // animation: 4s blobbing 2.6s linear infinite, 3s birth 3s ease-in-out forwards;
 //  }
 @include checked;
-&__checkbox:checked + &__menu{
+// &__checkbox:checked + &__menu{
     
-    height: 5rem;
-    width: 5rem;
-}
-&__checkbox:checked + &__menu > &__menu--icon {
-    height: 5rem;
-    width: 5rem;
-}
+//     transform: scale(.6);
+// }
+// &__checkbox:checked + &__menu > &__menu--back {
+//     transform: scale(.6);
+// }
+
     &__icon {
 
             &--2{
@@ -474,9 +490,9 @@
 
 
 @keyframes jump {
-    // 0%   {transform: translate3d(0,0,0) scale3d(1,1,1);}
-    // 40%  {transform: translate3d(0,10%,0) scale3d(.9,1.2,1);}
-    // 100% {transform: translate3d(0,20%,0) scale3d(1.2,.7,1);}
+    0%   {transform: translate3d(0,0,0) scale3d(1,1,1);}
+    40%  {transform: translate3d(0,10%,0) scale3d(.9,1.2,1);}
+    100% {transform: translate3d(0,20%,0) scale3d(1.2,.7,1);}
 
   }
 

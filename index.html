@@ -101,19 +101,22 @@
 
                 <section class="projects">
                     <div class="projects__sml">
-                        <input type="checkbox" class="projects__checkbox" id="projects-toggle"
-                            onclick="setTimeout(show, 250); setTimeout(disappear, 250)">
-                        <label for="projects-toggle" class="projects__menu btn">
-                            <div class="projects__menu--card  btn__card btn__card--front projects__menu--front">
-                                <div class="projects__menu--top btn__card--top">See</div>
-                                <div class="projects__menu--bottom btn__card--bottom">Projects</div>
-                            </div>
-                            <div class="projects__menu--card btn__card btn__card--back projects__menu--back">
-                                <svg class="projects__menu--icon btn__icon">
-                                    <use xlink:href="imgs/sprite.svg#icon-long-arrow-right"></use>
-                                </svg>
-                            </div>
-                        </label>
+                        <div class="projects__menubox">
+                            <input type="checkbox" class="projects__checkbox" id="projects-toggle"
+                                onclick="setTimeout(show, 250); setTimeout(disappear, 250)">
+                            <label for="projects-toggle" class="projects__menu btn">
+                                <div class="projects__menu--card  btn__card btn__card--front projects__menu--front">
+                                    <div class="projects__menu--top btn__card--top">See</div>
+                                    <div class="projects__menu--bottom btn__card--bottom">Projects</div>
+                                </div>
+                                <div class="projects__menu--card btn__card btn__card--back projects__menu--back">
+                                    <svg class="projects__menu--icon btn__icon">
+                                        <use xlink:href="imgs/sprite.svg#icon-long-arrow-right"></use>
+                                    </svg>
+                                </div>
+                            </label>
+                        </div>
+
                         <div class="projects__icon">
                             <svg class="projects__icon--eye">
                                 <use xlink:href="imgs/sprite.svg#icon-eye"></use>
@@ -153,6 +156,7 @@
                 <section class="contact">
 
                     <div class="contact__small">
+
                         <input type="checkbox" class="contact__checkbox" id="contact-toggle"
                             onclick="setTimeout(show, 250); setTimeout(disappear, 250)">
                         <label class="contact__menu btn" for="contact-toggle">

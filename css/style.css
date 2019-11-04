@@ -59,7 +59,13 @@ p {
   position: fixed;
   cursor: pointer;
   color: #fffef8;
-  border-radius: 50%; }
+  border-radius: 50%;
+  background-color: black;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center; }
   .btn__card {
     position: absolute;
     backface-visibility: hidden;
@@ -76,7 +82,7 @@ p {
     position: relative;
     z-index: 2800;
     opacity: 0;
-    background-color: black;
+    background-color: transparent;
     border-radius: 50%; }
     .btn__card--top {
       grid-row: 1/2; }
@@ -100,10 +106,10 @@ p {
       z-index: 2850;
       justify-content: center;
       align-content: center;
+      background-color: transparent;
       grid-row: 1/2;
       padding: 0;
       color: #fffef8;
-      border-radius: 50%;
       opacity: 0;
       transform-origin: center;
       transform: scale(0);
@@ -111,7 +117,7 @@ p {
   .btn__icon {
     position: absolute;
     background-color: transparent;
-    height: 100%;
+    height: 90%;
     width: 100%;
     transform: translateX(-50%); }
 
@@ -876,13 +882,16 @@ p {
     animation: .2s appear 23s ease-in forwards; }
   .projects__checkbox {
     display: none; }
-  .projects__menu {
+  .projects__menubox {
     grid-column: 4 / 5;
     grid-row: 2/3;
+    height: 10rem;
+    width: 10rem;
+    transform-origin: center; }
+  .projects__menu {
     height: 9.5rem;
     width: 9.5rem;
     font-size: 2.6rem;
-    transform: translateX(6%);
     background-color: transparent;
     transform-origin: 50% 50%;
     transition: all .2s ease;
@@ -913,7 +922,9 @@ p {
       fill: pink; }
     .projects__menu:hover {
       border: 5px #fffef8 solid;
-      font-size: 2.61rem; }
+      transform: translate(-1%, -5%); }
+    .projects__menu:hover > .projects__menu--card {
+      font-size: 2.5rem; }
   .projects__icon {
     position: absolute;
     grid-row: 1/-1;
@@ -952,14 +963,12 @@ p {
   .projects__checkbox:checked + .projects__menu > .projects__menu--back {
     animation: .1s zoomingIn .2s linear forwards;
     transform: scale(0.6); }
-  .projects__checkbox:checked + .projects__menu {
-    grid-column: 7 / 8;
-    grid-row: 3/4;
-    height: 6rem;
-    width: 6rem; }
   .projects__checkbox:checked ~ .projects__nav {
     opacity: 1;
     width: 100%; }
+  .projects__checkbox:checked + .projects__menu {
+    height: 6rem;
+    width: 6rem; }
 
 .disappear {
   z-index: 50; }
@@ -1008,6 +1017,7 @@ p {
       width: 8.5rem;
       background-color: black;
       transition: .3s all linear;
+      overflow: hidden;
       grid-column: 1/-1;
       grid-row: 1/-1;
       animation: .3s appear 8s linear forwards; }
@@ -1017,6 +1027,8 @@ p {
     .contact__menu:hover .contact__menu--icon {
       fill: #fffef8;
       transform: translateX(0); }
+    .contact__menu:hover > .contact__menu--card {
+      font-size: 1.8rem; }
     .contact__menu--top, .contact__menu--bottom {
       z-index: 2600; }
     .contact__menu--top {

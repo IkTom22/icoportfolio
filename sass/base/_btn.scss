@@ -5,6 +5,10 @@
     //@include menubox;
     color: $base-white;
     border-radius: 50%;
+    background-color: $base-black;
+    display: grid;
+    @include centering;
+    @include centerContent;
 
     &__card {
         position: absolute;
@@ -14,7 +18,8 @@
         left:0;
         @include menubox;
         opacity:0;
-        background-color: $base-black;
+         background-color: transparent;
+       // background-color: $base-black;
         border-radius: 50%;
 
         &--front{
@@ -26,10 +31,11 @@
             position: absolute;
             z-index: 2850;
             @include centerContent;
+            background-color: transparent;
             grid-row: 1/2;
             padding: 0;
             color: $base-white;  
-            border-radius: 50%;
+            //border-radius: 50%;
             opacity:0;
             transform-origin: center;
             transform: scale(0);
@@ -39,7 +45,7 @@
     &__icon {
         position: absolute;
         background-color: transparent;
-         height: 100%;
+         height: 90%;
          width: 100%;
          transform: translateX(-50%);
     }

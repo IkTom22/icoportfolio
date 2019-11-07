@@ -886,8 +886,7 @@ p {
     grid-column: 4 / 5;
     grid-row: 2/3;
     height: 10rem;
-    width: 10rem;
-    transform-origin: center; }
+    width: 10rem; }
   .projects__menu {
     height: 9.5rem;
     width: 9.5rem;
@@ -946,9 +945,10 @@ p {
     border-radius: 50%;
     transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1);
     transform: scale(0);
-    z-index: 3000;
-    opacity: 0;
-    background-image: radial-gradient(black, black); }
+    grid-column: 4 / 5;
+    grid-row: 2/3;
+    z-index: 3300;
+    background-color: #fffef8; }
   .projects:hover .projects__menu {
     border: 5px #fffef8 solid;
     font-size: 2.6rem; }
@@ -971,7 +971,32 @@ p {
     width: 6rem; }
 
 .disappear {
-  z-index: 50; }
+  visibility: hidden; }
+
+.scale1 {
+  transform: scale(1);
+  opacity: 1; }
+
+.showing {
+  visibility: visible; }
+
+.changeGrid {
+  grid-row: 3/4;
+  grid-column: 7/8; }
+
+.black {
+  background-color: black; }
+  .black__checkbox:checked ~ .black__background {
+    opacity: 1;
+    transform: scale(1); }
+  .black__checkbox:checked + .black__menu {
+    animation: .2s shikaku .2s linear forwards;
+    transform: scale(0.6); }
+  .black__checkbox:checked + .black__menu .black__menu--front {
+    animation: .2s zoomingOut .2s linear forwards; }
+  .black__checkbox:checked + .black__menu > .black__menu--back {
+    animation: .1s zoomingIn .2s linear forwards;
+    transform: scale(0.6); }
 
 .contact {
   grid-row: 1 / -1;

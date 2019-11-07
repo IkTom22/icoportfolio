@@ -103,7 +103,7 @@
                     <div class="projects__sml">
                         <div class="projects__menubox">
                             <input type="checkbox" class="projects__checkbox" id="projects-toggle"
-                                onclick="setTimeout(show, 250); setTimeout(disappear, 250)">
+                                onclick="setTimeout(scale, 200); setTimeout(disappearC, 240); setTimeout(move, 240)">
                             <label for="projects-toggle" class="projects__menu btn">
                                 <div class="projects__menu--card  btn__card btn__card--front projects__menu--front">
                                     <div class="projects__menu--top btn__card--top">See</div>
@@ -114,7 +114,9 @@
                                         <use xlink:href="imgs/sprite.svg#icon-long-arrow-right"></use>
                                     </svg>
                                 </div>
+
                             </label>
+
                         </div>
 
                         <div class="projects__icon">
@@ -122,9 +124,8 @@
                                 <use xlink:href="imgs/sprite.svg#icon-eye"></use>
                             </svg>
                         </div>
-                        <div class="projects__background">&nbsp;</div>
+                        <div class="projects__background" id="projBack">&nbsp;</div>
                     </div>
-
                     <div class="projects__card projects__card-3d projects__card-1">
                         <div class="projects__card--front ">
                             <div class="project__card--title">
@@ -158,7 +159,7 @@
                     <div class="contact__small">
 
                         <input type="checkbox" class="contact__checkbox" id="contact-toggle"
-                            onclick="setTimeout(show, 250); setTimeout(disappear, 250)">
+                            onclick="setTimeout(show , 250); setTimeout(disappearP, 250)">
                         <label class="contact__menu btn" for="contact-toggle">
                             <!-- button -->
                             <!-- <div class="contact__menu--card btn__card contact__menu--front"> -->

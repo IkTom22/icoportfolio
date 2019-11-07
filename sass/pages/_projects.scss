@@ -33,16 +33,11 @@
         grid-row: 2/3;
         height: 10rem;
         width: 10rem;
-        transform-origin: center;
+        // transform-origin: center;
         //transform: translateX(6%);
     } 
     &__menu{
         
-        // grid-column: 4 / 5;
-        // grid-row: 2/3;
-        //cursor: pointer;
-        //opacity:0;
-        //@include menubox;
         height: 9.5rem;
         width: 9.5rem;
         font-size: 2.6rem;
@@ -79,9 +74,7 @@
         }
         &--top{
                 align-self: end;
-            //     &::after{
-            //         background-color: $red-cube;
-            // }
+
         }
         &--bottom{
                 align-self: start;
@@ -91,9 +84,7 @@
         }
         &:hover{
             border: 5px  $base-white solid ;
-            // height: 10.5rem;
-            // width: 10.5rem;
-            
+
             transform: translate(-1%, -5%);
           }
           &:hover > &--card {
@@ -123,12 +114,14 @@
 
     &__background {
         @include background-bubble;
-        z-index:3000;
+        grid-column: 4 / 5;
+        grid-row: 2/3;
+        z-index:3300;
         //z-index:250;
-        opacity:0;
-       // background-color: $orange;
+       
+       background-color: $base-white;
         //background-image: radial-gradient($orange-light, $orange-red, $red-cube);
-        background-image: radial-gradient(black, black);
+        // background-image: radial-gradient(black, black);
     }
 
     &:hover &__menu{
@@ -165,5 +158,22 @@
 
 }
 .disappear {
-    z-index: 50;
+   visibility: hidden;
+
+}
+.scale1{
+    transform: scale(1);
+    opacity:1;
+}
+.showing {
+   visibility: visible;
+}
+.changeGrid{
+    grid-row: 3/4;
+    grid-column: 7/8;
+   
+}
+.black {
+    background-color: $base-black;
+    @include checked;
 }

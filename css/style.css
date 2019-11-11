@@ -478,9 +478,11 @@ p {
 
 @keyframes zoomingOut {
   0% {
-    opacity: 1; }
+    opacity: 1;
+    transform: scale(1); }
   100% {
-    opacity: 0; } }
+    opacity: 0;
+    transform: scale(0); } }
 
 @keyframes arrow-top {
   100% {
@@ -876,17 +878,23 @@ p {
     grid-template-rows: repeat(3, minmax(7.46rem, auto));
     justify-items: center;
     align-items: center;
-    align-content: center;
     justify-content: center;
+    align-content: center;
+    transform-origin: center;
     transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     animation: .2s appear 23s ease-in forwards; }
   .projects__checkbox {
     display: none; }
   .projects__menubox {
-    grid-column: 4 / 5;
-    grid-row: 2/3;
+    grid-column: 3 / 6;
+    grid-row: 1/-1;
     height: 10rem;
-    width: 10rem; }
+    width: 10rem;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center; }
   .projects__menu {
     height: 9.5rem;
     width: 9.5rem;
@@ -896,6 +904,8 @@ p {
     transition: all .2s ease;
     z-index: 3500; }
     .projects__menu--card {
+      grid-row: 1/-1;
+      grid-column: 1/-1;
       transition: .3s all linear;
       z-index: 3600;
       justify-content: center;
@@ -904,7 +914,13 @@ p {
       height: 9.5rem;
       width: 9.5rem;
       font-size: 2.6rem;
+      transition: all .2s;
       animation: 3s blackBackground 23.5s linear forwards; }
+    .projects__menu--back {
+      width: 7.5rem;
+      height: 7.5rem; }
+    .projects__menu:hover > .projects__menu--back {
+      border: 6px #2af1eb solid; }
     .projects__menu--top, .projects__menu--bottom {
       position: absolute;
       z-index: 3700;
@@ -918,12 +934,13 @@ p {
     .projects__menu--bottom {
       align-self: start; }
     .projects__menu--icon {
-      fill: pink; }
+      fill: #fffef8; }
     .projects__menu:hover {
       border: 5px #fffef8 solid;
-      transform: translate(-1%, -5%); }
-    .projects__menu:hover > .projects__menu--card {
-      font-size: 2.5rem; }
+      animation-fill-mode: backwards; }
+    .projects__menu:hover .projects__menu--icon {
+      fill: #2af1eb;
+      transform: translateX(0); }
   .projects__icon {
     position: absolute;
     grid-row: 1/-1;
@@ -932,8 +949,8 @@ p {
     transition: all .2s linear; }
     .projects__icon--eye {
       z-index: 2750;
-      width: 15rem;
-      height: 15rem;
+      width: 15.5rem;
+      height: 15.5rem;
       transform-origin: center;
       transform: scale(2.5) rotate3d(1, 0, 0, 90deg);
       animation: .3s openingEye 23.5s ease-in forwards; }
@@ -950,8 +967,7 @@ p {
     z-index: 3300;
     background-color: #fffef8; }
   .projects:hover .projects__menu {
-    border: 5px #fffef8 solid;
-    font-size: 2.6rem; }
+    border: 5px #fffef8 solid; }
   .projects__checkbox:checked ~ .projects__background {
     opacity: 1;
     transform: scale(1); }
@@ -969,6 +985,10 @@ p {
   .projects__checkbox:checked + .projects__menu {
     height: 6rem;
     width: 6rem; }
+  .projects__card-1 {
+    grid-row: 6/9;
+    grid-column: 4/7;
+    background-color: red; }
 
 .disappear {
   visibility: hidden; }
@@ -981,11 +1001,12 @@ p {
   visibility: visible; }
 
 .changeGrid {
-  grid-row: 3/4;
-  grid-column: 7/8; }
+  animation: .2s movinRight ease-in-out forwards; }
 
 .black {
-  background-color: black; }
+  background-color: black;
+  border-radius: 2.8rem;
+  transform: scale(0.4); }
   .black__checkbox:checked ~ .black__background {
     opacity: 1;
     transform: scale(1); }
@@ -997,6 +1018,17 @@ p {
   .black__checkbox:checked + .black__menu > .black__menu--back {
     animation: .1s zoomingIn .2s linear forwards;
     transform: scale(0.6); }
+
+.zoon-out {
+  animation: .2s zoomingOut .2s linear forwards; }
+
+.zoom-in {
+  animation: .1s zoomingIn .2s linear forwards; }
+
+@keyframes movinRight {
+  100% {
+    grid-row: 3/4;
+    grid-column: 7/8; } }
 
 .contact {
   grid-row: 1 / -1;

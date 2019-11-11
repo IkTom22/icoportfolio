@@ -17,9 +17,9 @@
         grid-template-columns: repeat(7, minmax(8.22rem, auto));
         grid-template-rows: repeat(3, minmax(7.46rem, auto));
         @include centering;
-        align-content: center;
-        justify-content: center;
-        
+        @include centerContent;
+     
+        transform-origin: center;
         transition: all .2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         animation: .2s appear 23s ease-in forwards;
     }
@@ -29,12 +29,16 @@
         display: none;
     }
     &__menubox{
-        grid-column: 4 / 5;
-        grid-row: 2/3;
+        grid-column: 3 / 6;
+        // justify-self: start;
+        grid-row: 1/-1;
         height: 10rem;
         width: 10rem;
         // transform-origin: center;
         //transform: translateX(6%);
+        display: grid;
+        @include centering;
+        @include centerContent;
     } 
     &__menu{
         
@@ -51,7 +55,10 @@
         //animation: .3s appear 23.5s ease-in forwards;
         z-index: 3500;
         //z-index: 250;
+        
         &--card {
+            grid-row: 1/-1;
+            grid-column: 1/-1;
             transition: .3s all linear;
             z-index: 3600;
             @include centerContent;
@@ -59,7 +66,19 @@
             height: 9.5rem;
             width: 9.5rem;
             font-size: 2.6rem;
+            transition: all .2s;
             animation: 3s blackBackground 23.5s linear forwards;
+
+        }
+        &--back {
+            width: 7.5rem;
+            height: 7.5rem;
+
+        }
+        &:hover > &--back {
+       
+                border: 6px $blue-mid-light solid;
+ 
         }
         &--top,
         &--bottom {
@@ -80,16 +99,21 @@
                 align-self: start;
         }
         &--icon {
-            fill: pink;
+            fill: $base-white;
         }
         &:hover{
-            border: 5px  $base-white solid ;
-
-            transform: translate(-1%, -5%);
-          }
-          &:hover > &--card {
-            font-size: 2.5rem;
-          }
+            border: 5px  $base-white solid;
+            animation-fill-mode: backwards;
+            //transform: translate(-1%, -5%);
+        }
+        // &:hover > &--back {
+        //     background: $red-cube;
+        // }
+        &:hover  &--icon {
+            fill:$blue-mid-light;
+            transform: translateX(0);
+            
+        }
             
     }
     &__icon{
@@ -103,8 +127,8 @@
 
         &--eye{
             z-index: 2750;
-            width: 15rem;
-            height: 15rem;
+            width: 15.5rem;
+            height: 15.5rem;
             transform-origin: center;
             transform: scale(2.5) rotate3d(1, 0, 0, 90deg);
             animation: .3s openingEye 23.5s ease-in forwards;
@@ -128,21 +152,14 @@
         border: 5px  $base-white solid ;
         // height: 10.5rem;
         // width: 10.5rem;
-        font-size: 2.6rem;
+        //font-size: 2.6rem;
 
       }
       
       //FUNCTIONARITY 
 
         @include checked;
-    //     &__checkbox:checked  &__menubox {
-        
-    //     grid-column: 7 / 8;
-    //     grid-row: 3/4;
-    //     height: 6rem;
-    //     width: 6rem;
-        
-    //   }
+
 
       &__checkbox:checked ~ &__nav {
         opacity: 1;
@@ -155,7 +172,11 @@
     
   } 
 
-
+  &__card-1 {
+    grid-row: 6/9;
+    grid-column: 4/7;
+    background-color: red;
+    }
 }
 .disappear {
    visibility: hidden;
@@ -169,11 +190,29 @@
    visibility: visible;
 }
 .changeGrid{
-    grid-row: 3/4;
-    grid-column: 7/8;
+    
+    animation:  .2s movinRight ease-in-out forwards;
+    // color: transparent;
    
 }
 .black {
     background-color: $base-black;
+    border-radius: 2.8rem;
     @include checked;
+    transform: scale(.4);
+}
+
+.zoon-out{
+    animation: .2s zoomingOut .2s linear forwards;
+}
+.zoom-in{
+    animation: .1s zoomingIn .2s linear forwards;
+    // transform: scale(.4);
+}
+
+@keyframes movinRight {
+    100%{
+        grid-row: 3/4;
+        grid-column: 7/8;
+    }
 }

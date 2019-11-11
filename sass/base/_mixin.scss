@@ -123,6 +123,7 @@
 
   }
   &__checkbox:checked + &__menu{
+    
     animation: .2s shikaku .2s linear forwards;
     transform: scale(.6);
   }

@@ -5,6 +5,7 @@ let contactBtn = document.querySelector('#contact-toggle'),
     job = document.querySelector('#jobList'),
     contactHide = document.querySelector('.contact__menu'),
     projectHide = document.querySelector('.projects__menu'),
+    projFntMenu = document.querySelector('.projects__menu--front'),
     projectMbox = document.querySelector('.projects__menubox'),
     menuPback = document.querySelector('.projects__menu--back');
 projectBack = document.querySelector('.projects__background');
@@ -82,11 +83,13 @@ function scale() {
 function move() {
     if (projectBtn.checked) {
 
-        projectMbox.classList.add('changeGrid')
+        projectMbox.classList.add('changeGrid');
+        projFntMenu.classList.add('disappear');
         menuPback.classList.add('black');
 
     } else {
-        projectMbox.classList.remove('changeGrid')
+        projectMbox.classList.remove('changeGrid');
+        projFntMenu.classList.remove('disappear');
         menuPback.classList.remove('black');
     }
 }

@@ -3,6 +3,9 @@
     grid-column:  1/-1;
     display: grid;
     @include base-template;
+    // coloum reduced by 1 and with changed by .25
+    grid-template-columns: minmax(2rem, 5rem) 2rem repeat(11, minmax(6.5rem, 1fr)) 2rem minmax(2rem, 5rem);
+    gap: 2.5rem;
     position: relative;
    
     &__sml{
@@ -41,7 +44,6 @@
         @include centerContent;
     } 
     &__menu{
-        
         height: 9.5rem;
         width: 9.5rem;
         font-size: 2.6rem;
@@ -143,8 +145,8 @@
         z-index:3300;
         //z-index:250;
        
-       background-color: $base-white;
-        //background-image: radial-gradient($orange-light, $orange-red, $red-cube);
+        background-color: $baige-yellow;
+        //background-image: radial-gradient($blue-green, $blue-mid, $blue-deep);
         // background-image: radial-gradient(black, black);
     }
 
@@ -171,12 +173,132 @@
     width: 6rem;
     
   } 
+  &__card {
+    position: relative;
+        // margin-top: -35px;
+    z-index: 4000;
+    //   overflow: hidden;
+    //   margin-top: -10rem;
+    //   height: 20rem;
+    //   width: 27rem;
+    height: 20rem;
+    width: 100%;
+    transition: all 0.2s ease;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    
+    
+
+
+      & > * {
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        pointer-events: none;
+        height: 100%;
+        width: 100%;
+        border-width: 2px;
+        border-style: solid;
+      }
+      &--front {    
+        transform: rotateX(0);
+        //background-color: black;
+        background-color: $base-white;
+        transition: all 0.2s ease;
+        transform-origin: 50% 50% -10rem;
+        display: grid;
+        grid-template-columns: 6rem 1fr 6rem;
+        grid-template-rows: 3rem repeat(2, 7rem) 3rem;
+        @include centering;
+        @include centerContent;
+        & svg {
+            grid-column: 2/3;
+            grid-row: 2/3;
+            width: 5rem;
+            height: 5rem;
+           
+            margin: 0;
+
+        }
+        & h5 {
+            grid-column: 2/3;
+            grid-row: 3/4;
+            width: 100%;
+            text-align: center;
+            text-transform: uppercase;
+            font-family:$font-display;
+            letter-spacing: .2rem;
+            
+        }
+
+      }
+      &--back{
+        
+        background-color: $base-black;
+        transform: rotateX(85deg);
+        background-image: linear-gradient($blue-green, $blue-mid, $blue-deep);
+        transition: all 0.2s ease;
+        transform-origin: 50% 50% -10rem;
+
+      }
+    
+
+    &:hover &--back{
+        transform: rotateX(0deg);
+        
+    }
+    &:hover &--front{
+        transform: rotateX(-90deg);
+        
+    }
+  }
 
   &__card-1 {
     grid-row: 6/9;
     grid-column: 4/7;
-    background-color: red;
+    // background-color: red;
+   
+    &--front{
+        
+        border-color: black;
+
+        & svg {
+            // fill:black;
+            fill: $red-cube;
+        }
     }
+    }
+   &__card-2 {
+    grid-row: 6/9;
+    grid-column: 7/10;
+    
+    & svg {
+        // fill:black;
+        fill:darkcyan;
+    }
+ 
+    }
+    &__card-3 {
+        grid-row: 6/9;
+        grid-column: 10/13;
+        
+        z-index: 1000;
+    } 
+    &__card-4 {
+        grid-row: 9/12;
+        grid-column: 4/7;
+       
+    }       
+    &__card-5 {
+        grid-row: 9/12;
+        grid-column: 7/10;
+       
+    }
+    &__card-6 {
+        grid-row: 9/12;
+        grid-column: 10/13;
+        
+    }    
 }
 .disappear {
    visibility: hidden;

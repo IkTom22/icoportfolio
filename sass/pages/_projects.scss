@@ -181,7 +181,7 @@
     //   margin-top: -10rem;
     //   height: 20rem;
     //   width: 27rem;
-    height: 20rem;
+    height: 22rem;
     width: 100%;
     transition: all 0.2s ease;
     transform-style: preserve-3d;
@@ -205,13 +205,14 @@
         //background-color: black;
         background-color: $base-white;
         transition: all 0.2s ease;
-        transform-origin: 50% 50% -10rem;
+        transform-origin: 50% 50% -12rem;
         display: grid;
         grid-template-columns: 6rem 1fr 6rem;
         grid-template-rows: 3rem repeat(2, 7rem) 3rem;
         @include centering;
         @include centerContent;
-        & svg {
+        & svg,
+        & >div {
             grid-column: 2/3;
             grid-row: 2/3;
             width: 5rem;
@@ -233,12 +234,45 @@
 
       }
       &--back{
-        
+        display: grid;
+        @include centering;
+        @include centerContent;
+        height: 22rem;
+        grid-template-rows: [title-start] 5rem [title-end] 1fr 3rem;
+        grid-template-columns: 2rem 1fr 2rem;
+        gap: 1rem;
         background-color: $base-black;
         transform: rotateX(85deg);
-        background-image: linear-gradient($blue-green, $blue-mid, $blue-deep);
+     
         transition: all 0.2s ease;
-        transform-origin: 50% 50% -10rem;
+        transform-origin: 50% 50% -12rem;
+
+        & >* {
+            margin: 0;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        & h5 {
+
+            grid-row: 1/2;
+            grid-column: 2/3;
+          
+            text-transform: uppercase;
+            padding-top: 2rem;
+            
+        }
+        & p {
+            grid-column: 2/3;
+            grid-row: 2/3;
+            text-align: center;
+            hyphens: auto;
+            font-weight: 400;
+        }
+        & button {
+            grid-column: 2/3;
+            grid-row: 3/4;
+            padding-bottom: 1.5rrem;
+        }
 
       }
     
@@ -264,7 +298,17 @@
 
         & svg {
             // fill:black;
-            fill: $red-cube;
+            //fill: $red-light;
+        }
+    }
+    &--back {
+        //background: red;
+        // background-image: linear-gradient( $orange-deep, $red-cube, $red-light);
+        //background-image: linear-gradient(to bottom, #f80000 0%, #f9d423 100%);
+        & >* {
+            
+            background-image: linear-gradient(to top, #fd714e, #ffedbc);
+            
         }
     }
     }
@@ -274,9 +318,17 @@
     
     & svg {
         // fill:black;
-        fill:darkcyan;
+        //fill:darkcyan;
     }
- 
+    &--back {
+        // background-image: linear-gradient($blue-green, $blue-mid, $blue-deep);
+        //background-image: linear-gradient(to top, #00c6fb 0%, #036d48 100%);
+        //background-image: linear-gradient(to top, #00d9fb 0%, #036d48 100%);
+        & >* {
+            background-image: linear-gradient(to top, #00d9fb 0%, #12f7a7 100%);
+            background-image: linear-gradient(to top, #f4f8f8 0%, #f1f8f6 100%);
+        }
+    }
     }
     &__card-3 {
         grid-row: 6/9;
@@ -287,6 +339,13 @@
     &__card-4 {
         grid-row: 9/12;
         grid-column: 4/7;
+        &--front {
+            & > div img {
+                width: 5rem;
+            height: 5rem;
+            }
+        }
+        
        
     }       
     &__card-5 {

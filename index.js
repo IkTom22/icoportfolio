@@ -7,8 +7,12 @@ let contactBtn = document.querySelector('#contact-toggle'),
     projectHide = document.querySelector('.projects__menu'),
     projFntMenu = document.querySelector('.projects__menu--front'),
     projectMbox = document.querySelector('.projects__menubox'),
-    menuPback = document.querySelector('.projects__menu--back');
-projectBack = document.querySelector('.projects__background');
+    menuPback = document.querySelector('.projects__menu--back'),
+    projectBack = document.querySelector('.projects__background'),
+    projCard = document.querySelectorAll('.projects__card');
+
+
+
 
 function show() {
     if (contactBtn.checked) {
@@ -64,10 +68,16 @@ function disappearC() {
 
         lowZindex(contactHide, contactContent);
         contactMbox.classList.add('disappear');
+        //project card appears
+        Array.from(projCard).forEach(card =>
+            card.classList.add('poppingup'));
 
     } else {
         highZindex(contactHide, contactContent);
         contactMbox.classList.remove('disappear');
+        //project card disapears
+        Array.from(projCard).forEach(card =>
+            card.classList.remove('poppingup'));
 
     }
 
@@ -93,3 +103,4 @@ function move() {
         menuPback.classList.remove('black');
     }
 }
+

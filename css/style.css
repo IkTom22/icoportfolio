@@ -909,7 +909,8 @@ p {
     background-color: transparent;
     transform-origin: 50% 50%;
     transition: all .2s ease;
-    z-index: 3500; }
+    z-index: 3500;
+    border: none; }
     .projects__menu--card {
       grid-row: 1/-1;
       grid-column: 1/-1;
@@ -922,12 +923,14 @@ p {
       width: 9.5rem;
       font-size: 2.6rem;
       transition: all .2s;
-      animation: 3s blackBackground 23.5s linear forwards; }
+      animation: 3s blackBackground 24s linear forwards; }
     .projects__menu--back {
       width: 7.5rem;
       height: 7.5rem; }
+      .projects__menu--back > svg {
+        fill: #faeeb8; }
     .projects__menu:hover > .projects__menu--back {
-      border: 6px #2af1eb solid; }
+      background: #06b306; }
     .projects__menu--top, .projects__menu--bottom {
       position: absolute;
       z-index: 3700;
@@ -942,11 +945,10 @@ p {
       align-self: start; }
     .projects__menu--icon {
       fill: #fffef8; }
-    .projects__menu:hover {
+    .projects__menu:hover > .projects__menu--front {
       border: 5px #fffef8 solid;
       animation-fill-mode: backwards; }
     .projects__menu:hover .projects__menu--icon {
-      fill: #2af1eb;
       transform: translateX(0); }
   .projects__icon {
     position: absolute;
@@ -973,8 +975,6 @@ p {
     grid-row: 2/3;
     z-index: 3300;
     background-color: #faeeb8; }
-  .projects:hover .projects__menu {
-    border: 5px #fffef8 solid; }
   .projects__checkbox:checked ~ .projects__background {
     opacity: 1;
     transform: scale(1); }
@@ -995,6 +995,8 @@ p {
   .projects__card {
     position: relative;
     z-index: 4000;
+    visibility: hidden;
+    transform: scale(0);
     height: 22rem;
     width: 100%;
     transition: all 0.2s ease;
@@ -1052,8 +1054,10 @@ p {
       transform-origin: 50% 50% -11rem; }
       .projects__card--back > * {
         margin: 0;
+        -webkit-background-clip: text;
         background-clip: text;
-        -webkit-text-fill-color: transparent; }
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent; }
       .projects__card--back h5 {
         grid-row: 1/2;
         grid-column: 2/3;
@@ -1068,12 +1072,14 @@ p {
         text-align: center;
         hyphens: auto;
         font-weight: 400;
-        font-size: 1.8rem; }
-      .projects__card--back button {
+        font-size: 1.6rem;
+        line-height: 2.2rem; }
+      .projects__card--back a {
         grid-column: 2/3;
         grid-row: 3/4;
-        padding-bottom: 2rem;
-        border: none; }
+        padding-bottom: 4rem;
+        text-decoration: none;
+        font-weight: 400; }
     .projects__card:hover .projects__card--back {
       transform: rotateX(0deg); }
     .projects__card:hover .projects__card--front {
@@ -1092,20 +1098,23 @@ p {
       .projects__card-1--back h5 {
         border-color: rgba(253, 113, 78, 0.5); }
       .projects__card-1--back > * {
+        background: -webkit-linear-gradient(to top, #fd714e, #fff7e2);
         background-image: linear-gradient(to top, #fd714e, #fff7e2); }
   .projects__card-2 {
     grid-row: 6/9;
     grid-column: 7/10; }
     .projects__card-2 svg {
       fill: #6e6b05; }
-    .projects__card-2--back h5 {
-      border-color: rgba(255, 212, 82, 0.5); }
-    .projects__card-2--back > * {
-      background-image: linear-gradient(to bottom, #d2cee2, #ffd452); }
+    .projects__card-2--back {
+      border-color: #6e6b05; }
+      .projects__card-2--back h5 {
+        border-color: rgba(255, 212, 82, 0.5); }
+      .projects__card-2--back > * {
+        background: -webkit-linear-gradient(to bottom, #d2cee2, #ffd452);
+        background-image: linear-gradient(to bottom, #d2cee2, #ffd452); }
   .projects__card-3 {
     grid-row: 6/9;
-    grid-column: 10/13;
-    z-index: 1000; }
+    grid-column: 10/13; }
     .projects__card-3 svg {
       fill: #920707; }
     .projects__card-3--back {
@@ -1113,6 +1122,7 @@ p {
       .projects__card-3--back h5 {
         border-color: rgba(146, 7, 7, 0.5); }
       .projects__card-3--back > * {
+        background: -webkit-linear-gradient(to bottom, #fffbd5, #ce0b32);
         background-image: linear-gradient(to bottom, #fffbd5, #ce0b32); }
   .projects__card-4 {
     grid-row: 9/12;
@@ -1124,6 +1134,7 @@ p {
       .projects__card-4--back h5 {
         border-color: rgba(0, 217, 251, 0.5); }
       .projects__card-4--back > * {
+        background: -webkit-linear-gradient(to top, #00d9fb 0%, #12f7a7 100%);
         background-image: linear-gradient(to top, #00d9fb 0%, #12f7a7 100%); }
   .projects__card-5 {
     grid-row: 9/12;
@@ -1135,7 +1146,7 @@ p {
       .projects__card-5--back h5 {
         border-color: rgba(255, 145, 0, 0.5); }
       .projects__card-5--back > * {
-        background-image: linear-gradient(to bottom, #fd5d35, #b6fc9a);
+        background: -webkit-linear-gradient(to bottom, #ff9100, #b6fc9a);
         background-image: linear-gradient(to bottom, #ff9100, #b6fc9a); }
   .projects__card-6 {
     grid-row: 9/12;
@@ -1147,6 +1158,7 @@ p {
       .projects__card-6--back h5 {
         border-color: rgba(153, 249, 134, 0.5); }
       .projects__card-6--back > * {
+        background: -webkit-linear-gradient(to top, #d3f5e2, #99f986);
         background-image: linear-gradient(to top, #d3f5e2, #99f986); }
 
 .disappear {
@@ -1188,6 +1200,20 @@ p {
   100% {
     grid-row: 3/4;
     grid-column: 7/8; } }
+
+.poppingup {
+  animation: .3s zoomingCard .5s ease-in-out forwards; }
+
+@keyframes zoomingCard {
+  0% {
+    visibility: hidden;
+    transform: scale(0); }
+  5% {
+    visibility: visible;
+    transform: scale(0); }
+  100% {
+    visibility: visible;
+    transform: scale(1); } }
 
 .contact {
   grid-row: 1 / -1;
@@ -1340,7 +1366,8 @@ p {
         transform-origin: 50% 50%;
         animation: .2s jump .2s linear alternate 4; }
       .contact__content--list:hover > h4 {
-        color: #ff3c00; }
+        color: #ff3c00;
+        color: #a5ffef; }
     .contact__content--name {
       grid-row: 4/5; }
     .contact__content--email {
@@ -1354,6 +1381,7 @@ p {
     .contact__content--icon {
       grid-column: 1/2;
       fill: #ff3c00;
+      fill: #2af1eb;
       width: 2.5rem;
       height: 2.5rem;
       z-index: 2900; }

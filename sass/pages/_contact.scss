@@ -93,11 +93,7 @@
         }
  
         &--icon {
-        //    position: absolute;
-        //    background-color: transparent;
-        //     height: 90%;
-        //     width: 100%;
-            //  transform: translateX(-50%);
+
             fill:#ff9c00;
 
         }
@@ -115,8 +111,7 @@
                                          $orange-deep 50%,
                                          $red-cube 100%);
 
-
-        
+                                         //background-image: radial-gradient(#c6ffdd, #fbd786, #f7797d);        
         // background-image: radial-gradient($orange, $orange-deep);
         animation: .3s appear 10.5s ease-in forwards;
     }
@@ -212,6 +207,7 @@
         }
         &:hover > h4 {
             color: $orange-red;
+            color: $blue-light;
         }
         
     }
@@ -241,6 +237,7 @@
         grid-column: 1/2;
         //fill: lightseagreen;
         fill: $orange-red;
+        fill: $blue-mid-light;
         width: 2.5rem;
         height: 2.5rem;
         z-index: 2900;

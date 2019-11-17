@@ -37,8 +37,6 @@
         grid-row: 1/-1;
         height: 10rem;
         width: 10rem;
-        // transform-origin: center;
-        //transform: translateX(6%);
         display: grid;
         @include centering;
         @include centerContent;
@@ -49,15 +47,10 @@
         font-size: 2.6rem;
         
         background-color: transparent;
-        //border-radius: 50%;
-        //color: $base-white;
         transform-origin: 50% 50%;
         transition: all .2s ease;
-        //animation: .3s appear 23.5s ease-in forwards, .3s blackBackground 23.5s ease-in forwards;
-        //animation: .3s appear 23.5s ease-in forwards;
         z-index: 3500;
-        //z-index: 250;
-        
+        border: none;
         &--card {
             grid-row: 1/-1;
             grid-column: 1/-1;
@@ -69,17 +62,21 @@
             width: 9.5rem;
             font-size: 2.6rem;
             transition: all .2s;
-            animation: 3s blackBackground 23.5s linear forwards;
+            animation: 3s blackBackground 24s linear forwards;
 
         }
+      
         &--back {
             width: 7.5rem;
             height: 7.5rem;
+            & > svg {
+                fill: $baige-yellow;
+            }
 
         }
         &:hover > &--back {
-       
-                border: 6px $blue-mid-light solid;
+            background: #06b306;
+                //border: 6px red solid;
  
         }
         &--top,
@@ -103,8 +100,9 @@
         &--icon {
             fill: $base-white;
         }
-        &:hover{
+        &:hover > &--front{
             border: 5px  $base-white solid;
+            
             animation-fill-mode: backwards;
             //transform: translate(-1%, -5%);
         }
@@ -112,7 +110,6 @@
         //     background: $red-cube;
         // }
         &:hover  &--icon {
-            fill:$blue-mid-light;
             transform: translateX(0);
             
         }
@@ -146,17 +143,8 @@
         //z-index:250;
        
         background-color: $baige-yellow;
-        //background-image: radial-gradient($blue-green, $blue-mid, $blue-deep);
-        // background-image: radial-gradient(black, black);
     }
 
-    &:hover &__menu{
-        border: 5px  $base-white solid ;
-        // height: 10.5rem;
-        // width: 10.5rem;
-        //font-size: 2.6rem;
-
-      }
       
       //FUNCTIONARITY 
 
@@ -177,18 +165,13 @@
     position: relative;
         // margin-top: -35px;
     z-index: 4000;
-    //   overflow: hidden;
-    //   margin-top: -10rem;
-    //   height: 20rem;
-    //   width: 27rem;
+    visibility: hidden;
+    transform: scale(0);
     height: 22rem;
     width: 100%;
     transition: all 0.2s ease;
     transform-style: preserve-3d;
     perspective: 1000px;
-    
-    
-
 
       & > * {
         position: absolute;
@@ -250,9 +233,14 @@
 
         & >* {
             margin: 0;
+            
+            
+            -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
-            
+            -moz-text-fill-color: transparent;
+            //text-fill-color: transparent;
+            //text-fill-color: transparent;
         }
         & h5 {
 
@@ -271,13 +259,16 @@
             text-align: center;
             hyphens: auto;
             font-weight: 400;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
+            line-height: 2.2rem;;
         }
-        & button {
+        & a{
             grid-column: 2/3;
             grid-row: 3/4;
-            padding-bottom: 2rem;
-            border: none;
+           padding-bottom: 4rem;
+            text-decoration: none;
+            font-weight: 400;
+
         }
 
       }
@@ -319,11 +310,14 @@
             border-color:  rgba(#fd714e, .5);
         }
         & >* {
-            
+            background: -webkit-linear-gradient(to top, #fd714e, #fff7e2);
             background-image: linear-gradient(to top, #fd714e, #fff7e2);
             
+            
         }
-    }
+        //& button > &a {background-image: linear-gradient(to top, #fd714e, #fff7e2);}
+            
+     }
     }
    &__card-2 {
     grid-row: 6/9;
@@ -334,20 +328,22 @@
         fill:#6e6b05;
     }
     &--back {
+        border-color:  #6e6b05;
         & h5 {
             
             border-color:  rgba(#ffd452, .5);
         }
         & >* {
+            background: -webkit-linear-gradient(to bottom, #d2cee2, #ffd452);
             background-image:linear-gradient(to bottom, #d2cee2, #ffd452);
+            
         }
     }
     }
     &__card-3 {
         grid-row: 6/9;
         grid-column: 10/13;
-        
-        z-index: 1000;
+
          & svg {
              fill: #920707;
          }
@@ -360,7 +356,9 @@
             }
 
             & >* {
+                background: -webkit-linear-gradient(to bottom, #fffbd5, #ce0b32);
                 background-image: linear-gradient(to bottom, #fffbd5, #ce0b32);
+               
             }
         }
     } 
@@ -378,7 +376,9 @@
             }
 
             & >* {
+                background: -webkit-linear-gradient(to top, #00d9fb 0%, #12f7a7 100%);
                 background-image: linear-gradient(to top, #00d9fb 0%, #12f7a7 100%);
+                
             }
         }
         
@@ -398,8 +398,10 @@
             }
             & >* {
                 //background-image: linear-gradient(to right, #ffe259, #ffa751);
-                background-image: linear-gradient(to bottom, #fd5d35, #b6fc9a);
+                //background-image: linear-gradient(to bottom, #fd5d35, #b6fc9a);
+                background: -webkit-linear-gradient(to bottom, #ff9100, #b6fc9a);
                 background-image: linear-gradient(to bottom, #ff9100, #b6fc9a);
+                
             }
         }
        
@@ -417,7 +419,9 @@
                 border-color:  rgba(#99f986, .5);
             }
             & >* {
+                background: -webkit-linear-gradient(to top, #d3f5e2 , #99f986);
                 background-image: linear-gradient(to top, #d3f5e2 , #99f986);
+                
                 
             }
         }
@@ -461,4 +465,23 @@
         grid-row: 3/4;
         grid-column: 7/8;
     }
+}
+
+.poppingup {
+ animation: .3s zoomingCard .5s ease-in-out forwards;
+}
+@keyframes zoomingCard{
+    0%{
+        visibility: hidden;
+        transform: scale(0);
+    }
+    5% {
+        visibility: visible;
+        transform: scale(0);
+    }
+    100%{
+        visibility: visible;
+        transform: scale(1);
+    }
+    
 }

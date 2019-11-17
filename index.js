@@ -92,13 +92,14 @@ function scale() {
 }
 function move() {
     if (projectBtn.checked) {
-
         projectMbox.classList.add('changeGrid');
+        //projectHide.classList.add('changeGrid');
         projFntMenu.classList.add('disappear');
         menuPback.classList.add('black');
 
     } else {
         projectMbox.classList.remove('changeGrid');
+        //projectHide.classList.remove('changeGrid');
         projFntMenu.classList.remove('disappear');
         menuPback.classList.remove('black');
     }

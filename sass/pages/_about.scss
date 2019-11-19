@@ -60,6 +60,7 @@
         transform: translate(-40%, -15%) rotate(75deg) scaleY(.9);
         animation: speaker 2s ease-in .5s 1 forwards;
       }
+     
       &--lines {
         position: absolute;
         
@@ -92,6 +93,12 @@
           transform: translateY(300%) rotate(28deg);
           
         }
+      }
+      &:hover &--icon {
+        animation: speaker 2s ease-in .2s;
+      }
+      &:hover &--lines {
+        animation: shouting .5s ease-in .2s;
       }
     }
     

@@ -9,7 +9,8 @@ let contactBtn = document.querySelector('#contact-toggle'),
     projectMbox = document.querySelector('.projects__menubox'),
     menuPback = document.querySelector('.projects__menu--back'),
     projectBack = document.querySelector('.projects__background'),
-    projCard = document.querySelectorAll('.projects__card');
+    projCard = document.querySelectorAll('.projects__card'),
+    logo = document.querySelector('.logo');
 
 
 
@@ -105,3 +106,4 @@ function move() {
     }
 }
 
+logo.addEventListener('click', () => { window.location.reload(true); })

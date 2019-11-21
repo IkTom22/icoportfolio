@@ -34,6 +34,8 @@
     display: grid;
     grid-template-columns: repeat(3, 5rem);
     grid-template-rows: repeat(3, 5rem);
+    cursor: pointer;
+    
     @include centering;
     @include centerContent;
     
@@ -67,6 +69,14 @@
         z-index: 3500;
       }
     }
+    &__home {
+      display: none;
+      grid-column: 2/3;
+      grid-row: 3/4;
+      padding-bottom: 2rem;
+      font-weight: 300;
+      
+    }
     &:hover &__letter--i{
       grid-row: 2/3;
       align-self: start;
@@ -77,5 +87,9 @@
     }
     &:hover &__letter--c {
       opacity:0;
+    }
+    &:hover &__home{
+      display: block;
+      
     }
   }

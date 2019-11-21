@@ -527,6 +527,7 @@ p {
   display: grid;
   grid-template-columns: repeat(3, 5rem);
   grid-template-rows: repeat(3, 5rem);
+  cursor: pointer;
   justify-items: center;
   align-items: center;
   justify-content: center;
@@ -555,6 +556,12 @@ p {
     .logo__letter--o {
       grid-row: 3/4;
       z-index: 3500; }
+  .logo__home {
+    display: none;
+    grid-column: 2/3;
+    grid-row: 3/4;
+    padding-bottom: 2rem;
+    font-weight: 300; }
   .logo:hover .logo__letter--i {
     grid-row: 2/3;
     align-self: start;
@@ -563,6 +570,8 @@ p {
     grid-row: 2/3; }
   .logo:hover .logo__letter--c {
     opacity: 0; }
+  .logo:hover .logo__home {
+    display: block; }
 
 .about {
   position: relative;
@@ -1107,14 +1116,19 @@ p {
         text-align: center;
         hyphens: auto;
         font-weight: 400;
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         line-height: 2.2rem; }
       .projects__card--back a {
         grid-column: 2/3;
         grid-row: 3/4;
-        padding-bottom: 4rem;
-        text-decoration: none;
-        font-weight: 400; }
+        padding-bottom: 3rem;
+        text-decoration: none; }
+      .projects__card--backa:link, .projects__card--backa:visited {
+        font-weight: 300;
+        font-size: 1.4rem; }
+      .projects__card--backa:hover, .projects__card--backa:active {
+        font-weight: 400 !important;
+        font-size: 1.5rem !important; }
     .projects__card:hover .projects__card--back {
       transform: rotateX(0deg); }
     .projects__card:hover .projects__card--front {

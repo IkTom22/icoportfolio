@@ -21,7 +21,7 @@
         grid-template-rows: repeat(3, minmax(7.46rem, auto));
         @include centering;
         @include centerContent;
-     
+        
         transform-origin: center;
         transition: all .2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         animation: .2s appear 23s ease-in forwards;
@@ -66,7 +66,11 @@
             animation: 3s blackBackground 24s linear forwards;
 
         }
-      
+        &--front {
+            pointer-events: none;
+            animation: .3s pointerOn 23.5s ease-in forwards;
+
+        }
         &--back {
             width: 7.5rem;
             height: 7.5rem;
@@ -178,11 +182,12 @@
         position: absolute;
         margin: 0;
         padding: 0;
-        pointer-events: none;
+        
         height: 100%;
         width: 100%;
         border-width: 3px;
         border-style: solid;
+        z-index: 4500;
       }
       &--front {    
         transform: rotateX(0);
@@ -264,22 +269,25 @@
             line-height: 2.2rem;
         }
         & a{
-            grid-column: 2/3;
-            grid-row: 3/4;
-            padding-bottom: 3rem;
-            text-decoration: none;
-            // font-weight: 300;
-            // font-size: 1.4rem;
-        }
-        &a:link,
-        &a:visited {
-            font-weight: 300; 
-            font-size: 1.4rem ;
-        }
-        &a:hover,
-        &a:active{
-            font-weight: 400 !important;
-            font-size: 1.5rem !important;
+
+            &:link,
+            &:visited {
+                transition: all .2s;
+                grid-column: 2/3;
+                grid-row: 3/4;
+                padding-bottom: 3rem;
+                text-decoration: none;
+                font-weight: 400; 
+                font-size: 1.4rem ;
+                transform: scale(1);
+            }
+            &:hover,
+            &:focus {
+                font-weight: 400 ;
+                font-size: 1.5rem;
+                transform: scale(1.1);
+            }
+            
         }
 
       }
@@ -287,17 +295,38 @@
 
     &:hover &--back{
         transform: rotateX(0deg);
-        
+
     }
+    // &:hover &--back   & a{
+
+    //         &:link,
+    //         &:visited {
+    //             transition: all .2s;
+    //             grid-column: 2/3;
+    //             grid-row: 3/4;
+    //             padding-bottom: 3rem;
+    //             text-decoration: none;
+    //             font-weight: 400; 
+    //             font-size: 1.4rem ;
+    //             transform: scale(1);
+    //         }
+    //         &:hover,
+    //         &:focus {
+    //             font-weight: 400 !important;
+    //             font-size: 1.5rem !important;
+    //             transform: scale(1.1);
+    //         }
+            
+    //     }
     &:hover &--front{
         transform: rotateX(-90deg);
         
     }
   }
-  &__top-row {
-      transform: translateY(-1.5rem);
+//   &__top-row {
+//       transform: translateY(-1.5rem);
     
-  }
+//   }
   &__card-1 {
     grid-row: 6/9;
     grid-column: 4/7;
@@ -495,4 +524,7 @@
         transform: scale(1);
     }
     
+}
+@keyframes pointerOn {
+    100% {pointer-events: auto;}
 }

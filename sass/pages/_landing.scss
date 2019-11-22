@@ -35,7 +35,7 @@
     grid-template-columns: repeat(3, 5rem);
     grid-template-rows: repeat(3, 5rem);
     cursor: pointer;
-    
+    z-index: 5000;
     @include centering;
     @include centerContent;
     

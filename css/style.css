@@ -528,6 +528,7 @@ p {
   grid-template-columns: repeat(3, 5rem);
   grid-template-rows: repeat(3, 5rem);
   cursor: pointer;
+  z-index: 5000;
   justify-items: center;
   align-items: center;
   justify-content: center;
@@ -603,7 +604,8 @@ p {
     justify-items: center;
     align-items: center;
     position: relative;
-    z-index: 2800; }
+    z-index: 2800;
+    cursor: pointer; }
     .about__menu--top {
       grid-column: 1/2;
       grid-row: 1/2; }
@@ -968,6 +970,9 @@ p {
       font-size: 2.6rem;
       transition: all .2s;
       animation: 3s blackBackground 24s linear forwards; }
+    .projects__menu--front {
+      pointer-events: none;
+      animation: .3s pointerOn 23.5s ease-in forwards; }
     .projects__menu--back {
       width: 7.5rem;
       height: 7.5rem; }
@@ -1050,11 +1055,11 @@ p {
       position: absolute;
       margin: 0;
       padding: 0;
-      pointer-events: none;
       height: 100%;
       width: 100%;
       border-width: 3px;
-      border-style: solid; }
+      border-style: solid;
+      z-index: 4500; }
     .projects__card--front {
       transform: rotateX(0);
       background-color: #fffef8;
@@ -1118,23 +1123,23 @@ p {
         font-weight: 400;
         font-size: 1.5rem;
         line-height: 2.2rem; }
-      .projects__card--back a {
+      .projects__card--back a:link, .projects__card--back a:visited {
+        transition: all .2s;
         grid-column: 2/3;
         grid-row: 3/4;
         padding-bottom: 3rem;
-        text-decoration: none; }
-      .projects__card--backa:link, .projects__card--backa:visited {
-        font-weight: 300;
-        font-size: 1.4rem; }
-      .projects__card--backa:hover, .projects__card--backa:active {
-        font-weight: 400 !important;
-        font-size: 1.5rem !important; }
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 1.4rem;
+        transform: scale(1); }
+      .projects__card--back a:hover, .projects__card--back a:focus {
+        font-weight: 400;
+        font-size: 1.5rem;
+        transform: scale(1.1); }
     .projects__card:hover .projects__card--back {
       transform: rotateX(0deg); }
     .projects__card:hover .projects__card--front {
       transform: rotateX(-90deg); }
-  .projects__top-row {
-    transform: translateY(-1.5rem); }
   .projects__card-1 {
     grid-row: 6/9;
     grid-column: 4/7; }
@@ -1263,6 +1268,10 @@ p {
   100% {
     visibility: visible;
     transform: scale(1); } }
+
+@keyframes pointerOn {
+  100% {
+    pointer-events: auto; } }
 
 .contact {
   grid-row: 1 / -1;

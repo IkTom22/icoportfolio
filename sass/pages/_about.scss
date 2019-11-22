@@ -29,7 +29,7 @@
       @include centering;
       position: relative;
       z-index: 2800;
-
+      cursor: pointer;
       &--top{
         grid-column: 1/2;
         grid-row: 1/2;

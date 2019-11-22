@@ -1,4 +1,4 @@
-let contactBtn = document.querySelector('#contact-toggle'),
+const contactBtn = document.querySelector('#contact-toggle'),
     projectBtn = document.querySelector('#projects-toggle'),
     contactContent = document.querySelector('.contact__content'),
     contactMbox = document.querySelector('.contact__small'),
@@ -10,7 +10,8 @@ let contactBtn = document.querySelector('#contact-toggle'),
     menuPback = document.querySelector('.projects__menu--back'),
     projectBack = document.querySelector('.projects__background'),
     projCard = document.querySelectorAll('.projects__card'),
-    logo = document.querySelector('.logo');
+    logo = document.querySelector('.logo'),
+    aboutMenu = document.querySelector('.about__menu');
 
 
 
@@ -106,4 +107,9 @@ function move() {
     }
 }
 
-logo.addEventListener('click', () => { window.location.reload(true); })
+logo.addEventListener('click', () => { window.location.reload(true); });
+aboutMenu.addEventListener('click', () => { window.location.reload(true); });
+// window.onclick = e => {
+//     console.log(e.target);
+//     console.log(e.target.tagName);
+// }

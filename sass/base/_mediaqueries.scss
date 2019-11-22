@@ -7,13 +7,16 @@
 // *	@include r(1140) { }
 // *	@include r(1280) { }
 // *	@include r(1500) { }
-@mixin r($point) {
-    @if  $point == 240 {
-        @media (min-width:240px){
+@mixin r($point, $position) {
+
+    @if  $point == 240 & $position == portrait {
+        @media (min-width:240px) and (orientation: portrait) {
+
+            }
 
         }
         
-    }
+    
     @if  $point == 320 {
         @media (min-width:320px){
 
@@ -50,10 +53,12 @@
         }
         
     }
-    @if  $point == 1500 {
-        @media (min-width:1500px){
+    @if  $point == 1500 & $position == landscape{
+        @media (min-width:1500px) and (orientation: landscape) and (aspect-ratio: 16/9){
 
-        }
+            grid-template-columns: 3.66% 1.46%  repeat(12, 7.4%) 1.46% 3.66%;
+            grid-template-rows: 7.61% 3.04% repeat(10, 7.823%) 3.04% 7.61%;
+        }   
         
     }
 }

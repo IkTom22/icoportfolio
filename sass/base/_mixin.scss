@@ -1,7 +1,11 @@
 @mixin base-template {
-    grid-template-columns: minmax(2rem, 5rem) 2rem repeat(12, minmax(6.25rem, 1fr )) 2rem minmax(2rem, 5rem);
-    grid-template-rows: minmax(2rem, 5rem) 2rem repeat(10, minmax(4rem, 1fr )) 2rem minmax(2rem, 5rem);
+    // grid-template-columns: minmax(2rem, 5rem) 2rem repeat(12, minmax(6.25rem, 1fr )) 2rem minmax(2rem, 5rem);
+    // grid-template-rows: minmax(2rem, 5rem) 2rem repeat(10, minmax(4rem, 1fr )) 2rem minmax(2rem, 5rem);
     gap: 1.5rem;
+    // 1283.73px 981px landscape for calc %
+    grid-template-columns: 1fr 1.558% repeat(12, 5.964%) 1.55% 1fr;
+    grid-template-rows: 1fr 2.0387% repeat(10, 6.432%) 2.0387% 1fr;
+
 }
 @mixin centering {
     justify-items: center;

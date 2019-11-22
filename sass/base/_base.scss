@@ -28,6 +28,9 @@ body{
     display: grid;
     justify-items: center;
     align-items: center;
-    grid-template-columns: minmax(2rem, 5rem) 2rem repeat(12, minmax(6.25rem, 1fr )) 2rem minmax(2rem, 5rem);
-    grid-template-rows: minmax(2rem, 5rem) 2rem repeat(10, minmax(4rem, 1fr )) 2rem minmax(2rem, 5rem);
+    // grid-template-columns: minmax(2rem, 5rem) 2rem repeat(12, minmax(6.25rem, 1fr )) 2rem minmax(2rem, 5rem);
+    // grid-template-rows: minmax(2rem, 5rem) 2rem repeat(10, minmax(4rem, 1fr )) 2rem minmax(2rem, 5rem);
+    // used 1366px 657px ratio to calcurate the %
+    grid-template-columns: 1fr 1.46%  repeat(12, 7.4%) 1.46% 1fr;
+    grid-template-rows: 1fr 3.04% repeat(10, 7.823%) 3.04% 1fr;
 }

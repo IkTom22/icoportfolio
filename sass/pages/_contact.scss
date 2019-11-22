@@ -117,7 +117,7 @@
     }
     &__content {
         position: absolute;
-        grid-column: 1 /12;
+        grid-column: 1 /14;
         grid-row: 1/-1;
         // position: fixed;
         display: grid;
@@ -184,7 +184,7 @@
     //title 
     &--title {
         grid-column: 2/10;
-        grid-row: 3/4;
+        grid-row: 2/3;
         z-index: 2850;
         z-index:2900;  
         color: $baige-yellow;
@@ -213,25 +213,25 @@
     }
 
     &--name {
-     grid-row: 4/5;
+     grid-row: 3/4;
     
      //grid-column: 2 /9; 
      
     }
     &--email {
-     grid-row: 5/6;
+     grid-row: 4/5;
      width: 70%;
      //grid-column: 2 /9 ;
      //justify-self: start; 
     } 
     &--language {
-        grid-row: 6/7;
+        grid-row: 5/6;
          width: 70%;    
         // grid-column: 2 /9 ; 
         //justify-self: start; 
     } 
     &--map{
-        grid-row: 7/8; 
+        grid-row: 6/7; 
     }
     &--icon {
         grid-column: 1/2;

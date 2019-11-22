@@ -27,8 +27,8 @@ body {
   display: grid;
   justify-items: center;
   align-items: center;
-  grid-template-columns: minmax(2rem, 5rem) 2rem repeat(12, minmax(6.25rem, 1fr)) 2rem minmax(2rem, 5rem);
-  grid-template-rows: minmax(2rem, 5rem) 2rem repeat(10, minmax(4rem, 1fr)) 2rem minmax(2rem, 5rem); }
+  grid-template-columns: 1fr 1.46% repeat(12, 7.4%) 1.46% 1fr;
+  grid-template-rows: 1fr 3.04% repeat(10, 7.823%) 3.04% 1fr; }
 
 h1 {
   font-size: 10rem;
@@ -498,9 +498,9 @@ p {
 
 .wrapper {
   display: grid;
-  grid-template-columns: minmax(2rem, 5rem) 2rem repeat(12, minmax(6.25rem, 1fr)) 2rem minmax(2rem, 5rem);
-  grid-template-rows: minmax(2rem, 5rem) 2rem repeat(10, minmax(4rem, 1fr)) 2rem minmax(2rem, 5rem);
   gap: 1.5rem;
+  grid-template-columns: 1fr 1.558% repeat(12, 5.964%) 1.55% 1fr;
+  grid-template-rows: 1fr 2.0387% repeat(10, 6.432%) 2.0387% 1fr;
   width: 100%;
   height: 150%;
   grid-row: 1 / -1;
@@ -582,9 +582,9 @@ p {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: minmax(2rem, 5rem) 2rem repeat(12, minmax(6.25rem, 1fr)) 2rem minmax(2rem, 5rem);
-  grid-template-rows: minmax(2rem, 5rem) 2rem repeat(10, minmax(4rem, 1fr)) 2rem minmax(2rem, 5rem);
   gap: 1.5rem;
+  grid-template-columns: 1fr 1.558% repeat(12, 5.964%) 1.55% 1fr;
+  grid-template-rows: 1fr 2.0387% repeat(10, 6.432%) 2.0387% 1fr;
   justify-items: center;
   align-items: center; }
   .about__menu {
@@ -851,9 +851,9 @@ p {
     background-color: #fffef8;
     filter: blur(20px) contrast(70);
     display: grid;
-    grid-template-columns: minmax(2rem, 5rem) 2rem repeat(12, minmax(6.25rem, 1fr)) 2rem minmax(2rem, 5rem);
-    grid-template-rows: minmax(2rem, 5rem) 2rem repeat(10, minmax(4rem, 1fr)) 2rem minmax(2rem, 5rem);
-    gap: 1.5rem; }
+    gap: 1.5rem;
+    grid-template-columns: 1fr 1.558% repeat(12, 5.964%) 1.55% 1fr;
+    grid-template-rows: 1fr 2.0387% repeat(10, 6.432%) 2.0387% 1fr; }
     .about__goo > * {
       background-color: #f00000;
       position: absolute;
@@ -910,10 +910,10 @@ p {
   grid-row: 1 / -1;
   grid-column: 1/-1;
   display: grid;
-  grid-template-columns: minmax(2rem, 5rem) 2rem repeat(12, minmax(6.25rem, 1fr)) 2rem minmax(2rem, 5rem);
-  grid-template-rows: minmax(2rem, 5rem) 2rem repeat(10, minmax(4rem, 1fr)) 2rem minmax(2rem, 5rem);
   gap: 1.5rem;
-  grid-template-columns: minmax(2rem, 5rem) 2rem repeat(11, minmax(6.5rem, 1fr)) 2rem minmax(2rem, 5rem);
+  grid-template-columns: 1fr 1.558% repeat(12, 5.964%) 1.55% 1fr;
+  grid-template-rows: 1fr 2.0387% repeat(10, 6.432%) 2.0387% 1fr;
+  grid-template-columns: 1fr 1.558% repeat(11, 5.621%) 1.558% 1fr;
   gap: 2.5rem;
   position: relative; }
   .projects__sml {
@@ -1277,9 +1277,9 @@ p {
   grid-row: 1 / -1;
   grid-column: 1/-1;
   display: grid;
-  grid-template-columns: minmax(2rem, 5rem) 2rem repeat(12, minmax(6.25rem, 1fr)) 2rem minmax(2rem, 5rem);
-  grid-template-rows: minmax(2rem, 5rem) 2rem repeat(10, minmax(4rem, 1fr)) 2rem minmax(2rem, 5rem);
   gap: 1.5rem;
+  grid-template-columns: 1fr 1.558% repeat(12, 5.964%) 1.55% 1fr;
+  grid-template-rows: 1fr 2.0387% repeat(10, 6.432%) 2.0387% 1fr;
   position: relative; }
   .contact__checkbox {
     display: none; }
@@ -1351,12 +1351,12 @@ p {
     animation: .3s appear 10.5s ease-in forwards; }
   .contact__content {
     position: absolute;
-    grid-column: 1 /12;
+    grid-column: 1 /14;
     grid-row: 1/-1;
     display: grid;
-    grid-template-columns: minmax(2rem, 5rem) 2rem repeat(12, minmax(6.25rem, 1fr)) 2rem minmax(2rem, 5rem);
-    grid-template-rows: minmax(2rem, 5rem) 2rem repeat(10, minmax(4rem, 1fr)) 2rem minmax(2rem, 5rem);
     gap: 1.5rem;
+    grid-template-columns: 1fr 1.558% repeat(12, 5.964%) 1.55% 1fr;
+    grid-template-rows: 1fr 2.0387% repeat(10, 6.432%) 2.0387% 1fr;
     justify-items: center;
     align-items: center;
     top: 0;
@@ -1404,7 +1404,7 @@ p {
       transform: rotate(0) translateY(0) translateX(0); }
     .contact__content--title {
       grid-column: 2/10;
-      grid-row: 3/4;
+      grid-row: 2/3;
       z-index: 2850;
       z-index: 2900;
       color: #faeeb8; }
@@ -1427,15 +1427,15 @@ p {
         color: #ff3c00;
         color: #a5ffef; }
     .contact__content--name {
-      grid-row: 4/5; }
+      grid-row: 3/4; }
     .contact__content--email {
-      grid-row: 5/6;
+      grid-row: 4/5;
       width: 70%; }
     .contact__content--language {
-      grid-row: 6/7;
+      grid-row: 5/6;
       width: 70%; }
     .contact__content--map {
-      grid-row: 7/8; }
+      grid-row: 6/7; }
     .contact__content--icon {
       grid-column: 1/2;
       fill: #ff3c00;

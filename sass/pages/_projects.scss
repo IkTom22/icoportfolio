@@ -4,7 +4,8 @@
     display: grid;
     @include base-template;
     // coloum reduced by 1 and with changed by .25
-    grid-template-columns: minmax(2rem, 5rem) 2rem repeat(11, minmax(6.5rem, 1fr)) 2rem minmax(2rem, 5rem);
+    //grid-template-columns: minmax(2rem, 5rem) 2rem repeat(11, minmax(6.5rem, 1fr)) 2rem minmax(2rem, 5rem);
+    grid-template-columns: 1fr 1.558% repeat(11, 5.621%) 1.558% 1fr;
     gap: 2.5rem;
     position: relative;
    

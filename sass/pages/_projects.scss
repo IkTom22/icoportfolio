@@ -10,16 +10,19 @@
     position: relative;
    
     &__sml{
-        grid-row: 6/9;
-        grid-column: 9/16;
+
+        grid-row: 5/9;
+        grid-column: 8/16;
         width: 100%;
         height: 100%;
         position: absolute;
         z-index: 2700;
         display: grid;
         opacity:0;
-        grid-template-columns: repeat(7, minmax(8.22rem, auto));
-        grid-template-rows: repeat(3, minmax(7.46rem, auto));
+        // grid-template-columns: repeat(7, minmax(8.22rem, auto));
+        // grid-template-rows: repeat(3, minmax(7.46rem, auto));
+        grid-template-columns: repeat(7, 12.1247%);
+        grid-template-rows: repeat(3, 23.06%);
         @include centering;
         @include centerContent;
         
@@ -197,8 +200,10 @@
         transition: all 0.2s ease;
         transform-origin: 50% 50% -11rem;
         display: grid;
-        grid-template-columns: 6rem 1fr 6rem;
-        grid-template-rows: 3rem repeat(2, 7rem) 3rem;
+        // grid-template-columns: 6rem 1fr 6rem;
+        // grid-template-rows: 3rem repeat(2, 7rem) 3rem;
+        grid-template-columns: 22.52% 1fr 22.52%;
+        grid-template-rows: 0.1363% repeat(2, 36.37%) 0.1363%;
         @include centering;
         @include centerContent;
         & svg,
@@ -228,8 +233,10 @@
         @include centering;
         @include centerContent;
         height: 22rem;
-        grid-template-rows: [title-start] 6rem [title-end] 1fr 3rem;
-        grid-template-columns: 2rem 1fr 2rem;
+        // grid-template-rows: [title-start] 6rem [title-end] 1fr 3rem;
+        // grid-template-columns: 2rem 1fr 2rem;
+        grid-template-rows: [title-start] 27.277% [title-end] 1fr 13.636%;
+        grid-template-columns: 7.5% 1fr 7.5%;
         gap: 1rem;
         background-color: $base-black;
         transform: rotateX(85deg);

@@ -263,9 +263,11 @@
             color: $base-black;
             position: absolute;
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
+            //grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
+            grid-template-columns: repeat(auto-fill, 12.5%);
             z-index:2800;
-            grid-template-rows: repeat(auto-fill, minmax(5rem, 1fr));
+            //grid-template-rows: repeat(auto-fill, minmax(5rem, 1fr));
+            grid-template-rows: repeat(auto-fill, 20%);
             @include centering;
             align-content: center;
             justify-content: center;
@@ -318,8 +320,10 @@
         z-index: 2780;
         // grid-template-columns: minmax(1rem,3rem) 1fr minmax(1rem,3rem);
         // grid-template-rows: minmax(1rem, 3rem) repeat(5, minmax(auto, 5rem)) minmax(1rem, 3rem);
-        grid-template-columns: minmax(2rem, 5rem)  1fr minmax(2rem,5rem);
-        grid-template-rows: minmax(2rem, 5rem) 8rem 1fr minmax(2rem, 5rem);
+        // grid-template-columns: minmax(2rem, 5rem)  1fr minmax(2rem,5rem);
+        // grid-template-rows: minmax(2rem, 5rem) 8rem 1fr minmax(2rem, 5rem);
+        grid-template-columns: 11.9%  1fr 11.9%;
+        grid-template-rows: 13.492% 21.587% 1fr 13.492%;
         & >* {
             position: absolute;
         }

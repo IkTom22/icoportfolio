@@ -305,27 +305,7 @@
         transform: rotateX(0deg);
 
     }
-    // &:hover &--back   & a{
 
-    //         &:link,
-    //         &:visited {
-    //             transition: all .2s;
-    //             grid-column: 2/3;
-    //             grid-row: 3/4;
-    //             padding-bottom: 3rem;
-    //             text-decoration: none;
-    //             font-weight: 400; 
-    //             font-size: 1.4rem ;
-    //             transform: scale(1);
-    //         }
-    //         &:hover,
-    //         &:focus {
-    //             font-weight: 400 !important;
-    //             font-size: 1.5rem !important;
-    //             transform: scale(1.1);
-    //         }
-            
-    //     }
     &:hover &--front{
         transform: rotateX(-90deg);
         

@@ -36,3 +36,17 @@ $font-body: 'Josefin Sans', sans-serif;
 
 //border-radious
 $base-radious:  62% 38% 65% 35% / 50% 49% 51% 50%;
+
+//media queries
+// Divice to consider
+  
+  //1920 +
+  //max-with : 1920 (1080p displays)
+  //max-with : 1680 (13″ MacBook Pro (1.5x scaling))
+  //max-with : 1440 (13″ MacBook Pro (2x scaling))
+  //max-with : 1366 ( ipad pro land)
+  //max-with : 1366 (HD laptops (768p))
+  //max-width: 1112px (iPad Pro 10″)
+  
+//--Desktop larger than 1920px--
+$desktop-xl: "only screen and (min-width: 1920px)";

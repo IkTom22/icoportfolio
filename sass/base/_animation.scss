@@ -257,6 +257,15 @@
       opacity: 1;
       transform: rotate(-18deg) translateX(20%);
     }
+ 
+  }
+  @media #{$desktop-xl} {
+    @keyframes shouting {
+      100%{
+        opacity: 1;
+        transform: rotate(-18deg) translateX(180%);
+      }
+    }
   }
 //Typing animation
   @keyframes typing {

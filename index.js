@@ -11,7 +11,8 @@ const contactBtn = document.querySelector('#contact-toggle'),
     projectBack = document.querySelector('.projects__background'),
     projCard = document.querySelectorAll('.projects__card'),
     logo = document.querySelector('.logo'),
-    aboutMenu = document.querySelector('.about__menu');
+    aboutMenu = document.querySelector('.about__menu'),
+    aBtn = document.querySelector('#aBtn');
 
 
 
@@ -109,6 +110,18 @@ function move() {
 
 logo.addEventListener('click', () => { window.location.reload(true); });
 aboutMenu.addEventListener('click', () => { window.location.reload(true); });
+aBtn.addEventListener('click', () => {
+    if (contactBtn.checked == false) {
+        contactBtn.checked == true;
+    } else {
+        contactBtn.checked == true;
+    }
+
+})
+
+
+
+
 // window.onclick = e => {
 //     console.log(e.target);
 //     console.log(e.target.tagName);

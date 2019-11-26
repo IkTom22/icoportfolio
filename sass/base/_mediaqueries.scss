@@ -1,64 +1,12 @@
-// * USAGE: 
-// *	@include r(240)  { }
-// *	@include r(320)  { }
-// *	@include r(480)  { }
-// *	@include r(768)  { }
-// *	@include r(1024) { }
-// *	@include r(1140) { }
-// *	@include r(1280) { }
-// *	@include r(1500) { }
-@mixin r($point, $position) {
+// Divice to consider
+  
+  //1920 +
+  //max-with : 1920 (1080p displays)
+  //max-with : 1680 (13″ MacBook Pro (1.5x scaling))
+  //max-with : 1440 (13″ MacBook Pro (2x scaling))
+  //max-with : 1366 ( ipad pro land)
+  //max-with : 1366 (HD laptops (768p))
+  //max-width: 1112px (iPad Pro 10″)
+//---Desktop larger than 1920px---
 
-    @if  $point == 240 & $position == portrait {
-        @media (min-width:240px) and (orientation: portrait) {
 
-            }
-
-        }
-        
-    
-    @if  $point == 320 {
-        @media (min-width:320px){
-
-        }
-        
-    }
-    @if  $point == 480 {
-        @media (min-width:480px){
-
-        }
-        
-    }
-    @if  $point == 768 {
-        @media (min-width:768px){
-
-        }
-        
-    }
-    @if  $point == 1024 {
-        @media (min-width:1024px){
-
-        }
-        
-    }
-    @if  $point == 1140 {
-        @media (min-width:1140px){
-
-        }
-        
-    }
-    @if  $point == 1280 {
-        @media (min-width:1280px){
-
-        }
-        
-    }
-    @if  $point == 1500 & $position == landscape{
-        @media (min-width:1500px) and (orientation: landscape) and (aspect-ratio: 16/9){
-
-            grid-template-columns: 3.66% 1.46%  repeat(12, 7.4%) 1.46% 3.66%;
-            grid-template-rows: 7.61% 3.04% repeat(10, 7.823%) 3.04% 7.61%;
-        }   
-        
-    }
-}

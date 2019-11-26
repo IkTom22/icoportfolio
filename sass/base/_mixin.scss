@@ -139,5 +139,5 @@
 &__checkbox:checked + &__menu > &__menu--back {
   animation: .1s zoomingIn .2s linear forwards;
     transform: scale(.6);
-}
+  }
 }

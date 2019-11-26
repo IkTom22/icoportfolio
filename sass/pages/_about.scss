@@ -30,6 +30,14 @@
       position: relative;
       z-index: 2800;
       cursor: pointer;
+      @media #{$desktop-xl} {
+        height: 10rem;
+        width: 10rem;
+        font-size: 3.5rem;  
+        gap: 1.2rem; 
+      }
+
+
       &--top{
         grid-column: 1/2;
         grid-row: 1/2;
@@ -59,6 +67,12 @@
         transition: all linear;
         transform: translate(-40%, -15%) rotate(75deg) scaleY(.9);
         animation: speaker 2s ease-in .5s 1 forwards;
+        @media #{$desktop-xl} {
+          height: 8rem;
+          width: 8rem;
+        }
+  
+        
       }
      
       &--lines {
@@ -74,6 +88,12 @@
         transition: all linear;
         opacity: 0;
         animation: shouting .5s ease-in .5s 2 forwards;
+        @media #{$desktop-xl} {
+          width: 4rem;
+          top: 29%;
+          transform: rotate(-18deg) translateX(0);
+        }
+  
         &::before,
         &::after {
           content: "";
@@ -86,11 +106,17 @@
         &::before {
           
           transform: translateY(-350%) rotate(-28deg);
+          @media #{$desktop-xl} {
+            transform: translateY(-700%) rotate(-28deg);
+          }
         }
 
         &::after {
           
           transform: translateY(300%) rotate(28deg);
+          @media #{$desktop-xl} {
+            transform: translateY(700%) rotate(28deg);
+          }
           
         }
       }
@@ -107,6 +133,11 @@
         grid-row: 4 / 9;
         z-index: 2100;
         width: 38rem;
+        @media #{$desktop-xl} {
+          grid-column: 5 / 9;
+          grid-row: 5 / 9;
+          width: 100%;
+        }
         
         h1{
           width: 0;
@@ -118,6 +149,10 @@
           letter-spacing: 1.2rem;
           margin-bottom: 2rem;
           color: $base-black;
+
+          @media #{$desktop-xl}{
+            height: 15rem;
+          }
         }
         & :nth-child(1){
           border-right: 5px $base-black solid;

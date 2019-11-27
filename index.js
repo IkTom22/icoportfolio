@@ -110,14 +110,7 @@ function move() {
 
 logo.addEventListener('click', () => { window.location.reload(true); });
 aboutMenu.addEventListener('click', () => { window.location.reload(true); });
-aBtn.addEventListener('click', () => {
-    if (contactBtn.checked == false) {
-        contactBtn.checked == true;
-    } else {
-        contactBtn.checked == true;
-    }
 
-})
 
 
 

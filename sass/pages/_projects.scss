@@ -97,6 +97,9 @@
                 transform: rotate3d(1, 0, 0, 90deg);
                 color: $base-white;
                 animation: .3s insideEye 23.5s ease-in forwards;
+                @media #{$desktop-xl}{
+                    font-size: 3rem;
+                }
                 
         }
         &--top{

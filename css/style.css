@@ -343,6 +343,46 @@ p {
     transform-origin: 0% 0%;
     transform: translateX(32rem) rotate3d(0, -1, 0, -92deg); } }
 
+@media only screen and (min-width: 1920px) {
+  @keyframes totheRight {
+    0% {
+      opacity: 1;
+      transform: translateX(0);
+      background-color: transparent; }
+    10% {
+      transform: translateX(1rem); }
+    20% {
+      transform: translateX(1rem); }
+    25% {
+      transform: translateX(-5rem); }
+    50% {
+      transform: translateX(-5rem);
+      width: 3rem; }
+    68% {
+      width: 32rem;
+      background-color: #ff0000;
+      transform: translateX(45rem); }
+    90% {
+      background-color: #ff0000;
+      width: 32rem; }
+    92% {
+      background-color: transparent; }
+    93% {
+      transform: translateX(45rem) rotate3d(0, 0, 0, 0);
+      opacity: 1; }
+    95% {
+      opacity: 0;
+      width: 100%;
+      transform-origin: 0% 0%;
+      transform: translateX(45rem) rotate3d(0, -1, 0, -92deg); }
+    96% {
+      opacity: 0; }
+    100% {
+      opacity: 0;
+      width: 100%;
+      transform-origin: 0% 0%;
+      transform: translateX(45rem) rotate3d(0, -1, 0, -92deg); } } }
+
 @keyframes totheLeft {
   0% {
     opacity: 1;
@@ -354,6 +394,19 @@ p {
     opacity: 1;
     color: black;
     transform: translateX(-22rem) translateY(0) rotateY(0) scale(1); } }
+
+@media only screen and (min-width: 1920px) {
+  @keyframes totheLeft {
+    0% {
+      opacity: 1;
+      color: black;
+      transform: translateX(5rem) translateY(0) rotateY(85deg) scale(1); }
+    20% {
+      transform: translateX(5rem) translateY(0) rotateY(0) scale(1); }
+    100% {
+      opacity: 1;
+      color: black;
+      transform: translateX(-30rem) translateY(0) rotateY(0) scale(1); } } }
 
 @keyframes fade-in {
   0% {
@@ -398,6 +451,17 @@ p {
   100% {
     opacity: 1;
     margin-left: 0; } }
+
+@media only screen and (min-width: 1920px) {
+  @keyframes slidingRight {
+    0% {
+      margin-left: 250%;
+      opacity: 0; }
+    2% {
+      opacity: 1; }
+    100% {
+      opacity: 1;
+      margin-left: 0; } } }
 
 @keyframes slideDown {
   0% {
@@ -704,7 +768,7 @@ p {
     width: 38rem; }
     @media only screen and (min-width: 1920px) {
       .about__greet {
-        grid-column: 5 / 9;
+        grid-column: 4 / 9;
         grid-row: 5 / 9;
         width: 100%; } }
     .about__greet h1 {
@@ -719,7 +783,9 @@ p {
       color: black; }
       @media only screen and (min-width: 1920px) {
         .about__greet h1 {
-          height: 15rem; } }
+          padding-top: 2rem;
+          height: 100%;
+          font-size: 15rem; } }
     .about__greet :nth-child(1) {
       border-right: 5px black solid;
       animation: 0.8s typing steps(10, start) 2s forwards, 0.5s blinking step-end alternate infinite, 0.2s blinking-end 4.2s linear forwards; }
@@ -731,8 +797,15 @@ p {
     grid-column: 4/9;
     grid-row: 9/ 13;
     z-index: 2100; }
+    @media only screen and (min-width: 1920px) {
+      .about__sub {
+        grid-row: 8/ 14;
+        justify-self: start; } }
     .about__sub h2 {
       color: #fffef8; }
+      @media only screen and (min-width: 1920px) {
+        .about__sub h2 {
+          font-size: 7rem; } }
   .about__me {
     grid-column: 9/ 16;
     grid-row: 3/ 11;
@@ -765,6 +838,12 @@ p {
       border-radius: 64% 36% 62% 38% / 61% 48% 52% 39%;
       transition: all linear;
       animation: blobbing 15s linear infinite; }
+      @media only screen and (min-width: 1920px) {
+        .about__me--content {
+          grid-row: 1/ 8; } }
+      @media only screen and (min-width: 1920px) {
+        .about__me--content {
+          column-gap: 3.5rem; } }
       .about__me--content h1 {
         grid-column: 2/ 3;
         grid-row: 3/ 6;
@@ -783,6 +862,9 @@ p {
         background-color: transparent;
         z-index: 2500;
         align-items: center; }
+        @media only screen and (min-width: 1920px) {
+          .about__me--content h1 {
+            font-size: 30rem; } }
       .about__me--content h2 {
         color: #fffef8;
         transform: translate3d(0, 0, 0);
@@ -792,6 +874,9 @@ p {
         opacity: 0;
         transition: all linear .3s;
         z-index: 2300; }
+        @media only screen and (min-width: 1920px) {
+          .about__me--content h2 {
+            font-size: 6rem; } }
     .about__me--1 h1 {
       justify-self: end;
       align-self: end;
@@ -800,6 +885,9 @@ p {
       animation: 2s fade-in 1s linear forwards, .2s coloring 9.5s ease-in forwards, 2.5s totheRight 10.5s ease-in forwards; }
     .about__me--1 h2 {
       animation: 2s fade-in 1s linear forwards, .1s fade-out 12.6s linear forwards; }
+      @media only screen and (min-width: 1920px) {
+        .about__me--1 h2 {
+          animation: 2s fade-in 1s linear forwards, .1s fade-out 12s linear forwards; } }
     .about__me--1 :nth-child(2) {
       grid-column: 3/ 8;
       grid-row: 3/ 4; }
@@ -917,15 +1005,24 @@ p {
       transform: translateX(0) translateY(0) rotate(0) scale(0.05);
       transition: all linear;
       animation: 2s blowing 1.5s ease-in-out forwards, 5s blobbing 2s linear infinite; }
+      @media only screen and (min-width: 1920px) {
+        .about__goo--1 {
+          width: 40vw;
+          height: 67vh; } }
     .about__goo--2 {
       grid-column: 9/ -1;
       grid-row: 3/ 10;
-      width: 55rem;
-      height: 45rem;
+      width: 40.26vw;
+      height: 68.807vh;
       border-radius: 62% 38% 65% 35% / 50% 49% 51% 50%;
       transform: translateX(0) translateY(0) scale(1) rotate(0);
       opacity: 0;
       animation: 4s blobbing 2.6s linear infinite, 3s birth 3s ease-in-out forwards; }
+      @media only screen and (min-width: 1920px) {
+        .about__goo--2 {
+          grid-row: 3/ 8;
+          width: 37vw;
+          height: 57vh; } }
     .about__goo--3 {
       grid-column: 12/ 15;
       grid-row: 9 / 13;
@@ -934,6 +1031,10 @@ p {
       width: 30rem;
       height: 30rem;
       animation: 6s blobbing 2.6s linear infinite, 3s birth2 7s ease-in-out forwards; }
+      @media only screen and (min-width: 1920px) {
+        .about__goo--3 {
+          width: 38rem;
+          height: 38rem; } }
     .about__goo--4 {
       width: 21rem;
       height: 21rem;
@@ -941,6 +1042,10 @@ p {
       right: 10%;
       transform: scale(1);
       animation: 25s floating 11s linear infinite; }
+      @media only screen and (min-width: 1920px) {
+        .about__goo--4 {
+          width: 23rem;
+          height: 23rem; } }
     .about__goo--5 {
       width: 18rem;
       height: 18rem;
@@ -948,12 +1053,20 @@ p {
       top: 100%;
       left: 20%;
       animation: 20s floating2 15s linear infinite; }
+      @media only screen and (min-width: 1920px) {
+        .about__goo--5 {
+          width: 20rem;
+          height: 20rem; } }
     .about__goo--6 {
       width: 20rem;
       height: 20rem;
       top: 100%;
       left: 10%;
       animation: 23s floating3 19s linear infinite; }
+      @media only screen and (min-width: 1920px) {
+        .about__goo--6 {
+          width: 22rem;
+          height: 22rem; } }
 
 .projects {
   grid-row: 1 / -1;
@@ -1037,6 +1150,9 @@ p {
       transform: rotate3d(1, 0, 0, 90deg);
       color: #fffef8;
       animation: .3s insideEye 23.5s ease-in forwards; }
+      @media only screen and (min-width: 1920px) {
+        .projects__menu--top, .projects__menu--bottom {
+          font-size: 3rem; } }
     .projects__menu--top {
       align-self: end; }
     .projects__menu--bottom {

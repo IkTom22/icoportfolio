@@ -339,6 +339,55 @@
       transform-origin: 0% 0%;
       transform: translateX(32rem) rotate3d(0, -1, 0, -92deg);}
   }
+  @media #{$desktop-xl} {
+    @keyframes totheRight {
+      0%{
+        opacity: 1;
+        transform: translateX(0);
+        background-color: transparent; 
+      }
+      10% {transform: translateX(1rem);}
+      20%{transform: translateX(1rem);}
+      25% {transform: translateX(-5rem);}
+      50% {
+        transform: translateX(-5rem);
+        width: 3rem;
+      }
+      
+      68% {
+        width: 32rem;
+        background-color: $red-cube;
+        transform: translateX(45rem);
+      }
+      90%{
+        background-color: $red-cube;
+        width: 32rem;
+      }
+      92%{
+        background-color: transparent;  
+      }
+      // 85%{
+      //   transform: translateX(32rem) rotate3d(0,0, 0, 0);
+      // }
+      93%{
+        transform: translateX(45rem) rotate3d(0,0, 0, 0);
+        opacity:1;
+      }
+      95%{
+        opacity:0;
+        width:100%;
+        transform-origin: 0% 0%;
+        transform: translateX(45rem) rotate3d(0, -1, 0, -92deg);
+      }
+      96%{
+        opacity:0;
+      }
+      100%{opacity:0;
+        width: 100%;
+        transform-origin: 0% 0%;
+        transform: translateX(45rem) rotate3d(0, -1, 0, -92deg);}
+    }
+  }
 
   @keyframes totheLeft {
     0% {
@@ -363,7 +412,30 @@
     }
   }
 
+@media #{$desktop-xl} {
+  @keyframes totheLeft {
+    0% {
+      opacity: 1;
+      color: $base-black;
+      //transform: translateX(0) rotate3d(0, -1, 0, -92deg) scale(1);
+      transform: translateX(5rem) translateY(0)rotateY(85deg) scale(1);
+    }
+    
+    20% {
+      //color:$base-white;
+      // transform-origin: 0% 0%;
+      //transform: translateX(0) rotate3d(0, 0, 0, 0)scale(1);
+      transform: translateX(5rem) translateY(0) rotateY(0) scale(1);
+    }
 
+    100%{
+      opacity:1;
+      color: $base-black;
+      //transform: translateX(-40rem) rotate3d(0, 0, 0, 0) scale(1.2);
+      transform: translateX(-30rem) translateY(0) rotateY(0) scale(1);
+    }
+  }
+}
 
   @keyframes fade-in{
     0%{opacity:0;}
@@ -410,6 +482,22 @@
       margin-left: 0;
     }
  }  
+ @media #{$desktop-xl} {
+  @keyframes slidingRight{
+    0%{ 
+       margin-left: 250%;
+       opacity:0;
+     }
+   2%{
+     
+     opacity: 1;
+   }
+    100%{  
+       opacity:1;
+       margin-left: 0;
+     }
+  }  
+}
 
  @keyframes slideDown {
    0%{

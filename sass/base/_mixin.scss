@@ -93,32 +93,6 @@
 }
 
 //--bBUTTON CHECKED MIXIN
-// @mixin checked {
-//   &__checkbox:checked ~ &__background {
-    
-//     transform: scale(80); 
-//   }
-//   &__checkbox:checked + &__menu &__menu--front{
-//     opacity: 1; 
-//     animation: .2s spinningOut .2s ease-in forwards;
-//   }  
-
-//   &__checkbox:checked + &__menu &__menu--back{
-//     opacity: 0;       
-//     animation: .2s  spinningIn .3s ease-in forwards;
-//   } 
-
-
-//   &__checkbox:not(:checked) + &__menu &__menu--back{
-//     opacity: 1;    
-//     animation: .2s spinningBackOut .2s ease-in forwards;
-//   } 
-//   &__checkbox:not(:checked) + &__menu &__menu--front{
-      
-//     animation: .2s spinningBackIn .3s ease-in forwards;
-//   } 
-  
-// }
 
 @mixin checked {
   &__checkbox:checked ~ &__background {

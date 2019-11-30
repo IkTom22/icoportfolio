@@ -1551,6 +1551,10 @@ p {
     grid-row: 1/4;
     background-image: radial-gradient(#ffa500 0%, #ff9900 5%, #ff5e00 50%, #ff0000 100%);
     animation: .3s appear 10.5s ease-in forwards; }
+    @media only screen and (min-width: 1920px) {
+      .contact__background {
+        height: 350rem;
+        width: 350rem; } }
   .contact__content {
     position: absolute;
     grid-column: 1 /14;
@@ -1570,6 +1574,9 @@ p {
     transition: all .2s ease-in;
     opacity: 0;
     transform-style: preserve-3d; }
+    @media only screen and (min-width: 1920px) {
+      .contact__content h3 {
+        font-size: 5rem; } }
     .contact__content--details > * {
       position: absolute;
       color: #fffef8; }
@@ -1581,8 +1588,8 @@ p {
       position: absolute;
       z-index: 2800;
       display: grid;
-      grid-template-columns: repeat(auto-fill, 10.001%);
-      grid-template-rows: repeat(auto-fill, 12.5009%);
+      grid-template-columns: repeat(9, 10.001%);
+      grid-template-rows: repeat(8, 12.5009%);
       justify-items: center;
       align-items: center;
       align-content: center;
@@ -1622,6 +1629,9 @@ p {
       max-width: 70%;
       transition: all .2s linear;
       z-index: 3000; }
+      @media only screen and (min-width: 1920px) {
+        .contact__content--list {
+          gap: 2.2rem; } }
       .contact__content--list:hover > svg {
         transform-origin: 50% 50%;
         animation: .2s jump .2s linear alternate 4; }
@@ -1645,9 +1655,16 @@ p {
       width: 2.5rem;
       height: 2.5rem;
       z-index: 2900; }
+      @media only screen and (min-width: 1920px) {
+        .contact__content--icon {
+          width: 4.5rem;
+          height: 4.5rem; } }
     .contact__content h4 {
       grid-column: 2/3;
       margin: 0; }
+      @media only screen and (min-width: 1920px) {
+        .contact__content h4 {
+          font-size: 3.5rem; } }
     .contact__content--message {
       grid-column: 10/16;
       grid-row: 8/12;
@@ -1700,6 +1717,10 @@ p {
       z-index: 2780;
       grid-template-columns: 11.9%  1fr 11.9%;
       grid-template-rows: 13.492% 21.587% 1fr 13.492%; }
+      @media only screen and (min-width: 1920px) {
+        .contact__content--job {
+          width: 55rem;
+          grid-row: 4/8; } }
       .contact__content--job > * {
         position: absolute; }
       .contact__content--job h3 {
@@ -1709,6 +1730,9 @@ p {
         margin: 0;
         font-size: 3.5rem;
         color: #fffef8; }
+        @media only screen and (min-width: 1920px) {
+          .contact__content--job h3 {
+            font-size: 5rem; } }
     .contact__content--positions {
       z-index: 700;
       grid-row: 3/4;
@@ -1720,6 +1744,9 @@ p {
       justify-items: start;
       padding-left: 0;
       padding-bottom: 5rem; }
+      @media only screen and (min-width: 1920px) {
+        .contact__content--positions {
+          padding-bottom: 0; } }
     .contact__content--position {
       display: grid;
       grid-template-columns: 19.813% min-content 1fr;
@@ -1735,12 +1762,19 @@ p {
         height: 2rem;
         transition: all .2s linear;
         fill: black; }
+        @media only screen and (min-width: 1920px) {
+          .contact__content--position svg {
+            width: 4.5rem;
+            height: 4.5rem; } }
       .contact__content--position p {
         font-size: 2.5rem;
         margin: 0;
         grid-column: 3/-1;
         color: #fffef8;
         font-weight: 400; }
+        @media only screen and (min-width: 1920px) {
+          .contact__content--position p {
+            font-size: 3.5rem; } }
       .contact__content--position:hover > p {
         color: black; }
     .contact__content--clip {

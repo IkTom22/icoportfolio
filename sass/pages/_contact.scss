@@ -111,6 +111,10 @@
     }
     &__background {
         @include background-bubble;
+        @media #{$desktop-xl}{
+            height: 350rem;
+            width: 350rem;
+        }
         z-index: 2780;
         //background-color: $blue-light;
         grid-row: 1/4;
@@ -142,6 +146,11 @@
         opacity: 0;
 
         transform-style: preserve-3d;
+        h3 {
+            @media #{$desktop-xl}{
+                font-size: 5rem;
+            }
+        }
         // contact details 
         &--details > * {
             position: absolute; 
@@ -157,8 +166,10 @@
             display: grid;
             // grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
             // grid-template-rows: repeat(auto-fill, minmax(5rem, 1fr));
-            grid-template-columns: repeat(auto-fill, 10.001%);
-            grid-template-rows: repeat(auto-fill, 12.5009%);
+            // grid-template-columns: repeat(auto-fill, 10.001%);
+            // grid-template-rows: repeat(auto-fill, 12.5009%);
+            grid-template-columns: repeat(9, 10.001%);
+            grid-template-rows: repeat(8, 12.5009%);
             @include centering;
             align-content: center;
             transform-style: preserve-3d;
@@ -207,6 +218,9 @@
         color: $baige-yellow;
         grid-template-columns: min-content 1fr;
         gap: 1rem;
+        @media #{$desktop-xl}{
+            gap: 2.2rem;
+        }
         height: 100%;
         max-width: 70%;
        
@@ -219,6 +233,7 @@
         &:hover > h4 {
             color: $orange-red;
             color: $blue-light;
+
         }
         
     }
@@ -252,6 +267,10 @@
         width: 2.5rem;
         height: 2.5rem;
         z-index: 2900;
+        @media #{$desktop-xl}{
+            width: 4.5rem;
+            height: 4.5rem;
+        }
         
     }
     // &--icon:hover {
@@ -262,6 +281,9 @@
     & h4 {
         grid-column: 2/3;
         margin:0;
+        @media #{$desktop-xl}{
+            font-size: 3.5rem;
+        }
     }
 
 
@@ -324,8 +346,12 @@
         grid-column: 12/16;
         grid-row: 4/9;
         width: 42rem;
-        height: 100%;
 
+        height: 100%;
+        @media #{$desktop-xl}{
+            width: 55rem;
+            grid-row: 4/8;
+        }
         display: grid;
         @include centering;
         z-index: 2780;
@@ -346,7 +372,9 @@
             font-size: 3.5rem;
             //color: rgba($blue-mid, .8);
             color: $base-white;
-            
+            @media #{$desktop-xl}{
+                font-size: 5rem;
+            }
             }
         
     }
@@ -363,6 +391,9 @@
             //align-items: center;
             padding-left: 0;
             padding-bottom: 5rem;
+            @media #{$desktop-xl}{
+                padding-bottom: 0;
+            }
             // grid-template-rows: repeat(4, minmax(auto, 5rem));
      }
     &--position{
@@ -384,6 +415,10 @@
             height: 2rem;
             transition: all .2s linear;
             fill: $base-black;
+            @media #{$desktop-xl}{
+                width: 4.5rem;
+                height: 4.5rem;
+            }
         }
 
         p{
@@ -394,6 +429,9 @@
             //color: rgba($blue-mid, .8);
             color: $base-white;
             font-weight:400;
+            @media #{$desktop-xl}{
+                font-size: 3.5rem;
+            }
         }
         &:hover > p{
             color: $base-black;

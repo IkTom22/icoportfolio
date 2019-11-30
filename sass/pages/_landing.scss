@@ -38,11 +38,17 @@
     z-index: 5000;
     @include centering;
     @include centerContent;
+
     
     @media #{$desktop-xl} {
       width: 20rem;
       height: 20rem;
       grid-row: 2/4;
+
+    }
+    @media #{$desktop-xxl} {
+      width: 25rem;
+      height: 25rem;
 
     }
 
@@ -57,9 +63,12 @@
       overflow: hidden;
       opacity:1;
       transition: all .2s ease-out;
-
+      
       @media #{$desktop-xl} {
         font-size: 7rem;   
+      }
+      @media #{$desktop-xxl} {
+        font-size: 9rem;   
       }
 
       &--i {
@@ -69,10 +78,14 @@
         text-transform: uppercase;
         font-size: 5rem;
         transform: scale(1) translateY(0);
+
+        
         @media #{$desktop-xl} {
           font-size: 7rem;   
         }
-
+        @media #{$desktop-xxl} {
+          font-size: 9rem;   
+        }
       }
       &--c{
         grid-row: 2/3;

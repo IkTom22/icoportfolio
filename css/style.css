@@ -408,6 +408,19 @@ p {
       color: black;
       transform: translateX(-30rem) translateY(0) rotateY(0) scale(1); } } }
 
+@media only screen and (min-width: 2304px) {
+  @keyframes totheLeft {
+    0% {
+      opacity: 1;
+      color: black;
+      transform: translateX(5rem) translateY(0) rotateY(85deg) scale(1); }
+    20% {
+      transform: translateX(5rem) translateY(0) rotateY(0) scale(1); }
+    100% {
+      opacity: 1;
+      color: black;
+      transform: translateX(-45rem) translateY(0) rotateY(0) scale(1); } } }
+
 @keyframes fade-in {
   0% {
     opacity: 0; }
@@ -463,6 +476,17 @@ p {
       opacity: 1;
       margin-left: 0; } } }
 
+@media only screen and (min-width: 2304px) {
+  @keyframes slidingRight {
+    0% {
+      margin-left: 250%;
+      opacity: 0; }
+    2% {
+      opacity: 1; }
+    100% {
+      opacity: 1;
+      margin-left: -10%; } } }
+
 @keyframes slideDown {
   0% {
     opacity: 1;
@@ -496,6 +520,40 @@ p {
     transform-origin: 50% 50%;
     width: 100%;
     transform: translateX(-22rem) rotate(1440deg); } }
+
+@media only screen and (min-width: 1920px) {
+  @keyframes turning {
+    0% {
+      color: black;
+      opacity: 1;
+      transform-origin: 50% 50%;
+      width: 100%;
+      transform: translateX(-30rem) rotate(0); }
+    30% {
+      color: black;
+      opacity: 1; }
+    100% {
+      opacity: 0;
+      transform-origin: 50% 50%;
+      width: 100%;
+      transform: translateX(-30rem) rotate(1440deg); } } }
+
+@media only screen and (min-width: 2304px) {
+  @keyframes turning {
+    0% {
+      color: black;
+      opacity: 1;
+      transform-origin: 50% 50%;
+      width: 100%;
+      transform: translateX(-43rem) rotate(0); }
+    30% {
+      color: black;
+      opacity: 1; }
+    100% {
+      opacity: 0;
+      transform-origin: 50% 50%;
+      width: 100%;
+      transform: translateX(-43rem) rotate(1440deg); } } }
 
 @keyframes turningIn {
   0% {
@@ -608,6 +666,10 @@ p {
       width: 20rem;
       height: 20rem;
       grid-row: 2/4; } }
+  @media only screen and (min-width: 2304px) {
+    .logo {
+      width: 25rem;
+      height: 25rem; } }
   .logo__letter {
     font-family: "Manjari", sans-serif;
     text-transform: lowercase;
@@ -622,6 +684,9 @@ p {
     @media only screen and (min-width: 1920px) {
       .logo__letter {
         font-size: 7rem; } }
+    @media only screen and (min-width: 2304px) {
+      .logo__letter {
+        font-size: 9rem; } }
     .logo__letter--i {
       grid-row: 1/2;
       z-index: 4000;
@@ -632,6 +697,9 @@ p {
       @media only screen and (min-width: 1920px) {
         .logo__letter--i {
           font-size: 7rem; } }
+      @media only screen and (min-width: 2304px) {
+        .logo__letter--i {
+          font-size: 9rem; } }
     .logo__letter--c {
       grid-row: 2/3;
       z-index: 3000; }
@@ -696,6 +764,12 @@ p {
         width: 10rem;
         font-size: 3.5rem;
         gap: 1.2rem; } }
+    @media only screen and (min-width: 2304px) {
+      .about__menu {
+        height: 12rem;
+        width: 12rem;
+        font-size: 4.5rem;
+        gap: 1.2rem; } }
     .about__menu--top {
       grid-column: 1/2;
       grid-row: 1/2; }
@@ -708,6 +782,10 @@ p {
         background-color: black;
         border-radius: 1rem;
         text-align: center; }
+        @media only screen and (min-width: 1920px) {
+          .about__menu--top::after {
+            margin-top: 1rem;
+            width: 8rem; } }
     .about__menu--bottom {
       grid-column: 1/2;
       grid-row: 2/3; }
@@ -771,6 +849,11 @@ p {
         grid-column: 4 / 9;
         grid-row: 5 / 9;
         width: 100%; } }
+    @media only screen and (min-width: 2304px) {
+      .about__greet {
+        grid-column: 4 / 9;
+        grid-row: 4 / 9;
+        width: 100%; } }
     .about__greet h1 {
       width: 0;
       overflow: hidden;
@@ -786,6 +869,11 @@ p {
           padding-top: 2rem;
           height: 100%;
           font-size: 15rem; } }
+      @media only screen and (min-width: 2304px) {
+        .about__greet h1 {
+          padding-top: 2rem;
+          height: 100%;
+          font-size: 17rem; } }
     .about__greet :nth-child(1) {
       border-right: 5px black solid;
       animation: 0.8s typing steps(10, start) 2s forwards, 0.5s blinking step-end alternate infinite, 0.2s blinking-end 4.2s linear forwards; }
@@ -806,6 +894,10 @@ p {
       @media only screen and (min-width: 1920px) {
         .about__sub h2 {
           font-size: 7rem; } }
+      @media only screen and (min-width: 2304px) {
+        .about__sub h2 {
+          font-size: 8.5rem;
+          line-height: 10rem; } }
   .about__me {
     grid-column: 9/ 16;
     grid-row: 3/ 11;
@@ -844,6 +936,9 @@ p {
       @media only screen and (min-width: 1920px) {
         .about__me--content {
           column-gap: 3.5rem; } }
+      @media only screen and (min-width: 2304px) {
+        .about__me--content {
+          column-gap: 8rem; } }
       .about__me--content h1 {
         grid-column: 2/ 3;
         grid-row: 3/ 6;
@@ -864,7 +959,12 @@ p {
         align-items: center; }
         @media only screen and (min-width: 1920px) {
           .about__me--content h1 {
+            grid-row: 3/ 6;
             font-size: 30rem; } }
+        @media only screen and (min-width: 2304px) {
+          .about__me--content h1 {
+            grid-row: 3/7;
+            font-size: 38.5rem; } }
       .about__me--content h2 {
         color: #fffef8;
         transform: translate3d(0, 0, 0);
@@ -877,6 +977,9 @@ p {
         @media only screen and (min-width: 1920px) {
           .about__me--content h2 {
             font-size: 6rem; } }
+        @media only screen and (min-width: 2304px) {
+          .about__me--content h2 {
+            font-size: 7.2rem; } }
     .about__me--1 h1 {
       justify-self: end;
       align-self: end;
@@ -909,10 +1012,8 @@ p {
         transform: translateX(5rem) translateY(0) rotateY(85deg) scale(1);
         animation: 1.5s totheLeft 12.87s ease-in-out forwards, 2s turning 17s ease-in forwards; }
       .about__me--2 h2 {
-        width: 30rem;
         margin-left: 200%;
         opacity: 0;
-        height: 5rem;
         overflow: hidden;
         transition: all linear .2s;
         animation: 1.5s slidingRight 13s ease-in-out forwards, .5s slideDown 18.5s ease-in forwards; }
@@ -953,24 +1054,36 @@ p {
         justify-self: end;
         transform: translateY(17%) rotate(20deg);
         animation: 0.05s appear 19.5s linear forwards, 1s zoomOut 22s cubic-bezier(0.86, -0.57, 0.45, 0.77) forwards; }
+        @media only screen and (min-width: 1920px) {
+          .about__me--3 :nth-child(2) {
+            transform: translateX(-5%) translateY(17%) rotate(20deg); } }
       .about__me--3 :nth-child(3) {
         opacity: 0;
         grid-column: 3 /4;
         grid-row: 4/5;
         font-size: 7rem;
         animation: 0.05s appear 19.55s linear forwards, 1s zoomOut 22s cubic-bezier(0.86, -0.57, 0.45, 0.77) forwards; }
+        @media only screen and (min-width: 1920px) {
+          .about__me--3 :nth-child(3) {
+            transform: translateX(-5%); } }
       .about__me--3 :nth-child(4) {
         opacity: 0;
         grid-column: 4 /5;
         grid-row: 4/5;
         font-size: 9rem;
         animation: 0.05s appear 19.6s linear forwards, 1s zoomOut 22s cubic-bezier(0.86, -0.57, 0.45, 0.77) forwards; }
+        @media only screen and (min-width: 1920px) {
+          .about__me--3 :nth-child(4) {
+            transform: translateX(-5%); } }
       .about__me--3 :nth-child(5) {
         opacity: 0;
         grid-column: 5 /6;
         grid-row: 4/5;
         font-size: 11rem;
         animation: 0.05s appear 19.65s linear forwards, 1s zoomOut 22s cubic-bezier(0.86, -0.57, 0.45, 0.77) forwards; }
+        @media only screen and (min-width: 1920px) {
+          .about__me--3 :nth-child(5) {
+            transform: translateX(-5%); } }
       .about__me--3 :nth-child(6) {
         opacity: 0;
         grid-column: 6 /8;
@@ -978,6 +1091,9 @@ p {
         font-size: 19rem;
         transform: translateX(-10%) rotate(20deg);
         animation: 0.05s appear 19.7s linear forwards, 1s zoomOut 22s cubic-bezier(0.86, -0.57, 0.45, 0.77) forwards; }
+        @media only screen and (min-width: 1920px) {
+          .about__me--3 :nth-child(6) {
+            transform: translateX(-5%); } }
   .about__goo {
     z-index: 1800;
     position: relative;
@@ -1009,6 +1125,10 @@ p {
         .about__goo--1 {
           width: 40vw;
           height: 67vh; } }
+      @media only screen and (min-width: 2304px) {
+        .about__goo--1 {
+          width: 41vw;
+          height: 64vh; } }
     .about__goo--2 {
       grid-column: 9/ -1;
       grid-row: 3/ 10;
@@ -1693,6 +1813,9 @@ p {
         z-index: 2900;
         color: black;
         font-size: 3.7rem; }
+        @media only screen and (min-width: 1920px) {
+          .contact__content--message h2 {
+            font-size: 5rem; } }
     .contact__content--message-back {
       display: absolute;
       width: 23rem;
@@ -1705,6 +1828,10 @@ p {
       background-image: radial-gradient(#00ff7b, #1c0575);
       z-index: 2850;
       animation: 9s blobbing2 .7s linear infinite; }
+      @media only screen and (min-width: 1920px) {
+        .contact__content--message-back {
+          width: 34rem;
+          height: 34rem; } }
     .contact__content--job {
       position: absolute;
       grid-column: 12/16;

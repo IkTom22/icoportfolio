@@ -36,6 +36,12 @@
         font-size: 3.5rem;  
         gap: 1.2rem; 
       }
+      @media #{$desktop-xxl} {
+        height: 12rem;
+        width: 12rem;
+        font-size: 4.5rem;  
+        gap: 1.2rem; 
+      }
 
 
       &--top{
@@ -52,6 +58,11 @@
           background-color: $base-black;
           border-radius: 1rem;
           text-align: center;
+          @media #{$desktop-xl} {
+            margin-top: 1rem;
+            width: 8rem;
+
+          }
         }
       }
 
@@ -138,6 +149,11 @@
           grid-row: 5 / 9;
           width: 100%;
         }
+        @media #{$desktop-xxl} {
+          grid-column: 4 / 9;
+          grid-row: 4 / 9;
+          width: 100%;
+        }
         
         h1{
           width: 0;
@@ -155,6 +171,12 @@
             height: 100%;
             font-size: 15rem;
           }
+          @media #{$desktop-xxl}{
+            padding-top: 2rem;
+            height: 100%;
+            font-size: 17rem;
+          }
+
         }
         & :nth-child(1){
           border-right: 5px $base-black solid;
@@ -183,7 +205,11 @@
        color: $base-white; 
        @media #{$desktop-xl}{
         font-size: 7rem;
-      }
+        }
+        @media #{$desktop-xxl}{
+          font-size: 8.5rem;
+          line-height: 10rem;;
+        }
        }
       }
 
@@ -237,6 +263,9 @@
           @media #{$desktop-xl}{
             column-gap: 3.5rem;
           }
+          @media #{$desktop-xxl}{
+            column-gap: 8rem;
+          }
  
           h1{
             grid-column: 2/ 3;
@@ -259,7 +288,12 @@
             z-index: 2500;
             align-items: center;
             @media #{$desktop-xl}{
+              grid-row: 3/ 6;
               font-size:30rem;
+            }
+            @media #{$desktop-xxl}{
+              grid-row: 3/7;
+              font-size:38.5rem;
             }
            
           }
@@ -277,6 +311,9 @@
             z-index: 2300;
             @media #{$desktop-xl}{
               font-size: 6rem;
+            }
+            @media #{$desktop-xxl}{
+              font-size: 7.2rem;
             }
             
           }
@@ -329,11 +366,11 @@
             animation: 1.5s totheLeft 12.87s ease-in-out forwards, 2s turning 17s ease-in forwards;
           }
           h2{
-            width:30rem;
+            //width:30rem;
             margin-left: 200%;
             
             opacity:0;
-            height: 5rem;
+           
             overflow: hidden;
             transition: all linear .2s;
             //animation: 1.5s slidingRight 12s ease-in-out forwards, .5s slideDown 17.5s ease-in forwards;
@@ -391,8 +428,10 @@
             transform: translateY(17%) rotate(20deg);
             animation: .05s appear 19.5s linear forwards,
                         1s zoomOut 22s cubic-bezier(.86, -0.57, .45, .77)  forwards;
-                        // animation: .05s appear 18.5s linear forwards,
-                        // 1s zoomOut 21s cubic-bezier(.86, -0.57, .45, .77)  forwards;
+            @media #{$desktop-xl}{
+              transform: translateX(-5%) translateY(17%) rotate(20deg);
+            }
+
           }
           & :nth-child(3){
             opacity:0;
@@ -403,6 +442,9 @@
                         1s zoomOut 22s cubic-bezier(.86, -0.57, .45, .77)  forwards;
                         // animation: .05s appear 18.55s linear forwards, 
                         // 1s zoomOut 21s cubic-bezier(.86, -0.57, .45, .77)  forwards;
+            @media #{$desktop-xl}{
+              transform: translateX(-5%);
+            }            
             }
           & :nth-child(4){
             opacity:0;
@@ -411,8 +453,9 @@
             font-size: 9rem;
             animation: .05s appear 19.6s linear forwards,
                         1s zoomOut 22s cubic-bezier(.86, -0.57, .45, .77)  forwards;
-                        // animation: .05s appear 18.6s linear forwards,
-                        // 1s zoomOut 21s cubic-bezier(.86, -0.57, .45, .77)  forwards;
+                        @media #{$desktop-xl}{
+                          transform: translateX(-5%);
+                        }
           }
           & :nth-child(5){
             opacity:0;
@@ -421,8 +464,9 @@
             font-size: 11rem;
             animation: .05s appear 19.65s linear forwards,
                         1s zoomOut 22s cubic-bezier(.86, -0.57, .45, .77)  forwards;
-                        // animation: .05s appear 18.65s linear forwards,
-                        // 1s zoomOut 21s cubic-bezier(.86, -0.57, .45, .77)  forwards;
+                        @media #{$desktop-xl}{
+                          transform: translateX(-5%);
+                        }
           }
           & :nth-child(6){
             opacity:0;
@@ -432,8 +476,9 @@
             transform: translateX(-10%) rotate(20deg);
             animation: .05s appear 19.7s linear forwards,
                         1s zoomOut 22s cubic-bezier(.86, -0.57, .45, .77)  forwards;
-                        // animation: .05s appear 18.7s linear forwards,
-                        // 1s zoomOut 21s cubic-bezier(.86, -0.57, .45, .77)  forwards;
+                        @media #{$desktop-xl}{
+                          transform: translateX(-5%);
+                        }
           }
         }
       }
@@ -469,6 +514,10 @@
             @media #{$desktop-xl}{
               width: 40vw;
               height: 67vh;
+            }
+            @media #{$desktop-xxl}{
+              width: 41vw;
+              height: 64vh;
             }
             border-radius: 62% 38% 65% 35% / 50% 49% 51% 50% ;
             //background-color: $red-light;       

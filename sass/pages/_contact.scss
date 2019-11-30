@@ -320,6 +320,9 @@
                 z-index: 2900;
                 color: $base-black;
                 font-size:3.7rem;
+                @media #{$desktop-xl}{
+                    font-size: 5rem;
+                  }
             }
     
         }
@@ -327,6 +330,12 @@
             display: absolute;
             width: 23rem;
             height: 23rem;
+            @media #{$desktop-xl}{
+                width: 34rem;
+                height: 34rem;
+              }
+            // width: 16.837vw;
+            // height: 35.168vh;
             background-color: lightskyblue;
             background-color:$blue-lime;
             grid-column: 2/8;

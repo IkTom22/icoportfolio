@@ -436,6 +436,30 @@
     }
   }
 }
+@media #{$desktop-xxl} {
+  @keyframes totheLeft {
+    0% {
+      opacity: 1;
+      color: $base-black;
+      //transform: translateX(0) rotate3d(0, -1, 0, -92deg) scale(1);
+      transform: translateX(5rem) translateY(0)rotateY(85deg) scale(1);
+    }
+    
+    20% {
+      //color:$base-white;
+      // transform-origin: 0% 0%;
+      //transform: translateX(0) rotate3d(0, 0, 0, 0)scale(1);
+      transform: translateX(5rem) translateY(0) rotateY(0) scale(1);
+    }
+
+    100%{
+      opacity:1;
+      color: $base-black;
+      //transform: translateX(-40rem) rotate3d(0, 0, 0, 0) scale(1.2);
+      transform: translateX(-45rem) translateY(0) rotateY(0) scale(1);
+    }
+  }
+}
 
   @keyframes fade-in{
     0%{opacity:0;}
@@ -498,6 +522,22 @@
      }
   }  
 }
+@media #{$desktop-xxl} {
+  @keyframes slidingRight{
+    0%{ 
+       margin-left: 250%;
+       opacity:0;
+     }
+   2%{
+     
+     opacity: 1;
+   }
+    100%{  
+       opacity:1;
+       margin-left: -10%;
+     }
+  }  
+}
 
  @keyframes slideDown {
    0%{
@@ -547,23 +587,77 @@
     transform: translateX(-22rem) rotate(1440deg);
    }
  }
+ @media #{$desktop-xl}{
 
- @keyframes turningIn {
+  @keyframes turning{
    0%{
      color: $base-black;
-     opacity: 0;
+     opacity:1;
      transform-origin: 50% 50%;
-     transform: translateX(-5rem) rotate(0);
+     width: 100%;
+     transform: translateX(-30rem) rotate(0);
    }
-   1%{
-    opacity: 1;
-   }
-   100%{
+  
+   30%{
     color: $base-black;
     opacity: 1;
-    transform: translateX(-5rem) rotate(360deg);
+   }
+   
+   100%{
+     $color: $base-black;
+     opacity: 0;
+     transform-origin: 50% 50%;
+     width: 100%;
+    transform: translateX(-30rem) rotate(1440deg);
    }
  }
+    
+ }
+ @media #{$desktop-xxl}{
+
+ @keyframes turning{
+  0%{
+    color: $base-black;
+    opacity:1;
+    transform-origin: 50% 50%;
+    width: 100%;
+    transform: translateX(-43rem) rotate(0);
+  }
+ 
+  30%{
+   color: $base-black;
+   opacity: 1;
+  }
+  
+  100%{
+    $color: $base-black;
+    opacity: 0;
+    transform-origin: 50% 50%;
+    width: 100%;
+   transform: translateX(-43rem) rotate(1440deg);
+  }
+}
+   
+}
+ @keyframes turningIn {
+  0%{
+    color: $base-black;
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: translateX(-5rem) rotate(0);
+  }
+  1%{
+   opacity: 1;
+  }
+  100%{
+   color: $base-black;
+   opacity: 1;
+   transform: translateX(-5rem) rotate(360deg);
+  }
+}
+
+
+
 // animation between about me and projects
  @keyframes zoomOut {
    0%{ opacity:1}

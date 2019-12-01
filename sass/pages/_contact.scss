@@ -111,10 +111,7 @@
     }
     &__background {
         @include background-bubble;
-        @media #{$desktop-xl}{
-            height: 350rem;
-            width: 350rem;
-        }
+
         z-index: 2780;
         //background-color: $blue-light;
         grid-row: 1/4;

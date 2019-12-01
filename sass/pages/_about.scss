@@ -264,7 +264,7 @@
             column-gap: 3.5rem;
           }
           @media #{$desktop-xxl}{
-            column-gap: 8rem;
+            column-gap: 4rem;
           }
  
           h1{
@@ -331,6 +331,7 @@
             //animation: 2s fade-in linear forwards, .1s fade-out 11.6s linear forwards;
             animation: 2s fade-in 1s linear forwards, .1s fade-out 12.6s linear forwards;
             @media #{$desktop-xl}{
+              padding-left: 5rem;
               animation: 2s fade-in 1s linear forwards, .1s fade-out 12s linear forwards;
             }
           }
@@ -416,6 +417,9 @@
             justify-self: center;
             text-align: center;
             transform: rotate(20deg);
+            @media #{$desktop-xxl}{
+              transform: translateX(-25%) rotate(20deg) ;
+            }
             z-index: 2700;
             text-transform: uppercase;
             
@@ -428,9 +432,10 @@
             transform: translateY(17%) rotate(20deg);
             animation: .05s appear 19.5s linear forwards,
                         1s zoomOut 22s cubic-bezier(.86, -0.57, .45, .77)  forwards;
-            @media #{$desktop-xl}{
-              transform: translateX(-5%) translateY(17%) rotate(20deg);
-            }
+                        @media #{$desktop-xxl}{
+                          transform: translateX(-10%) rotate(20deg) ;
+                        }
+
 
           }
           & :nth-child(3){
@@ -442,9 +447,7 @@
                         1s zoomOut 22s cubic-bezier(.86, -0.57, .45, .77)  forwards;
                         // animation: .05s appear 18.55s linear forwards, 
                         // 1s zoomOut 21s cubic-bezier(.86, -0.57, .45, .77)  forwards;
-            @media #{$desktop-xl}{
-              transform: translateX(-5%);
-            }            
+                        
             }
           & :nth-child(4){
             opacity:0;
@@ -453,9 +456,7 @@
             font-size: 9rem;
             animation: .05s appear 19.6s linear forwards,
                         1s zoomOut 22s cubic-bezier(.86, -0.57, .45, .77)  forwards;
-                        @media #{$desktop-xl}{
-                          transform: translateX(-5%);
-                        }
+
           }
           & :nth-child(5){
             opacity:0;
@@ -464,9 +465,7 @@
             font-size: 11rem;
             animation: .05s appear 19.65s linear forwards,
                         1s zoomOut 22s cubic-bezier(.86, -0.57, .45, .77)  forwards;
-                        @media #{$desktop-xl}{
-                          transform: translateX(-5%);
-                        }
+
           }
           & :nth-child(6){
             opacity:0;
@@ -476,9 +475,7 @@
             transform: translateX(-10%) rotate(20deg);
             animation: .05s appear 19.7s linear forwards,
                         1s zoomOut 22s cubic-bezier(.86, -0.57, .45, .77)  forwards;
-                        @media #{$desktop-xl}{
-                          transform: translateX(-5%);
-                        }
+
           }
         }
       }
@@ -560,6 +557,10 @@
             width: 38rem;
             height: 38rem;
           }
+          @media #{$desktop-xxl}{
+            width: 46rem;
+            height: 46rem;
+          }
           //@at-rootanimation: 6s blobbing 1.6s linear infinite, 3s birth2 6s ease-in-out forwards;
           animation: 6s blobbing 2.6s linear infinite, 3s birth2 7s ease-in-out forwards;
         }
@@ -569,6 +570,10 @@
           @media #{$desktop-xl}{
             width: 25rem;
             height: 25rem;
+          }
+          @media #{$desktop-xxl}{
+            width: 29rem;
+            height: 29rem;
           }
           top: 100%;
           right: 10%;
@@ -583,6 +588,10 @@
             width: 21rem;
             height: 21rem;
           }
+          @media #{$desktop-xxl}{
+            width: 24rem;
+            height: 24rem;
+          }
           transform: scale(1);
           top: 100%;
           left: 20%;
@@ -596,6 +605,10 @@
           @media #{$desktop-xl}{
             width: 24rem;
             height: 24rem;
+          }
+          @media #{$desktop-xxl}{
+            width: 28rem;
+            height: 28rem;
           }
           top: 100%;
           left: 10%;

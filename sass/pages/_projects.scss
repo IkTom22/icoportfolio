@@ -68,6 +68,10 @@
             font-size: 2.6rem;
             transition: all .2s;
             animation: 3s blackBackground 24s linear forwards;
+            @media #{$desktop-xxl}{
+                height: 11rem;
+                width: 11rem;
+            }
 
         }
         &--front {
@@ -80,6 +84,10 @@
             height: 7.5rem;
             & > svg {
                 fill: $baige-yellow;
+            }
+            @media #{$desktop-xxl}{
+                height: 12rem;
+                width: 12rem;
             }
 
         }
@@ -99,6 +107,9 @@
                 animation: .3s insideEye 23.5s ease-in forwards;
                 @media #{$desktop-xl}{
                     font-size: 3rem;
+                }
+                @media #{$desktop-xxl}{
+                    font-size: 3.5rem;
                 }
                 
         }
@@ -143,6 +154,10 @@
             transform-origin: center;
             transform: scale(2.5) rotate3d(1, 0, 0, 90deg);
             animation: .3s openingEye 23.5s ease-in forwards;
+            @media #{$desktop-xxl}{
+                width: 22rem;
+                height: 22rem;
+            }
 
         }       
     }
@@ -187,10 +202,14 @@
     @media #{$desktop-xl} {
         height: 30rem;
     }
+    @media #{$desktop-xxl} {
+        height: 40rem;
+    }
     h5 {
         @media #{$desktop-xl} {
             font-size: 2.5rem; 
         }
+
     }
       & > * {
         position: absolute;
@@ -212,11 +231,16 @@
         @media #{$desktop-xl} {
             transform-origin: 50% 50% -15rem;
         }
+
         display: grid;
         // grid-template-columns: 6rem 1fr 6rem;
         // grid-template-rows: 3rem repeat(2, 7rem) 3rem;
         grid-template-columns: 22.52% 1fr 22.52%;
-        grid-template-rows: 0.1363% repeat(2, 36.37%) 0.1363%;
+        grid-template-rows: 13.63% repeat(2, 36.37%) 13.63%;
+        @media #{$desktop-xxl} {
+            transform-origin: 50% 50% -20rem;
+            grid-template-rows: 20% repeat(2, 30%) 20%;
+        }
         @include centering;
         @include centerContent;
         & svg,
@@ -240,12 +264,15 @@
             text-transform: uppercase;
             font-family:$font-display;
             letter-spacing: .2rem;
+            @media #{$desktop-xxl} {
+                font-size: 2.8rem;
+            }
            
             
         }
 
       }
-      &--back{
+    &--back{
         display: grid;
         @include centering;
         @include centerContent;
@@ -264,6 +291,10 @@
         @media #{$desktop-xl} {
             height: 30rem;
             transform-origin: 50% 50% -16.1rem;
+        }
+        @media #{$desktop-xxl} {
+            height: 40rem;
+            transform-origin: 50% 50% -21.8rem;
         }
 
         & >* {
@@ -286,6 +317,9 @@
             padding-top: 2rem;
             border-bottom-style: solid;
             border-bottom-width: .5px;
+            @media #{$desktop-xxl} {
+                font-size: 3.3rem;
+            }
 
         }
         & p {
@@ -299,6 +333,10 @@
             @media #{$desktop-xl} {
                 font-size: 2rem;
                 line-height: 2.5rem;
+            }
+            @media #{$desktop-xxl} {
+                font-size: 2.8rem;
+                line-height: 3.5rem;
             }
 
         }
@@ -317,6 +355,9 @@
                 @media #{$desktop-xl} {
                     font-size: 1.9rem;
                 }
+                @media #{$desktop-xxl} {
+                    font-size: 2.5rem;
+                }
             }
             &:hover,
             &:focus {
@@ -325,6 +366,9 @@
                 transform: scale(1.1);
                 @media #{$desktop-xl} {
                     font-size: 2.2rem;
+                }
+                @media #{$desktop-xxl} {
+                    font-size: 2.8rem;
                 }
             }
             

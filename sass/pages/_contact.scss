@@ -94,6 +94,9 @@
         }
         &:hover >&--card {
             font-size: 1.8rem;
+            @media #{$desktop-xl} {
+                font-size: 2.6rem;
+            }
             @media #{$desktop-xxl} {
                 font-size: 3.1rem;
             }
@@ -101,13 +104,16 @@
         &--top,
         &--bottom{
             z-index: 2600;
+            @media #{$desktop-xl} {
+                font-size: 2.5rem;
+            }
             @media #{$desktop-xxl} {
                 font-size: 3rem;
             }
         }
         &--top{
             padding-top: 2rem;
-            @media #{$desktop-xxl} {
+            @media #{$desktop-xl} {
                 &::after{
                     margin-top: 1.5rem;
                 }
@@ -362,7 +368,7 @@
                 width: 34rem;
                 height: 34rem;
             }
-            @media #{$desktop-xl}{
+            @media #{$desktop-xxl}{
                 width: 42rem;
                 height: 42rem;
             }

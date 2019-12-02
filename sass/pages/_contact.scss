@@ -12,6 +12,9 @@
         //grid-row: 10/12;
         grid-row: 10/13;
         grid-column: 13/15;
+        @media #{$desktop-xxl} {
+            grid-row: 10/12; 
+        }
         width: 100%;
         height: 100%;
         opacity:0;
@@ -50,7 +53,10 @@
             height: 12rem;
             width: 12rem;
         }
-
+        @media #{$desktop-xxl} {
+            height: 15rem;
+            width: 15rem;
+        }
         &--card{
             
             z-index: 2900;
@@ -67,7 +73,10 @@
                 width: 12rem;
                 font-size: 2.5rem;
             }
-            
+            @media #{$desktop-xxl} {
+                height: 15rem;
+                width: 15rem;
+            }
         }
 
      
@@ -85,16 +94,25 @@
         }
         &:hover >&--card {
             font-size: 1.8rem;
+            @media #{$desktop-xxl} {
+                font-size: 3.1rem;
+            }
         }
         &--top,
         &--bottom{
             z-index: 2600;
+            @media #{$desktop-xxl} {
+                font-size: 3rem;
+            }
         }
         &--top{
             padding-top: 2rem;
-            // &::after{
-            //     background-color: $red-cube;
-            // }
+            @media #{$desktop-xxl} {
+                &::after{
+                    margin-top: 1.5rem;
+                }
+            }
+           
         }
 
         &--bottom{
@@ -147,6 +165,9 @@
             @media #{$desktop-xl}{
                 font-size: 5rem;
             }
+            @media #{$desktop-xxl} {
+                font-size: 5.5rem;
+            }
         }
         // contact details 
         &--details > * {
@@ -156,6 +177,9 @@
     &--details {
             grid-column: 4/11;
             grid-row: 5/11;
+            @media #{$desktop-xxl} {
+                grid-column: 3/11;
+            }
             width: 100%;
             height: 100%;
             position: absolute;
@@ -268,6 +292,10 @@
             width: 4.5rem;
             height: 4.5rem;
         }
+        @media #{$desktop-xxl}{
+            width: 5rem;
+            height: 5rem;
+        }
         
     }
     // &--icon:hover {
@@ -280,6 +308,9 @@
         margin:0;
         @media #{$desktop-xl}{
             font-size: 3.5rem;
+        }
+        @media #{$desktop-xxl}{
+            font-size: 4rem;
         }
     }
 
@@ -330,7 +361,11 @@
             @media #{$desktop-xl}{
                 width: 34rem;
                 height: 34rem;
-              }
+            }
+            @media #{$desktop-xl}{
+                width: 42rem;
+                height: 42rem;
+            }
             // width: 16.837vw;
             // height: 35.168vh;
             background-color: lightskyblue;
@@ -381,7 +416,10 @@
             @media #{$desktop-xl}{
                 font-size: 5rem;
             }
+            @media #{$desktop-xxl}{
+                font-size: 5.5rem;
             }
+        }
         
     }
      &--positions{
@@ -400,6 +438,9 @@
             @media #{$desktop-xl}{
                 padding-bottom: 0;
             }
+            @media #{$desktop-xxl}{
+                width: 100%;
+            }
             // grid-template-rows: repeat(4, minmax(auto, 5rem));
      }
     &--position{
@@ -407,6 +448,9 @@
         //grid-template-columns: 4rem min-content 1fr ;
         grid-template-columns: 19.813% min-content 1fr ;
         gap: 1.5rem;
+        @media #{$desktop-xxl}{
+            gap: 2.5rem;
+        }
         align-items: center;
         justify-items: start;
         &:hover > svg{
@@ -437,6 +481,9 @@
             font-weight:400;
             @media #{$desktop-xl}{
                 font-size: 3.5rem;
+            }
+            @media #{$desktop-xl}{
+                font-size: 4rem;
             }
         }
         &:hover > p{
@@ -489,6 +536,11 @@
                 height: 12rem;
                 width: 12rem;
 
+            }
+            @media #{$desktop-xxl} {
+                grid-row: 4/6;
+                height: 16rem;
+                width: 16rem;
             }
         }
         

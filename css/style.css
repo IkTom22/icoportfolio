@@ -1635,6 +1635,9 @@ p {
     grid-template-rows: repeat(6, 18.4885%);
     transition: all .2s linear;
     animation: .2s appear 8s linear forwards, .3s slideUp 10s ease-in forwards; }
+    @media only screen and (min-width: 2304px) {
+      .contact__small {
+        grid-row: 10/12; } }
   .contact__menu {
     height: 8.5rem;
     width: 8.5rem;
@@ -1648,6 +1651,10 @@ p {
       .contact__menu {
         height: 12rem;
         width: 12rem; } }
+    @media only screen and (min-width: 2304px) {
+      .contact__menu {
+        height: 15rem;
+        width: 15rem; } }
     .contact__menu--card {
       z-index: 2900;
       height: 8.5rem;
@@ -1663,6 +1670,10 @@ p {
           height: 12rem;
           width: 12rem;
           font-size: 2.5rem; } }
+      @media only screen and (min-width: 2304px) {
+        .contact__menu--card {
+          height: 15rem;
+          width: 15rem; } }
     .contact__menu:hover {
       border: 5px #fffef8 solid;
       transform-origin: center; }
@@ -1671,10 +1682,19 @@ p {
       transform: translateX(0); }
     .contact__menu:hover > .contact__menu--card {
       font-size: 1.8rem; }
+      @media only screen and (min-width: 2304px) {
+        .contact__menu:hover > .contact__menu--card {
+          font-size: 3.1rem; } }
     .contact__menu--top, .contact__menu--bottom {
       z-index: 2600; }
+      @media only screen and (min-width: 2304px) {
+        .contact__menu--top, .contact__menu--bottom {
+          font-size: 3rem; } }
     .contact__menu--top {
       padding-top: 2rem; }
+      @media only screen and (min-width: 2304px) {
+        .contact__menu--top::after {
+          margin-top: 1.5rem; } }
     .contact__menu--bottom {
       padding-bottom: 1rem; }
     .contact__menu--icon {
@@ -1713,6 +1733,9 @@ p {
     @media only screen and (min-width: 1920px) {
       .contact__content h3 {
         font-size: 5rem; } }
+    @media only screen and (min-width: 2304px) {
+      .contact__content h3 {
+        font-size: 5.5rem; } }
     .contact__content--details > * {
       position: absolute;
       color: #fffef8; }
@@ -1733,6 +1756,9 @@ p {
       border-radius: 62% 38% 65% 35% / 50% 49% 51% 50%;
       background-color: #faeeb8;
       animation: 10s blobbing2 .5s linear infinite; }
+      @media only screen and (min-width: 2304px) {
+        .contact__content--details {
+          grid-column: 3/11; } }
     .contact__content--speech {
       grid-column: 1 /-1;
       grid-row: 1/-1;
@@ -1795,12 +1821,19 @@ p {
         .contact__content--icon {
           width: 4.5rem;
           height: 4.5rem; } }
+      @media only screen and (min-width: 2304px) {
+        .contact__content--icon {
+          width: 5rem;
+          height: 5rem; } }
     .contact__content h4 {
       grid-column: 2/3;
       margin: 0; }
       @media only screen and (min-width: 1920px) {
         .contact__content h4 {
           font-size: 3.5rem; } }
+      @media only screen and (min-width: 2304px) {
+        .contact__content h4 {
+          font-size: 4rem; } }
     .contact__content--message {
       grid-column: 10/16;
       grid-row: 8/12;
@@ -1848,6 +1881,10 @@ p {
         .contact__content--message-back {
           width: 34rem;
           height: 34rem; } }
+      @media only screen and (min-width: 1920px) {
+        .contact__content--message-back {
+          width: 42rem;
+          height: 42rem; } }
     .contact__content--job {
       position: absolute;
       grid-column: 12/16;
@@ -1876,6 +1913,9 @@ p {
         @media only screen and (min-width: 1920px) {
           .contact__content--job h3 {
             font-size: 5rem; } }
+        @media only screen and (min-width: 2304px) {
+          .contact__content--job h3 {
+            font-size: 5.5rem; } }
     .contact__content--positions {
       z-index: 700;
       grid-row: 3/4;
@@ -1890,12 +1930,18 @@ p {
       @media only screen and (min-width: 1920px) {
         .contact__content--positions {
           padding-bottom: 0; } }
+      @media only screen and (min-width: 2304px) {
+        .contact__content--positions {
+          width: 100%; } }
     .contact__content--position {
       display: grid;
       grid-template-columns: 19.813% min-content 1fr;
       gap: 1.5rem;
       align-items: center;
       justify-items: start; }
+      @media only screen and (min-width: 2304px) {
+        .contact__content--position {
+          gap: 2.5rem; } }
       .contact__content--position:hover > svg {
         cursor: auto;
         animation: .5s shake .2s ease-in forwards; }
@@ -1918,6 +1964,9 @@ p {
         @media only screen and (min-width: 1920px) {
           .contact__content--position p {
             font-size: 3.5rem; } }
+        @media only screen and (min-width: 1920px) {
+          .contact__content--position p {
+            font-size: 4rem; } }
       .contact__content--position:hover > p {
         color: black; }
     .contact__content--clip {
@@ -1950,6 +1999,11 @@ p {
       .contact__icon--2 {
         height: 12rem;
         width: 12rem; } }
+    @media only screen and (min-width: 2304px) {
+      .contact__icon--2 {
+        grid-row: 4/6;
+        height: 16rem;
+        width: 16rem; } }
 
 @keyframes shake {
   0% {

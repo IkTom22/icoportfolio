@@ -16,6 +16,13 @@
     transform-style: preserve-3d;
     transition: all linear;
     overflow: hidden;
+    @media #{$mob-xxs-port}{
+      grid-column:  1/-1;
+      height: 100%;
+      border-radius: 50% 50% 0% 0% / 10% 10% 0% 0%;
+    }
+
+    
    
 }
 
@@ -45,6 +52,7 @@
       width: 5.5rem;
       height: 5.5rem;
       transform: translateY(1rem);
+      background-color: $base-black;
     }
     @media #{$desktop-xl} {
       width: 20rem;
@@ -70,6 +78,7 @@
       opacity:1;
       transition: all .2s ease-out;
       @media #{$mob-xxs-port}{
+        color: $base-white;
         font-size: 1.5rem;  
       }
       
@@ -119,6 +128,7 @@
 
       @media #{$mob-xxs-port}{
         font-size: 1.4rem; 
+        color: $base-white;
       }
       @media #{$desktop-xl} {
         font-size: 3rem;   

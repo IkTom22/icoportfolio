@@ -33,4 +33,8 @@ body{
     // used 1366px 657px ratio to calcurate the %
     grid-template-columns: 1fr 1.46%  repeat(12, 7.4%) 1.46% 1fr;
     grid-template-rows: 1fr 3.04% repeat(10, 7.823%) 3.04% 1fr;
+
+    @media #{$mob-xxs-port}{
+        background-color:$base-white;
+      }
 }

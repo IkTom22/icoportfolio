@@ -29,6 +29,11 @@
         transform-origin: center;
         transition: all .2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         animation: .2s appear 23s ease-in forwards;
+        @media #{$mob-xxs-port}{
+            grid-row: 2/4;
+            grid-column: 2/5;
+            animation: .2s appear 5s ease-in forwards;
+        }
     }
     
     // @include hoverEffect2;
@@ -154,6 +159,11 @@
             transform-origin: center;
             transform: scale(2.5) rotate3d(1, 0, 0, 90deg);
             animation: .3s openingEye 23.5s ease-in forwards;
+            @media #{$mob-xxs-port}{
+                width: 3.7rem;
+                height: 3.7rem;
+                animation: .3s openingEye 5s ease-in forwards;
+            }
             @media #{$desktop-xxl}{
                 width: 22rem;
                 height: 22rem;

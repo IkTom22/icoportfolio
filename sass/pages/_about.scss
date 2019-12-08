@@ -540,8 +540,8 @@
             height: 76.3vh;
             @media #{$mob-xxs-port}{
               grid-column: 1/-1;
-              grid-row: 5/14;
-              width: 90vw;
+              grid-row: 6/14;
+              width: 100vw;
               height: 100%;
             }
             @media #{$desktop-xl}{

@@ -7,6 +7,19 @@
     grid-template-rows: 1fr 2.0387% repeat(10, 6.432%) 2.0387% 1fr;
 
 }
+@mixin temp-sml {
+  gap: 1rem;
+  grid-template-columns: 1fr repeat(9, 7%) 1fr;
+  grid-template-rows: 1fr repeat(10, 6.432%) 1fr;
+}
+
+// @mixin s-template {
+//   gap: 1rem;
+//   grid-template-columns: 1fr repeat(9, 7%) 1fr;
+//   grid-template-rows: 1fr repeat(10, 6.432%) 1fr;
+// }
+
+
 @mixin centering {
     justify-items: center;
     align-items: center;

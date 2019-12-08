@@ -35,6 +35,7 @@ body{
     grid-template-rows: 1fr 3.04% repeat(10, 7.823%) 3.04% 1fr;
 
     @media #{$mob-xxs-port}{
+        @include temp-sml;
         background-color:$base-white;
       }
 }

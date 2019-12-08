@@ -18,6 +18,8 @@
     overflow: hidden;
     @media #{$mob-xxs-port}{
       grid-column:  1/-1;
+
+      @include temp-sml;
       height: 100%;
       border-radius: 50% 50% 0% 0% / 10% 10% 0% 0%;
     }
@@ -47,11 +49,12 @@
     @include centerContent;
 
     @media #{$mob-xxs-port}{
-      grid-column: 8/11;
+      grid-column: 5/8;
       grid-row: 1/3;
       width: 5.5rem;
       height: 5.5rem;
       transform: translateY(1rem);
+      justify-self: center;
       background-color: $base-black;
     }
     @media #{$desktop-xl} {

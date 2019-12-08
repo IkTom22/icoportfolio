@@ -8,7 +8,10 @@
     grid-template-columns: 1fr 1.558% repeat(11, 5.621%) 1.558% 1fr;
     gap: 2.5rem;
     position: relative;
-   
+    @media #{$mob-xxs-port}{
+        @include temp-sml;
+    }
+    
     &__sml{
 
         grid-row: 5/9;
@@ -30,9 +33,9 @@
         transition: all .2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         animation: .2s appear 23s ease-in forwards;
         @media #{$mob-xxs-port}{
-            grid-row: 2/4;
-            grid-column: 2/5;
-            animation: .2s appear 5s ease-in forwards;
+            grid-row: 8/10;
+            grid-column: 8/11;
+            animation: .2s appear 5.5s ease-in forwards;
         }
     }
     
@@ -55,6 +58,7 @@
         height: 9.5rem;
         width: 9.5rem;
         font-size: 2.6rem;
+        
         position: absolute;
         background-color: transparent;
         transform-origin: 50% 50%;
@@ -73,6 +77,10 @@
             font-size: 2.6rem;
             transition: all .2s;
             animation: 3s blackBackground 24s linear forwards;
+            @media #{$mob-xxs-port}{
+                height: 4.5rem;
+                width: 4.5rem; 
+            }
             @media #{$desktop-xxl}{
                 height: 11rem;
                 width: 11rem;
@@ -89,6 +97,10 @@
             height: 7.5rem;
             & > svg {
                 fill: $baige-yellow;
+            }
+            @media #{$mob-xxs-port}{
+                height: 6rem;
+                width: 6rem; 
             }
             @media #{$desktop-xxl}{
                 height: 12rem;
@@ -110,6 +122,10 @@
                 transform: rotate3d(1, 0, 0, 90deg);
                 color: $base-white;
                 animation: .3s insideEye 23.5s ease-in forwards;
+                @media #{$mob-xxs-port}{
+                    animation: .3s insideEye 5.5s ease-in forwards;
+                    font-size: 1.2rem;
+                }
                 @media #{$desktop-xl}{
                     font-size: 3rem;
                 }
@@ -160,9 +176,9 @@
             transform: scale(2.5) rotate3d(1, 0, 0, 90deg);
             animation: .3s openingEye 23.5s ease-in forwards;
             @media #{$mob-xxs-port}{
-                width: 3.7rem;
-                height: 3.7rem;
-                animation: .3s openingEye 5s ease-in forwards;
+                width: 4.5rem;
+                height: 4.5rem;
+                animation: .3s openingEye 5.5s ease-in forwards;
             }
             @media #{$desktop-xxl}{
                 width: 22rem;
@@ -209,6 +225,9 @@
     transition: all 0.2s ease;
     transform-style: preserve-3d;
     perspective: 1000px;
+    @media #{$mob-xxs-port}{
+        height: 10rem;
+    }
     @media #{$desktop-xl} {
         height: 30rem;
     }
@@ -405,6 +424,10 @@
     grid-row: 6/9;
     grid-column: 4/7;
     // background-color: red;
+    @media #{$mob-xxs-port}{
+        grid-row: 3/5;
+        grid-column: 3/6;
+    }
    
     &--front{
         
@@ -436,6 +459,10 @@
    &__card-2 {
     grid-row: 6/9;
     grid-column: 7/10;
+    @media #{$mob-xxs-port}{
+        grid-row: 3/5;
+        grid-column: 7/10;
+    }
     
     & svg {
         // fill:black;
@@ -457,6 +484,10 @@
     &__card-3 {
         grid-row: 6/9;
         grid-column: 10/13;
+        @media #{$mob-xxs-port}{
+            grid-row: 5/7;
+            grid-column: 3/6;
+        }
 
          & svg {
              fill: #920707;
@@ -479,6 +510,10 @@
     &__card-4 {
         grid-row: 9/12;
         grid-column: 4/7;
+        @media #{$mob-xxs-port}{
+            grid-row: 5/7;
+            grid-column: 7/10;
+        }
         & svg {
             fill:darkcyan;
         }
@@ -501,6 +536,10 @@
     &__card-5 {
         grid-row: 9/12;
         grid-column: 7/10;
+        @media #{$mob-xxs-port}{
+            grid-row: 7/9;
+            grid-column: 3/6;
+        }
         & svg {
             fill: #ff9100;
         }
@@ -521,8 +560,12 @@
        
     }
     &__card-6 {
-        grid-row: 9/12;
+        grid-row: 7/9;
         grid-column: 10/13;
+        @media #{$mob-xxs-port}{
+            grid-row: 5/7;
+            grid-column: 7/10;
+        }
         & svg {
             fill: #06b306;
         }

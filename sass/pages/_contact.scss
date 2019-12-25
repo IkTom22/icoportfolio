@@ -12,8 +12,15 @@
         //grid-row: 10/12;
         grid-row: 10/13;
         grid-column: 13/15;
+        @media #{$mob-xxs-port} {
+            justify-items: end;
+            grid-column: 8/11;
+            grid-row: 11/13; 
+            animation: .2s appear 5.5s linear forwards, .3s slideUp 5.5s ease-in forwards
+        }
         @media #{$desktop-xxl} {
             grid-row: 10/12; 
+            @include centerContent;
         }
         width: 100%;
         height: 100%;
@@ -49,7 +56,13 @@
         z-index: 2900;
         transform-origin: 50% 50%;
         transition: .2s all linear;
+        @media #{$mob-xxs-port} {
+            grid-row: 1/-1;
+            height: 7rem;
+            width: 7rem;
+        }
         @media #{$desktop-xl} {
+            
             height: 12rem;
             width: 12rem;
         }
@@ -68,6 +81,12 @@
             grid-column: 1/-1;
             grid-row: 1/-1;
             animation: .3s appear 8s linear forwards;
+            @media #{$mob-xxs-port} {
+                animation: .3s appear 5.5ss linear forwards;
+                font-size: 1.5rem;
+                height: 7rem;
+                width: 7rem;
+            }
             @media #{$desktop-xl} {
                 height: 12rem;
                 width: 12rem;
@@ -83,8 +102,6 @@
         &:hover {
             border: 5px  $base-white solid;
             transform-origin: center;
-           
-            //transform: scale(1);
 
         }
         &:hover  &--icon {
@@ -94,6 +111,9 @@
         }
         &:hover >&--card {
             font-size: 1.8rem;
+            @media #{$mob-xxs-port} {
+                font-size: 1.6rem;
+            }
             @media #{$desktop-xl} {
                 font-size: 2.6rem;
             }
@@ -167,6 +187,11 @@
         opacity: 0;
 
         transform-style: preserve-3d;
+        @media #{$mob-xxs-port}{
+            grid-column: 1 /11;
+            grid-row: 1/11; 
+        }
+
         h3 {
             @media #{$desktop-xl}{
                 font-size: 5rem;
@@ -183,6 +208,12 @@
     &--details {
             grid-column: 4/11;
             grid-row: 5/11;
+            @media #{$mob-xxs-port}{
+                background-color: $base-black;
+                height: 27rem;
+                width: 27rem;
+
+            }
             @media #{$desktop-xxl} {
                 grid-column: 3/11;
             }
@@ -219,6 +250,9 @@
         transform: rotate(300deg) translateY(5%) translateX(5%);  
         z-index: 2850;
         fill: $base-black;
+        @media #{$mob-xxs-port}{
+            fill: transparent;
+        }
        
     }
     &--speech-2{
@@ -236,6 +270,9 @@
         z-index: 2850;
         z-index:2900;  
         color: $baige-yellow;
+        @media #{$mob-xxs-port}{
+            grid-column: 2/10;
+        }
     }
     &--list {
         // grid-column: 2 /10;
@@ -345,6 +382,9 @@
             background-color:$base-black;
             animation: 14s blobbing2 .7s linear infinite;
             
+            @media #{$mob-xxs-port}{
+                transform: scale(0);
+            }
             h2 {
                 color: $base-black;
                 position: absolute;
@@ -408,6 +448,9 @@
         // grid-template-rows: minmax(2rem, 5rem) 8rem 1fr minmax(2rem, 5rem);
         grid-template-columns: 11.9%  1fr 11.9%;
         grid-template-rows: 13.492% 21.587% 1fr 13.492%;
+        @media #{$mob-xxs-port}{
+                transform: scale(0);
+            }
         & >* {
             position: absolute;
         }
@@ -441,6 +484,7 @@
             //align-items: center;
             padding-left: 0;
             padding-bottom: 5rem;
+            
             @media #{$desktop-xl}{
                 padding-bottom: 0;
             }
@@ -538,6 +582,9 @@
             width: 10rem;
             height: 10rem;
             transform: scale(0.5);
+            @media #{$mob-xxs-port} {
+                transform: scale(0);
+            }
             @media #{$desktop-xl} {
                 height: 12rem;
                 width: 12rem;

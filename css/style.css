@@ -1411,7 +1411,7 @@ p {
     background-color: #faeeb8; }
   .projects__checkbox:checked ~ .projects__background {
     opacity: 1;
-    transform: scale(1); }
+    transform: scale(2); }
   .projects__checkbox:checked + .projects__menu {
     animation: .2s shikaku .2s linear forwards;
     transform: scale(0.6); }
@@ -1469,6 +1469,9 @@ p {
       align-items: center;
       justify-content: center;
       align-content: center; }
+      @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+        .projects__card--front {
+          transform-origin: 50% 50% -5rem; } }
       @media only screen and (min-width: 1920px) {
         .projects__card--front {
           transform-origin: 50% 50% -15rem; } }
@@ -1483,6 +1486,11 @@ p {
         width: 5rem;
         height: 5rem;
         margin: 0; }
+        @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+          .projects__card--front svg,
+          .projects__card--front > div {
+            width: 3.5rem;
+            height: 3.5rem; } }
         @media only screen and (min-width: 1920px) {
           .projects__card--front svg,
           .projects__card--front > div {
@@ -1496,6 +1504,9 @@ p {
         text-transform: uppercase;
         font-family: "Manjari", sans-serif;
         letter-spacing: .2rem; }
+        @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+          .projects__card--front h5 {
+            font-size: 1.1rem; } }
         @media only screen and (min-width: 2304px) {
           .projects__card--front h5 {
             font-size: 2.8rem; } }
@@ -1506,13 +1517,18 @@ p {
       justify-content: center;
       align-content: center;
       height: 22rem;
-      grid-template-rows: [title-start] 27.277% [title-end] 1fr 13.636%;
+      grid-template-rows: 10% [title-start] 15% [title-end] 1fr 1fr 1fr;
       grid-template-columns: 7.5% 1fr 7.5%;
       gap: 1rem;
       background-color: black;
       transform: rotateX(85deg);
       transition: all 0.2s ease;
       transform-origin: 50% 50% -11rem; }
+      @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+        .projects__card--back {
+          height: 10rem;
+          transform-origin: 50% 50% -5.4rem;
+          grid-template-rows: 10% [title-start] 1fr [title-end] 1fr 10%; } }
       @media only screen and (min-width: 1920px) {
         .projects__card--back {
           height: 30rem;
@@ -1528,24 +1544,30 @@ p {
         -webkit-text-fill-color: transparent;
         -moz-text-fill-color: transparent; }
       .projects__card--back h5 {
-        grid-row: 1/2;
+        grid-row: 2/3;
         grid-column: 2/3;
         align-self: end;
         text-transform: capitalize;
         padding-top: 2rem;
         border-bottom-style: solid;
         border-bottom-width: .5px; }
+        @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+          .projects__card--back h5 {
+            font-size: 1.1rem; } }
         @media only screen and (min-width: 2304px) {
           .projects__card--back h5 {
             font-size: 3.3rem; } }
       .projects__card--back p {
         grid-column: 2/3;
-        grid-row: 2/3;
+        grid-row: 3/4;
         text-align: center;
         hyphens: auto;
         font-weight: 400;
         font-size: 1.5rem;
         line-height: 2.2rem; }
+        @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+          .projects__card--back p {
+            display: none; } }
         @media only screen and (min-width: 1920px) {
           .projects__card--back p {
             font-size: 2rem;
@@ -1557,12 +1579,16 @@ p {
       .projects__card--back a:link, .projects__card--back a:visited {
         transition: all .2s;
         grid-column: 2/3;
-        grid-row: 3/4;
+        grid-row: 4/5;
         padding-bottom: 3rem;
         text-decoration: none;
         font-weight: 400;
         font-size: 1.4rem;
         transform: scale(1); }
+        @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+          .projects__card--back a:link, .projects__card--back a:visited {
+            font-size: 1rem;
+            grid-row: 3/4; } }
         @media only screen and (min-width: 1920px) {
           .projects__card--back a:link, .projects__card--back a:visited {
             font-size: 1.9rem; } }
@@ -1573,6 +1599,9 @@ p {
         font-weight: 400;
         font-size: 1.5rem;
         transform: scale(1.1); }
+        @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+          .projects__card--back a:hover, .projects__card--back a:focus {
+            font-size: 1.1rem; } }
         @media only screen and (min-width: 1920px) {
           .projects__card--back a:hover, .projects__card--back a:focus {
             font-size: 2.2rem; } }
@@ -1598,9 +1627,16 @@ p {
       border-color: #fd714e; }
       .projects__card-1--back h5 {
         border-color: rgba(253, 113, 78, 0.5); }
+        @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+          .projects__card-1--back h5 {
+            grid-row: 2/3; } }
       .projects__card-1--back > * {
         background: -webkit-linear-gradient(to top, #fd714e, #fff7e2);
         background-image: linear-gradient(to top, #fd714e, #fff7e2); }
+      .projects__card-1--back .p-title {
+        grid-row: 3/4; }
+      .projects__card-1--back .p-sub {
+        grid-row: 4/5; }
   .projects__card-2 {
     grid-row: 6/9;
     grid-column: 7/10; }
@@ -1622,7 +1658,7 @@ p {
     grid-column: 10/13; }
     @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
       .projects__card-3 {
-        grid-row: 5/7;
+        grid-row: 6/8;
         grid-column: 3/6; } }
     .projects__card-3 svg {
       fill: #920707; }
@@ -1638,7 +1674,7 @@ p {
     grid-column: 4/7; }
     @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
       .projects__card-4 {
-        grid-row: 5/7;
+        grid-row: 6/8;
         grid-column: 7/10; } }
     .projects__card-4 svg {
       fill: darkcyan; }
@@ -1654,7 +1690,7 @@ p {
     grid-column: 7/10; }
     @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
       .projects__card-5 {
-        grid-row: 7/9;
+        grid-row: 9/11;
         grid-column: 3/6; } }
     .projects__card-5 svg {
       fill: #ff9100; }
@@ -1666,11 +1702,11 @@ p {
         background: -webkit-linear-gradient(to bottom, #ff9100, #b6fc9a);
         background-image: linear-gradient(to bottom, #ff9100, #b6fc9a); }
   .projects__card-6 {
-    grid-row: 7/9;
+    grid-row: 9/12;
     grid-column: 10/13; }
     @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
       .projects__card-6 {
-        grid-row: 5/7;
+        grid-row: 9/11;
         grid-column: 7/10; } }
     .projects__card-6 svg {
       fill: #06b306; }
@@ -1701,7 +1737,7 @@ p {
   transform: scale(0.4); }
   .black__checkbox:checked ~ .black__background {
     opacity: 1;
-    transform: scale(1); }
+    transform: scale(2); }
   .black__checkbox:checked + .black__menu {
     animation: .2s shikaku .2s linear forwards;
     transform: scale(0.6); }
@@ -1769,9 +1805,17 @@ p {
     grid-template-rows: repeat(6, 18.4885%);
     transition: all .2s linear;
     animation: .2s appear 8s linear forwards, .3s slideUp 10s ease-in forwards; }
+    @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+      .contact__small {
+        justify-items: end;
+        grid-column: 8/11;
+        grid-row: 11/13;
+        animation: .2s appear 5.5s linear forwards, .3s slideUp 5.5s ease-in forwards; } }
     @media only screen and (min-width: 2304px) {
       .contact__small {
-        grid-row: 10/12; } }
+        grid-row: 10/12;
+        justify-content: center;
+        align-content: center; } }
   .contact__menu {
     height: 8.5rem;
     width: 8.5rem;
@@ -1781,6 +1825,11 @@ p {
     z-index: 2900;
     transform-origin: 50% 50%;
     transition: .2s all linear; }
+    @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+      .contact__menu {
+        grid-row: 1/-1;
+        height: 7rem;
+        width: 7rem; } }
     @media only screen and (min-width: 1920px) {
       .contact__menu {
         height: 12rem;
@@ -1799,6 +1848,12 @@ p {
       grid-column: 1/-1;
       grid-row: 1/-1;
       animation: .3s appear 8s linear forwards; }
+      @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+        .contact__menu--card {
+          animation: .3s appear 5.5ss linear forwards;
+          font-size: 1.5rem;
+          height: 7rem;
+          width: 7rem; } }
       @media only screen and (min-width: 1920px) {
         .contact__menu--card {
           height: 12rem;
@@ -1816,6 +1871,9 @@ p {
       transform: translateX(0); }
     .contact__menu:hover > .contact__menu--card {
       font-size: 1.8rem; }
+      @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+        .contact__menu:hover > .contact__menu--card {
+          font-size: 1.6rem; } }
       @media only screen and (min-width: 1920px) {
         .contact__menu:hover > .contact__menu--card {
           font-size: 2.6rem; } }
@@ -1870,6 +1928,10 @@ p {
     transition: all .2s ease-in;
     opacity: 0;
     transform-style: preserve-3d; }
+    @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+      .contact__content {
+        grid-column: 1 /11;
+        grid-row: 1/11; } }
     @media only screen and (min-width: 1920px) {
       .contact__content h3 {
         font-size: 5rem; } }
@@ -1896,6 +1958,11 @@ p {
       border-radius: 62% 38% 65% 35% / 50% 49% 51% 50%;
       background-color: #faeeb8;
       animation: 10s blobbing2 .5s linear infinite; }
+      @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+        .contact__content--details {
+          background-color: black;
+          height: 27rem;
+          width: 27rem; } }
       @media only screen and (min-width: 2304px) {
         .contact__content--details {
           grid-column: 3/11; } }
@@ -1908,6 +1975,9 @@ p {
       transform: rotate(300deg) translateY(5%) translateX(5%);
       z-index: 2850;
       fill: black; }
+      @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+        .contact__content--speech {
+          fill: transparent; } }
     .contact__content--speech-2 {
       fill: #faeeb8;
       width: 115%;
@@ -1919,6 +1989,9 @@ p {
       z-index: 2850;
       z-index: 2900;
       color: #faeeb8; }
+      @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+        .contact__content--title {
+          grid-column: 2/10; } }
     .contact__content--list {
       grid-column: 2/9;
       display: grid;
@@ -1993,6 +2066,9 @@ p {
       border-radius: 62% 38% 65% 35% / 50% 49% 51% 50%;
       background-color: black;
       animation: 14s blobbing2 .7s linear infinite; }
+      @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+        .contact__content--message {
+          transform: scale(0); } }
       .contact__content--message h2 {
         color: black;
         position: absolute;
@@ -2041,6 +2117,9 @@ p {
         .contact__content--job {
           width: 55rem;
           grid-row: 4/8; } }
+      @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+        .contact__content--job {
+          transform: scale(0); } }
       .contact__content--job > * {
         position: absolute; }
       .contact__content--job h3 {
@@ -2120,7 +2199,7 @@ p {
       transform: rotateY(180deg) translateY(5%) translateX(-20%); }
   .contact__checkbox:checked ~ .contact__background {
     opacity: 1;
-    transform: scale(1); }
+    transform: scale(2); }
   .contact__checkbox:checked + .contact__menu {
     animation: .2s shikaku .2s linear forwards;
     transform: scale(0.6); }
@@ -2135,6 +2214,9 @@ p {
     width: 10rem;
     height: 10rem;
     transform: scale(0.5); }
+    @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+      .contact__icon--2 {
+        transform: scale(0); } }
     @media only screen and (min-width: 1920px) {
       .contact__icon--2 {
         height: 12rem;

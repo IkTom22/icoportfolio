@@ -257,6 +257,9 @@
         background-color: $base-white;
         transition: all 0.2s ease;
         transform-origin: 50% 50% -11rem;
+        @media #{$mob-xxs-port}{
+            transform-origin: 50% 50% -5rem;
+        }
         @media #{$desktop-xl} {
             transform-origin: 50% 50% -15rem;
         }
@@ -279,6 +282,10 @@
             width: 5rem;
             height: 5rem;     
             margin: 0;
+            @media #{$mob-xxs-port}{
+                width: 3.5rem;
+                height: 3.5rem;
+            }
             @media #{$desktop-xl} {
                 width: 8rem;
                 height: 8rem; 
@@ -293,6 +300,10 @@
             text-transform: uppercase;
             font-family:$font-display;
             letter-spacing: .2rem;
+
+            @media #{$mob-xxs-port}{
+                font-size: 1.1rem;
+            }
             @media #{$desktop-xxl} {
                 font-size: 2.8rem;
             }
@@ -309,7 +320,7 @@
         
         // grid-template-rows: [title-start] 6rem [title-end] 1fr 3rem;
         // grid-template-columns: 2rem 1fr 2rem;
-        grid-template-rows: [title-start] 27.277% [title-end] 1fr 13.636%;
+        grid-template-rows: 10% [title-start] 15% [title-end] 1fr 1fr 1fr;
         grid-template-columns: 7.5% 1fr 7.5%;
         gap: 1rem;
         background-color: $base-black;
@@ -317,6 +328,12 @@
      
         transition: all 0.2s ease;
         transform-origin: 50% 50% -11rem;
+        @media #{$mob-xxs-port}{
+            height: 10rem;
+            transform-origin: 50% 50% -5.4rem;
+            grid-template-rows: 10% [title-start] 1fr [title-end] 1fr 10%;
+        }
+
         @media #{$desktop-xl} {
             height: 30rem;
             transform-origin: 50% 50% -16.1rem;
@@ -339,13 +356,17 @@
         }
         & h5 {
 
-            grid-row: 1/2;
+            grid-row: 2/3;
             grid-column: 2/3;
             align-self: end;
             text-transform: capitalize;
             padding-top: 2rem;
             border-bottom-style: solid;
             border-bottom-width: .5px;
+            @media #{$mob-xxs-port}{
+                font-size: 1.1rem;
+            }
+            
             @media #{$desktop-xxl} {
                 font-size: 3.3rem;
             }
@@ -353,12 +374,15 @@
         }
         & p {
             grid-column: 2/3;
-            grid-row: 2/3;
+            grid-row: 3/4;
             text-align: center;
             hyphens: auto;
             font-weight: 400;
             font-size: 1.5rem;
             line-height: 2.2rem;
+            @media #{$mob-xxs-port}{
+                display: none;
+            }
             @media #{$desktop-xl} {
                 font-size: 2rem;
                 line-height: 2.5rem;
@@ -375,12 +399,16 @@
             &:visited {
                 transition: all .2s;
                 grid-column: 2/3;
-                grid-row: 3/4;
+                grid-row: 4/5;
                 padding-bottom: 3rem;
                 text-decoration: none;
                 font-weight: 400; 
                 font-size: 1.4rem ;
                 transform: scale(1);
+                @media #{$mob-xxs-port}{
+                    font-size: 1rem;
+                    grid-row: 3/4;
+                }
                 @media #{$desktop-xl} {
                     font-size: 1.9rem;
                 }
@@ -393,6 +421,9 @@
                 font-weight: 400 ;
                 font-size: 1.5rem;
                 transform: scale(1.1);
+                @media #{$mob-xxs-port}{
+                    font-size: 1.1rem;
+                }
                 @media #{$desktop-xl} {
                     font-size: 2.2rem;
                 }
@@ -436,15 +467,16 @@
         & svg {
             fill: $red-light;
         }
+        
     }
     &--back {
         border-color:  #fd714e;
-        //background: red;
-        // background-image: linear-gradient( $orange-deep, $red-cube, $red-light);
-        //background-image: linear-gradient(to bottom, #f80000 0%, #f9d423 100%);\
+
         & h5 {
-            
             border-color:  rgba(#fd714e, .5);
+            @media #{$mob-xxs-port}{
+                grid-row: 2/3;
+            }
         }
         & >* {
             background: -webkit-linear-gradient(to top, #fd714e, #fff7e2);
@@ -452,7 +484,15 @@
             
             
         }
-        //& button > &a {background-image: linear-gradient(to top, #fd714e, #fff7e2);}
+        & .p-title {
+            grid-row: 3/4;
+            
+
+        }
+        & .p-sub{
+            grid-row: 4/5;
+        }
+      
             
      }
     }
@@ -485,7 +525,7 @@
         grid-row: 6/9;
         grid-column: 10/13;
         @media #{$mob-xxs-port}{
-            grid-row: 5/7;
+            grid-row: 6/8;
             grid-column: 3/6;
         }
 
@@ -511,7 +551,7 @@
         grid-row: 9/12;
         grid-column: 4/7;
         @media #{$mob-xxs-port}{
-            grid-row: 5/7;
+            grid-row: 6/8;
             grid-column: 7/10;
         }
         & svg {
@@ -537,7 +577,7 @@
         grid-row: 9/12;
         grid-column: 7/10;
         @media #{$mob-xxs-port}{
-            grid-row: 7/9;
+            grid-row: 9/11;
             grid-column: 3/6;
         }
         & svg {
@@ -560,10 +600,10 @@
        
     }
     &__card-6 {
-        grid-row: 7/9;
+        grid-row: 9/12;
         grid-column: 10/13;
         @media #{$mob-xxs-port}{
-            grid-row: 5/7;
+            grid-row: 9/11;
             grid-column: 7/10;
         }
         & svg {

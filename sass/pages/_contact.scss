@@ -208,12 +208,7 @@
     &--details {
             grid-column: 4/11;
             grid-row: 5/11;
-            @media #{$mob-xxs-port}{
-                background-color: $base-black;
-                height: 27rem;
-                width: 27rem;
-
-            }
+            
             @media #{$desktop-xxl} {
                 grid-column: 3/11;
             }
@@ -222,10 +217,7 @@
             position: absolute;
             z-index: 2800;
             display: grid;
-            // grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
-            // grid-template-rows: repeat(auto-fill, minmax(5rem, 1fr));
-            // grid-template-columns: repeat(auto-fill, 10.001%);
-            // grid-template-rows: repeat(auto-fill, 12.5009%);
+
             grid-template-columns: repeat(9, 10.001%);
             grid-template-rows: repeat(8, 12.5009%);
             @include centering;
@@ -234,6 +226,17 @@
             border-radius: 62% 38% 65% 35% / 50% 49% 51% 50% ;
             background-color: $baige-yellow;
             animation: 10s blobbing2 .5s linear infinite;
+            @media #{$mob-xxs-port}{
+                background-color: $base-black;
+                height: 27rem;
+                width: 27rem;
+                grid-template-columns: repeat(9, 7.8%);
+                grid-template-rows: repeat(7, 11%);
+                gap: 1rem;
+                & h4 {
+                    font-size: 1.7rem;
+                }
+            }
 
 
         }
@@ -271,7 +274,7 @@
         z-index:2900;  
         color: $baige-yellow;
         @media #{$mob-xxs-port}{
-            grid-column: 2/10;
+            grid-column: 1/10;
         }
     }
     &--list {
@@ -282,6 +285,9 @@
         color: $baige-yellow;
         grid-template-columns: min-content 1fr;
         gap: 1rem;
+        @media #{$mob-xxs-port}{
+            grid-column: 1/10;
+        }
         @media #{$desktop-xl}{
             gap: 2.2rem;
         }

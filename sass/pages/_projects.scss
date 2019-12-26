@@ -11,6 +11,9 @@
     @media #{$mob-xxs-port}{
         @include temp-sml;
     }
+    @media #{$mob-xxs-land}{
+        gap: 1.5rem;
+    }
     
     &__sml{
 
@@ -35,6 +38,9 @@
         @media #{$mob-xxs-port}{
             grid-row: 8/10;
             grid-column: 8/11;
+            animation: .2s appear 5.5s ease-in forwards;
+        }
+        @media #{$mob-xxs-land}{
             animation: .2s appear 5.5s ease-in forwards;
         }
     }
@@ -81,6 +87,10 @@
                 height: 4.5rem;
                 width: 4.5rem; 
             }
+            @media #{$mob-xxs-land}{
+                height: 4.5rem;
+                width: 4.5rem; 
+            }
             @media #{$desktop-xxl}{
                 height: 11rem;
                 width: 11rem;
@@ -123,6 +133,10 @@
                 color: $base-white;
                 animation: .3s insideEye 23.5s ease-in forwards;
                 @media #{$mob-xxs-port}{
+                    animation: .3s insideEye 5.5s ease-in forwards;
+                    font-size: 1.2rem;
+                }
+                @media #{$mob-xxs-land}{
                     animation: .3s insideEye 5.5s ease-in forwards;
                     font-size: 1.2rem;
                 }
@@ -176,6 +190,11 @@
             transform: scale(2.5) rotate3d(1, 0, 0, 90deg);
             animation: .3s openingEye 23.5s ease-in forwards;
             @media #{$mob-xxs-port}{
+                width: 4.5rem;
+                height: 4.5rem;
+                animation: .3s openingEye 5.5s ease-in forwards;
+            }
+            @media #{$mob-xxs-land}{
                 width: 4.5rem;
                 height: 4.5rem;
                 animation: .3s openingEye 5.5s ease-in forwards;

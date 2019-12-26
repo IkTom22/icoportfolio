@@ -288,6 +288,9 @@
           @media #{$mob-xxs-port}{
             visibility: hidden;
           }
+          @media #{$mob-xxs-land}{
+            visibility: hidden;
+          }
           @media #{$desktop-xl}{
             grid-row: 1/ 8;
           }

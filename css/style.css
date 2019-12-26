@@ -29,7 +29,7 @@ body {
   align-items: center;
   grid-template-columns: 1fr 1.46% repeat(12, 7.4%) 1.46% 1fr;
   grid-template-rows: 1fr 3.04% repeat(10, 7.823%) 3.04% 1fr; }
-  @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+  @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
     .container {
       gap: 1rem;
       grid-template-columns: 1fr repeat(9, 7%) 1fr;
@@ -615,7 +615,7 @@ p {
   transform-style: preserve-3d;
   transition: all linear;
   overflow: hidden; }
-  @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+  @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
     .wrapper {
       grid-column: 1/-1;
       gap: 1rem;
@@ -648,7 +648,7 @@ p {
   align-items: center;
   justify-content: center;
   align-content: center; }
-  @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+  @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
     .logo {
       grid-column: 5/8;
       grid-row: 1/3;
@@ -681,7 +681,7 @@ p {
     overflow: hidden;
     opacity: 1;
     transition: all .2s ease-out; }
-    @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+    @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
       .logo__letter {
         color: #fffef8;
         font-size: 1.5rem; } }
@@ -701,7 +701,7 @@ p {
       text-transform: uppercase;
       font-size: 5rem;
       transform: scale(1) translateY(0); }
-      @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+      @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
         .logo__letter--i {
           font-size: 1.5rem; } }
       @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {
@@ -717,7 +717,7 @@ p {
     .logo__letter--c {
       grid-row: 2/3;
       z-index: 3000; }
-      @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+      @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
         .logo__letter--c {
           padding-top: .5rem; } }
     .logo__letter--o {
@@ -729,7 +729,7 @@ p {
     grid-row: 3/4;
     padding-bottom: 2rem;
     font-weight: 300; }
-    @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+    @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
       .logo__home {
         font-size: 1.4rem;
         color: #fffef8; } }
@@ -740,7 +740,7 @@ p {
     grid-row: 2/3;
     align-self: start;
     transform: scale(0.8) translateY(-30%); }
-    @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+    @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
       .logo:hover .logo__letter--i {
         transform: scale(0.8) translateY(-50%); } }
   .logo:hover .logo__letter--o {
@@ -763,7 +763,7 @@ p {
   grid-template-rows: 1fr 2.0387% repeat(10, 6.432%) 2.0387% 1fr;
   justify-items: center;
   align-items: center; }
-  @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+  @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
     .about {
       grid-row: 2/ -1;
       grid-column: 1/-1; } }
@@ -789,7 +789,7 @@ p {
     position: relative;
     z-index: 2800;
     cursor: pointer; }
-    @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+    @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
       .about__menu {
         transform: scale(0); } }
     @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {
@@ -881,7 +881,7 @@ p {
     grid-row: 4 / 9;
     z-index: 2100;
     width: 38rem; }
-    @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+    @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
       .about__greet {
         grid-column: 3 / -1;
         grid-row: 5 / 7;
@@ -911,7 +911,7 @@ p {
       letter-spacing: 1.2rem;
       margin-bottom: 2rem;
       color: black; }
-      @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+      @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
         .about__greet h1 {
           font-size: 5.8rem;
           margin-bottom: 0;
@@ -944,7 +944,7 @@ p {
     grid-column: 4/9;
     grid-row: 9/ 13;
     z-index: 2100; }
-    @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+    @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
       .about__sub {
         grid-column: 3/9;
         grid-row: 8/ 12; } }
@@ -958,7 +958,7 @@ p {
         justify-self: start; } }
     .about__sub h2 {
       color: #fffef8; }
-      @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+      @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
         .about__sub h2 {
           font-size: 3.4rem; } }
       @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {
@@ -1003,7 +1003,7 @@ p {
       border-radius: 64% 36% 62% 38% / 61% 48% 52% 39%;
       transition: all linear;
       animation: blobbing 15s linear infinite; }
-      @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+      @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
         .about__me--content {
           visibility: hidden; } }
       @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {
@@ -1192,7 +1192,7 @@ p {
       transform: translateX(0) translateY(0) rotate(0) scale(0.05);
       transition: all linear;
       animation: 2s blowing 1.5s ease-in-out forwards, 5s blobbing 2s linear infinite; }
-      @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+      @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
         .about__goo--1 {
           grid-column: 1/-1;
           grid-row: 6/14;
@@ -1219,7 +1219,7 @@ p {
       transform: translateX(0) translateY(0) scale(1) rotate(0);
       opacity: 0;
       animation: 4s blobbing 2.6s linear infinite, 3s birth 3s ease-in-out forwards; }
-      @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+      @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
         .about__goo--2 {
           grid-column: 8/ -1;
           grid-row: 3/ 9; } }
@@ -1299,17 +1299,17 @@ p {
   grid-template-columns: 1fr 1.558% repeat(11, 5.621%) 1.558% 1fr;
   gap: 2.5rem;
   position: relative; }
-  @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+  @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
     .projects {
       gap: 1rem;
       grid-template-columns: 1fr repeat(9, 7%) 1fr;
       grid-template-rows: 1fr repeat(10, 6.432%) 1fr; } }
   @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {
     .projects {
-      gap: 1.5rem; } }
+      gap: 1rem; } }
   .projects__sml {
     grid-row: 5/9;
-    grid-column: 8/16;
+    grid-column: 9/16;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -1325,7 +1325,7 @@ p {
     transform-origin: center;
     transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     animation: .2s appear 23s ease-in forwards; }
-    @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+    @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
       .projects__sml {
         grid-row: 8/10;
         grid-column: 8/11;
@@ -1369,7 +1369,7 @@ p {
       font-size: 2.6rem;
       transition: all .2s;
       animation: 3s blackBackground 24s linear forwards; }
-      @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+      @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
         .projects__menu--card {
           height: 4.5rem;
           width: 4.5rem; } }
@@ -1389,7 +1389,7 @@ p {
       height: 7.5rem; }
       .projects__menu--back > svg {
         fill: #faeeb8; }
-      @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+      @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
         .projects__menu--back {
           height: 6rem;
           width: 6rem; } }
@@ -1407,7 +1407,7 @@ p {
       transform: rotate3d(1, 0, 0, 90deg);
       color: #fffef8;
       animation: .3s insideEye 23.5s ease-in forwards; }
-      @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+      @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
         .projects__menu--top, .projects__menu--bottom {
           animation: .3s insideEye 5.5s ease-in forwards;
           font-size: 1.2rem; } }
@@ -1445,7 +1445,7 @@ p {
       transform-origin: center;
       transform: scale(2.5) rotate3d(1, 0, 0, 90deg);
       animation: .3s openingEye 23.5s ease-in forwards; }
-      @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+      @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
         .projects__icon--eye {
           width: 4.5rem;
           height: 4.5rem;
@@ -1498,9 +1498,12 @@ p {
     transition: all 0.2s ease;
     transform-style: preserve-3d;
     perspective: 1000px; }
-    @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+    @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
       .projects__card {
         height: 10rem; } }
+    @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {
+      .projects__card {
+        height: 6rem; } }
     @media only screen and (min-width: 1920px) {
       .projects__card {
         height: 30rem; } }
@@ -1531,9 +1534,13 @@ p {
       align-items: center;
       justify-content: center;
       align-content: center; }
-      @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+      @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
         .projects__card--front {
           transform-origin: 50% 50% -5rem; } }
+      @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {
+        .projects__card--front {
+          grid-template-rows: 10% repeat(2, 40%) 10%;
+          transform-origin: 50% 50% -3rem; } }
       @media only screen and (min-width: 1920px) {
         .projects__card--front {
           transform-origin: 50% 50% -15rem; } }
@@ -1548,11 +1555,16 @@ p {
         width: 5rem;
         height: 5rem;
         margin: 0; }
-        @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+        @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
           .projects__card--front svg,
           .projects__card--front > div {
             width: 3.5rem;
             height: 3.5rem; } }
+        @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {
+          .projects__card--front svg,
+          .projects__card--front > div {
+            width: 2.5rem;
+            height: 2.5rem; } }
         @media only screen and (min-width: 1920px) {
           .projects__card--front svg,
           .projects__card--front > div {
@@ -1566,9 +1578,12 @@ p {
         text-transform: uppercase;
         font-family: "Manjari", sans-serif;
         letter-spacing: .2rem; }
-        @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+        @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
           .projects__card--front h5 {
             font-size: 1.1rem; } }
+        @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {
+          .projects__card--front h5 {
+            font-size: 1rem; } }
         @media only screen and (min-width: 2304px) {
           .projects__card--front h5 {
             font-size: 2.8rem; } }
@@ -1586,11 +1601,15 @@ p {
       transform: rotateX(85deg);
       transition: all 0.2s ease;
       transform-origin: 50% 50% -11rem; }
-      @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+      @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
         .projects__card--back {
           height: 10rem;
           transform-origin: 50% 50% -5.4rem;
           grid-template-rows: 10% [title-start] 1fr [title-end] 1fr 10%; } }
+      @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {
+        .projects__card--back {
+          height: 6rem;
+          transform-origin: 50% 50% -3rem; } }
       @media only screen and (min-width: 1920px) {
         .projects__card--back {
           height: 30rem;
@@ -1613,9 +1632,13 @@ p {
         padding-top: 2rem;
         border-bottom-style: solid;
         border-bottom-width: .5px; }
-        @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+        @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
           .projects__card--back h5 {
             font-size: 1.1rem; } }
+        @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {
+          .projects__card--back h5 {
+            font-size: 1rem;
+            display: none; } }
         @media only screen and (min-width: 2304px) {
           .projects__card--back h5 {
             font-size: 3.3rem; } }
@@ -1627,7 +1650,10 @@ p {
         font-weight: 400;
         font-size: 1.5rem;
         line-height: 2.2rem; }
-        @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+        @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
+          .projects__card--back p {
+            display: none; } }
+        @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {
           .projects__card--back p {
             display: none; } }
         @media only screen and (min-width: 1920px) {
@@ -1647,10 +1673,14 @@ p {
         font-weight: 400;
         font-size: 1.4rem;
         transform: scale(1); }
-        @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+        @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
           .projects__card--back a:link, .projects__card--back a:visited {
             font-size: 1rem;
             grid-row: 3/4; } }
+        @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {
+          .projects__card--back a:link, .projects__card--back a:visited {
+            font-size: 1rem;
+            grid-row: 3/5; } }
         @media only screen and (min-width: 1920px) {
           .projects__card--back a:link, .projects__card--back a:visited {
             font-size: 1.9rem; } }
@@ -1661,7 +1691,10 @@ p {
         font-weight: 400;
         font-size: 1.5rem;
         transform: scale(1.1); }
-        @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+        @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
+          .projects__card--back a:hover, .projects__card--back a:focus {
+            font-size: 1.1rem; } }
+        @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {
           .projects__card--back a:hover, .projects__card--back a:focus {
             font-size: 1.1rem; } }
         @media only screen and (min-width: 1920px) {
@@ -1677,9 +1710,13 @@ p {
   .projects__card-1 {
     grid-row: 6/9;
     grid-column: 4/7; }
-    @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+    @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
       .projects__card-1 {
         grid-row: 3/5;
+        grid-column: 3/6; } }
+    @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {
+      .projects__card-1 {
+        grid-row: 6/8;
         grid-column: 3/6; } }
     .projects__card-1--front {
       border-color: black; }
@@ -1689,9 +1726,13 @@ p {
       border-color: #fd714e; }
       .projects__card-1--back h5 {
         border-color: rgba(253, 113, 78, 0.5); }
-        @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+        @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
           .projects__card-1--back h5 {
             grid-row: 2/3; } }
+        @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {
+          .projects__card-1--back h5 {
+            grid-row: 2/4;
+            display: unset; } }
       .projects__card-1--back > * {
         background: -webkit-linear-gradient(to top, #fd714e, #fff7e2);
         background-image: linear-gradient(to top, #fd714e, #fff7e2); }
@@ -1702,10 +1743,14 @@ p {
   .projects__card-2 {
     grid-row: 6/9;
     grid-column: 7/10; }
-    @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+    @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
       .projects__card-2 {
         grid-row: 3/5;
         grid-column: 7/10; } }
+    @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {
+      .projects__card-2 {
+        grid-row: 6/8;
+        grid-column: 6/9; } }
     .projects__card-2 svg {
       fill: #6e6b05; }
     .projects__card-2--back {
@@ -1718,10 +1763,14 @@ p {
   .projects__card-3 {
     grid-row: 6/9;
     grid-column: 10/13; }
-    @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+    @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
       .projects__card-3 {
         grid-row: 6/8;
         grid-column: 3/6; } }
+    @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {
+      .projects__card-3 {
+        grid-row: 6/8;
+        grid-column: 9/12; } }
     .projects__card-3 svg {
       fill: #920707; }
     .projects__card-3--back {
@@ -1734,10 +1783,13 @@ p {
   .projects__card-4 {
     grid-row: 9/12;
     grid-column: 4/7; }
-    @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+    @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
       .projects__card-4 {
         grid-row: 6/8;
         grid-column: 7/10; } }
+    @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {
+      .projects__card-4 {
+        grid-row: 8/10; } }
     .projects__card-4 svg {
       fill: darkcyan; }
     .projects__card-4--back {
@@ -1750,10 +1802,13 @@ p {
   .projects__card-5 {
     grid-row: 9/12;
     grid-column: 7/10; }
-    @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+    @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
       .projects__card-5 {
         grid-row: 9/11;
         grid-column: 3/6; } }
+    @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {
+      .projects__card-5 {
+        grid-row: 8/10; } }
     .projects__card-5 svg {
       fill: #ff9100; }
     .projects__card-5--back {
@@ -1766,10 +1821,13 @@ p {
   .projects__card-6 {
     grid-row: 9/12;
     grid-column: 10/13; }
-    @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+    @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
       .projects__card-6 {
         grid-row: 9/11;
         grid-column: 7/10; } }
+    @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {
+      .projects__card-6 {
+        grid-row: 8/10; } }
     .projects__card-6 svg {
       fill: #06b306; }
     .projects__card-6--back {
@@ -1867,7 +1925,7 @@ p {
     grid-template-rows: repeat(6, 18.4885%);
     transition: all .2s linear;
     animation: .2s appear 8s linear forwards, .3s slideUp 10s ease-in forwards; }
-    @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+    @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
       .contact__small {
         justify-items: end;
         grid-column: 8/11;
@@ -1875,7 +1933,8 @@ p {
         animation: .2s appear 5.5s linear forwards, .3s slideUp 5.5s ease-in forwards; } }
     @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {
       .contact__small {
-        grid-column: 10/12; } }
+        grid-column: 10/12;
+        animation: .2s appear 5.5s linear forwards, .3s slideUp 5.5s ease-in forwards; } }
     @media only screen and (min-width: 2304px) {
       .contact__small {
         grid-row: 10/12;
@@ -1890,7 +1949,7 @@ p {
     z-index: 2900;
     transform-origin: 50% 50%;
     transition: .2s all linear; }
-    @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+    @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
       .contact__menu {
         grid-row: 1/-1;
         height: 7rem;
@@ -1913,7 +1972,7 @@ p {
       grid-column: 1/-1;
       grid-row: 1/-1;
       animation: .3s appear 8s linear forwards; }
-      @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+      @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
         .contact__menu--card {
           animation: .3s appear 5.5ss linear forwards;
           font-size: 1.5rem;
@@ -1936,7 +1995,7 @@ p {
       transform: translateX(0); }
     .contact__menu:hover > .contact__menu--card {
       font-size: 1.8rem; }
-      @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+      @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
         .contact__menu:hover > .contact__menu--card {
           font-size: 1.6rem; } }
       @media only screen and (min-width: 1920px) {
@@ -1993,7 +2052,7 @@ p {
     transition: all .2s ease-in;
     opacity: 0;
     transform-style: preserve-3d; }
-    @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+    @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
       .contact__content {
         grid-column: 1 /11;
         grid-row: 1/11; } }
@@ -2026,7 +2085,7 @@ p {
       @media only screen and (min-width: 2304px) {
         .contact__content--details {
           grid-column: 3/11; } }
-      @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+      @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
         .contact__content--details {
           background-color: black;
           height: 27rem;
@@ -2045,7 +2104,7 @@ p {
       transform: rotate(300deg) translateY(5%) translateX(5%);
       z-index: 2850;
       fill: black; }
-      @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+      @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
         .contact__content--speech {
           fill: transparent; } }
     .contact__content--speech-2 {
@@ -2059,7 +2118,7 @@ p {
       z-index: 2850;
       z-index: 2900;
       color: #faeeb8; }
-      @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+      @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
         .contact__content--title {
           grid-column: 1/10; } }
     .contact__content--list {
@@ -2074,7 +2133,7 @@ p {
       max-width: 70%;
       transition: all .2s linear;
       z-index: 3000; }
-      @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+      @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
         .contact__content--list {
           grid-column: 1/10; } }
       @media only screen and (min-width: 1920px) {
@@ -2139,7 +2198,7 @@ p {
       border-radius: 62% 38% 65% 35% / 50% 49% 51% 50%;
       background-color: black;
       animation: 14s blobbing2 .7s linear infinite; }
-      @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+      @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
         .contact__content--message {
           transform: scale(0); } }
       .contact__content--message h2 {
@@ -2190,7 +2249,7 @@ p {
         .contact__content--job {
           width: 55rem;
           grid-row: 4/8; } }
-      @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+      @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
         .contact__content--job {
           transform: scale(0); } }
       .contact__content--job > * {
@@ -2287,7 +2346,7 @@ p {
     width: 10rem;
     height: 10rem;
     transform: scale(0.5); }
-    @media only screen and (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+    @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
       .contact__icon--2 {
         transform: scale(0); } }
     @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {

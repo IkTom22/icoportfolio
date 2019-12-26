@@ -16,10 +16,11 @@
             justify-items: end;
             grid-column: 8/11;
             grid-row: 11/13; 
-            animation: .2s appear 5.5s linear forwards, .3s slideUp 5.5s ease-in forwards
+            animation: .2s appear 5.5s linear forwards, .3s slideUp 5.5s ease-in forwards;
         }
         @media #{$mob-xxs-land}{
             grid-column: 10/12;
+            animation: .2s appear 5.5s linear forwards, .3s slideUp 5.5s ease-in forwards;
         }
         @media #{$desktop-xxl} {
             grid-row: 10/12; 
@@ -90,6 +91,7 @@
                 height: 7rem;
                 width: 7rem;
             }
+            
             @media #{$desktop-xl} {
                 height: 12rem;
                 width: 12rem;

@@ -512,7 +512,7 @@
     }
     @media #{$mob-xxs-land}{
         grid-row: 6/8;
-        grid-column: 3/6;
+        grid-column: 4/7;
     }
     &--front{
         
@@ -563,7 +563,7 @@
     }
     @media #{$mob-xxs-land}{
         grid-row: 6/8;
-        grid-column: 6/9;
+        grid-column: 7/10;
     }
     
     & svg {
@@ -592,7 +592,7 @@
         }
         @media #{$mob-xxs-land}{
             grid-row: 6/8;
-            grid-column: 9/12;
+            grid-column: 10/13;
         }
          & svg {
              fill: #920707;

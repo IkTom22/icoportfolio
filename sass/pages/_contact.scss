@@ -7,7 +7,9 @@
     &__checkbox{
         display: none;
     }
-    
+    @media #{$mob-xxs-land}{
+        gap: .5rem;
+    }
     &__small{
         //grid-row: 10/12;
         grid-row: 10/13;
@@ -19,7 +21,8 @@
             animation: .2s appear 5.5s linear forwards, .3s slideUp 5.5s ease-in forwards;
         }
         @media #{$mob-xxs-land}{
-            grid-column: 10/12;
+            grid-column: 12/14;
+            grid-row: 11/13; 
             animation: .2s appear 5.5s linear forwards, .3s slideUp 5.5s ease-in forwards;
         }
         @media #{$desktop-xxl} {
@@ -65,6 +68,10 @@
             height: 7rem;
             width: 7rem;
         }
+        @media #{$mob-xxs-land} {
+            height: 6.5rem;
+            width: 6.5rem;
+        }
         @media #{$desktop-xl} {
             
             height: 12rem;
@@ -91,7 +98,10 @@
                 height: 7rem;
                 width: 7rem;
             }
-            
+            @media #{$mob-xxs-land} {
+                height: 6.5rem;
+                width: 6.5rem;
+            }
             @media #{$desktop-xl} {
                 height: 12rem;
                 width: 12rem;
@@ -119,6 +129,9 @@
             @media #{$mob-xxs-port} {
                 font-size: 1.6rem;
             }
+            @media #{$mob-xxs-land} {
+                font-size: 1.1rem;
+            }
             @media #{$desktop-xl} {
                 font-size: 2.6rem;
             }
@@ -129,6 +142,9 @@
         &--top,
         &--bottom{
             z-index: 2600;
+            @media #{$mob-xxs-land} {
+                font-size: 1.6rem;
+            }
             @media #{$desktop-xl} {
                 font-size: 2.5rem;
             }
@@ -196,6 +212,10 @@
             grid-column: 1 /11;
             grid-row: 1/11; 
         }
+        @media #{$mob-xxs-land}{
+            grid-column: 1 /12;
+            grid-row: 1/-1; 
+        }
 
         h3 {
             @media #{$desktop-xl}{
@@ -214,9 +234,6 @@
             grid-column: 4/11;
             grid-row: 5/11;
             
-            @media #{$desktop-xxl} {
-                grid-column: 3/11;
-            }
             width: 100%;
             height: 100%;
             position: absolute;
@@ -242,6 +259,18 @@
                     font-size: 1.7rem;
                 }
             }
+            @media #{$mob-xxs-land}{
+                background-color: $base-black;
+                grid-column: 4/12;
+                column-gap: .5rem;
+                row-gap: 1rem;
+                & h4 {
+                    font-size: 1.8rem;
+                }
+            }
+            @media #{$desktop-xxl} {
+                grid-column: 3/11;
+            }
 
 
         }
@@ -260,6 +289,9 @@
         fill: $base-black;
         @media #{$mob-xxs-port}{
             fill: transparent;
+        }
+        @media #{$mob-xxs-land}{
+            display: none;
         }
        
     }
@@ -281,6 +313,13 @@
         @media #{$mob-xxs-port}{
             grid-column: 1/10;
         }
+        @media #{$mob-xxs-land}{
+            grid-column: 1/10;
+            font-size: 3rem;
+        }
+        @media #{$mob-xxs-land}{
+            grid-column: 1/10;
+        }
     }
     &--list {
         // grid-column: 2 /10;
@@ -291,6 +330,9 @@
         grid-template-columns: min-content 1fr;
         gap: 1rem;
         @media #{$mob-xxs-port}{
+            grid-column: 1/10;
+        }
+        @media #{$mob-xxs-land}{
             grid-column: 1/10;
         }
         @media #{$desktop-xl}{
@@ -396,6 +438,9 @@
             @media #{$mob-xxs-port}{
                 transform: scale(0);
             }
+            @media #{$mob-xxs-land}{
+                transform: scale(0);
+            }
             h2 {
                 color: $base-black;
                 position: absolute;
@@ -446,10 +491,7 @@
         width: 42rem;
 
         height: 100%;
-        @media #{$desktop-xl}{
-            width: 55rem;
-            grid-row: 4/8;
-        }
+        
         display: grid;
         @include centering;
         z-index: 2780;
@@ -461,6 +503,13 @@
         grid-template-rows: 13.492% 21.587% 1fr 13.492%;
         @media #{$mob-xxs-port}{
                 transform: scale(0);
+            }
+        @media #{$mob-xxs-land}{
+                transform: scale(0);
+            }
+        @media #{$desktop-xl}{
+            width: 55rem;
+            grid-row: 4/8;
             }
         & >* {
             position: absolute;

@@ -1717,7 +1717,7 @@ p {
     @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {
       .projects__card-1 {
         grid-row: 6/8;
-        grid-column: 3/6; } }
+        grid-column: 4/7; } }
     .projects__card-1--front {
       border-color: black; }
       .projects__card-1--front svg {
@@ -1750,7 +1750,7 @@ p {
     @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {
       .projects__card-2 {
         grid-row: 6/8;
-        grid-column: 6/9; } }
+        grid-column: 7/10; } }
     .projects__card-2 svg {
       fill: #6e6b05; }
     .projects__card-2--back {
@@ -1770,7 +1770,7 @@ p {
     @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {
       .projects__card-3 {
         grid-row: 6/8;
-        grid-column: 9/12; } }
+        grid-column: 10/13; } }
     .projects__card-3 svg {
       fill: #920707; }
     .projects__card-3--back {
@@ -1906,6 +1906,9 @@ p {
   position: relative; }
   .contact__checkbox {
     display: none; }
+  @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {
+    .contact {
+      gap: .5rem; } }
   .contact__small {
     grid-row: 10/13;
     grid-column: 13/15;
@@ -1933,7 +1936,8 @@ p {
         animation: .2s appear 5.5s linear forwards, .3s slideUp 5.5s ease-in forwards; } }
     @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {
       .contact__small {
-        grid-column: 10/12;
+        grid-column: 12/14;
+        grid-row: 11/13;
         animation: .2s appear 5.5s linear forwards, .3s slideUp 5.5s ease-in forwards; } }
     @media only screen and (min-width: 2304px) {
       .contact__small {
@@ -1954,6 +1958,10 @@ p {
         grid-row: 1/-1;
         height: 7rem;
         width: 7rem; } }
+    @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {
+      .contact__menu {
+        height: 6.5rem;
+        width: 6.5rem; } }
     @media only screen and (min-width: 1920px) {
       .contact__menu {
         height: 12rem;
@@ -1978,6 +1986,10 @@ p {
           font-size: 1.5rem;
           height: 7rem;
           width: 7rem; } }
+      @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {
+        .contact__menu--card {
+          height: 6.5rem;
+          width: 6.5rem; } }
       @media only screen and (min-width: 1920px) {
         .contact__menu--card {
           height: 12rem;
@@ -1998,6 +2010,9 @@ p {
       @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
         .contact__menu:hover > .contact__menu--card {
           font-size: 1.6rem; } }
+      @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {
+        .contact__menu:hover > .contact__menu--card {
+          font-size: 1.1rem; } }
       @media only screen and (min-width: 1920px) {
         .contact__menu:hover > .contact__menu--card {
           font-size: 2.6rem; } }
@@ -2006,6 +2021,9 @@ p {
           font-size: 3.1rem; } }
     .contact__menu--top, .contact__menu--bottom {
       z-index: 2600; }
+      @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {
+        .contact__menu--top, .contact__menu--bottom {
+          font-size: 1.6rem; } }
       @media only screen and (min-width: 1920px) {
         .contact__menu--top, .contact__menu--bottom {
           font-size: 2.5rem; } }
@@ -2056,6 +2074,10 @@ p {
       .contact__content {
         grid-column: 1 /11;
         grid-row: 1/11; } }
+    @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {
+      .contact__content {
+        grid-column: 1 /12;
+        grid-row: 1/-1; } }
     @media only screen and (min-width: 1920px) {
       .contact__content h3 {
         font-size: 5rem; } }
@@ -2082,9 +2104,6 @@ p {
       border-radius: 62% 38% 65% 35% / 50% 49% 51% 50%;
       background-color: #faeeb8;
       animation: 10s blobbing2 .5s linear infinite; }
-      @media only screen and (min-width: 2304px) {
-        .contact__content--details {
-          grid-column: 3/11; } }
       @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
         .contact__content--details {
           background-color: black;
@@ -2095,6 +2114,17 @@ p {
           gap: 1rem; }
           .contact__content--details h4 {
             font-size: 1.7rem; } }
+      @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {
+        .contact__content--details {
+          background-color: black;
+          grid-column: 4/12;
+          column-gap: .5rem;
+          row-gap: 1rem; }
+          .contact__content--details h4 {
+            font-size: 1.8rem; } }
+      @media only screen and (min-width: 2304px) {
+        .contact__content--details {
+          grid-column: 3/11; } }
     .contact__content--speech {
       grid-column: 1 /-1;
       grid-row: 1/-1;
@@ -2107,6 +2137,9 @@ p {
       @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
         .contact__content--speech {
           fill: transparent; } }
+      @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {
+        .contact__content--speech {
+          display: none; } }
     .contact__content--speech-2 {
       fill: #faeeb8;
       width: 115%;
@@ -2119,6 +2152,13 @@ p {
       z-index: 2900;
       color: #faeeb8; }
       @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
+        .contact__content--title {
+          grid-column: 1/10; } }
+      @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {
+        .contact__content--title {
+          grid-column: 1/10;
+          font-size: 3rem; } }
+      @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {
         .contact__content--title {
           grid-column: 1/10; } }
     .contact__content--list {
@@ -2134,6 +2174,9 @@ p {
       transition: all .2s linear;
       z-index: 3000; }
       @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
+        .contact__content--list {
+          grid-column: 1/10; } }
+      @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {
         .contact__content--list {
           grid-column: 1/10; } }
       @media only screen and (min-width: 1920px) {
@@ -2201,6 +2244,9 @@ p {
       @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
         .contact__content--message {
           transform: scale(0); } }
+      @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {
+        .contact__content--message {
+          transform: scale(0); } }
       .contact__content--message h2 {
         color: black;
         position: absolute;
@@ -2245,13 +2291,16 @@ p {
       z-index: 2780;
       grid-template-columns: 11.9%  1fr 11.9%;
       grid-template-rows: 13.492% 21.587% 1fr 13.492%; }
+      @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
+        .contact__content--job {
+          transform: scale(0); } }
+      @media only screen and (min-width: 480px) and (max-height: 539px) and (orientation: landscape) {
+        .contact__content--job {
+          transform: scale(0); } }
       @media only screen and (min-width: 1920px) {
         .contact__content--job {
           width: 55rem;
           grid-row: 4/8; } }
-      @media only screen and (min-width: 320px) and (max-height: 480px) and (orientation: portrait) {
-        .contact__content--job {
-          transform: scale(0); } }
       .contact__content--job > * {
         position: absolute; }
       .contact__content--job h3 {

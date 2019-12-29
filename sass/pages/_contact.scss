@@ -25,6 +25,12 @@
             grid-row: 11/13; 
             animation: .2s appear 5.5s linear forwards, .3s slideUp 5.5s ease-in forwards;
         }
+        @media #{$mob-xs-port} {
+            justify-items: end;
+            grid-column: 9/12;
+            grid-row: 12/14;
+            animation: .2s appear 5.5s linear forwards, .3s slideUp 5.5s ease-in forwards;
+        }
         @media #{$desktop-xxl} {
             grid-row: 10/12; 
             @include centerContent;
@@ -72,6 +78,11 @@
             height: 6.5rem;
             width: 6.5rem;
         }
+        @media #{$mob-xs-port} {
+            grid-row: 1/-1;
+            height: 10rem;
+            width: 10rem;
+        }
         @media #{$desktop-xl} {
             
             height: 12rem;
@@ -102,6 +113,13 @@
                 height: 6.5rem;
                 width: 6.5rem;
             }
+            @media #{$mob-xs-port} {
+                animation: .3s appear 5.5ss linear forwards;
+                font-size: 2rem;
+                height: 10rem;
+                width: 10rem;
+            }
+            
             @media #{$desktop-xl} {
                 height: 12rem;
                 width: 12rem;
@@ -132,6 +150,9 @@
             @media #{$mob-xxs-land} {
                 font-size: 1.1rem;
             }
+            @media #{$mob-xs-port} {
+                font-size: 1.7rem;
+            }
             @media #{$desktop-xl} {
                 font-size: 2.6rem;
             }
@@ -148,6 +169,7 @@
             @media #{$desktop-xl} {
                 font-size: 2.5rem;
             }
+            
             @media #{$desktop-xxl} {
                 font-size: 3rem;
             }
@@ -216,7 +238,10 @@
             grid-column: 1 /12;
             grid-row: 1/-1; 
         }
-
+        @media #{$mob-xs-port}{
+            grid-column: 1 /11;
+            grid-row: 1/11; 
+        }
         h3 {
             @media #{$desktop-xl}{
                 font-size: 5rem;
@@ -268,6 +293,19 @@
                     font-size: 1.8rem;
                 }
             }
+            @media #{$mob-xs-port}{
+                background-color: $base-black;
+                height: 38rem;
+                width: 38rem;
+                grid-column: 1/-1;
+                grid-row: 5/20;
+                grid-template-columns: repeat(9, 7.8%);
+                grid-template-rows: repeat(7, 11%);
+                gap: 1rem;
+                & h4 {
+                    font-size: 2.5rem;
+                }
+            }
             @media #{$desktop-xxl} {
                 grid-column: 3/11;
             }
@@ -291,6 +329,9 @@
             fill: transparent;
         }
         @media #{$mob-xxs-land}{
+            display: none;
+        }
+        @media #{$mob-xs-port}{
             display: none;
         }
        
@@ -317,9 +358,10 @@
             grid-column: 1/10;
             font-size: 3rem;
         }
-        @media #{$mob-xxs-land}{
+        @media #{$mob-xs-port}{
             grid-column: 1/10;
         }
+
     }
     &--list {
         // grid-column: 2 /10;
@@ -333,6 +375,9 @@
             grid-column: 1/10;
         }
         @media #{$mob-xxs-land}{
+            grid-column: 1/10;
+        }
+        @media #{$mob-xs-port}{
             grid-column: 1/10;
         }
         @media #{$desktop-xl}{
@@ -441,6 +486,9 @@
             @media #{$mob-xxs-land}{
                 transform: scale(0);
             }
+            @media #{$mob-xs-port}{
+                transform: scale(0);
+            }
             h2 {
                 color: $base-black;
                 position: absolute;
@@ -505,6 +553,9 @@
                 transform: scale(0);
             }
         @media #{$mob-xxs-land}{
+                transform: scale(0);
+            }
+        @media #{$mob-xs-port}{
                 transform: scale(0);
             }
         @media #{$desktop-xl}{
@@ -648,7 +699,9 @@
             @media #{$mob-xxs-land} {
                 transform: scale(0);
             }
-
+            @media #{$mob-xs-port} {
+                transform: scale(0);
+            }
             @media #{$desktop-xl} {
                 height: 12rem;
                 width: 12rem;

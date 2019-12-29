@@ -26,6 +26,13 @@
     @media #{$mob-xxs-land}{
       gap: .5rem;
     }
+    @media #{$mob-xs-port}{
+      grid-column:  1/-1;
+
+      @include temp-sml;
+      height: 100%;
+      border-radius: 50% 50% 0% 0% / 10% 10% 0% 0%;
+    }
     
    
 }
@@ -59,9 +66,19 @@
       justify-self: center;
       background-color: $base-black;
     }
+    
     @media #{$mob-xxs-land}{
       width: 6.5rem;
       height: 6.5rem;
+    }
+    @media #{$mob-xs-port}{
+      grid-column: 8/10;
+      grid-row: 2/3;
+      width: 10rem;
+      height: 10rem;
+      transform: translateY(1rem);
+      justify-self: center;
+      background-color: $base-black;
     }
     @media #{$desktop-xl} {
       width: 20rem;
@@ -93,6 +110,10 @@
       @media #{$mob-xxs-land}{
         font-size: 2.5rem;  
       }
+      @media #{$mob-xs-port}{
+        color: $base-white;
+        font-size: 4rem;  
+      }
       @media #{$desktop-xl} {
         font-size: 7rem;   
       }
@@ -113,6 +134,9 @@
         @media #{$mob-xxs-land}{
           padding-top: 0;
           font-size: 2.5rem;  
+        }
+        @media #{$mob-xs-port}{
+          font-size: 4rem;  
         }
         @media #{$desktop-xl} {
           font-size: 7rem;   
@@ -142,6 +166,10 @@
 
       @media #{$mob-xxs-port}{
         font-size: 1.4rem; 
+        color: $base-white;
+      }
+      @media #{$mob-xs-port}{
+        font-size: 3rem; 
         color: $base-white;
       }
       @media #{$desktop-xl} {

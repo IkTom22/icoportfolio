@@ -14,6 +14,9 @@
     @media #{$mob-xxs-land}{
         gap: 1rem;
     }
+    @media #{$mob-xs-port}{
+        @include temp-sml;
+    }
     
     &__sml{
 
@@ -41,6 +44,11 @@
             animation: .2s appear 5.5s ease-in forwards;
         }
         @media #{$mob-xxs-land}{
+            animation: .2s appear 5.5s ease-in forwards;
+        }
+        @media #{$mob-xs-port}{
+            grid-row: 8/10;
+            grid-column: 8/11;
             animation: .2s appear 5.5s ease-in forwards;
         }
     }
@@ -91,6 +99,10 @@
                 height: 4.5rem;
                 width: 4.5rem; 
             }
+            @media #{$mob-xs-port}{
+                height: 6.5rem;
+                width: 6.5rem; 
+            }
             @media #{$desktop-xxl}{
                 height: 11rem;
                 width: 11rem;
@@ -116,6 +128,10 @@
                 height: 12rem;
                 width: 12rem;
             }
+            @media #{$mob-xs-port}{
+                height: 6rem;
+                width: 6rem; 
+            }
 
         }
         &:hover > &--back {
@@ -139,6 +155,10 @@
                 @media #{$mob-xxs-land}{
                     animation: .3s insideEye 5.5s ease-in forwards;
                     font-size: 1.2rem;
+                }
+                @media #{$mob-xs-port}{
+                    animation: .3s insideEye 5.5s ease-in forwards;
+                    font-size: 2rem;
                 }
                 @media #{$desktop-xl}{
                     font-size: 3rem;
@@ -199,6 +219,11 @@
                 height: 4.5rem;
                 animation: .3s openingEye 5.5s ease-in forwards;
             }
+            @media #{$mob-xs-port}{
+                width: 6.5rem;
+                height: 6.5rem;
+                animation: .3s openingEye 5.5s ease-in forwards;
+            }
             @media #{$desktop-xxl}{
                 width: 22rem;
                 height: 22rem;
@@ -250,6 +275,9 @@
     @media #{$mob-xxs-land}{
         height: 6rem;
     }
+    @media #{$mob-xs-port}{
+        height: 16rem;
+    }
     @media #{$desktop-xl} {
         height: 30rem;
     }
@@ -286,6 +314,9 @@
             grid-template-rows: 10% repeat(2, 40%) 10%;
             transform-origin: 50% 50% -3rem;
         }
+        @media #{$mob-xs-port}{
+            transform-origin: 50% 50% -8rem;
+        }
         @media #{$desktop-xl} {
             transform-origin: 50% 50% -15rem;
         }
@@ -317,6 +348,10 @@
                 width: 2.5rem;
                 height: 2.5rem;
             }
+            @media #{$mob-xs-port}{
+                width: 3.5rem;
+                height: 3.5rem;
+            }
             @media #{$desktop-xl} {
                 width: 8rem;
                 height: 8rem; 
@@ -337,6 +372,9 @@
             }
             @media #{$mob-xxs-land}{
                 font-size: 1rem;
+            }
+            @media #{$mob-xs-port}{
+                font-size: 1.7rem;
             }
             @media #{$desktop-xxl} {
                 font-size: 2.8rem;
@@ -370,6 +408,11 @@
         @media #{$mob-xxs-land}{
             height: 6rem;
             transform-origin: 50% 50% -3rem;
+        }
+        @media #{$mob-xs-port}{
+            height: 16rem;
+            transform-origin: 50% 50% -8.6rem;
+            grid-template-rows: 10% [title-start] 1fr [title-end] 1fr 10%;
         }
         @media #{$desktop-xl} {
             height: 30rem;
@@ -407,7 +450,9 @@
                 font-size: 1rem;
                 display: none;
             }
-            
+            @media #{$mob-xs-port}{
+                font-size: 2rem;
+            }   
             @media #{$desktop-xxl} {
                 font-size: 3.3rem;
             }
@@ -425,6 +470,9 @@
                 display: none;
             }
             @media #{$mob-xxs-land}{
+                display: none;
+            }
+            @media #{$mob-xs-port}{
                 display: none;
             }
             @media #{$desktop-xl} {
@@ -514,6 +562,10 @@
         grid-row: 6/8;
         grid-column: 4/7;
     }
+    @media #{$mob-xs-port}{
+        grid-row: 3/5;
+        grid-column: 3/6;
+    }
     &--front{
         
         border-color: black;
@@ -534,6 +586,9 @@
             @media #{$mob-xxs-land}{
                 grid-row: 2/4;
                 display: unset;
+            }
+            @media #{$mob-xs-port}{
+                grid-row: 2/3;
             }
         }
         & >* {
@@ -565,6 +620,10 @@
         grid-row: 6/8;
         grid-column: 7/10;
     }
+    @media #{$mob-xs-port}{
+        grid-row: 3/5;
+        grid-column: 7/10;
+    }
     
     & svg {
         // fill:black;
@@ -594,6 +653,10 @@
             grid-row: 6/8;
             grid-column: 10/13;
         }
+        @media #{$mob-xs-port}{
+            grid-row: 6/8;
+            grid-column: 3/6;
+        }
          & svg {
              fill: #920707;
          }
@@ -621,6 +684,10 @@
         }
         @media #{$mob-xxs-land}{
             grid-row: 8/10;    
+        }
+        @media #{$mob-xs-port}{
+            grid-row: 6/8;
+            grid-column: 7/10;
         }
         & svg {
             fill:darkcyan;
@@ -651,6 +718,10 @@
         @media #{$mob-xxs-land}{
             grid-row: 8/10;    
         }
+        @media #{$mob-xs-port}{
+            grid-row: 9/11;
+            grid-column: 3/6;
+        }
         & svg {
             fill: #ff9100;
         }
@@ -679,6 +750,10 @@
         }
         @media #{$mob-xxs-land}{
             grid-row: 8/10;    
+        }
+        @media #{$mob-xs-port}{
+            grid-row: 9/11;
+            grid-column: 7/10;
         }
         & svg {
             fill: #06b306;

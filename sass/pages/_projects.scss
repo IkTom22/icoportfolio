@@ -17,6 +17,9 @@
     @media #{$mob-xs-port}{
         @include temp-sml;
     }
+    @media #{$mob-port}{
+        @include temp-sml;
+    }
     
     &__sml{
 
@@ -49,6 +52,11 @@
         @media #{$mob-xs-port}{
             grid-row: 8/10;
             grid-column: 8/11;
+            animation: .2s appear 5.5s ease-in forwards;
+        }
+        @media #{$mob-port}{
+            grid-row: 8/10;
+            grid-column: 8/12;
             animation: .2s appear 5.5s ease-in forwards;
         }
     }
@@ -107,6 +115,10 @@
                 height: 5rem;
                 width: 5rem; 
             }
+            @media #{$mob-port}{
+                height: 10rem;
+                width: 10rem; 
+            }
             @media #{$desktop-xxl}{
                 height: 11rem;
                 width: 11rem;
@@ -133,6 +145,10 @@
                 width: 12rem;
             }
             @media #{$mob-xs-port}{
+                height: 6rem;
+                width: 6rem; 
+            }
+            @media #{$mob-port}{
                 height: 6rem;
                 width: 6rem; 
             }
@@ -166,6 +182,10 @@
                 }
                 @media #{$mob-xs-land}{
                     font-size: 1.5rem;
+                }
+                @media #{$mob-port}{
+                    animation: .3s insideEye 5.5s ease-in forwards;
+                    font-size: 2.5rem;
                 }
                 @media #{$desktop-xl}{
                     font-size: 3rem;
@@ -236,6 +256,11 @@
                 width: 6.5rem;
                 height: 6.5rem;
               }
+            @media #{$mob-port}{
+                width: 10rem;
+                height: 10rem;
+                animation: .3s openingEye 5.5s ease-in forwards;
+            }
             @media #{$desktop-xxl}{
                 width: 22rem;
                 height: 22rem;
@@ -293,6 +318,9 @@
     @media #{$mob-xs-land}{
         height: 9rem;
     }
+    @media #{$mob-port}{
+        height: 25rem;
+    }
     @media #{$desktop-xl} {
         height: 30rem;
     }
@@ -336,6 +364,9 @@
             
             transform-origin: 50% 50% -4.5rem;
         }
+        @media #{$mob-port}{
+            transform-origin: 50% 50% -12.5rem;
+        }
         @media #{$desktop-xl} {
             transform-origin: 50% 50% -15rem;
         }
@@ -371,6 +402,10 @@
                 width: 3.5rem;
                 height: 3.5rem;
             }
+            @media #{$mob-port}{
+                width: 5rem;
+                height: 5rem;
+            }
             @media #{$desktop-xl} {
                 width: 8rem;
                 height: 8rem; 
@@ -395,9 +430,13 @@
             @media #{$mob-xs-port}{
                 font-size: 1.7rem;
             }
+            @media #{$mob-port}{
+                font-size: 1.8rem;
+            }
             @media #{$desktop-xxl} {
                 font-size: 2.8rem;
             }
+            
            
             
         }
@@ -436,6 +475,11 @@
         @media #{$mob-xs-land}{
             height: 9rem;
             transform-origin: 50% 50% -4.85rem;
+        }
+        @media #{$mob-port}{
+            height: 25rem;
+            transform-origin: 50% 50% -13rem;
+            grid-template-rows: 10% [title-start] 15% [title-end] 1fr 1fr 1fr;
         }
         @media #{$desktop-xl} {
             height: 30rem;
@@ -476,6 +520,9 @@
             @media #{$mob-xs-port}{
                 font-size: 2rem;
             }   
+            @media #{$mob-port}{
+                font-size: 2rem;
+            }
             @media #{$desktop-xxl} {
                 font-size: 3.3rem;
             }
@@ -497,6 +544,9 @@
             }
             @media #{$mob-xs-port}{
                 display: none;
+            }
+            @media #{$mob-port}{
+                display: block;
             }
             @media #{$desktop-xl} {
                 font-size: 2rem;
@@ -528,12 +578,13 @@
                     font-size: 1rem;
                     grid-row: 3/5;
                 }
-                @media #{$desktop-xl} {
-                    font-size: 1.9rem;
-                }
+                
                 @media #{$mob-xxs-land}{
                     font-size: 1.3rem;
                     
+                }
+                @media #{$desktop-xl} {
+                    font-size: 1.9rem;
                 }
                 @media #{$desktop-xxl} {
                     font-size: 2.5rem;
@@ -550,11 +601,12 @@
                 @media #{$mob-xxs-land}{
                     font-size: 1.1rem;
                 }
-                @media #{$desktop-xl} {
-                    font-size: 2.2rem;
-                }
+                
                 @media #{$mob-xxs-land}{
                     font-size: 1.4rem;   
+                }
+                @media #{$desktop-xl} {
+                    font-size: 2.2rem;
                 }
                 @media #{$desktop-xxl} {
                     font-size: 2.8rem;
@@ -596,6 +648,10 @@
         grid-row: 3/5;
         grid-column: 3/6;
     }
+    @media #{$mob-port}{
+        grid-row: 3/5;
+        grid-column: 2/6;
+    }
     &--front{
         
         border-color: black;
@@ -619,6 +675,10 @@
             }
             @media #{$mob-xs-port}{
                 grid-row: 2/3;
+            }
+            @media #{$mob-port}{
+                grid-row: 2/3;
+            
             }
         }
         & >* {
@@ -652,7 +712,11 @@
     }
     @media #{$mob-xs-port}{
         grid-row: 3/5;
-        grid-column: 7/10;
+        grid-column: 7/11;
+    }
+    @media #{$mob-port}{
+        grid-row: 3/5;
+        grid-column: 7/11;
     }
     
     & svg {
@@ -686,6 +750,10 @@
         @media #{$mob-xs-port}{
             grid-row: 6/8;
             grid-column: 3/6;
+        }
+        @media #{$mob-port}{
+            grid-row: 6/8;
+            grid-column: 2/6;
         }
          & svg {
              fill: #920707;
@@ -721,6 +789,10 @@
         }
         @media #{$mob-xs-land}{
             grid-row: 9/12;    
+        }
+        @media #{$mob-port}{
+            grid-row: 6/8;
+            grid-column: 7/11;
         }
         & svg {
             fill:darkcyan;
@@ -758,6 +830,10 @@
         @media #{$mob-xs-land}{
             grid-row: 9/12;    
         }
+        @media #{$mob-port}{
+            grid-row: 9/11;
+            grid-column: 2/6;
+        }
         & svg {
             fill: #ff9100;
         }
@@ -793,6 +869,10 @@
         }
         @media #{$mob-xs-land}{
             grid-row: 9/12;    
+        }
+        @media #{$mob-port}{
+            grid-row: 9/11;
+            grid-column: 7/11;
         }
         & svg {
             fill: #06b306;

@@ -634,6 +634,14 @@ p {
       grid-template-rows: 1fr repeat(10, 6.432%) 1fr;
       height: 100%;
       border-radius: 50% 50% 0% 0% / 10% 10% 0% 0%; } }
+  @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
+    .wrapper {
+      grid-column: 1/-1;
+      gap: 1rem;
+      grid-template-columns: 1fr repeat(9, 7%) 1fr;
+      grid-template-rows: 1fr repeat(10, 6.432%) 1fr;
+      height: 100%;
+      border-radius: 50% 50% 0% 0% / 10% 10% 0% 0%; } }
 
 .logo {
   width: 15rem;
@@ -678,6 +686,15 @@ p {
       transform: translateY(1rem);
       justify-self: center;
       background-color: black; } }
+  @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
+    .logo {
+      grid-column: 8/10;
+      grid-row: 2/3;
+      width: 17rem;
+      height: 17rem;
+      transform: translateY(1rem);
+      justify-self: center;
+      background-color: black; } }
   @media only screen and (min-width: 1920px) {
     .logo {
       width: 20rem;
@@ -709,6 +726,10 @@ p {
       .logo__letter {
         color: #fffef8;
         font-size: 4rem; } }
+    @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
+      .logo__letter {
+        color: #fffef8;
+        font-size: 6rem; } }
     @media only screen and (min-width: 1920px) {
       .logo__letter {
         font-size: 7rem; } }
@@ -732,6 +753,9 @@ p {
       @media only screen and (min-width: 360px) and (max-height: 812px) and (orientation: portrait) {
         .logo__letter--i {
           font-size: 4rem; } }
+      @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
+        .logo__letter--i {
+          font-size: 5.5rem; } }
       @media only screen and (min-width: 1920px) {
         .logo__letter--i {
           font-size: 7rem; } }
@@ -760,6 +784,10 @@ p {
     @media only screen and (min-width: 360px) and (max-height: 812px) and (orientation: portrait) {
       .logo__home {
         font-size: 3rem;
+        color: #fffef8; } }
+    @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
+      .logo__home {
+        font-size: 4rem;
         color: #fffef8; } }
     @media only screen and (min-width: 1920px) {
       .logo__home {
@@ -802,6 +830,11 @@ p {
     .about {
       grid-row: 2/ -1;
       grid-column: 1/-1; } }
+  @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
+    .about {
+      grid-row: 2/ -1;
+      grid-column: 1/-1;
+      grid-template-columns: 1fr 5% repeat(11, 5.964%) 5% 1fr; } }
   .about__menu {
     grid-column: 1 / 3;
     grid-row: 8 / 10;
@@ -833,6 +866,9 @@ p {
     @media only screen and (min-width: 667px) and (max-height: 414px) and (orientation: landscape) {
       .about__menu {
         transform: scale(0.8); } }
+    @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
+      .about__menu {
+        transform: scale(0); } }
     @media only screen and (min-width: 1920px) {
       .about__menu {
         height: 10rem;
@@ -938,6 +974,11 @@ p {
       .about__greet {
         grid-column: 4 / 12;
         justify-self: start; } }
+    @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
+      .about__greet {
+        grid-column: 3 / -1;
+        grid-row: 5 / 7;
+        width: 100%; } }
     @media only screen and (min-width: 1440px) {
       .about__greet {
         grid-column: 4 / 9;
@@ -975,6 +1016,12 @@ p {
           margin-bottom: 0;
           height: 7rem;
           letter-spacing: 1rem; } }
+      @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
+        .about__greet h1 {
+          font-size: 12rem;
+          margin-bottom: 0;
+          height: 13rem;
+          letter-spacing: 1.5rem; } }
       @media only screen and (min-width: 1440px) {
         .about__greet h1 {
           padding-top: 2rem;
@@ -1012,6 +1059,10 @@ p {
     @media only screen and (min-width: 667px) and (max-height: 414px) and (orientation: landscape) {
       .about__sub {
         grid-column: 4 / 12; } }
+    @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
+      .about__sub {
+        grid-column: 3/9;
+        grid-row: 8/ 12; } }
     @media only screen and (min-width: 1920px) {
       .about__sub {
         grid-row: 8/ 14;
@@ -1030,6 +1081,9 @@ p {
       @media only screen and (min-width: 667px) and (max-height: 414px) and (orientation: landscape) {
         .about__sub h2 {
           font-size: 2.8rem; } }
+      @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
+        .about__sub h2 {
+          font-size: 6.5rem; } }
       @media only screen and (min-width: 1920px) {
         .about__sub h2 {
           font-size: 7rem; } }
@@ -1076,6 +1130,9 @@ p {
         .about__me--content {
           visibility: hidden; } }
       @media only screen and (min-width: 360px) and (max-height: 812px) and (orientation: portrait) {
+        .about__me--content {
+          visibility: hidden; } }
+      @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
         .about__me--content {
           visibility: hidden; } }
       @media only screen and (min-width: 1920px) {
@@ -1282,6 +1339,12 @@ p {
           grid-column: 3/12;
           grid-row: 6/13;
           width: 43vw; } }
+      @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
+        .about__goo--1 {
+          grid-column: 1/-1;
+          grid-row: 6/14;
+          width: 80vw;
+          height: 100%; } }
       @media only screen and (min-width: 1920px) {
         .about__goo--1 {
           width: 40vw;
@@ -1314,6 +1377,12 @@ p {
           grid-row: 3/ 8;
           width: 37vw;
           height: 57vh; } }
+      @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
+        .about__goo--2 {
+          grid-column: 8/ -1;
+          grid-row: 3/ 6;
+          width: 55vw;
+          height: 40vh; } }
     .about__goo--3 {
       grid-column: 12/ 15;
       grid-row: 9 / 13;
@@ -1322,6 +1391,9 @@ p {
       width: 30rem;
       height: 30rem;
       animation: 6s blobbing 2.6s linear infinite, 3s birth2 7s ease-in-out forwards; }
+      @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
+        .about__goo--3 {
+          grid-column: 11/ 15; } }
       @media only screen and (min-width: 667px) and (max-height: 414px) and (orientation: landscape) {
         .about__goo--3 {
           grid-column: 10/ 12;
@@ -1416,6 +1488,11 @@ p {
       gap: 1rem;
       grid-template-columns: 1fr repeat(9, 7%) 1fr;
       grid-template-rows: 1fr repeat(10, 6.432%) 1fr; } }
+  @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
+    .projects {
+      gap: 1rem;
+      grid-template-columns: 1fr repeat(9, 7%) 1fr;
+      grid-template-rows: 1fr repeat(10, 6.432%) 1fr; } }
   .projects__sml {
     grid-row: 5/9;
     grid-column: 9/16;
@@ -1446,6 +1523,11 @@ p {
       .projects__sml {
         grid-row: 8/10;
         grid-column: 8/11;
+        animation: .2s appear 5.5s ease-in forwards; } }
+    @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
+      .projects__sml {
+        grid-row: 8/10;
+        grid-column: 8/12;
         animation: .2s appear 5.5s ease-in forwards; } }
   .projects__checkbox {
     display: none; }
@@ -1499,6 +1581,10 @@ p {
         .projects__menu--card {
           height: 5rem;
           width: 5rem; } }
+      @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
+        .projects__menu--card {
+          height: 10rem;
+          width: 10rem; } }
       @media only screen and (min-width: 2304px) {
         .projects__menu--card {
           height: 11rem;
@@ -1520,6 +1606,10 @@ p {
           height: 12rem;
           width: 12rem; } }
       @media only screen and (min-width: 360px) and (max-height: 812px) and (orientation: portrait) {
+        .projects__menu--back {
+          height: 6rem;
+          width: 6rem; } }
+      @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
         .projects__menu--back {
           height: 6rem;
           width: 6rem; } }
@@ -1548,6 +1638,10 @@ p {
       @media only screen and (min-width: 667px) and (max-height: 414px) and (orientation: landscape) {
         .projects__menu--top, .projects__menu--bottom {
           font-size: 1.5rem; } }
+      @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
+        .projects__menu--top, .projects__menu--bottom {
+          animation: .3s insideEye 5.5s ease-in forwards;
+          font-size: 2.5rem; } }
       @media only screen and (min-width: 1920px) {
         .projects__menu--top, .projects__menu--bottom {
           font-size: 3rem; } }
@@ -1597,6 +1691,11 @@ p {
         .projects__icon--eye {
           width: 6.5rem;
           height: 6.5rem; } }
+      @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
+        .projects__icon--eye {
+          width: 10rem;
+          height: 10rem;
+          animation: .3s openingEye 5.5s ease-in forwards; } }
       @media only screen and (min-width: 2304px) {
         .projects__icon--eye {
           width: 22rem;
@@ -1652,6 +1751,9 @@ p {
     @media only screen and (min-width: 667px) and (max-height: 414px) and (orientation: landscape) {
       .projects__card {
         height: 9rem; } }
+    @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
+      .projects__card {
+        height: 25rem; } }
     @media only screen and (min-width: 1920px) {
       .projects__card {
         height: 30rem; } }
@@ -1695,6 +1797,9 @@ p {
       @media only screen and (min-width: 480px) and (max-height: 540px) and (orientation: landscape) {
         .projects__card--front {
           transform-origin: 50% 50% -4.5rem; } }
+      @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
+        .projects__card--front {
+          transform-origin: 50% 50% -12.5rem; } }
       @media only screen and (min-width: 1920px) {
         .projects__card--front {
           transform-origin: 50% 50% -15rem; } }
@@ -1724,6 +1829,11 @@ p {
           .projects__card--front > div {
             width: 3.5rem;
             height: 3.5rem; } }
+        @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
+          .projects__card--front svg,
+          .projects__card--front > div {
+            width: 5rem;
+            height: 5rem; } }
         @media only screen and (min-width: 1920px) {
           .projects__card--front svg,
           .projects__card--front > div {
@@ -1746,6 +1856,9 @@ p {
         @media only screen and (min-width: 360px) and (max-height: 812px) and (orientation: portrait) {
           .projects__card--front h5 {
             font-size: 1.7rem; } }
+        @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
+          .projects__card--front h5 {
+            font-size: 1.8rem; } }
         @media only screen and (min-width: 2304px) {
           .projects__card--front h5 {
             font-size: 2.8rem; } }
@@ -1781,6 +1894,11 @@ p {
         .projects__card--back {
           height: 9rem;
           transform-origin: 50% 50% -4.85rem; } }
+      @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
+        .projects__card--back {
+          height: 25rem;
+          transform-origin: 50% 50% -13rem;
+          grid-template-rows: 10% [title-start] 15% [title-end] 1fr 1fr 1fr; } }
       @media only screen and (min-width: 1920px) {
         .projects__card--back {
           height: 30rem;
@@ -1813,6 +1931,9 @@ p {
         @media only screen and (min-width: 360px) and (max-height: 812px) and (orientation: portrait) {
           .projects__card--back h5 {
             font-size: 2rem; } }
+        @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
+          .projects__card--back h5 {
+            font-size: 2rem; } }
         @media only screen and (min-width: 2304px) {
           .projects__card--back h5 {
             font-size: 3.3rem; } }
@@ -1833,6 +1954,9 @@ p {
         @media only screen and (min-width: 360px) and (max-height: 812px) and (orientation: portrait) {
           .projects__card--back p {
             display: none; } }
+        @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
+          .projects__card--back p {
+            display: block; } }
         @media only screen and (min-width: 1920px) {
           .projects__card--back p {
             font-size: 2rem;
@@ -1858,12 +1982,12 @@ p {
           .projects__card--back a:link, .projects__card--back a:visited {
             font-size: 1rem;
             grid-row: 3/5; } }
-        @media only screen and (min-width: 1920px) {
-          .projects__card--back a:link, .projects__card--back a:visited {
-            font-size: 1.9rem; } }
         @media only screen and (min-width: 480px) and (max-height: 540px) and (orientation: landscape) {
           .projects__card--back a:link, .projects__card--back a:visited {
             font-size: 1.3rem; } }
+        @media only screen and (min-width: 1920px) {
+          .projects__card--back a:link, .projects__card--back a:visited {
+            font-size: 1.9rem; } }
         @media only screen and (min-width: 2304px) {
           .projects__card--back a:link, .projects__card--back a:visited {
             font-size: 2.5rem; } }
@@ -1877,12 +2001,12 @@ p {
         @media only screen and (min-width: 480px) and (max-height: 540px) and (orientation: landscape) {
           .projects__card--back a:hover, .projects__card--back a:focus {
             font-size: 1.1rem; } }
-        @media only screen and (min-width: 1920px) {
-          .projects__card--back a:hover, .projects__card--back a:focus {
-            font-size: 2.2rem; } }
         @media only screen and (min-width: 480px) and (max-height: 540px) and (orientation: landscape) {
           .projects__card--back a:hover, .projects__card--back a:focus {
             font-size: 1.4rem; } }
+        @media only screen and (min-width: 1920px) {
+          .projects__card--back a:hover, .projects__card--back a:focus {
+            font-size: 2.2rem; } }
         @media only screen and (min-width: 2304px) {
           .projects__card--back a:hover, .projects__card--back a:focus {
             font-size: 2.8rem; } }
@@ -1905,6 +2029,10 @@ p {
       .projects__card-1 {
         grid-row: 3/5;
         grid-column: 3/6; } }
+    @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
+      .projects__card-1 {
+        grid-row: 3/5;
+        grid-column: 2/6; } }
     .projects__card-1--front {
       border-color: black; }
       .projects__card-1--front svg {
@@ -1921,6 +2049,9 @@ p {
             grid-row: 2/4;
             display: unset; } }
         @media only screen and (min-width: 360px) and (max-height: 812px) and (orientation: portrait) {
+          .projects__card-1--back h5 {
+            grid-row: 2/3; } }
+        @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
           .projects__card-1--back h5 {
             grid-row: 2/3; } }
       .projects__card-1--back > * {
@@ -1944,7 +2075,11 @@ p {
     @media only screen and (min-width: 360px) and (max-height: 812px) and (orientation: portrait) {
       .projects__card-2 {
         grid-row: 3/5;
-        grid-column: 7/10; } }
+        grid-column: 7/11; } }
+    @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
+      .projects__card-2 {
+        grid-row: 3/5;
+        grid-column: 7/11; } }
     .projects__card-2 svg {
       fill: #6e6b05; }
     .projects__card-2--back {
@@ -1969,6 +2104,10 @@ p {
       .projects__card-3 {
         grid-row: 6/8;
         grid-column: 3/6; } }
+    @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
+      .projects__card-3 {
+        grid-row: 6/8;
+        grid-column: 2/6; } }
     .projects__card-3 svg {
       fill: #920707; }
     .projects__card-3--back {
@@ -1995,6 +2134,10 @@ p {
     @media only screen and (min-width: 667px) and (max-height: 414px) and (orientation: landscape) {
       .projects__card-4 {
         grid-row: 9/12; } }
+    @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
+      .projects__card-4 {
+        grid-row: 6/8;
+        grid-column: 7/11; } }
     .projects__card-4 svg {
       fill: darkcyan; }
     .projects__card-4--back {
@@ -2021,6 +2164,10 @@ p {
     @media only screen and (min-width: 667px) and (max-height: 414px) and (orientation: landscape) {
       .projects__card-5 {
         grid-row: 9/12; } }
+    @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
+      .projects__card-5 {
+        grid-row: 9/11;
+        grid-column: 2/6; } }
     .projects__card-5 svg {
       fill: #ff9100; }
     .projects__card-5--back {
@@ -2047,6 +2194,10 @@ p {
     @media only screen and (min-width: 667px) and (max-height: 414px) and (orientation: landscape) {
       .projects__card-6 {
         grid-row: 9/12; } }
+    @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
+      .projects__card-6 {
+        grid-row: 9/11;
+        grid-column: 7/11; } }
     .projects__card-6 svg {
       fill: #06b306; }
     .projects__card-6--back {
@@ -2169,6 +2320,12 @@ p {
         grid-row: 10/12;
         justify-content: center;
         align-content: center; } }
+    @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
+      .contact__small {
+        justify-items: end;
+        grid-column: 12/14;
+        grid-row: 12/14;
+        animation: .2s appear 5.5s linear forwards, .3s slideUp 5.5s ease-in forwards; } }
   .contact__menu {
     height: 8.5rem;
     width: 8.5rem;
@@ -2196,6 +2353,11 @@ p {
       .contact__menu {
         height: 12rem;
         width: 12rem; } }
+    @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
+      .contact__menu {
+        grid-row: 1/-1;
+        height: 15rem;
+        width: 15rem; } }
     @media only screen and (min-width: 2304px) {
       .contact__menu {
         height: 15rem;
@@ -2212,7 +2374,7 @@ p {
       animation: .3s appear 8s linear forwards; }
       @media only screen and (min-width: 320px) and (max-height: 568px) and (orientation: portrait) {
         .contact__menu--card {
-          animation: .3s appear 5.5ss linear forwards;
+          animation: .3s appear 5.5s linear forwards;
           font-size: 1.5rem;
           height: 7rem;
           width: 7rem; } }
@@ -2222,10 +2384,16 @@ p {
           width: 6.5rem; } }
       @media only screen and (min-width: 360px) and (max-height: 812px) and (orientation: portrait) {
         .contact__menu--card {
-          animation: .3s appear 5.5ss linear forwards;
+          animation: .3s appear 5.5s linear forwards;
           font-size: 2rem;
           height: 10rem;
           width: 10rem; } }
+      @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
+        .contact__menu--card {
+          animation: .3s appear 5.5s linear forwards;
+          font-size: 3rem;
+          height: 13rem;
+          width: 13rem; } }
       @media only screen and (min-width: 1920px) {
         .contact__menu--card {
           height: 12rem;
@@ -2252,6 +2420,9 @@ p {
       @media only screen and (min-width: 360px) and (max-height: 812px) and (orientation: portrait) {
         .contact__menu:hover > .contact__menu--card {
           font-size: 1.7rem; } }
+      @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
+        .contact__menu:hover > .contact__menu--card {
+          font-size: 2.6rem; } }
       @media only screen and (min-width: 1920px) {
         .contact__menu:hover > .contact__menu--card {
           font-size: 2.6rem; } }
@@ -2321,6 +2492,10 @@ p {
       .contact__content {
         grid-column: 1 /11;
         grid-row: 1/11; } }
+    @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
+      .contact__content {
+        grid-column: 1 /15;
+        grid-row: 1/12; } }
     @media only screen and (min-width: 1920px) {
       .contact__content h3 {
         font-size: 5rem; } }
@@ -2384,6 +2559,19 @@ p {
           grid-template-rows: repeat(7, 12.5009%); }
           .contact__content--details h4 {
             font-size: 2.2rem; } }
+      @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
+        .contact__content--details {
+          background-color: black;
+          height: 55rem;
+          width: 55rem;
+          grid-column: 1/-1;
+          grid-row: 5/20;
+          justify-self: center;
+          grid-template-columns: repeat(10, 10%);
+          grid-template-rows: repeat(7, 11%);
+          gap: 1rem; }
+          .contact__content--details h4 {
+            font-size: 3.5rem; } }
       @media only screen and (min-width: 2304px) {
         .contact__content--details {
           grid-column: 3/11; } }
@@ -2403,6 +2591,9 @@ p {
         .contact__content--speech {
           display: none; } }
       @media only screen and (min-width: 360px) and (max-height: 812px) and (orientation: portrait) {
+        .contact__content--speech {
+          display: none; } }
+      @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
         .contact__content--speech {
           display: none; } }
     .contact__content--speech-2 {
@@ -2426,6 +2617,10 @@ p {
       @media only screen and (min-width: 360px) and (max-height: 812px) and (orientation: portrait) {
         .contact__content--title {
           grid-column: 1/10; } }
+      @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
+        .contact__content--title {
+          grid-column: 1/10;
+          font-size: 5.5rem; } }
     .contact__content--list {
       grid-column: 2/9;
       display: grid;
@@ -2445,6 +2640,9 @@ p {
         .contact__content--list {
           grid-column: 1/10; } }
       @media only screen and (min-width: 360px) and (max-height: 812px) and (orientation: portrait) {
+        .contact__content--list {
+          grid-column: 1/10; } }
+      @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
         .contact__content--list {
           grid-column: 1/10; } }
       @media only screen and (min-width: 1920px) {
@@ -2473,6 +2671,10 @@ p {
       width: 2.5rem;
       height: 2.5rem;
       z-index: 2900; }
+      @media only screen and (min-width: 360px) and (max-height: 812px) and (orientation: portrait) {
+        .contact__content--icon {
+          width: 3.5rem;
+          height: 3.5rem; } }
       @media only screen and (min-width: 1920px) {
         .contact__content--icon {
           width: 4.5rem;
@@ -2516,6 +2718,9 @@ p {
         .contact__content--message {
           transform: scale(0); } }
       @media only screen and (min-width: 360px) and (max-height: 812px) and (orientation: portrait) {
+        .contact__content--message {
+          transform: scale(0); } }
+      @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
         .contact__content--message {
           transform: scale(0); } }
       .contact__content--message h2 {
@@ -2569,6 +2774,9 @@ p {
         .contact__content--job {
           transform: scale(0); } }
       @media only screen and (min-width: 360px) and (max-height: 812px) and (orientation: portrait) {
+        .contact__content--job {
+          transform: scale(0); } }
+      @media only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait) {
         .contact__content--job {
           transform: scale(0); } }
       @media only screen and (min-width: 1920px) {

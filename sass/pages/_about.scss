@@ -50,6 +50,9 @@
       @media #{$mob-xs-port}{
         transform: scale(0);
       }
+      @media #{$mob-xs-land} {
+        transform: scale(.8);
+      }
       @media #{$desktop-xl} {
         height: 10rem;
         width: 10rem;
@@ -179,6 +182,10 @@
           grid-row: 5 / 7;
           width: 100%;
         }
+        @media #{$mob-xs-land} {
+          grid-column: 4 / 12;
+          justify-self: start;
+        }
         @media #{$desktop-l} {
           grid-column: 4 / 9;
           grid-row: 6 / 8;
@@ -219,6 +226,7 @@
             height: 7rem;
             letter-spacing: 1rem;
           }
+          
           @media #{$desktop-l}{
             padding-top: 2rem;
             height: 100%;
@@ -263,6 +271,9 @@
         grid-column: 3/9;
         grid-row: 8/ 12;
       }
+      @media #{$mob-xs-land}{ 
+        grid-column: 4 / 12;
+      }
       @media #{$desktop-xl}{
         grid-row: 8/ 14;
         justify-self: start;
@@ -276,7 +287,10 @@
         font-size: 2.5rem;
       }
       @media #{$mob-xs-port}{
-        font-size: 5rem;
+        font-size: 4.2rem;
+      }
+      @media #{$mob-xs-land}{
+        font-size: 2.8rem;
       }
        @media #{$desktop-xl}{
         font-size: 7rem;
@@ -319,6 +333,9 @@
           @media #{$mob-xs-port}{
             visibility: hidden;
           }
+          // @media #{$mob-xs-land}{
+          //   visibility: visible;
+          // }
           @media #{$desktop-xl}{
             grid-row: 1/ 8;
           }
@@ -608,6 +625,11 @@
               width: 80vw;
               height: 100%;
             }
+            @media #{$mob-xs-land}{
+              grid-column: 3/12;
+              grid-row: 6/13;
+              width: 43vw;
+            }
             @media #{$desktop-xl}{
               width: 40vw;
               height: 67vh;
@@ -643,6 +665,9 @@
             width: 50vw;
             height: 50vh;
           }
+          // @media #{$mob-xxs-land}{
+          //   grid-column: 8/ -1;
+          // }
           @media #{$desktop-xl}{
             grid-row: 3/ 8;
             width: 37vw;
@@ -663,6 +688,14 @@
           opacity: 0;
           width: 30rem;
           height: 30rem;
+
+          @media #{$mob-xs-land}{
+            grid-column: 10/ 12;
+            grid-row: 10 / 13;
+            width: 25rem;
+            height: 25rem;
+          }
+
           @media #{$desktop-xl}{
             width: 38rem;
             height: 38rem;
@@ -677,6 +710,10 @@
         &--4{
           width: 21rem;
           height: 21rem;
+          @media #{$mob-xs-land}{
+            width: 12rem;
+            height: 12rem;
+          }
           @media #{$desktop-xl}{
             width: 25rem;
             height: 25rem;
@@ -694,6 +731,10 @@
         &--5{
           width: 18rem;
           height: 18rem;
+          @media #{$mob-xs-land}{
+            width: 10rem;
+            height: 10rem;
+          }
           @media #{$desktop-xl}{
             width: 21rem;
             height: 21rem;
@@ -712,6 +753,10 @@
         &--6{
           width: 20rem;
           height: 20rem;
+          @media #{$mob-xs-land}{
+            width: 10rem;
+            height: 10rem;
+          }
           @media #{$desktop-xl}{
             width: 24rem;
             height: 24rem;

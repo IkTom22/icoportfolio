@@ -103,6 +103,10 @@
                 height: 6.5rem;
                 width: 6.5rem; 
             }
+            @media #{$mob-xs-land}{
+                height: 5rem;
+                width: 5rem; 
+            }
             @media #{$desktop-xxl}{
                 height: 11rem;
                 width: 11rem;
@@ -160,6 +164,9 @@
                     animation: .3s insideEye 5.5s ease-in forwards;
                     font-size: 2rem;
                 }
+                @media #{$mob-xs-land}{
+                    font-size: 1.5rem;
+                }
                 @media #{$desktop-xl}{
                     font-size: 3rem;
                 }
@@ -209,6 +216,7 @@
             transform-origin: center;
             transform: scale(2.5) rotate3d(1, 0, 0, 90deg);
             animation: .3s openingEye 23.5s ease-in forwards;
+           
             @media #{$mob-xxs-port}{
                 width: 4.5rem;
                 height: 4.5rem;
@@ -220,10 +228,14 @@
                 animation: .3s openingEye 5.5s ease-in forwards;
             }
             @media #{$mob-xs-port}{
-                width: 6.5rem;
-                height: 6.5rem;
+                width: 6rem;
+                height: 6rem;
                 animation: .3s openingEye 5.5s ease-in forwards;
             }
+            @media #{$mob-xs-land}{
+                width: 6.5rem;
+                height: 6.5rem;
+              }
             @media #{$desktop-xxl}{
                 width: 22rem;
                 height: 22rem;
@@ -278,6 +290,9 @@
     @media #{$mob-xs-port}{
         height: 16rem;
     }
+    @media #{$mob-xs-land}{
+        height: 9rem;
+    }
     @media #{$desktop-xl} {
         height: 30rem;
     }
@@ -316,6 +331,10 @@
         }
         @media #{$mob-xs-port}{
             transform-origin: 50% 50% -8rem;
+        }
+        @media #{$mob-xxs-land}{
+            
+            transform-origin: 50% 50% -4.5rem;
         }
         @media #{$desktop-xl} {
             transform-origin: 50% 50% -15rem;
@@ -407,12 +426,16 @@
         }
         @media #{$mob-xxs-land}{
             height: 6rem;
-            transform-origin: 50% 50% -3rem;
+            transform-origin: 50% 50% -3.2rem;
         }
         @media #{$mob-xs-port}{
             height: 16rem;
             transform-origin: 50% 50% -8.6rem;
             grid-template-rows: 10% [title-start] 1fr [title-end] 1fr 10%;
+        }
+        @media #{$mob-xs-land}{
+            height: 9rem;
+            transform-origin: 50% 50% -4.85rem;
         }
         @media #{$desktop-xl} {
             height: 30rem;
@@ -508,6 +531,10 @@
                 @media #{$desktop-xl} {
                     font-size: 1.9rem;
                 }
+                @media #{$mob-xxs-land}{
+                    font-size: 1.3rem;
+                    
+                }
                 @media #{$desktop-xxl} {
                     font-size: 2.5rem;
                 }
@@ -525,6 +552,9 @@
                 }
                 @media #{$desktop-xl} {
                     font-size: 2.2rem;
+                }
+                @media #{$mob-xxs-land}{
+                    font-size: 1.4rem;   
                 }
                 @media #{$desktop-xxl} {
                     font-size: 2.8rem;
@@ -689,6 +719,9 @@
             grid-row: 6/8;
             grid-column: 7/10;
         }
+        @media #{$mob-xs-land}{
+            grid-row: 9/12;    
+        }
         & svg {
             fill:darkcyan;
         }
@@ -722,6 +755,9 @@
             grid-row: 9/11;
             grid-column: 3/6;
         }
+        @media #{$mob-xs-land}{
+            grid-row: 9/12;    
+        }
         & svg {
             fill: #ff9100;
         }
@@ -754,6 +790,9 @@
         @media #{$mob-xs-port}{
             grid-row: 9/11;
             grid-column: 7/10;
+        }
+        @media #{$mob-xs-land}{
+            grid-row: 9/12;    
         }
         & svg {
             fill: #06b306;

@@ -297,13 +297,21 @@
                 background-color: $base-black;
                 height: 38rem;
                 width: 38rem;
-                grid-column: 1/-1;
+                grid-column: 2/13;
                 grid-row: 5/20;
+                justify-self: start;;
                 grid-template-columns: repeat(9, 7.8%);
                 grid-template-rows: repeat(7, 11%);
                 gap: 1rem;
                 & h4 {
                     font-size: 2.5rem;
+                }
+            }
+            @media #{$mob-xs-land}{
+                grid-column: 4/13;
+                grid-template-rows: repeat(7, 12.5009%);
+                & h4 {
+                    font-size: 2.2rem;
                 }
             }
             @media #{$desktop-xxl} {

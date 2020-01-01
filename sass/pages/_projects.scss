@@ -20,6 +20,9 @@
     @media #{$mob-port}{
         @include temp-sml;
     }
+    @media #{$med-screen-port}{
+        @include temp-sml;
+    }
     
     &__sml{
 
@@ -42,22 +45,23 @@
         transition: all .2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         animation: .2s appear 23s ease-in forwards;
         @media #{$mob-xxs-port}{
-            grid-row: 8/10;
             grid-column: 8/11;
-            animation: .2s appear 5.5s ease-in forwards;
+            @include smlP;
         }
         @media #{$mob-xxs-land}{
             animation: .2s appear 5.5s ease-in forwards;
         }
         @media #{$mob-xs-port}{
-            grid-row: 8/10;
             grid-column: 8/11;
-            animation: .2s appear 5.5s ease-in forwards;
+            @include smlP;
         }
         @media #{$mob-port}{
-            grid-row: 8/10;
             grid-column: 8/12;
-            animation: .2s appear 5.5s ease-in forwards;
+            @include smlP;
+        }
+        @media #{$med-screen-port}{
+            grid-column: 7/12;
+            @include smlP;
         }
     }
     
@@ -119,6 +123,10 @@
                 height: 10rem;
                 width: 10rem; 
             }
+            @media #{$med-screen-port}{
+                height: 11rem;
+                width: 11rem; 
+            }
             @media #{$desktop-xxl}{
                 height: 11rem;
                 width: 11rem;
@@ -152,7 +160,10 @@
                 height: 6rem;
                 width: 6rem; 
             }
-
+            @media #{$med-screen-port}{
+                height: 10rem;
+                width: 10rem; 
+            }
         }
         &:hover > &--back {
             background: #06b306;
@@ -187,12 +198,17 @@
                     animation: .3s insideEye 5.5s ease-in forwards;
                     font-size: 2.5rem;
                 }
+                @media #{$med-screen-port}{
+                    animation: .3s insideEye 5.5s ease-in forwards;
+                    font-size: 3.5rem;
+                }
                 @media #{$desktop-xl}{
                     font-size: 3rem;
                 }
                 @media #{$desktop-xxl}{
                     font-size: 3.5rem;
                 }
+                
                 
         }
         &--top{
@@ -261,6 +277,11 @@
                 height: 10rem;
                 animation: .3s openingEye 5.5s ease-in forwards;
             }
+            @media #{$med-screen-port}{
+                width: 12rem;
+                height: 12rem;
+                animation: .3s openingEye 5.5s ease-in forwards;
+            }
             @media #{$desktop-xxl}{
                 width: 22rem;
                 height: 22rem;
@@ -321,6 +342,9 @@
     @media #{$mob-port}{
         height: 25rem;
     }
+    @media #{$med-screen-port}{
+        height: 28rem;
+    }
     @media #{$desktop-xl} {
         height: 30rem;
     }
@@ -367,6 +391,9 @@
         @media #{$mob-port}{
             transform-origin: 50% 50% -12.5rem;
         }
+        @media #{$med-screen-port}{
+            transform-origin: 50% 50% -14rem;
+        }
         @media #{$desktop-xl} {
             transform-origin: 50% 50% -15rem;
         }
@@ -406,6 +433,10 @@
                 width: 5rem;
                 height: 5rem;
             }
+            @media #{$med-screen-port}{
+                width: 6rem;
+                height: 6rem;
+            }
             @media #{$desktop-xl} {
                 width: 8rem;
                 height: 8rem; 
@@ -432,6 +463,9 @@
             }
             @media #{$mob-port}{
                 font-size: 1.8rem;
+            }
+            @media #{$med-screen-port}{
+                font-size: 2.5rem;
             }
             @media #{$desktop-xxl} {
                 font-size: 2.8rem;
@@ -481,6 +515,11 @@
             transform-origin: 50% 50% -13rem;
             grid-template-rows: 10% [title-start] 15% [title-end] 1fr 1fr 1fr;
         }
+        @media #{$med-screen-port}{
+            height: 28rem;
+            transform-origin: 50% 50% -15rem;
+            grid-template-rows: 10% [title-start] 15% [title-end] 1fr 1fr 1fr;
+        }
         @media #{$desktop-xl} {
             height: 30rem;
             transform-origin: 50% 50% -16.1rem;
@@ -523,6 +562,9 @@
             @media #{$mob-port}{
                 font-size: 2rem;
             }
+            @media #{$med-screen-port}{
+                font-size: 2.3rem;
+            }
             @media #{$desktop-xxl} {
                 font-size: 3.3rem;
             }
@@ -547,6 +589,9 @@
             }
             @media #{$mob-port}{
                 display: block;
+            }
+            @media #{$med-screen-port}{
+                font-size: 1.7rem;
             }
             @media #{$desktop-xl} {
                 font-size: 2rem;
@@ -583,6 +628,9 @@
                     font-size: 1.3rem;
                     
                 }
+                @media #{$med-screen-port}{
+                    font-size: 1.7rem;
+                }
                 @media #{$desktop-xl} {
                     font-size: 1.9rem;
                 }
@@ -604,6 +652,9 @@
                 
                 @media #{$mob-xxs-land}{
                     font-size: 1.4rem;   
+                }
+                @media #{$med-screen-port}{
+                    font-size: 1.8rem;
                 }
                 @media #{$desktop-xl} {
                     font-size: 2.2rem;
@@ -649,6 +700,10 @@
         grid-column: 3/6;
     }
     @media #{$mob-port}{
+        grid-row: 3/5;
+        grid-column: 2/6;
+    }
+    @media #{$med-screen-port}{
         grid-row: 3/5;
         grid-column: 2/6;
     }
@@ -712,9 +767,13 @@
     }
     @media #{$mob-xs-port}{
         grid-row: 3/5;
-        grid-column: 7/11;
+        grid-column: 7/10;
     }
     @media #{$mob-port}{
+        grid-row: 3/5;
+        grid-column: 7/11;
+    }
+    @media #{$med-screen-port}{
         grid-row: 3/5;
         grid-column: 7/11;
     }
@@ -755,6 +814,10 @@
             grid-row: 6/8;
             grid-column: 2/6;
         }
+        @media #{$med-screen-port}{
+            grid-row: 6/8;
+            grid-column: 2/6;
+        }
          & svg {
              fill: #920707;
          }
@@ -791,6 +854,10 @@
             grid-row: 9/12;    
         }
         @media #{$mob-port}{
+            grid-row: 6/8;
+            grid-column: 7/11;
+        }
+        @media #{$med-screen-port}{
             grid-row: 6/8;
             grid-column: 7/11;
         }
@@ -834,6 +901,10 @@
             grid-row: 9/11;
             grid-column: 2/6;
         }
+        @media #{$med-screen-port}{
+            grid-row: 9/11;
+            grid-column: 2/6;
+        }
         & svg {
             fill: #ff9100;
         }
@@ -871,6 +942,10 @@
             grid-row: 9/12;    
         }
         @media #{$mob-port}{
+            grid-row: 9/11;
+            grid-column: 7/11;
+        }
+        @media #{$med-screen-port}{
             grid-row: 9/11;
             grid-column: 7/11;
         }

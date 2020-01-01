@@ -21,7 +21,7 @@
 
       @include temp-sml;
       height: 100%;
-      border-radius: 50% 50% 0% 0% / 10% 10% 0% 0%;
+      @include radious2;
     }
     @media #{$mob-xxs-land}{
       gap: .5rem;
@@ -31,14 +31,20 @@
 
       @include temp-sml;
       height: 100%;
-      border-radius: 50% 50% 0% 0% / 10% 10% 0% 0%;
+      @include radious2;
     }
     @media #{$mob-port}{
       grid-column:  1/-1;
 
       @include temp-sml;
       height: 100%;
-      border-radius: 50% 50% 0% 0% / 10% 10% 0% 0%;
+      @include radious2;
+    }
+    @media #{$med-screen-port}{
+      grid-column:  1/-1;
+      @include temp-sml;
+      height: 100%;
+      @include radious2;
     }
     
    
@@ -79,22 +85,19 @@
       height: 6.5rem;
     }
     @media #{$mob-xs-port}{
-      grid-column: 8/10;
-      grid-row: 2/3;
       width: 10rem;
       height: 10rem;
-      transform: translateY(1rem);
-      justify-self: center;
-      background-color: $base-black;
+      @include logoPort;
     }
     @media #{$mob-port}{
-      grid-column: 8/10;
-      grid-row: 2/3;
       width: 17rem;
       height: 17rem;
-      transform: translateY(1rem);
-      justify-self: center;
-      background-color: $base-black;
+      @include logoPort;
+    }
+    @media #{$med-screen-port}{
+      width: 20rem;
+      height: 20rem;
+      @include logoPort;
     }
     @media #{$desktop-xl} {
       width: 20rem;
@@ -134,6 +137,10 @@
         color: $base-white;
         font-size: 6rem;  
       }
+      @media #{$med-screen-port}{
+        color: $base-white;
+        font-size: 7rem;
+      }
       @media #{$desktop-xl} {
         font-size: 7rem;   
       }
@@ -160,6 +167,9 @@
         }
         @media #{$mob-port}{
           font-size: 5.5rem;  
+        }
+        @media #{$med-screen-port}{
+          font-size: 7rem;
         }
         @media #{$desktop-xl} {
           font-size: 7rem;   
@@ -198,6 +208,10 @@
       @media #{$mob-port}{
         font-size: 4rem; 
         color: $base-white;
+      }
+      @media #{$med-screen-port}{
+        color: $base-white;
+        font-size: 6rem;
       }
       @media #{$desktop-xl} {
         font-size: 3rem;   

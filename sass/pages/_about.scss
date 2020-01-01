@@ -11,22 +11,25 @@
     @include   centering;
   
     @media #{$mob-xxs-port} {
-      grid-row: 2/ -1;
-      grid-column: 1/-1;
+      @include aboutgrid-p;
     }
     
     @media #{$mob-xxs-land} {
       gap: .5rem;
     }
     @media #{$mob-xs-port} {
-      grid-row: 2/ -1;
-      grid-column: 1/-1;
+      @include aboutgrid-p;
     }
     @media #{$mob-port} {
-      grid-row: 2/ -1;
-      grid-column: 1/-1;
+      @include aboutgrid-p;
       grid-template-columns: 1fr 5% repeat(11, 5.964%) 5% 1fr;
     }
+    @media #{$med-screen-port}{
+      @include aboutgrid-p;
+      grid-template-columns: 1fr 5% repeat(11, 5.964%) 5% 1fr;
+    }
+    
+
     &__menu{
       grid-column: 1 / 3;
       grid-row: 8 / 10;
@@ -47,19 +50,22 @@
       z-index: 2800;
       cursor: pointer;
       @media #{$mob-xxs-port}{
-        transform: scale(0);
+        @include zero;
       }
       @media #{$mob-xxs-land} {
-        transform: scale(0);
+        @include zero;
       }
       @media #{$mob-xs-port}{
-        transform: scale(0);
+        @include zero;
       }
       @media #{$mob-xs-land} {
         transform: scale(.8);
       }
       @media #{$mob-port}{
-        transform: scale(0);
+        @include zero;
+      }
+      @media #{$med-screen-port}{
+        @include zero;
       }
       @media #{$desktop-xl} {
         height: 10rem;
@@ -176,28 +182,26 @@
         z-index: 2100;
         width: 38rem;
         @media #{$mob-xxs-port} {
-          grid-column: 3 / -1;
-          grid-row: 5 / 7;
-          width: 100%;
+          @include greetgrid-p;
         }
         @media #{$mob-xxs-land}{
           width: auto;
+          justify-self: start;
           grid-column: 3 / 12;
           grid-row: 5 / 9;
         }
         @media #{$mob-xs-port} {
-          grid-column: 3 / -1;
-          grid-row: 5 / 7;
-          width: 100%;
+          @include greetgrid-p;
         }
         @media #{$mob-xs-land} {
           grid-column: 4 / 12;
           justify-self: start;
         }
         @media #{$mob-port} {
-          grid-column: 3 / -1;
-          grid-row: 5 / 7;
-          width: 100%;
+          @include greetgrid-p;
+        }
+        @media #{$med-screen-port}{
+          @include greetgrid-p;
         }
         @media #{$desktop-l} {
           grid-column: 4 / 9;
@@ -245,6 +249,12 @@
             height: 13rem;
             letter-spacing: 1.5rem
           }
+          @media #{$med-screen-port}{
+            font-size: 13rem;
+            margin-bottom: 0;
+            height: 13.5rem;
+            letter-spacing: 1.7rem;
+          }
           @media #{$desktop-l}{
             padding-top: 2rem;
             height: 100%;
@@ -278,23 +288,23 @@
       grid-row: 9/ 13;
       z-index: 2100;
       @media #{$mob-xxs-port}{
-        grid-column: 3/9;
-        grid-row: 8/ 12;
+        @include subgrid-p;
       }
       @media #{$mob-xxs-land}{ 
         grid-column: 3 / 12;
         justify-self: start;
       }
       @media #{$mob-xs-port} {
-        grid-column: 3/9;
-        grid-row: 8/ 12;
+        @include subgrid-p;
       }
       @media #{$mob-xs-land}{ 
         grid-column: 4 / 12;
       }
       @media #{$mob-port} {
-        grid-column: 3/9;
-        grid-row: 8/ 12;
+        @include subgrid-p;
+      }
+      @media #{$med-screen-port}{
+        @include subgrid-p;
       }
       @media #{$desktop-xl}{
         grid-row: 8/ 14;
@@ -316,6 +326,9 @@
       }
       @media #{$mob-port}{
         font-size: 6.5rem;
+      }
+      @media #{$med-screen-port}{
+        font-size: 7.5rem;
       }
        @media #{$desktop-xl}{
         font-size: 7rem;
@@ -362,6 +375,9 @@
           //   visibility: visible;
           // }
           @media #{$mob-port}{
+            visibility: hidden;
+          }
+          @media #{$med-screen-port}{
             visibility: hidden;
           }
           @media #{$desktop-xl}{
@@ -648,10 +664,7 @@
               grid-row: 6/14;
             }
             @media #{$mob-xs-port}{
-              grid-column: 1/-1;
-              grid-row: 6/14;
-              width: 80vw;
-              height: 100%;
+              @include gooPort;
             }
             @media #{$mob-xs-land}{
               grid-column: 3/12;
@@ -659,10 +672,10 @@
               width: 43vw;
             }
             @media #{$mob-port}{
-              grid-column: 1/-1;
-              grid-row: 6/14;
-              width: 80vw;
-              height: 100%;
+              @include gooPort;
+            }
+            @media #{$med-screen-port}{
+              @include gooPort;
             }
             @media #{$desktop-xl}{
               width: 40vw;
@@ -713,6 +726,13 @@
             width: 55vw;
             height: 40vh;
           }
+
+          @media #{$med-screen-port} {
+            grid-column: 8/ -1;
+            grid-row: 3/ 6;
+            width: 75vw;
+            height: 35vh;
+          }
           border-radius: 62% 38% 65% 35% / 50% 49% 51% 50% ;
           transform: translateX(0) translateY(0) scale(1) rotate(0);
           opacity: 0;
@@ -737,7 +757,12 @@
             width: 25rem;
             height: 25rem;
           }
-
+          @media #{$med-screen-port}{
+            grid-column: 10/ 15;
+            grid-row: 11 / 15;
+            width: 55rem;
+            height: 55rem;
+          }
           @media #{$desktop-xl}{
             width: 38rem;
             height: 38rem;

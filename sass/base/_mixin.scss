@@ -71,8 +71,20 @@
 
 // contact portrait menu grid
 @mixin smlC {
+  grid-column: 9/12;
+  grid-row: 12/14;
   justify-items: end;
   animation: .2s appear 5.5s linear forwards, .3s slideUp 5.5s ease-in forwards;
+}
+
+// contact details port 
+@mixin contDet-lg-port {
+  grid-column: 1/-1;
+  grid-row: 5/20;
+  justify-self: center;
+  grid-template-columns: repeat(10, 10%);
+  grid-template-rows: repeat(7, 11%);
+  gap: 1rem;
 }
 @mixin centering {
     justify-items: center;

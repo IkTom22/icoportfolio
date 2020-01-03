@@ -286,7 +286,7 @@
         }
         @media #{$med-screen-port}{
             grid-column: 1 /15;
-            grid-row: 1/12;
+            grid-row: 1/10;
         }
         h3 {
             @media #{$desktop-xl}{
@@ -364,28 +364,18 @@
                 background-color: $base-black;
                 height: 55rem;
                 width: 55rem;
-                grid-column: 1/-1;
-                grid-row: 5/20;
-                justify-self: center;
-                grid-template-columns: repeat(10, 10%);
-                grid-template-rows: repeat(7, 11%);
-                gap: 1rem;
+                @include contDet-lg-port;
                 & h4 {
                     font-size: 3.5rem;
                 }
             }
             @media #{$med-screen-port}{
                 background-color: $base-black;
-                height: 55rem;
-                width: 55rem;
-                grid-column: 1/-1;
-                grid-row: 5/20;
-                justify-self: center;
-                grid-template-columns: repeat(10, 10%);
-                grid-template-rows: repeat(7, 11%);
-                gap: 1rem;
+                height: 75rem;
+                width: 75rem;
+                @include contDet-lg-port;
                 & h4 {
-                    font-size: 3.5rem;
+                    font-size: 5rem;
                 }
             }
             @media #{$desktop-xxl} {
@@ -535,6 +525,10 @@
         @media #{$mob-xs-port}{
             width: 3.5rem;
             height: 3.5rem;
+        }
+        @media #{$med-screen-port}{
+            width: 5rem;
+            height: 5rem;
         }
 
         @media #{$desktop-xl}{

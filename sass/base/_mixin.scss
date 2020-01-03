@@ -68,6 +68,12 @@
   grid-row: 8/10;
   animation: .2s appear 5.5s ease-in forwards;
 }
+
+// contact portrait menu grid
+@mixin smlC {
+  justify-items: end;
+  animation: .2s appear 5.5s linear forwards, .3s slideUp 5.5s ease-in forwards;
+}
 @mixin centering {
     justify-items: center;
     align-items: center;

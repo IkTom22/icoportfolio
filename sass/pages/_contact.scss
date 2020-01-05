@@ -13,6 +13,9 @@
     @media #{$med-screen-port}{
         @include temp-sml;
     }
+    @media #{$lag-screen-port}{
+        @include temp-sml;
+    }
     
     &__small{
         //grid-row: 10/12;
@@ -39,11 +42,22 @@
         @media #{$mob-port} {
             @include smlC;
         }
+      
         @media #{$med-screen-port}{
             @include smlC;
             grid-column: 7/12;
-            grid-row: 11/12;
+            grid-row: 11/13;
             justify-items: center;
+        }
+       
+        @media #{$lag-screen-port}{
+            @include smlC;
+            grid-column: 7/12;
+            grid-row: 10/13;
+            justify-items: center;
+        }
+        @media #{$ipadpro-land}{
+            grid-row: 9/13;
         }
         width: 100%;
         height: 100%;
@@ -108,6 +122,15 @@
             height: 20rem;
             width: 20rem;
         }
+        @media #{$lag-screen-port} {
+            grid-row: 1/-1;
+            height: 22rem;
+            width: 22rem;
+        }
+        @media #{$ipadpro-land}{
+            height: 14rem;
+            width: 14rem;
+        }
         @media #{$desktop-xxl} {
             height: 15rem;
             width: 15rem;
@@ -151,6 +174,17 @@
                 height: 15rem;
                 width: 15rem;
             }
+            @media #{$lag-screen-port} {
+                animation: .3s appear 5.5s linear forwards;
+                font-size: 3.8rem;
+                height:20rem;
+                width: 20rem;
+            }
+            @media #{$ipadpro-land}{
+                height:12rem;
+                width: 12rem;
+                font-size: 2.5rem;
+            }
             @media #{$desktop-xl} {
                 height: 12rem;
                 width: 12rem;
@@ -189,6 +223,9 @@
             }
             @media #{$med-screen-port} {
                 font-size: 3.6rem;
+            }
+            @media #{$lag-screen-port} {
+                font-size: 3.7rem;
             }
             @media #{$desktop-xl} {
                 font-size: 2.6rem;
@@ -288,6 +325,10 @@
             grid-column: 1 /15;
             grid-row: 1/10;
         }
+        @media #{$lag-screen-port}{
+            grid-column: 1 /15;
+            grid-row: 1/11;
+        }
         h3 {
             @media #{$desktop-xl}{
                 font-size: 5rem;
@@ -378,6 +419,15 @@
                     font-size: 5rem;
                 }
             }
+            @media #{$lag-screen-port}{
+                background-color: $base-black;
+                height: 100rem;
+                width: 100rem;
+                @include contDet-lg-port;
+                & h4 {
+                    font-size: 5.5rem;
+                }
+            }
             @media #{$desktop-xxl} {
                 grid-column: 3/11;
             }
@@ -412,7 +462,9 @@
         @media #{$med-screen-port}{
             display: none;
         }
-       
+        @media #{$lag-screen-port}{
+            display: none;
+        }
     }
     &--speech-2{
         fill: $baige-yellow;
@@ -447,6 +499,10 @@
             grid-column: 1/10;
             font-size: 5.5rem;
         }
+        @media #{$lag-screen-port}{
+            grid-column: 1/10;
+            font-size: 7.5rem;
+        }
 
     }
     &--list {
@@ -470,6 +526,9 @@
             grid-column: 1/10;
         }
         @media #{$med-screen-port}{
+            grid-column: 1/10;
+        }
+        @media #{$lag-screen-port}{
             grid-column: 1/10;
         }
         @media #{$desktop-xl}{
@@ -529,6 +588,10 @@
         @media #{$med-screen-port}{
             width: 5rem;
             height: 5rem;
+        }
+        @media #{$lag-screen-port}{
+            width: 5.5rem;
+            height: 5.5rem;
         }
 
         @media #{$desktop-xl}{
@@ -595,6 +658,9 @@
                 @include zero;
             }
             @media #{$med-screen-port}{
+                @include zero;
+            }
+            @media #{$lag-screen-port}{
                 @include zero;
             }
             h2 {
@@ -670,6 +736,9 @@
             @include zero;
         }
         @media #{$med-screen-port}{
+            @include zero;
+        }
+        @media #{$lag-screen-port}{
             @include zero;
         }
         @media #{$desktop-xl}{
@@ -821,6 +890,13 @@
             }
             @media #{$med-screen-port} {
                 @include zero;
+            }
+            @media #{$lag-screen-port} {
+                @include zero;
+            }
+            @media #{$ipadpro-land}{
+                grid-row: 2/6;
+                transform: scale(0.8);
             }
             @media #{$desktop-xl} {
                 height: 12rem;

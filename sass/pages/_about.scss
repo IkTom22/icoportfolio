@@ -28,6 +28,10 @@
       @include aboutgrid-p;
       grid-template-columns: 1fr 5% repeat(11, 5.964%) 5% 1fr;
     }
+    @media #{$lag-screen-port}{
+      @include aboutgrid-p;
+      grid-template-columns: 1fr 5% repeat(11, 5.964%) 5% 1fr;
+    }
     
 
     &__menu{
@@ -65,6 +69,9 @@
         @include zero;
       }
       @media #{$med-screen-port}{
+        @include zero;
+      }
+      @media #{$lag-screen-port}{
         @include zero;
       }
       @media #{$desktop-xl} {
@@ -203,6 +210,14 @@
         @media #{$med-screen-port}{
           @include greetgrid-p;
         }
+        @media #{$lag-screen-port}{
+          @include greetgrid-p;
+        }
+        @media #{$ipadpro-land}{
+          grid-column: 4 / 10;
+          width: 100%;
+          
+        }
         @media #{$desktop-l} {
           grid-column: 4 / 9;
           grid-row: 6 / 8;
@@ -253,6 +268,17 @@
             font-size: 13rem;
             margin-bottom: 0;
             height: 13.5rem;
+            letter-spacing: 1.7rem;
+          }
+          @media #{$lag-screen-port}{
+            font-size: 15.5rem;
+            margin-bottom: 0;
+            height: 16rem;
+            letter-spacing: 1.7rem;
+          }
+          @media #{$ipadpro-land}{
+            font-size: 12rem;
+            height: 12rem;
             letter-spacing: 1.7rem;
           }
           @media #{$desktop-l}{
@@ -306,6 +332,12 @@
       @media #{$med-screen-port}{
         @include subgrid-p;
       }
+      @media #{$lag-screen-port}{
+        @include subgrid-p;
+      }
+      @media #{$ipadpro-land}{
+        grid-row: 8/ 13;
+      }
       @media #{$desktop-xl}{
         grid-row: 8/ 14;
         justify-self: start;
@@ -329,6 +361,13 @@
       }
       @media #{$med-screen-port}{
         font-size: 7.5rem;
+      }
+      @media #{$lag-screen-port}{
+        font-size: 8.8rem;
+        letter-spacing: 1.3rem;
+      }
+      @media #{$ipadpro-land}{
+        font-size: 6rem;
       }
        @media #{$desktop-xl}{
         font-size: 7rem;
@@ -380,6 +419,9 @@
           @media #{$med-screen-port}{
             visibility: hidden;
           }
+          @media #{$lag-screen-port}{
+            visibility: hidden;
+          }
           @media #{$desktop-xl}{
             grid-row: 1/ 8;
           }
@@ -405,6 +447,9 @@
           transition: all linear;
           // overflow: hidden;
           animation: blobbing 15s linear infinite;
+          @media #{$ipadpro-land}{
+            column-gap: 3rem;
+          }
           @media #{$desktop-xl}{
             column-gap: 3.5rem;
           }
@@ -432,6 +477,9 @@
             //animation: 8s coloring  ease-in forwards, 3s totheRight 8.5s ease-in-out forwards;
             z-index: 2500;
             align-items: center;
+            @media #{$ipadpro-land}{
+              font-size:30rem;
+            }
             @media #{$desktop-xl}{
               grid-row: 3/ 6;
               font-size:30rem;
@@ -677,6 +725,13 @@
             @media #{$med-screen-port}{
               @include gooPort;
             }
+            @media #{$lag-screen-port}{
+              @include gooPort;
+            }
+            @media #{$ipadpro-land}{
+              width: 45vw;
+              height: 60vh;
+            }
             @media #{$desktop-xl}{
               width: 40vw;
               height: 67vh;
@@ -733,6 +788,16 @@
             width: 75vw;
             height: 35vh;
           }
+          @media #{$lag-screen-port} {
+            grid-column: 8/ -1;
+            grid-row: 3/ 6;
+            width: 75vw;
+            height: 35vh;
+          }
+          @media #{$ipadpro-land}{
+            width: 45vw;
+            height: 60vh;
+          }
           border-radius: 62% 38% 65% 35% / 50% 49% 51% 50% ;
           transform: translateX(0) translateY(0) scale(1) rotate(0);
           opacity: 0;
@@ -763,6 +828,13 @@
             width: 55rem;
             height: 55rem;
           }
+          @media #{$lag-screen-port}{
+            grid-column: 10/ 15;
+            grid-row: 11 / 15;
+            width: 55rem;
+            height: 55rem;
+          }
+          
           @media #{$desktop-xl}{
             width: 38rem;
             height: 38rem;
@@ -780,6 +852,14 @@
           @media #{$mob-xs-land}{
             width: 12rem;
             height: 12rem;
+          }
+          @media #{$lag-screen-port}{
+            width: 32rem;
+            height: 32rem;
+          }
+          @media #{$ipadpro-land}{
+            width: 23rem;
+            height: 23rem;
           }
           @media #{$desktop-xl}{
             width: 25rem;
@@ -801,6 +881,10 @@
           @media #{$mob-xs-land}{
             width: 10rem;
             height: 10rem;
+          }
+          @media #{$lag-screen-port}{
+            width: 45rem;
+            height: 45rem;
           }
           @media #{$desktop-xl}{
             width: 21rem;
@@ -824,6 +908,10 @@
             width: 10rem;
             height: 10rem;
           }
+          @media #{$lag-screen-port}{
+            width: 38rem;
+            height: 38rem;
+          }
           @media #{$desktop-xl}{
             width: 24rem;
             height: 24rem;
@@ -832,6 +920,7 @@
             width: 28rem;
             height: 28rem;
           }
+          
           top: 100%;
           left: 10%;
           //animation: 23s floating3 18s linear infinite;

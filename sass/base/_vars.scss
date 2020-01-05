@@ -77,6 +77,10 @@ $mob-xs-land: "only screen and (min-width: 667px) and (max-height: 414px) and (o
 $mob-port: "only screen and (min-width: 720px) and (max-height: 1334px) and (orientation: portrait)" ;
 
 $med-screen-port: "only screen and (min-width: 828px) and (max-height: 1920px) and (orientation: portrait)" ;
+
+$lag-screen-port: "only screen and (min-width: 1125px) and (max-height: 2688px) and (orientation: portrait)" ;
+
+$ipadpro-land:"only screen and (min-width: 1366px) and (max-height: 1024px) and (orientation: landscape)" ;
 //--13″ MacBook Pro 1440 x 900 (2x scaling) ~
 $desktop-l: "only screen and (min-width: 1440px)";
 

@@ -46,7 +46,12 @@
       height: 100%;
       @include radious2;
     }
-    
+    @media #{$lag-screen-port}{
+      grid-column:  1/-1;
+      @include temp-sml;
+      height: 100%;
+      @include radious2;
+    }
    
 }
 
@@ -99,6 +104,11 @@
       height: 20rem;
       @include logoPort;
     }
+    @media #{$lag-screen-port}{
+      width: 23rem;
+      height: 23rem;
+      @include logoPort;
+    }
     @media #{$desktop-xl} {
       width: 20rem;
       height: 20rem;
@@ -141,6 +151,10 @@
         color: $base-white;
         font-size: 7rem;
       }
+      @media #{$lag-screen-port}{
+        color: $base-white;
+        font-size: 9rem;
+      }
       @media #{$desktop-xl} {
         font-size: 7rem;   
       }
@@ -170,6 +184,9 @@
         }
         @media #{$med-screen-port}{
           font-size: 7rem;
+        }
+        @media #{$lag-screen-port}{
+          font-size: 9rem;
         }
         @media #{$desktop-xl} {
           font-size: 7rem;   
@@ -213,6 +230,10 @@
         color: $base-white;
         font-size: 6rem;
       }
+      @media #{$lag-screen-port}{
+        color: $base-white;
+        font-size: 7rem;
+      }
       @media #{$desktop-xl} {
         font-size: 3rem;   
       }
@@ -226,6 +247,7 @@
       @media #{$mob-xxs-port}{
         transform: scale(.8) translateY(-50%);
       }
+
     }
     &:hover &__letter--o {
       grid-row: 2/3;

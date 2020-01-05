@@ -23,6 +23,9 @@
     @media #{$med-screen-port}{
         @include temp-sml;
     }
+    @media #{$lag-screen-port}{
+        @include temp-sml;
+    }
     
     &__sml{
 
@@ -63,6 +66,12 @@
             grid-column: 7/12;
             @include smlP;
         }
+        @media #{$lag-screen-port}{
+            
+            @include smlP;
+            grid-column: 7/12;
+            grid-row: 4/8;
+        }
     }
     
     // @include hoverEffect2;
@@ -79,6 +88,10 @@
         display: grid;
         @include centering;
         @include centerContent;
+        @media #{$lag-screen-port}{
+            height: 15rem;
+            width: 15rem; 
+        }
     } 
     &__menu{
         height: 9.5rem;
@@ -127,6 +140,10 @@
                 height: 11rem;
                 width: 11rem; 
             }
+            @media #{$lag-screen-port}{
+                height: 15rem;
+                width: 15rem; 
+            }
             @media #{$desktop-xxl}{
                 height: 11rem;
                 width: 11rem;
@@ -163,6 +180,10 @@
             @media #{$med-screen-port}{
                 height: 10rem;
                 width: 10rem; 
+            }
+            @media #{$lag-screen-port}{
+                height: 13rem;
+                width: 13rem; 
             }
         }
         &:hover > &--back {
@@ -201,6 +222,10 @@
                 @media #{$med-screen-port}{
                     animation: .3s insideEye 5.5s ease-in forwards;
                     font-size: 3.5rem;
+                }
+                @media #{$lag-screen-port}{
+                    animation: .3s insideEye 5.5s ease-in forwards;
+                    font-size: 3.7rem;
                 }
                 @media #{$desktop-xl}{
                     font-size: 3rem;
@@ -282,6 +307,11 @@
                 height: 12rem;
                 animation: .3s openingEye 5.5s ease-in forwards;
             }
+            @media #{$lag-screen-port}{
+                width: 18rem;
+                height: 18rem;
+                animation: .3s openingEye 5.5s ease-in forwards;
+            }
             @media #{$desktop-xxl}{
                 width: 22rem;
                 height: 22rem;
@@ -345,6 +375,9 @@
     @media #{$med-screen-port}{
         height: 28rem;
     }
+    @media #{$lag-screen-port}{
+        height: 42rem;
+    }
     @media #{$desktop-xl} {
         height: 30rem;
     }
@@ -394,6 +427,9 @@
         @media #{$med-screen-port}{
             transform-origin: 50% 50% -14rem;
         }
+        @media #{$lag-screen-port}{
+            transform-origin: 50% 50% -21rem;
+        }
         @media #{$desktop-xl} {
             transform-origin: 50% 50% -15rem;
         }
@@ -437,6 +473,10 @@
                 width: 6rem;
                 height: 6rem;
             }
+            @media #{$lag-screen-port}{
+                width: 11rem;
+                height: 11rem;
+            }
             @media #{$desktop-xl} {
                 width: 8rem;
                 height: 8rem; 
@@ -467,6 +507,9 @@
             @media #{$med-screen-port}{
                 font-size: 2.5rem;
             }
+            @media #{$lag-screen-port}{
+                font-size: 3.5rem;
+            }
             @media #{$desktop-xxl} {
                 font-size: 2.8rem;
             }
@@ -491,7 +534,7 @@
         transform: rotateX(85deg);
      
         transition: all 0.2s ease;
-        transform-origin: 50% 50% -11rem;
+        transform-origin: 50% 50% -11.5rem;
         @media #{$mob-xxs-port}{
             height: 10rem;
             transform-origin: 50% 50% -5.4rem;
@@ -519,6 +562,11 @@
             height: 28rem;
             transform-origin: 50% 50% -15rem;
             grid-template-rows: 10% [title-start] 15% [title-end] 1fr 1fr 1fr;
+        }
+        @media #{$lag-screen-port}{
+            height: 42rem;
+            transform-origin: 50% 50% -22.8rem;
+            grid-template-rows: 10% [title-start] 15% [title-end] 1fr 1fr 10%;
         }
         @media #{$desktop-xl} {
             height: 30rem;
@@ -565,6 +613,9 @@
             @media #{$med-screen-port}{
                 font-size: 2.3rem;
             }
+            @media #{$lag-screen-port}{
+                font-size: 3.5rem;
+            }
             @media #{$desktop-xxl} {
                 font-size: 3.3rem;
             }
@@ -592,6 +643,10 @@
             }
             @media #{$med-screen-port}{
                 font-size: 1.7rem;
+            }
+            @media #{$lag-screen-port}{
+                font-size: 2.5rem;
+                line-height: 3rem;
             }
             @media #{$desktop-xl} {
                 font-size: 2rem;
@@ -631,6 +686,10 @@
                 @media #{$med-screen-port}{
                     font-size: 1.7rem;
                 }
+                @media #{$lag-screen-port}{
+                    font-size: 2rem;
+                    padding-bottom: 0;
+                }
                 @media #{$desktop-xl} {
                     font-size: 1.9rem;
                 }
@@ -655,6 +714,9 @@
                 }
                 @media #{$med-screen-port}{
                     font-size: 1.8rem;
+                }
+                @media #{$lag-screen-port}{
+                    font-size: 2.2rem;
                 }
                 @media #{$desktop-xl} {
                     font-size: 2.2rem;
@@ -704,6 +766,10 @@
         grid-column: 2/6;
     }
     @media #{$med-screen-port}{
+        grid-row: 3/5;
+        grid-column: 2/6;
+    }
+    @media #{$lag-screen-port}{
         grid-row: 3/5;
         grid-column: 2/6;
     }
@@ -777,7 +843,10 @@
         grid-row: 3/5;
         grid-column: 7/11;
     }
-    
+    @media #{$lag-screen-port}{
+        grid-row: 3/5;
+        grid-column: 7/11;
+    }
     & svg {
         // fill:black;
         fill:#6e6b05;
@@ -815,6 +884,10 @@
             grid-column: 2/6;
         }
         @media #{$med-screen-port}{
+            grid-row: 6/8;
+            grid-column: 2/6;
+        }
+        @media #{$lag-screen-port}{
             grid-row: 6/8;
             grid-column: 2/6;
         }
@@ -858,6 +931,10 @@
             grid-column: 7/11;
         }
         @media #{$med-screen-port}{
+            grid-row: 6/8;
+            grid-column: 7/11;
+        }
+        @media #{$lag-screen-port}{
             grid-row: 6/8;
             grid-column: 7/11;
         }
@@ -905,6 +982,10 @@
             grid-row: 9/11;
             grid-column: 2/6;
         }
+        @media #{$lag-screen-port}{
+            grid-row: 9/11;
+            grid-column: 2/6;
+        }
         & svg {
             fill: #ff9100;
         }
@@ -946,6 +1027,10 @@
             grid-column: 7/11;
         }
         @media #{$med-screen-port}{
+            grid-row: 9/11;
+            grid-column: 7/11;
+        }
+        @media #{$lag-screen-port}{
             grid-row: 9/11;
             grid-column: 7/11;
         }

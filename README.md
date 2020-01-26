@@ -7,6 +7,7 @@ Goals:
 - Use SVG icons
 - Use css( majority) and javascript to create the text/sentence animation on "about" section
 - Create gooey bubble effect back ground with css animation
+- Compress and prefix the all SCSS into CSS file
 
 Instructions:
 - install Node.js

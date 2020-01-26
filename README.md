@@ -2,8 +2,8 @@
 Ico portfolio
 Goals:
 - Create non scrolling one page website 
-- Clear and simple instruction for the audience
-- USe scss with css grid system
+- Clear and simple instruction/buttons for the audience
+- Use SCSS with CSS grid system
 - Use SVG icons
 - Use css( majority) and javascript to create the text/sentence animation on "about" section
 - Create gooey bubble effect back ground with css animation

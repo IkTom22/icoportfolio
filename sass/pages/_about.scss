@@ -314,6 +314,7 @@
       grid-row: 9/ 13;
       z-index: 2100;
       justify-self: start;
+      color:$base-white;
       @media #{$mob-xxs-port}{
         @include subgrid-p;
       }
